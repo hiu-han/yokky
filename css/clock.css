@@ -1,3 +1,11 @@
+.today_wrap {
+  padding-bottom: 8px;
+}
+#today {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
 .clock_wrap {
   padding-bottom: 25px;
 }
