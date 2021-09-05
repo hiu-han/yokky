@@ -8,10 +8,6 @@ const images = [
 ]
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
-// const bgImage = document.createElement("img");
 const body = document.querySelector("body");
 
 body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/main/${chosenImage})`;
-// bgImage.id = "bg_img";
-console.dir(body.style);
-// document.body.appendChild(bgImage);
