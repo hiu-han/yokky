@@ -4,6 +4,7 @@
 #today {
   font-size: 1.8rem;
   font-weight: 500;
+  color: #fdfdfd;
 }
 
 .clock_wrap {
@@ -14,4 +15,5 @@
   font-size: 7rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
+  color: #fdfdfd;
 }

@@ -8,8 +8,9 @@
   padding-bottom: 6px;
   border-bottom: 1px solid #fdfdfd;
   font-size: 34px;
+  color: #fdfdfd;
 }
-.login_wrap input[type="submit"] {
+.login_wrap input[type='submit'] {
   text-indent: -99999px;
 }
 .login_wrap #greeting {
