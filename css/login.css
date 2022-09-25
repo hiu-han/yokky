@@ -17,6 +17,7 @@
   display: inline-block;
   font-size: 36px;
   font-weight: 600;
+  color: #fff;
 }
 .login_wrap #logout {
   padding: 0 8px;
@@ -27,6 +28,7 @@
   background: none;
   vertical-align: middle;
   transition: 0.3s ease;
+  color: #fff;
 }
 .login_wrap #logout:hover {
   background-color: rgba(255, 255, 255, 0.3);
