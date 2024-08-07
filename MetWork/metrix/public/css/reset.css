@@ -86,34 +86,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
-body,
-h1,
-h2,
-h3,
-h4,
-input,
-button {
-  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-  font-size: 14px;
-  color: #313131;
-}
-
-body {
-  background-color: #fdfdfd;
-  word-break: break-all;
-  -ms-word-break: break-all;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
 article,
 aside,
 details,
@@ -149,12 +121,60 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 input:focus {
   outline: none;
 }
-
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* ------ ADD ------ */
+body,
+h1,
+h2,
+h3,
+h4,
+input,
+textarea,
+select,
+button {
+  font-family: 'Pretendard', 'Noto Sans KR', Apple Gothic, 'Malgun Gothic',
+    sans-serif;
+  font-size: 14px;
+  color: #2a2a2a;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+button {
+  background-color: none;
+}
+
+/** TEST style **/
+.test-lines {
+  width: 500px;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.line01 {
+  border-top: 3px solid #1e4d9b;
+  background-color: #bfcee6;
+}
+.line02 {
+  border-top: 3px solid #d93a35;
+  background-color: #f7cbca;
+}
+.line03 {
+  border-top: 3px solid #f7cc46;
+  background-color: #eeeadc;
+}
+.line04 {
+  border-top: 3px solid #ce5f2c;
+  background-color: #fad0bd;
+}
+.line05 {
+  border-top: 3px solid #999;
+  background-color: #dfdfdf;
 }
