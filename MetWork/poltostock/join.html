@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pol:STOCK">
+  <meta property="og:url" content="http://www.p2s.co.kr">
+  <meta property="og:description" content="Polish to Stock">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./src/img/icon/favicon.png">
+  <title>Pol:STOCK</title>
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+
+
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header"></div>
+
+    <div id="main" class="contents-page">
+      <div class="page-inner">
+        <div class="contents-title-area">
+          <section class="page-title alws-view">
+            <h2>회원가입</h2>
+          </section>
+        </div>
+
+        <div class="contents-area site-main-contents">
+          <section class="cont-section user-join">
+            <div class="mypage_box">
+              <div class="mypage_inner">
+                <div class="user_info_wrap join">
+                  <form action="" name="Join_Form" target="join_iframe">
+                    <fieldset>
+                      <!-- <legend class='blind'>회원정보</legend>
+                      <div class="user_mail_wrap">
+                        <label for="sml_id">이메일</label>
+                        <input type="text" name='sml_id' id='sml_id' class='input-email'
+                          placeholder='인증 메일이 발송됩니다.'>
+                        <div class="btn-box"><a href="javascript:void(0);" class="btn">발송</a></div>
+                      </div>
+                      <div class="user_mail_wrap">
+                        <label for="verification_code"></label>
+                        <input type="text" name='user_mail' id='verification_code' class='input-veri'
+                          placeholder='인증번호'>
+                        <div class="btn-box"><a href="javascript:viod(0)" class="btn">확인</a></div>
+                      </div>
+                      <div class="user_pw_wrap">
+                        <label for="join_pw">비밀번호</label>
+                        <input type="password" name='user_pw' id='join_pw' class='input-pw'
+                          placeholder='영문, 숫자, 특수문자 혼합 8자리'>
+                      </div>
+                      <div class="user_pw_wrap">
+                        <label for="join_pw_check">비밀번호 확인</label>
+                        <input type="password" name='join_pw_check' id='join_pw_check' class='input-pw' placeholder=''>
+                      </div>
+                      <div class="user_name_wrap">
+                        <label for="user_name">이름</label>
+                        <input type="text" name='user_name' id='user_name' class='input-name'>
+                      </div>
+                      <div class="user_hp_wrap">
+                        <label for="user_hp">휴대전화</label>
+                        <input type="text" name='user_hp' id='user_hp' class='input-ph'>
+                        <div class="btn-box"><a href="#" class="btn">인증</a></div>
+                      </div>
+                      <div class="user_birth_wrap">
+                        <label for="user_birth">생년월일</label>
+                        <input type="text" name='user_birth' id='user_birth' placeholder='YYYY/MM/DD'
+                          class='input-birth'>
+                      </div> -->
+                      <legend class='blind'>회원정보</legend>
+                      <div class="user_mail_wrap">
+                        <label for="sml_id">이메일</label>
+                        <input type="text" name='sml_id' id='sml_id' class='input-email' placeholder='인증 메일이 발송됩니다.'>
+                        <div class="btn-box"><a href="javascript:email_CHK();" class="btn">발송</a></div>
+                      </div>
+                      <div class="user_mail_wrap">
+                        <label for="verification_code"></label>
+                        <input type="text" name='verification_code' id='verification_code' class='input-veri'
+                          placeholder='인증번호'>
+                        <div class="btn-box"><a href="javascript:email_Confirm();" class="btn">확인</a></div>
+                      </div>
+                      <div class="sml_pw_wrap">
+                        <label for="join_pw">비밀번호</label>
+                        <input type="password" name='sml_pw' id='sml_pw' class='input-pw'
+                          placeholder='영문, 숫자, 특수문자 혼합 8자리'>
+                      </div>
+                      <div class="sml_pw_wrap">
+                        <label for="join_pw_check">비밀번호 확인</label>
+                        <input type="password" name='sml_pw2' id='sml_pw2' class='input-pw' placeholder=''>
+                      </div>
+                      <div class="user_name_wrap">
+                        <label for="user_name">이름</label>
+                        <input type="text" name='sml_name' id='sml_name' class='input-name'>
+                      </div>
+                      <div class="user_hp_wrap">
+                        <label for="user_hp">휴대전화</label>
+                        <input type="text" name='sml_hp' id='sml_hp' class='input-ph'>
+                        div class="btn-box"><a href="#" class="btn">인증</a>
+                      </div </div>
+                      <div class="user_birth_wrap">
+                        <label for="user_birth">생년월일</label>
+                        <input type="text" name='sml_birth_ymd' id='sml_birth_ymd' placeholder='YYYY/MM/DD'
+                          class='input-birth'>
+                      </div>
+                      <div class="" id="itmsListBtn">
+                        <!--  onclick="getItmsList()" -->
+                        <label>관심종목(최대4개)</label>
+                        <input type="text" id="code_group_name" value="" readonly>
+                        <input type="hidden" id="code_group" name="code_group">
+                      </div>
+                    </fieldset>
+                    <div class="terms_agree_wrap">
+                      <div class="use_agreement">
+                        <input type="checkbox" id='use_agree_chk'>
+                        <label for="use_agree_chk">서비스 이용약관에 동의합니다.</label>
+                        <a href="#">자세히보기</a>
+                      </div>
+                      <div class="personal_policy_wrap">
+                        <input type="checkbox" id='pers_pol_chk'>
+                        <label for="pers_pol_chk">개인정보처리방침에 동의합니다.</label>
+                        <a href="#">자세히보기</a>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="btn_wrap">
+                    <p class="btn-box change-btns join-btn"><a href="javascript:void(0);" class="btn">회원가입</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  </div>
+
+  <script src='./src/js/jquery-3.5.1.js'></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/main.js"></script>
+  <!-- <script src="./src/js/user.js"></script> -->
+
+  <script>
+    // 이메일 발송
+    function email_CHK(e) {
+      var frm = document.all.Join_Form;
+      var isEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+      if (!isEmail.test(frm.sml_id.value)) {
+        alert("이메일 형식이 잘못 되었습니다.");
+        frm.sml_id.focus();
+        return false;
+      }
+      if (frm.sml_id.value.length > 50) {
+        alert("이메일 주소는 50자까지 유효합니다.");
+        frm.sml_id.focus();
+        return false;
+      }
+
+      var data = {
+        proc: "setJoinEmailChk",
+        sml_id: $("#sml_id").val()
+      };
+
+      $.ajax({
+        type: 'POST',
+        url: "<?=_URL?><?=$param->page_type?>/join_emailchk",
+        data: data,
+        success: function (res) {
+          if (res === "false") {
+            alert('이미 존재하는 이메일입니다.');
+            return false;
+          } else {
+            alert("메일이발송되었습니다.\n최대 5분 정도 소요될 수 있으니 잠시만 기다려주십시오.");
+            Join_Form.ck_Auth_Num.value = res;
+            sendJoinEmailFrom();
+          }
+
+        } // End. success
+      });
+
+      return false;
+
+    }; // End. function email_CHK () {
+
+    // 회원가입
+    function join_user() {
+
+      var frm = document.all.Join_Form;
+
+      if (!frm.sml_id.value) {
+        alert("이메일을 입력해주세요");
+        frm.sml_id.focus();
+        return false;
+      }
+
+      var isEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+      if (!isEmail.test(frm.sml_id.value)) {
+        alert("이메일 형식이 잘못 되었습니다.");
+        frm.sml_id.focus();
+        return false;
+      }
+      if (frm.sml_id.value.length > 50) {
+        alert("이메일 주소는 50자까지 유효합니다.");
+        frm.sml_id.focus();
+        return false;
+      }
+
+
+      var join_pw_chk = frm.sml_pw.value;
+
+      if (frm.sml_pw.value != frm.sml_pw2.value) {
+        alert("비밀번호와 비밀번호확인이 다릅니다.");
+        frm.sml_id.focus();
+        return false;
+      }
+
+
+
+
+      // 8자리이상영문,숫자,특수문자를 혼합하여입력
+      // 1@qwerty
+      var pattern1 = /[0-9]/; //숫자
+      var pattern2 = /[a-zA-Z]/; //영어
+      var pattern3 = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/; //한글
+      var pattern4 = /[~!@#\#$%<>^&*]/; //특수문자
+
+
+      //숫자 체크하고 싶을 때
+      if (pattern1.test(join_pw_chk) == false) {
+        alert("비밀번호에 숫자를 혼합하여야 합니다.");
+        frm.sml_pw.focus();
+        return false;
+
+      } else if (pattern4.test(join_pw_chk) == false) {
+        //특수문자 체크하고 싶을 때
+        alert("비밀번호에 특수문자를 혼합하여야 합니다.");
+        frm.sml_pw.focus();
+        return false;
+      } else if (pattern2.test(join_pw_chk) == false) {
+        //영어 체크하고 싶을 때
+        alert("비밀번호에 영문를 혼합하여야 합니다.");
+        frm.sml_pw.focus();
+        return false;
+      } else if (pattern3.test(join_pw_chk)) {
+        //영어 체크하고 싶을 때
+        alert("비밀번호에 한글은 제외시키셔야 합니다.");
+        frm.sml_pw.focus();
+        return false;
+
+      } else if (join_pw_chk.length < 8) {
+        alert("8자리 이상 비밀번호을 입력해주세요");
+        frm.sml_pw.focus();
+        return false;
+      }
+
+
+      if (!frm.sml_name.value) {
+        alert("이름을 입력해주세요!");
+        frm.sml_name.focus();
+        return false;
+      }
+
+
+      if (!frm.sml_hp.value) {
+        alert("휴대전화를 입력해주세요.");
+        frm.sml_hp.focus();
+        return false;
+      }
+
+
+      if (!frm.sml_birth_ymd.value) {
+        alert("생년월일을 입력해주세요.");
+        frm.sml_birth_ymd.focus();
+        return false;
+      }
+
+
+      if (frm.agree_policy.checked == false) {
+        alert("서비스 이용약관에 동의 해주세요.");
+        frm.agree_policy.focus();
+        return false;
+      }
+
+
+      if (frm.agree_privacy.checked == false) {
+        alert("개인정보처리방침에 동의해주세요.");
+        frm.agree_privacy.focus();
+        return false;
+      }
+
+
+      if (frm.ck_Auth_Num2.value != "OK") {
+        alert("이메일 인증을 해주세요.");
+        frm.ck_Auth_Num2.focus();
+        return false;
+      }
+
+
+
+      frm.action = "/user/join_proc";
+      // frm.submit();
+      frm.submit();
+      return false;
+    } // End. join_user
+
+    $(".join-btn").on("click", function () {
+      console.log(2);
+      join_user();
+    });
+
+  </script>
+</body>
+
+</html>

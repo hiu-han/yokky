@@ -1,0 +1,286 @@
+/*  ---- LOGIN MODAL ----  */
+.login-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 14px);
+  max-width: 450px;
+  padding: 30px 24px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 3px 3px 12px 0px rgba(120, 120, 120, 0.1);
+  box-sizing: border-box;
+  z-index: 350;
+}
+.login-box .login-box-inner {
+  width: 100%;
+}
+
+.login-box .logo-title {
+  width: 100%;
+  text-align: center;
+}
+.login-box .logo-title a img {
+  width: 45%;
+}
+h3.logo {
+  display: inline-block;
+  padding-top: 16px;
+}
+.login-box .logo-title > a {
+  display: inline-block;
+}
+
+.login-box .login-form {
+  margin: 25px 0 0px;
+}
+
+.login-form ul {
+  margin-bottom: 20px;
+}
+
+.login-form li > input {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  line-height: 3;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #4a4a4a;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0);
+  text-indent: 15px;
+  font-weight: 300;
+}
+
+.login-form .btn-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+#loginBtn,
+.login-form .cls-btn {
+  width: 48%;
+  text-align: center;
+  transition: 0.4s;
+  vertical-align: middle;
+}
+#loginBtn {
+  background-color: #f5c546;
+}
+.login-form .cls-btn {
+  background-color: rgb(200, 200, 200);
+}
+#loginBtn > .btn,
+.login-form .cls-btn > .btn {
+  display: block;
+  width: 100%;
+  line-height: 3;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  color: #333;
+  transition: 0.4s;
+}
+#loginBtn:hover {
+  background-color: #fccc52;
+}
+.login-form .cls-btn:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.login-box .info-user {
+  margin-top: 25px;
+  float: right;
+}
+.login-box .info-user > .go-join {
+  position: relative;
+  padding-right: 20px;
+  margin-right: 17px;
+}
+.login-box .info-user > .go-join::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  top: 55%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #333;
+}
+.login-box .info-user > span > a {
+  transition: 0.25s easw;
+}
+.login-box .info-user > span:hover > a {
+  font-weight: 500;
+}
+
+/*  ---- JOIN PAGE ----  */
+.contents-title-area > .page-title.alws-view {
+  display: block;
+}
+
+.mypage_box .user_info_wrap {
+  width: 100%;
+  margin: 0px auto;
+  font-size: 16px;
+}
+
+.user_info_wrap fieldset {
+  width: 100%;
+  padding: 10px 0 10px;
+  margin: 0 auto;
+}
+.user_info_wrap fieldset > div {
+  margin: 15px 0;
+  font-size: 0;
+}
+.user_info_wrap fieldset label {
+  display: inline-block;
+  width: 25%;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 14px;
+}
+.user_info_wrap input[type="text"],
+.user_info_wrap input[type="password"] {
+  width: 60%;
+  line-height: 3;
+  margin: 0 0 10px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background-color: #fdfdfd;
+  font-size: 14px;
+  text-indent: 15px;
+}
+.user_info_wrap input[readonly] {
+  border-bottom: 1px solid #aaa;
+}
+.user_hp_wrap {
+  position: relative;
+}
+.user_hp_wrap input {
+  padding-right: 90px;
+  box-sizing: border-box;
+}
+.user_info_wrap fieldset .btn-box {
+  display: inline-block;
+  width: 15%;
+  text-align: right;
+}
+.user_info_wrap fieldset .btn-box > .btn {
+  display: inline-block;
+  padding: 2px 12px;
+  line-height: 1.9;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 0rem;
+}
+.user_info_wrap fieldset .btn-box:hover > .btn {
+  border: 1px solid #e9cf53;
+  background-color: #e9cf53;
+  color: #fdfdfd;
+}
+
+.user_info_wrap .btn_wrap {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.user_info_wrap .change-btns {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #333;
+  border: 1px solid #333;
+  color: #fdfdfd;
+}
+.user_info_wrap .change-btns:hover {
+  background-color: #444;
+  border: 1px solid #444;
+}
+.user_info_wrap .cancel-btns:hover {
+  border: 1px solid #afafaf;
+  background-color: #afafaf;
+}
+
+.user_info_wrap.join fieldset > div > p {
+  display: inline-block;
+  width: 130px;
+}
+#join_mail,
+#verification_code {
+  padding-right: 14px;
+  box-sizing: border-box;
+}
+
+.user_info_wrap .terms_agree_wrap {
+  padding: 20px 0 20px 14px;
+  font-size: 14px;
+}
+.user_info_wrap .terms_agree_wrap > * {
+  line-height: 2.5;
+}
+.user_info_wrap .terms_agree_wrap input {
+  margin-right: 10px;
+}
+.user_info_wrap .terms_agree_wrap label {
+  margin-right: 20px;
+}
+.user_info_wrap .terms_agree_wrap a {
+  font-size: 12px;
+  color: dodgerblue;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 992px) {
+  /*  ---- LOGIN MODAL ----  */
+  .login-box {
+    padding: 40px 50px;
+  }
+
+  /*  ---- JOIN PAGE ----  */
+  .mypage_box .user_info_wrap {
+    max-width: 700px;
+    padding: 0 80px;
+  }
+
+  .user_info_wrap fieldset {
+    width: 580px;
+  }
+
+  .user_info_wrap fieldset label {
+    width: 26%;
+    font-size: 16px;
+  }
+
+  .user_info_wrap input[type="text"],
+  .user_info_wrap input[type="password"] {
+    width: 62%;
+    font-size: 16px;
+  }
+
+  .user_info_wrap fieldset .btn-box {
+    width: 12%;
+    text-align: center;
+  }
+  .user_info_wrap fieldset .btn-box > .btn {
+    font-size: 14px;
+  }
+
+  .user_info_wrap .terms_agree_wrap {
+    width: 380px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .user_info_wrap .btn_wrap {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pol:STOCK">
+  <meta property="og:url" content="http://www.p2s.co.kr">
+  <meta property="og:description" content="Polish to Stock">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./src/img/icon/favicon.png">
+  <title>Pol:STOCK</title>
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+
+  <style>
+    #primaryMenu>li.menu-item-market::after {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header"></div>
+
+    <div id="main" class="contents-page">
+      <div class="page-inner">
+        <div class="contents-title-area">
+          <section class="page-title">
+            <h2>MARKET</h2>
+          </section>
+        </div>
+
+        <div class="contents-area site-main-contents">
+          <section class="cont-section market-stock-market">
+            <div class="section-inner">
+              <div class="section-title clearFix">
+                <h3>STOCK MARKET</h3>
+                <div class="section-info">
+                  <span>21.12.08</span>
+                </div>
+              </div>
+              <div class="section-contents">
+                <div class="contents-inner">
+                  <div class="tab-title-wrap clearFix">
+                    <p class="tab-title tab-kospi now-on"><span>코스피</span></p>
+                    <p class="tab-title tab-kosdaq"><span>코스닥</span></p>
+                  </div>
+                  <div class="tab-item-wrap">
+                    <div class="tab-item-inner kospi-wrap now-on">
+                      <p class="kospi-wrap-title inner-title">코스피</p>
+                      <div class="tab-item item-group-main">
+                        <div class="item-main-ty item-main-ty01">
+                          <span class="item-title">지수</span>
+                          <span id="tabMainTy01" class="item-num color--minus">2,936.44</span>
+                        </div>
+                        <div class="item-main-ty item-main-ty02">
+                          <span class="item-title">등락</span>
+                          <span id="tabMainTy02" class="item-num color--plus">45.62</span>
+                        </div>
+                        <div class="item-main-ty item-main-ty03">
+                          <span class="item-title">등락율</span>
+                          <span id="tabMainTy03" class="item-num color--plus">-1.47%</span>
+                        </div>
+                      </div>
+                      <!-- div class="tab-item item-group-det">
+                        <div class="item-det-ty item-det-ty01">
+                          <span class="item-title">상한</span>
+                          <span id="tabDetTy01" class="item-num color--plus">0</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty02">
+                          <span class="item-title">상승</span>
+                          <span id="tabDetTy02" class="item-num color--plus">353</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty03">
+                          <span class="item-title">보합</span>
+                          <span id="tabDetTy03" class="item-num color--middle">81</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty04">
+                          <span class="item-title">하락</span>
+                          <span id="tabDetTy04" class="item-num color--minus">498</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty05">
+                          <span class="item-title">하한</span>
+                          <span id="tabDetTy05" class="item-num color--minus">0</span>
+                        </div>
+                      </div -->
+                      <div class="tab-item item-group-price">
+                        <div class="item-price-ty item-price-ty01">
+                          <span class="item-title">거래량</span>
+                          <span id="tabPriceTy01" class="item-num color--middle">449,846</span>
+                        </div>
+                        <div class="item-price-ty item-price-ty02">
+                          <span class="item-title">거래대금</span>
+                          <span id="tabPriceTy02" class="item-num color--middle">10,076,010</span>
+                        </div>
+                        <div class="item-price-ty item-price-ty03">
+                          <span class="item-title">시가총액</span>
+                          <span id="tabPriceTy03" class="item-num color--middle">3,017,933</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-item-inner kosdaq-wrap">
+                      <p class="kosdaq-wrap-title inner-title">코스닥</p>
+                      <div class="tab-item item-group-main">
+                        <div class="item-main-ty item-main-ty01 clearFix">
+                          <span class="item-title">지수</span>
+                          <span id="tabMainTy01" class="item-num color--plus">3,003.23</span>
+                        </div>
+                        <div class="item-main-ty item-main-ty02 clearFix">
+                          <span class="item-title">등락</span>
+                          <span id="tabMainTy02" class="item-num color--minus">45.62</span>
+                        </div>
+                        <div class="item-main-ty item-main-ty03 clearFix">
+                          <span class="item-title">등락율</span>
+                          <span id="tabMainTy03" class="item-num color--minus">-1.47%</span>
+                        </div>
+                      </div>
+                      <!-- div class="tab-item item-group-det">
+                        <div class="item-det-ty item-det-ty01">
+                          <span class="item-title">상한</span>
+                          <span id="tabDetTy01" class="item-num color--plus">0</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty02">
+                          <span class="item-title">상승</span>
+                          <span id="tabDetTy02" class="item-num color--plus">353</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty03">
+                          <span class="item-title">보합</span>
+                          <span id="tabDetTy03" class="item-num color--middle">81</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty04">
+                          <span class="item-title">하락</span>
+                          <span id="tabDetTy04" class="item-num color--minus">498</span>
+                        </div>
+                        <div class="item-det-ty item-det-ty05">
+                          <span class="item-title">하한</span>
+                          <span id="tabDetTy05" class="item-num color--minus">0</span>
+                        </div>
+                      </div -->
+                      <div class="tab-item item-group-price">
+                        <div class="item-price-ty item-price-ty01">
+                          <span class="item-title">거래량</span>
+                          <span id="tabPriceTy01" class="item-num color--middle">449,846</span>
+                        </div>
+                        <div class="item-price-ty item-price-ty02">
+                          <span class="item-title">거래대금</span>
+                          <span id="tabPriceTy02" class="item-num color--middle">10,076,010</span>
+                        </div>
+                        <div class="item-price-ty item-price-ty03">
+                          <span class="item-title">시가총액</span>
+                          <span id="tabPriceTy03" class="item-num color--middle">3,017,933</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <section class="cont-section market-national-assembly">
+            <div class="section-inner">
+              <div class="section-title clearFix">
+                <h3>NATIONAL ASSEMBLY</h3>
+                <p id="koslyInfoBtn" class="help-btn">
+                  <!-- <a href="javascript:void(0);" class="icon-help-circled-alt">?i</a> -->
+                  <!-- <a href="javascript:void(0);" class="icon--bg icon--bg--help"></a> -->
+                  <a href="#" class="icon--bg icon--bg--help"></a>
+                  <!-- <a href="javascript:void(0);" class="icon--svg icon--svg--help"><img
+                      src="./src/img/icon/icon_help.svg" alt="question icon"></a> -->
+                </p>
+                <div class="section-info">
+                  <span>21.12.08</span>
+                </div>
+              </div>
+              <div class="section-contents">
+                <div class="contents-inner">
+                  <div class="analysis-wrap clearFix">
+                    <div class="analysis-wrap-inner">
+                      <div class="analysis-graph-wrap">
+                        <div class="analysis-graph-inner">
+                          <ul class="graph-list">
+                            <li class="graph-item">
+                              <div id="revIncRelated" class="related-num bg--plus--sub">
+                                <!-- R+ 관련법안 수 -->
+                                <div id="revIncPrime" class="prime-num bg--plus">
+                                  <!-- R+ 유력법안 수 -->
+                                </div>
+                              </div>
+                              <P class="area-info area-info-rp">
+                                <span class="area-name area-rp bg-color--plus">R+</span>
+                                <span class="area-num area-num-rp"><em>2,155</em> / <strong
+                                    class="color--plus">522.5</strong></span>
+                              </P>
+                            </li>
+                            <li class="graph-item">
+                              <div id="revDecRelated" class="related-num bg--minus--sub">
+                                <!-- R- 관련법안 수 -->
+                                <div id="revDecPrime" class="prime-num bg--minus">
+                                  <!-- R- 유력법안 수 -->
+                                </div>
+                              </div>
+                              <P class="area-info area-info-rm">
+                                <span class="area-name area-rm bg-color--minus">R-</span>
+                                <span class="area-num area-num-rm"><em>2,155</em> / <strong
+                                    class="color--minus">151.7</strong></span>
+                              </P>
+                            </li>
+                            <li class="graph-item">
+                              <div id="cosIncRelated" class="related-num bg--minus--sub">
+                                <!-- C+ 관련법안 수 -->
+                                <div id="cosIncPrime" class="prime-num bg--minus">
+                                  <!-- C+ 유력법안 수 -->
+                                </div>
+                              </div>
+                              <P class="area-info area-info-cp">
+                                <span class="area-name area-cp bg-color--minus">C+</span>
+                                <span class="area-num area-num-cp"><em>644</em> / <strong
+                                    class="color--minus">85.7</strong></span>
+                              </P>
+                            </li>
+                            <li class="graph-item">
+                              <div id="cosDecRelated" class="related-num bg--plus--sub">
+                                <!-- C- 관련법안 수 -->
+                                <div id="cosDecPrime" class="prime-num bg--plus">
+                                  <!-- C- 유력법안 수 -->
+                                </div>
+                              </div>
+                              <P class="area-info area-info-cm">
+                                <span class="area-name area-cm bg-color--plus">C-</span>
+                                <span class="area-num area-num-cm"><em>3,655</em> / <strong
+                                    class="color--plus">455.1</strong></span>
+                              </P>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="analysis-field-wrap">
+                        <div class="add-sec-title">
+                          <h4>산업별 법안효과</h4>
+                        </div>
+                        <div class="analysis-field-inner">
+                          <div class="field-top">
+                            <div class="field-title">
+                              표준 산업 분야
+                              <p id="standFieldInfoBtn" class="help-btn">
+                                <a href="#" class="icon--bg icon--bg--help"></a>
+                              </p>
+                            </div>
+                            <p class="field-num">
+                              <span class="field-num-rp color--plus">R+</span>
+                              <span class="field-num-rm color--minus">R-</span>
+                              <span class="field-num-cp color--minus">C+</span>
+                              <span class="field-num-cm color--plus">C-</span>
+                            </p>
+                          </div>
+                          <ul class="field-list">
+                            <li class="field-item field-01">
+                              <a href="#">
+                                <h4 class="field-title">SW 게임</h4>
+                                <span id="field01Ty01" class="field-num-rp color--plus">16</span>
+                                <span id="field01Ty02" class="field-num-rm color--minus">1</span>
+                                <span id="field01Ty03" class="field-num-cp color--minus">0</span>
+                                <span id="field01Ty04" class="field-num-cm color--plus">2</span>
+                              </a>
+                            </li>
+                            <li class="field-item field-02">
+                              <a href="#">
+                                <h4 class="field-title">반도체 및 장비</h4>
+                                <span id="field02Ty01" class="field-num-rp color--plus">16</span>
+                                <span id="field02Ty02" class="field-num-rm color--minus">1</span>
+                                <span id="field02Ty03" class="field-num-cp color--minus">0</span>
+                                <span id="field02Ty04" class="field-num-cm color--plus">2</span>
+                              </a>
+                            </li>
+                            <li class="field-item field-03">
+                              <a href="#">
+                                <h4 class="field-title">화학</h4>
+                                <span id="field03Ty01" class="field-num-rp color--plus">16</span>
+                                <span id="field03Ty02" class="field-num-rm color--minus">1</span>
+                                <span id="field03Ty03" class="field-num-cp color--minus">0</span>
+                                <span id="field03Ty04" class="field-num-cm color--plus">2</span>
+                              </a>
+                            </li>
+                            <li class="field-item field-04">
+                              <a href="#">
+                                <h4 class="field-title">자동차</h4>
+                                <span id="field04Ty01" class="field-num-rp color--plus">16</span>
+                                <span id="field04Ty02" class="field-num-rm color--minus">1</span>
+                                <span id="field04Ty03" class="field-num-cp color--minus">0</span>
+                                <span id="field04Ty04" class="field-num-cm color--plus">2</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="analysis-bill-wrap">
+                        <div class="analysis-bill-topper clearFix">
+                          <h4 class="bill-list-title">관련 법안 목록</h4>
+                          <div class="bill-sort-box">
+                            <p class="sort-current">All</p>
+                            <ul class="sort-list">
+                              <li class="sort-item sort-all">All</li>
+                              <li class="sort-item sort-reve-inc"><a href="#">Revenue Increase</a></li>
+                              <li class="sort-item sort-reve-dec"><a href="#">Revenue Decrease</a></li>
+                              <li class="sort-item sort-cost-inc"><a href="#">Cost Increase</a></li>
+                              <li class="sort-item sort-cost-dec"><a href="#">Cost Decrease</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="analysis-bill-inner">
+                          <ul class="related-bill-list bill-list">
+                            <li class="bill-item">
+                              <div class="bill-top">
+                                <span class="bill-icon revInc">R+</span>
+                                <span class="bill-state">위원회 심사 중</span>
+                                <span class="bill-rate">99.6%</span>
+                                <span class="bill-date">2021.11.19</span>
+                              </div>
+                              <div class="bill-contents">
+                                <a href="./billSubDetail.html">
+                                  <h4 class="bill-title">[2112203]전기통신사업법 일부 개정법률안</h4>
+                                  <p class="bill-drafter">홍정민 의원 등 10인</p>
+                                  <p class="bill-sub-thumb">
+                                    1. 제안 이유 현행법은 중앙행정기관별로 각기 다른 법령으로통해 관리하던 연구개발사업을 통합적, 체계적으로 관리하여 연구현장의 불편을 해소하고 연구자의
+                                    자율성을 높이기 위한
+                                    법률로서, 국가연구개발사업의 추진에 관하여 다른 법률에 우선하여 적용하도록 하고 있음. 그러나 동 법의 시행 이후 인문, 사회 분야 학술지원 사업에
+                                    대한
+                                    동 법의 적용과 관련하여 인문 사회 준야 학술활동의 고유한 특성이 반영될 필요가 있다는
+                                    의견이 제기되고 있음.
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="bill-bottom">
+                                <p class="detail-link"><a href="./billSubDetail.html">제안 이유 및 주요 내용</a></p>
+                                <div class="bill-rate">
+                                  <span>---</span>
+                                  <strong>-----</strong>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="bill-item">
+                              <div class="bill-top">
+                                <span class="bill-icon cosInc">C+</span>
+                                <span class="bill-state">위원회 심사 중</span>
+                                <span class="bill-rate">95.2%</span>
+                                <span class="bill-date">2021.11.19</span>
+                              </div>
+                              <div class="bill-contents">
+                                <a href="./billSubDetail.html">
+                                  <h4 class="bill-title">[2112203]전기통신사업법 일부 개정법률안</h4>
+                                  <p class="bill-drafter">홍정민 의원 등 10인</p>
+                                  <p class="bill-sub-thumb">
+                                    1. 제안 이유 현행법은 중앙행정기관별로 각기 다른 법령으로통해 관리하던 연구개발사업을 통합적, 체계적으로 관리하여 연구현장의 불편을 해소하고 연구자의
+                                    자율성을 높이기 위한
+                                    법률로서, 국가연구개발사업의 추진에 관하여 다른 법률에 우선하여 적용하도록 하고 있음. 그러나 동 법의 시행 이후 인문, 사회 분야 학술지원 사업에
+                                    대한
+                                    동 법의 적용과 관련하여 인문 사회 준야 학술활동의 고유한 특성이 반영될 필요가 있다는
+                                    의견이 제기되고 있음.
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="bill-bottom">
+                                <p class="detail-link"><a href="./billSubDetail.html">제안 이유 및 주요 내용</a></p>
+                                <div class="bill-rate">
+                                  <span>---</span>
+                                  <strong>-----</strong>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="bill-item">
+                              <div class="bill-top">
+                                <span class="bill-icon revInc">R+</span>
+                                <span class="bill-state">위원회 심사 중</span>
+                                <span class="bill-rate">92.7%</span>
+                                <span class="bill-date">2021.11.19</span>
+                              </div>
+                              <div class="bill-contents">
+                                <a href="./billSubDetail.html">
+                                  <h4 class="bill-title">[2112203]전기통신사업법 일부 개정법률안</h4>
+                                  <p class="bill-drafter">홍정민 의원 등 10인</p>
+                                  <p class="bill-sub-thumb">
+                                    1. 제안 이유 현행법은 중앙행정기관별로 각기 다른 법령으로통해 관리하던 연구개발사업을 통합적, 체계적으로 관리하여 연구현장의 불편을 해소하고 연구자의
+                                    자율성을 높이기 위한
+                                    법률로서, 국가연구개발사업의 추진에 관하여 다른 법률에 우선하여 적용하도록 하고 있음. 그러나 동 법의 시행 이후 인문, 사회 분야 학술지원 사업에
+                                    대한
+                                    동 법의 적용과 관련하여 인문 사회 준야 학술활동의 고유한 특성이 반영될 필요가 있다는
+                                    의견이 제기되고 있음.
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="bill-bottom">
+                                <p class="detail-link"><a href="./billSubDetail.html">제안 이유 및 주요 내용</a></p>
+                                <div class="bill-rate">
+                                  <span>---</span>
+                                  <strong>-----</strong>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="bill-item">
+                              <div class="bill-top">
+                                <span class="bill-icon cosDec">C-</span>
+                                <span class="bill-state">위원회 심사 중</span>
+                                <span class="bill-rate">83.1%</span>
+                                <span class="bill-date">2021.11.19</span>
+                              </div>
+                              <div class="bill-contents">
+                                <a href="./billSubDetail.html">
+                                  <h4 class="bill-title">[2112203]전기통신사업법 일부 개정법률안</h4>
+                                  <p class="bill-drafter">홍정민 의원 등 10인</p>
+                                  <p class="bill-sub-thumb">
+                                    1. 제안 이유 현행법은 중앙행정기관별로 각기 다른 법령으로통해 관리하던 연구개발사업을 통합적, 체계적으로 관리하여 연구현장의 불편을 해소하고 연구자의
+                                    자율성을 높이기 위한
+                                    법률로서, 국가연구개발사업의 추진에 관하여 다른 법률에 우선하여 적용하도록 하고 있음. 그러나 동 법의 시행 이후 인문, 사회 분야 학술지원 사업에
+                                    대한
+                                    동 법의 적용과 관련하여 인문 사회 준야 학술활동의 고유한 특성이 반영될 필요가 있다는
+                                    의견이 제기되고 있음.
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="bill-bottom">
+                                <p class="detail-link"><a href="./billSubDetail.html">제안 이유 및 주요 내용</a></p>
+                                <div class="bill-rate">
+                                  <span>---</span>
+                                  <strong>-----</strong>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="list-more-btn">
+                          <button>+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  </div>
+
+  <script src='./src/js/jquery-3.5.1.js'></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>

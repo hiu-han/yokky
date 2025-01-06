@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pol:STOCK">
+  <meta property="og:url" content="http://www.p2s.co.kr">
+  <meta property="og:description" content="Polish to Stock">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./src/img/icon/favicon.png">
+  <title>Pol:STOCK</title>
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+
+  <style>
+    header {
+      /* position: absolute; */
+    }
+
+    header>.header-inner {
+      /* background-color: unset !important; */
+      background-color: rgba(245, 205, 73, 0.8);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      /* background-color: #F5C341 !important; */
+      /* border: 1px solid #e9c469; */
+      border-bottom: 1px solid #f3c550;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header"></div>
+
+    <div id="main" class="home-page">
+      <div class="page-inner">
+        <div class="contents-area site-banner">
+          <section class="main-banner">
+            <div class="banner-container">
+              <h2 class="blind">Main banner</h2>
+              <div class="banner-wrap">
+                <article class="banner-item">
+                  <div class="banner-title-wrap">
+                    <h3 class="banner-title">They are moving your CHEESE</h3>
+                    <div class="banner-title-sub">관련 법안을 <b>한눈에</b>, Pol:STOCK으로 <b>예측을 쉽고 빠르게</b></div>
+                    <p id="servBeginBtn" class="banner-btn"><a href="./login.html">서비스 시작하기</a></p>
+                  </div>
+                  <div class="banner-area">
+                    <div class="img-wrap">
+                      <div class="img-bg-wrap">
+                        <p class="img-bg bg-big01"></p>
+                        <p class="img-bg bg-mid01"></p>
+                        <p class="img-bg bg-mid02"></p>
+                        <p class="img-bg bg-sm01"></p>
+                      </div>
+                      <span class="img-box cheese-box">
+                        <img src="./src/img/main/cheese.png" alt="cheese img">
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="contens-area site-main-contents">
+          <section class="service-info">
+
+          </section>
+
+          <section class="service-recommend">
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src='./src/js/jquery-3.5.1.js'></script>
+  <script src="src/js/include.js"></script>
+  <script src="src/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      function indexHeaderHandler() {
+        $(".header-inner").addClass("index");
+      }
+      indexHeaderHandler();
+    })
+  </script>
+</body>
+
+</html>

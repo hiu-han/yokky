@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pol:STOCK">
+  <meta property="og:url" content="http://www.p2s.co.kr">
+  <meta property="og:description" content="Polish to Stock">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./src/img/icon/favicon.png">
+  <title>Pol:STOCK</title>
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="main" class="login-page">
+      <div class="page-inner">
+        <div class="contents-area login-area">
+          <section class="cont-section login-section">
+            <div class="login-wrap">
+              <div class="login_box">
+                <div class="login_box_inner clearFix">
+                  <h3 class="logo_title"><a href="./index.html"><img src="./src/img/common/logo.svg" alt=""></a></h3>
+                  <div class="login_form">
+                    <form name='login_form' method='post' action="#">
+                      <fieldset>
+                        <legend class='blind'>로그인 폼</legend>
+                        <ul>
+                          <li><input type="text" id='login_id' name='login_id' class='input-email'
+                              placeholder='아이디를 입력해주세요'></li>
+                          <li><input type="password" id='login_pass' class='input-pw' placeholder='비밀번호를 입력해주세요'></li>
+                        </ul>
+                        <div id="login-btn"><a href="#" class='btn'>로그인</a></div>
+                      </fieldset>
+                    </form>
+                  </div>
+                  <div class="info_user">
+                    <span class='go_join'><a href="./join.html">회원가입</a></span>
+                    <span class='go_find_pw'><a href="./find_pw.html">비밀번호 찾기</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src='./src/js/jquery-3.5.1.js'></script>
+  <script src="src/js/include.js"></script>
+  <script src="src/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      function indexHeaderHandler() {
+        $(".header-inner").addClass("index");
+      }
+      indexHeaderHandler();
+    })
+  </script>
+</body>
+
+</html>
