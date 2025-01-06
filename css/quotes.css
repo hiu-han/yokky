@@ -1,0 +1,32 @@
+#quote {
+  width: 40vw;
+  max-width: 450px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+}
+#quote > span {
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+#quote > span:first-of-type {
+  display: block;
+  margin-bottom: 14px;
+}
+#quote > span:last-of-type {
+  position: relative;
+  padding-left: 10px;
+  font-style: italic;
+}
+#quote > span:last-of-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}

@@ -1,0 +1,20 @@
+#weather {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+#weather > span {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+#weather > span:first-child {
+  position: relative;
+  padding-right: 13px;
+  font-size: 30px;
+}
+#weather > span:nth-child(2) {
+  display: block;
+}
