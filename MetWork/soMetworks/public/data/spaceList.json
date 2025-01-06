@@ -1,0 +1,64 @@
+{
+  "spaceList": {
+    "spaceFocusA": {
+      "name": "focus A 공간",
+      "price": "12,000",
+      "tag": ["1~8인", "회의 공간", "집중형", "대형모니터"]
+    },
+    "spaceFocusB": {
+      "name": "Focus B 공간",
+      "price": "5,000",
+      "tag": ["1인실", "집중형"]
+    },
+    "spaceFocusC": {
+      "name": "Focus C 공간",
+      "price": "6,000",
+      "tag": ["1~8인", "회의 공간", "집중형", "대형모니터"]
+    },
+    "spaceTrainingA": {
+      "name": "Training A 공간",
+      "price": "25,000",
+      "tag": ["1~22인", "교육 공간", "교육형"]
+    },
+    "spaceTrainingB": {
+      "name": "Training B 공간",
+      "price": "18,000",
+      "tag": ["1~12인", "교육 공간", "교육형"]
+    },
+    "spaceTrainingAB": {
+      "name": "Training A + B 공간",
+      "price": "12,000",
+      "tag": ["1~34인", "교육 공간", "특수 교육형"]
+    },
+    "spaceFGM": {
+      "name": "FGM",
+      "price":"15,000",
+      "tag": ["1~8인", "회의 공간", "집중형", "관찰형", "대형모니터"]
+    },
+    "spaceFGD": {
+      "name": "FGD",
+      "price": "18,000",
+      "tag": ["1~10인", "회의 공간", "집중형", "관찰형", "대형모니터"]
+    },
+    "spaceM1": {
+      "name": "M1 공간",
+      "price": "7,000",
+      "tag": ["1~8인", "회의 공간", "집중형", "대형모니터"]
+    },
+    "spaceM2": {
+      "name": "M2 공간",
+      "price": "7,000",
+      "tag": ["1~8인", "회의 공간", "집중형", "대형모니터"]
+    },
+    "spaceOpen": {
+      "name": "Open 공간",
+      "price": "18,000",
+      "tag": ["1~6인", "다목적 공간", "집중형", "대형모니터"]
+    },
+    "spaceWzone": {
+      "name": "Work 공강",
+      "price": "1,500",
+      "tag": ["1인", "다목적 사무공간", "오픈형", "모니터"]
+    }
+  }
+}

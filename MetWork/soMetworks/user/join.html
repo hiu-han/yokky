@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mets">
+  <meta property="og:url" content="http://www.mets.co.kr">
+  <meta property="og:description" content="Mets">
+  <meta property="og:image" content="../public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="../public/img/icon/favicon.png">
+  <title>Metworks|공유오피스</title>
+
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="main" class="join-page container-page">
+      <div class="wrapper">
+        <section class="login__container">
+          <div class="section__inner">
+            <h3 class="section-title blind">가압하기</h3>
+            <div class="section__content">
+              <div class="content--head">
+                <p class="link-item goBack">
+                  <a href="./login.html">돌아가기</a>
+                </p>
+                <h4 class="logo container-logo">
+                  <a href="../index.html">
+                    <span class="txt--strong">Metworks</span>
+                    <span class="txt--regular">공유오피스</span>
+                  </a>
+                </h4>
+              </div>
+
+              <div class="content--body">
+                <div class="login__box">
+                  <h4 class="box-title">회원가입</h4>
+                  <span class="txt-info">* 표시 항목은 필수 입력사항입니다</span>
+                  <form action="">
+                    <fieldset>
+                      <legend class="blind">가입정보입력</legend>
+                      <div class="input__wrap input-join">
+                        <p class="input-item name">
+                          <label class="input-label">
+                            <input type="text" placeholder="이름 *" required>
+                          </label>
+                          <!-- .txt-add // '가입하기' 누를 때, 미입력상태인 경우 .alert를 추가하여 활성화 -->
+                          <span class="txt-add alert">필수 입력사항입니다.</span>
+                        </p>
+                        <p class="input-item phoneNum">
+                          <label class="input-label">
+                            <input type="tel" placeholder="휴대전화번호 *" required>
+                          </label>
+                          <button class="input-btn">인증번호</button>
+                          <span class="txt-add">휴대전화번호를 인증해 주세요.</span>
+                        </p>
+                        <p class="input-item phoneNumChk nowOn">
+                          <label class="input-label">
+                            <input type="number" placeholder="인증번호 *" required>
+                            <!-- .tiem-count // .nowOn을 추가해서 활성화 -->
+                            <span class="time-count nowOn">00:00</span>
+                          </label>
+                          <button class="input-btn">확인</button>
+                        </p>
+                        <p class="input-item pw">
+                          <label class="input-label">
+                            <input type="password" placeholder="비밀번호 *" required>
+                            <span class="hint-txt">숫자, 영문 포함 6자리 이상</span>
+                          </label>
+                          <span class="txt-add">비밀번호 형식을 확인해 주세요.</span>
+                        </p>
+                        <p class="input-item pwChk">
+                          <label class="input-label">
+                            <input type="password" placeholder="비밀번호 재입력 *" required>
+                          </label>
+                          <span class="txt-add">비밀번호를 확인해 주세요.</span>
+                        </p>
+                        <p class="input-item email">
+                          <label class="input-label">
+                            <input type="email" placeholder="이메일 주소 *" required>
+                          </label>
+                          <span class="txt-add">이메일 형식을 확인해 주세요.</span>
+                        </p>
+                        <p class="input-item job halfWidth">
+                          <label class="input-label">
+                            <input type="text" placeholder="직업">
+                          </label>
+                        </p>
+                        <p class="input-item group halfWidth">
+                          <label class="input-label">
+                            <input type="text" placeholder="회사·단체명">
+                          </label>
+                        </p>
+                      </div>
+
+                      <div class="accept-input">
+                        <p class="accept-item personalInfo">
+                          <label class="input-item">
+                            <input type="checkbox" checked>
+                            <span class="input-label">개인정보 제공 동의</span>
+                          </label>
+                          <a href="#" id="callPersonalPolicy"><span>자세히 보기</span></a>
+                        </p>
+                        <p class="accept-item usingService">
+                          <label class="input-item">
+                            <input type="checkbox">
+                            <span class="input-label">서비스 이용약관 동의</span>
+                          </label>
+                          <a href="#" id="callServicePolicy">자세히 보기</a>
+                        </p>
+                      </div>
+
+                      <div class="submit-btn__wrap">
+                        <p class="link-btn goBack">
+                          <a href="./login.html">취소</a>
+                        </p>
+                        <input type="submit" class="submit-join" value="가입하기">
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+              <!-- 
+              <div class="content--foot">
+                <div class="login-link__wrap">
+                  <a href="./find_pw.html" class="link-item findPw">비밀번호 찾기</a>
+                  <a href="./join.html" class="link-item join">가입하기</a>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <div id="fAside"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../public/js/jquery-3.5.1.js"></script>
+  <script src="../public/js/include.js"></script>
+  <script src="../public/js/modal.js"></script>
+</body>
+
+</html>

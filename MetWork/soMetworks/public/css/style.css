@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import url('./reset.css');
+@import url('./font.css');
+@import url('./common.css');
+@import url('./layout.css');
+@import url('./base.css');
+@import url('./modal.css');
+
+/** FONT 사용
+main: Pretendard 14px
+**/
+
+/** className 표기
+.mentioned-keyword {
+  .mentioned-keyword__wrap {
+    .mentioned-keyword__list {
+      .mentioned-keyword__item {
+        .mentioned-keyword__num {}
+        .mentioned-keyword__text {
+          .mentioned-keyword__date.date--start {}
+          .mentioned-keyword__date.date--end {}
+        }
+        .mentioned-keyword__icon.icon--cat {}
+        .mentioned-keyword__icon.icon--dog {}
+        .mentioned-keyword__icon.icon--lion {}
+      }
+    }
+  }
+}
+
+<li class="banner__item nowOn"></li>
+**/
+
+/** ID 표기
+#mentKwrdDate
+#mentKwrdText
+**/
+
+/***------------------ common.css  START ------------------***/
+/*** COMMON ***/
+
+/***------------------ common.css  END ------------------***/
+
+/***------------------ layout.css  START ------------------***/
+/*** HEADER ***/
+/** HEADER -> logo **/
+/** HEADER -> nav **/
+/*** FOOTER ***/
+/***------------------ layout.css  END ------------------***/
+
+/***------------------ main.css  START ------------------***/
+/*** COMMON ***/
+/*** MAIN ***/
+/***------------------ main.css  END ------------------***/
+
+/***------------------ modal.css  START ------------------***/
+
+/***------------------ modal.css  END ------------------***/

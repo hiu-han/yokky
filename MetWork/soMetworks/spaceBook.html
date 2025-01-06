@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Metworks">
+  <meta property="og:url" content="http://www.metworks.co.kr">
+  <meta property="og:description" content="Metworks">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
+  <title>Metworks|공유오피스</title>
+
+  <script src="public/js/jquery-3.5.1.js"></script>
+  <link rel="stylesheet" href="public/css/style.css">
+
+  <style>
+    #primary-menu>.gnb__item#menu--book>a {
+      color: #212121;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header"></div>
+
+    <div id="main" class="contents-page space-book">
+      <div class="wrapper">
+        <section class="page-top">
+          <div class="section__inner">
+            <h3 class="page-title">예약하기</h3>
+          </div>
+        </section>
+
+        <section class="page-content content--space-book">
+          <div class="section__inner">
+            <h4 class="section-title blind">예약하기</h4>
+            <div class="section-content">
+              <div class="content--head">
+                <span class="txt-info">온라인 및 현장 예약 모두 가능합니다.<br>
+                  <strong>월·분기 예약, 세금계산서</strong>가 필요한 경우 <strong>전화 또는 이메일 문의</strong> 바랍니다.</span>
+              </div>
+
+              <div class="content--body">
+                <div class="bg-box" id="bgSpaceSelector"></div>
+                <div class="book--space-select">
+                  <h4 class="box-title">이용할 공간 선택</h4>
+                  <div class="btn btn--cls"><button>X</button></div>
+                  <div class="space-info__wrap bookFocusA">
+                    <!-- .space-select__wrap에서 선택한 공간의 사진과 정보가 노출됨 -->
+                    <p class="space-info--image">
+                      <span class="img-box"></span>
+                    </p>
+                    <div class="space-info--text">
+                      <!-- <span class="people-num">1~8인 이용</span> -->
+                      <h5 class="space-name">Focus A 공간</h5>
+                      <ul class="space-keyword__list">
+                        <li class="space-keyword__item">1~7인</li>
+                        <li class="space-keyword__item">회의공간</li>
+                        <li class="space-keyword__item">집중형</li>
+                        <li class="space-keyword__item">대형모니터</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="space-select__wrap">
+                    <h5 class="wrap-title">이용할 공간을 선택해주세요.</h5>
+                    <!-- 원하는 룸을 선택하는 곳. 버튼으로 구성되어있지만 평면도로 맵핑할 예정 -->
+                    <ul class="space-btn__list">
+                      <!-- .space-btn // 원하는 룸의 버튼을 click하면 .selected가 추가되어 활성화
+                            -> 상단의 .space-info--image에 선택한 룸의 이름을 class명으로 추가. -->
+                      <li id="bookFocusA" class="space-btn selected"><button>Focus A</button></li>
+                      <li id="bookFocusB" class="space-btn"><button>Focus B</button></li>
+                      <li id="bookFocusC" class="space-btn"><button>Focus C</button></li>
+                      <li id="bookTrainingA" class="space-btn"><button>Training A</button></li>
+                      <li id="bookTrainingB" class="space-btn"><button>Training B</button></li>
+                      <!-- <li id="bookTrainingAB" class="space-btn"><button>Training A+B</button></li> -->
+                      <li id="bookFGM" class="space-btn"><button>FGM</button></li>
+                      <li id="bookFGD" class="space-btn"><button>FGD</button></li>
+                      <li id="bookM1" class="space-btn"><button>M1</button></li>
+                      <li id="bookM2" class="space-btn"><button>M2</button></li>
+                      <li id="bookOpen" class="space-btn"><button>Open Zone</button></li>
+                      <li id="bookW-01" class="space-btn"><button>W01</button></li>
+                      <li id="bookW-02" class="space-btn"><button>W02</button></li>
+                      <li id="bookW-03" class="space-btn"><button>W03</button></li>
+                      <li id="bookW-04" class="space-btn"><button>W04</button></li>
+                      <li id="bookW-05" class="space-btn"><button>W05</button></li>
+                      <li id="bookW-06" class="space-btn"><button>W06</button></li>
+                      <li id="bookW-07" class="space-btn"><button>W07</button></li>
+                      <li id="bookW-08" class="space-btn"><button>W08</button></li>
+                      <li id="bookW-09" class="space-btn"><button>W09</button></li>
+                      <li id="bookW-10" class="space-btn"><button>W10</button></li>
+                      <li id="bookW-11" class="space-btn"><button>W11</button></li>
+                      <li id="bookW-12" class="space-btn"><button>W12</button></li>
+                      <li id="bookW-13" class="space-btn"><button>W13</button></li>
+                      <li id="bookW-14" class="space-btn"><button>W14</button></li>
+                      <li id="bookW-15" class="space-btn"><button>W15</button></li>
+                    </ul>
+                  </div>
+
+                  <div class="space-select-btn__wrap">
+                    <div class="btn btn-confirm"><button>선택하기</button></div>
+                  </div>
+                </div>
+
+                <div class="book--info-select">
+                  <form action="">
+                    <div class="book-input__wrap">
+                      <fieldset>
+                        <legend class="blind">예약 정보 입력</legend>
+                        <div class="book-input spaceName">
+                          <h6 class="book-input--name">대여 공간</h6>
+                          <p class="input-item" id="callSpaceSelector">
+                            <span class="item-space">Open형 공간</span>
+                            <span class="item-price"><em>시간당</em><strong>10,000</strong><em>원</em></span>
+                          </p>
+                        </div>
+
+                        <div class="book-input useWhen">
+                          <div class="book-input--head">
+                            <div class="head-tap__wrap">
+                              <ul class="head-tap__list">
+                                <li class="head-tap__item">
+                                  <p class="head-tap">시간별</p>
+                                </li>
+                                <li class="head-tap__item nowOn">
+                                  <p class="head-tap">기간별</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="book-input--body">
+                            <div class="book-input__sub useDaily">
+                              <div class="book-input__item useDate">
+                                <h6 class="book-input--name">이용 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date">
+                                </label>
+                              </div>
+                              <div class="book-input__item useTime">
+                                <h6 class="book-input--name">이용 시간 선택</h6>
+                                <label class="input-item" id="timeSelector">
+                                  <input type="text" placeholder="이용 시간을 선택해주세요">
+                                </label>
+                              </div>
+                            </div>
+                            <div class="book-input__sub useMonthly nowOn">
+                              <div class="book-input__item useDayStart">
+                                <h6 class="book-input--name">시작 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date" id="startDate" onchange="handleStartDateChange()"
+                                    pattern="\d{4}-\d{2}-\d{2}">
+                                </label>
+                              </div>
+                              <div class="book-input__item useDayEnd">
+                                <h6 class="book-input--name">종료 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date" id="endDate" onchange="calculateTotal()"
+                                    pattern="\d{4}-\d{2}-\d{2}">
+                                </label>
+                              </div>
+                              <!-- <div class="btn--calc" onclick="calculateTotal()">계산</div> -->
+                              <!-- 임시 버튼 // call #modalCostWzone -->
+                              <p class="btn btn--modal">
+                                <button id="callCostWzone">열기</button>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="book-input optionSelect">
+                          <h6 class="book-input--name">장비 대여 및 옵션</h6>
+                          <div class="input-item">
+                            <div class="option-select select--book-option">
+                              <p class="option-slected" id="bookOptionSelected">없음</p>
+                              <ul class="option__list">
+                                <li class="option__item">없음</li>
+                                <li class="option__item">모니터</li>
+                                <li class="option__item">노트북</li>
+                                <li class="option__item">스캐너</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book-input purpose">
+                          <h6 class="book-input--name">이용 목적</h6>
+                          <label class="input-item">
+                            <input type="text" placeholder="예) 업무, 교육, 스터디 등">
+                          </label>
+                        </div>
+                        <div class="book-input enterPw">
+                          <h6 class="book-input--name">출입 비밀번호</h6>
+                          <label class="input-item">
+                            <input type="password" placeholder="숫자 4자리를 입력해주세요">
+                          </label>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="book-total__wrap days">
+                      <h5 class="wrap-title">결제 정보</h5>
+                      <ul class="book-total__list">
+                        <li class="book-total__item spacePrice">
+                          <span class="item--name">총 이용 일수</span>
+                          <span class="item--num" id="totalDayCount"></span>
+                        </li>
+                        <li class="book-total__item totalTime">
+                          <span class="item--name">기간별 이용 현황(임시)</span>
+                          <span class="item--num" id="totalDays"></span>
+                        </li>
+                        <li class="book-total__item totalPrice">
+                          <span class="item--name">총 이용 금액</span>
+                          <span class="item--num" id="totalDayCharge"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- <div class="book-total__wrap">
+                      <h5 class="wrap-title">결제 정보</h5>
+                      <ul class="book-total__list">
+                        <li class="book-total__item spacePrice">
+                          <span class="item--name">시간당 대여 금액</span>
+                          <span class="item--num">10,000<em>원</em></span>
+                        </li>
+                        <li class="book-total__item totalTime">
+                          <span class="item--name">총 이용 시간</span>
+                          <span class="item--num">5<em>시간</em></span>
+                        </li>
+                        <li class="book-total__item optionPrice">
+                          <span class="item--name">옵션 금액</span>
+                          <span class="item--num">0<em>원</em></span>
+                        </li>
+                        <li class="book-total__item totalPrice">
+                          <span class="item--name">총 이용 금액</span>
+                          <span class="item--num">50,000<em>원</em></span>
+                        </li>
+                      </ul>
+                    </div> -->
+
+                    <div class="book-submit__wrap">
+                      <fieldset>
+                        <legend class="blind">예약하기</legend>
+                        <div class="accept-input">
+                          <p class="accept-item damaged">
+                            <label class="input-item">
+                              <input type="checkbox">
+                              <span class="input-label">시설 파손 시 배상에 대한 동의</span>
+                            </label>
+                            <!-- <a href="link-area"><span>자세히 보기</span></a> -->
+                          </p>
+                        </div>
+                        <p class="btn confirm">
+                          <!-- onclick // 작업을 위해 임시로 넣어둠! -->
+                          <button onclick="window.open('./bookedInfo.html','_blink');">예약하기</button>
+                        </p>
+                      </fieldset>
+                    </div>
+                  </form>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <div id="aside"></div>
+  </div>
+
+  <script src="./public/js/jquery-3.5.1.js"></script>
+  <script src="./public/js/include.js"></script>
+  <script src="./public/js/index.js"></script>
+  <script src="./public/js/modal.js"></script>
+
+  <script>
+
+    const startDateInput = document.getElementById("startDate");
+    const endDateInput = document.getElementById("endDate");
+
+    // const startDate = new Date(startDateInput.value);
+    // const endDate = new Date(endDateInput.value);
+
+    function handleStartDateChange() {
+      const startDate = new Date(startDateInput.value);
+      const endDate = new Date(endDateInput.value);
+
+      const minEndDate = new Date(startDate.getTime() + (29 * 24 * 60 * 60 * 1000));
+      if (endDate < minEndDate) {
+        endDateInput.value = "";
+      }
+
+      if (endDate < startDate) {
+        endDateInput.value = startDateInput.value;
+      }
+
+      endDateInput.min = minEndDate.toISOString().slice(0, 10);
+    }
+
+    function calculateTotal() {
+      if (startDateInput.value === '') {
+        alert('시작 날짜를 선택해 주세요.');
+      } else {
+        const calculateDateDifference = function () {
+          // const startDateInput = document.getElementById("startDate");
+          // const endDateInput = document.getElementById("endDate");
+
+          const startDate = new Date(startDateInput.value);
+          const endDate = new Date(endDateInput.value);
+
+          const timeDifference = endDate.getTime() - startDate.getTime();
+          days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+          console.log("일 수 차이: " + days);
+          console.log(startDateInput.value);
+          console.log(endDateInput.value);
+
+          return days++;
+        }
+        let day = calculateDateDifference();
+        console.log(days);
+
+        ///////////////////////////////////
+
+        function calculateDivision(number, a, b) {
+          const resultA = Math.floor(number / a);
+          const remainderA = number % a;
+
+          const resultB = Math.floor(remainderA / b);
+          const remainderB = remainderA % b;
+
+          return {
+            resultA,
+            remainderA,
+            resultB,
+            remainderB
+          };
+        }
+
+        // const number = 150; // 변수로 지정된 숫자
+        // const a = 30; // 상수 a
+        // const b = 7; // 상수 b
+        // const number = days;
+        const numM = 30; // 상수 a
+        const numW = 7; // 상수 b
+
+        const { resultA, remainderA, resultB, remainderB } = calculateDivision(days, numM, numW);
+
+        const costM = 270000,
+          costW = 69000,
+          costD = 11000;
+
+        const totalDayCharge = resultA * costM + resultB * costW + costD * remainderB;
+        const totalDayResult = totalDayCharge.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+        console.log("resultA:", resultA);
+        console.log("remainderA:", remainderA);
+        console.log("resultB:", resultB);
+        console.log("remainderB:", remainderB);
+        console.log(`${totalDayCharge}원`);
+
+        const $totalDayCount = document.getElementById('totalDayCount'),
+          $totalDays = document.getElementById('totalDays'),
+          $totalDayCharge = document.getElementById('totalDayCharge');
+
+        $totalDayCount.innerText = `${days}일`;
+        $totalDays.innerText = `월(30일 기준) : ${resultA} / 주 : ${resultB} / 일 : ${remainderB}`;
+        $totalDayCharge.innerText = `${totalDayResult}원`;
+      }
+    }
+  </script>
+</body>
+
+</html>

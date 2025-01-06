@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Metworks">
+  <meta property="og:url" content="http://www.metworks.co.kr">
+  <meta property="og:description" content="Metworks">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
+  <title>Metworks | 공유오피스</title>
+
+  <link rel="stylesheet" href="public/css/style.css">
+
+  <style>
+    .contents-page.space-info #primary-menu>.gnb__item#menu--info>a {
+      color: #212121;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header"></div>
+
+    <div id="main" class="history">
+      <div class="wrapper">
+        <section class="page-top">
+          <div class="section__inner">
+            <h3 class="page-title">예약내역</h3>
+            <div class="page-options">
+              <div class="select__wrap select--book-state">
+                <select name="" id="bookStateSelect">
+                  <option value="">전체</option>
+                  <option value="">예약 완료</option>
+                  <option value="">예약 취소</option>
+                  <option value="">이용 완료</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 예약 내역 카드 샘플 | 예약 일시 구조 수정 테스트 -->
+        <section class="book-check__container">
+          <div class="section__inner">
+            <h3 class="section-title blind">예약 내역</h3>
+            <div class="section__content">
+              <div class="content--head">
+                <p class="booked-date">2023. 3. 1</p>
+                <!-- .badge-status // 상태에따라 .used, .canceled, .booked 세가지의 class명을 추가 함. -->
+                <p class="badge badge--status booked">예약 완료</p>
+              </div>
+
+              <div class="content--body">
+                <div class="booked-info__box">
+                  <div class="seleced-info__wrap">
+                    <h5 class="wrap-title">예약 정보</h5>
+                    <ul class="booked-info__list selectedInfo">
+                      <li class="booked-info__item spaceName">
+                        <span class="item--name">대여공간</span>
+                        <span class="item--num">Focus A 공간</span>
+                      </li>
+                      <li class="booked-info__item useWhen">
+                        <span class="item--name">이용 일시</span>
+                        <ul class="info-sub__list">
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                          <li class="info-sub__item">
+                            <span class="item--num">2023.09.18 9:00~23:00</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <!-- li class="booked-info__item useDate">
+                        <span class="item--name">이용 날짜</span>
+                        <span class="item--num"><em class="y">2023</em>년<em class="m">3</em>월<em
+                            class="d">1</em>일</span>
+                      </li>
+                      <li class="booked-info__item useTime">
+                        <span class="item--name">이용 시간</span>
+                        <span class="item--num"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                      </li -->
+                      <li class="booked-info__item selectedOption">
+                        <span class="item--name">장비 대여 및 옵션</span>
+                        <span class="item--num">-</span>
+                      </li>
+                      <li class="booked-info__item spacePw">
+                        <span class="item--name">출입 비밀번호</span>
+                        <span class="item--num">0304</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="cost-info__wrap">
+                    <h5 class="wrap-title">결제 정보</h5>
+                    <ul class="booked-info__list costInfo">
+                      <li class="booked-info__item totalTime">
+                        <span class="item--name">총 이용 시간</span>
+                        <span class="item--num"><em class="h">5</em>시간</span>
+                      </li>
+                      <li class="booked-info__item totalPrice">
+                        <span class="item--name">총 이용 금액</span>
+                        <span class="item--num"><em class="price">50,000</em>원</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content--foot">
+                <div class="foot-btn__wrap">
+                  <button class="btn--cancel-res"">예약취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 예약 내역 카드 샘플 | 예약 완료 -->
+        <section class=" book-check__container">
+                    <div class="section__inner">
+                      <h3 class="section-title blind">예약 내역</h3>
+                      <div class="section__content">
+                        <div class="content--head">
+                          <p class="booked-date">2023. 3. 1</p>
+                          <!-- .badge-status // 상태에따라 .used, .canceled, .booked 세가지의 class명을 추가 함. -->
+                          <p class="badge badge--status booked">예약 완료</p>
+                        </div>
+
+                        <div class="content--body">
+                          <div class="booked-info__box">
+                            <div class="seleced-info__wrap">
+                              <h5 class="wrap-title">예약 정보</h5>
+                              <ul class="booked-info__list selectedInfo">
+                                <li class="booked-info__item spaceName">
+                                  <span class="item--name">대여공간</span>
+                                  <span class="item--num">Focus A 공간</span>
+                                </li>
+                                <li class="booked-info__item useWhen">
+                                  <span class="item--name">이용 일시</span>
+                                  <div class="item__sub">
+                                    <span class="item--num">
+                                      <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                          class="d">1</em></span>
+                                      <span class="num--time"><em class="start">10:00</em>~<em
+                                          class="end">15:00</em></span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <!-- li class="booked-info__item useDate">
+                        <span class="item--name">이용 날짜</span>
+                        <span class="item--num"><em class="y">2023</em>년<em class="m">3</em>월<em
+                            class="d">1</em>일</span>
+                      </li>
+                      <li class="booked-info__item useTime">
+                        <span class="item--name">이용 시간</span>
+                        <span class="item--num"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                      </li -->
+                                <li class="booked-info__item selectedOption">
+                                  <span class="item--name">장비 대여 및 옵션</span>
+                                  <span class="item--num">-</span>
+                                </li>
+                                <li class="booked-info__item spacePw">
+                                  <span class="item--name">출입 비밀번호</span>
+                                  <span class="item--num">0304</span>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="cost-info__wrap">
+                              <h5 class="wrap-title">결제 정보</h5>
+                              <ul class="booked-info__list costInfo">
+                                <li class="booked-info__item totalTime">
+                                  <span class="item--name">총 이용 시간</span>
+                                  <span class="item--num"><em class="h">5</em>시간</span>
+                                </li>
+                                <li class="booked-info__item totalPrice">
+                                  <span class="item--name">총 이용 금액</span>
+                                  <span class="item--num"><em class="price">50,000</em>원</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="content--foot">
+                          <div class="foot-btn__wrap">
+                            <button class="btn--cancel-res"">예약취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 예약 내역 카드 샘플 | 예약 취소 -->
+        <section class=" book-check__container">
+                              <div class="section__inner">
+                                <h3 class="section-title blind">예약 내역</h3>
+                                <div class="section__content">
+                                  <div class="content--head">
+                                    <p class="booked-date">2023.3.1</p>
+                                    <!-- .badge-status // 상태에따라 .used, .canceled, .booked 세가지의 class명을 추가 함. -->
+                                    <p class="badge badge--status canceled">예약 취소</p>
+                                  </div>
+
+                                  <div class="content--body">
+                                    <div class="booked-info__box">
+                                      <div class="seleced-info__wrap">
+                                        <h5 class="wrap-title">예약 정보</h5>
+                                        <ul class="booked-info__list selectedInfo">
+                                          <li class="booked-info__item spaceName">
+                                            <span class="item--name">대여공간</span>
+                                            <span class="item--num">Focus A 공간</span>
+                                          </li>
+                                          <li class="booked-info__item useWhen">
+                                            <span class="item--name">이용 일시</span>
+                                            <div class="item__sub">
+                                              <span class="item--num">
+                                                <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                                    class="d">1</em></span>
+                                                <span class="num--time"><em class="start">10:00</em>~<em
+                                                    class="end">15:00</em></span>
+                                              </span>
+                                            </div>
+                                          </li>
+                                          <li class="booked-info__item selectedOption">
+                                            <span class="item--name">장비 대여 및 옵션</span>
+                                            <span class="item--num">-</span>
+                                          </li>
+                                          <li class="booked-info__item spacePw">
+                                            <span class="item--name">출입 비밀번호</span>
+                                            <span class="item--num">0304</span>
+                                          </li>
+                                        </ul>
+                                      </div>
+
+                                      <div class="cost-info__wrap">
+                                        <h5 class="wrap-title">결제 정보</h5>
+                                        <ul class="booked-info__list costInfo">
+                                          <li class="booked-info__item totalTime">
+                                            <span class="item--name">총 이용 시간</span>
+                                            <span class="item--num"><em class="h">5</em>시간</span>
+                                          </li>
+                                          <li class="booked-info__item totalPrice">
+                                            <span class="item--name">총 이용 금액</span>
+                                            <span class="item--num"><em class="price">50,000</em>원</span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+        </section>
+
+        <!-- 예약 내역 카드 샘플 | 이용 완료 -->
+        <section class="book-check__container">
+          <div class="section__inner">
+            <h3 class="section-title blind">예약 내역</h3>
+            <div class="section__content">
+              <div class="content--head">
+                <p class="booked-date">2023.3.1</p>
+                <!-- .badge-status // 상태에따라 .used, .canceled, .booked 세가지의 class명을 추가 함. -->
+                <p class="badge badge--status used">이용 완료</p>
+              </div>
+
+              <div class="content--body">
+                <div class="booked-info__box">
+                  <div class="seleced-info__wrap">
+                    <h5 class="wrap-title">예약 정보</h5>
+                    <ul class="booked-info__list selectedInfo">
+                      <li class="booked-info__item spaceName">
+                        <span class="item--name">대여공간</span>
+                        <span class="item--num">Focus A 공간</span>
+                      </li>
+                      <li class="booked-info__item useWhen">
+                        <span class="item--name">이용 일시</span>
+                        <ul class="item--num__list">
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">1</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">2</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">3</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">4</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">5</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">6</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">7</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">8</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">9</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">10</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                          <li class="item--num">
+                            <span class="num--date"><em class="y">2023</em>.<em class="m">3</em>.<em
+                                class="d">11</em></span>
+                            <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
+                          </li>
+                        </ul>
+                        <p class="btn list-open--btn">
+                          <button>더 보기</button>
+                        </p>
+                      </li>
+                      <li class="booked-info__item selectedOption">
+                        <span class="item--name">장비 대여 및 옵션</span>
+                        <span class="item--num">-</span>
+                      </li>
+                      <li class="booked-info__item spacePw">
+                        <span class="item--name">출입 비밀번호</span>
+                        <span class="item--num">0304</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="cost-info__wrap">
+                    <h5 class="wrap-title">결제 정보</h5>
+                    <ul class="booked-info__list costInfo">
+                      <li class="booked-info__item totalTime">
+                        <span class="item--name">총 이용 시간</span>
+                        <span class="item--num"><em class="h">5</em>시간</span>
+                      </li>
+                      <li class="booked-info__item totalPrice">
+                        <span class="item--name">총 이용 금액</span>
+                        <span class="item--num"><em class="price">50,000</em>원</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="./public/js/jquery-3.5.1.js"></script>
+  <script src="./public/js/include.js"></script>
+</body>
+
+</html>

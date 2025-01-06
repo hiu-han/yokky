@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Metworks">
+  <meta property="og:url" content="http://www.metworks.co.kr">
+  <meta property="og:description" content="Metworks">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
+  <title>Metworks|공유오피스</title>
+
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/css/calStyle.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header"></div>
+
+    <div id="main" class="contents-page book-state">
+      <div class="wrapper">
+        <section class="page-top">
+          <div class="section__inner">
+            <h3 class="page-title">예약현황</h3>
+            <span class="txt-info">
+              날짜별 공유오피스 전체 예약 현황을 확인하실 수 있습니다.<br>
+              자세한 사항은 문의 부탁드립니다.
+            </span>
+          </div>
+        </section>
+
+        <section class="page-content content--book-state">
+          <div class="section__inner">
+            <h4 class="section-title blind">예약현황</h4>
+            <div class="section-content">
+              <div class="content--head">
+              </div>
+
+              <div class="content-body">
+                <div class="book-state__box">
+                  <div id="stateCalendarTool" class="calendar-head">
+                    <div class="head-date__wrap">
+                      <!-- 현재 년 월 표기 -->
+                      <h5 class="wrap-title year-month">2023년 4월</h5>
+                      <div class="calendar-btn__wrap">
+                        <button id="calPrev">&lt;</button>
+                        <button id="calToday">TODAY</button>
+                        <button id="calNext">&gt;</button>
+                      </div>
+                    </div>
+                    <!-- 룸 선택 셀렉트 박스 -->
+                    <div class="select__wrap select--room">
+                      <select name="" id="roomSelect">
+                        <option value="">전체 룸 검색</option>
+                        <option value="">FocusA</option>
+                        <option value="">FocusB</option>
+                        <option value="">FocusC</option>
+                        <option value="">M1</option>
+                        <option value="">M2</option>
+                        <option value="">FGM</option>
+                        <option value="">FGD</option>
+                        <option value="">TrainingA</option>
+                        <option value="">TrainingB</option>
+                        <option value="">Open</option>
+                        <option value="">w01</option>
+                        <option value="">w02</option>
+                        <option value="">w03</option>
+                        <option value="">w04</option>
+                        <option value="">w05</option>
+                        <option value="">w06</option>
+                        <option value="">w07</option>
+                        <option value="">w08</option>
+                        <option value="">w09</option>
+                        <option value="">w10</option>
+                        <option value="">w11</option>
+                        <option value="">w12</option>
+                        <option value="">w13</option>
+                        <option value="">w14</option>
+                        <option value="">w15</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 동작하는 달력 -->
+                  <div id="stateCalendar" class="real calendar__wrap"></div>
+
+                  <!-- 달력 활용안 샘플 -->
+                  <div id="stateCalendarSample" class="calendar__wrap" style="margin-top:60px;">
+                    <table>
+                      <colgroup>
+                        <col style="width:14.2%;">
+                        <col style="width:14.2%;">
+                        <col style="width:14.2%;">
+                        <col style="width:14.2%;">
+                        <col style="width:14.2%;">
+                        <col style="width:14.2%;">
+                        <col style="width:14.2%;">
+                      </colgroup>
+                      <thead id="calHead">
+                        <tr>
+                          <th corspan="7" id="monthYear"></th>
+                        </tr>
+                        <tr>
+                          <th class="cal-day cal--sun"><span>일</span></th>
+                          <th class="cal-day cal--mon"><span>월</span></th>
+                          <th class="cal-day cal--tue"><span>화</span></th>
+                          <th class="cal-day cal--wed"><span>수</span></th>
+                          <th class="cal-day cal--thu"><span>목</span></th>
+                          <th class="cal-day cal--fri"><span>금</span></th>
+                          <th class="cal-day cal--sat"><span>토</span></th>
+                        </tr>
+                      </thead>
+                      <tbody id="calBody">
+                        <tr>
+                          <td class="cal-date">
+                          </td>
+                          <td class="cal-date">
+                          </td>
+                          <td class="cal-date">
+                          </td>
+                          <td class="cal-date">
+                          </td>
+                          <td class="cal-date">
+                          </td>
+                          <td class="cal-date">
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>1</span></p>
+                            <!-- .booked__list 예약된 리스트 / 마우스오버 시 absolute적용되며 전체 리스트 노출됨 -->
+                            <div class="booked__list">
+                              <!-- .booked__item 예약된 아이템 + .focusA 등의 예약된 룸 className -->
+                              <p class="booked__item focusA">
+                                <!-- .item-time 예약된 시간 -->
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">12:00</em>
+                                </span>
+                                <!-- .item-name 예약된 룸 -->
+                                <span class="item-name">FocusA</span>
+                              </p>
+                              <p class="booked__item trainingA">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">15:00</em>
+                                </span>
+                                <span class="item-name">TrainingA</span>
+                              </p>
+                              <p class="booked__item focusA">
+                                <span class="item-time">
+                                  <em class="time--start">14:00</em> ~
+                                  <em class="time--end">17:00</em>
+                                </span>
+                                <span class="item-name">FocusA</span>
+                              </p>
+                              <p class="booked__item m1">
+                                <span class="item-time">
+                                  <em class="time--start">14:00</em> ~
+                                  <em class="time--end">15:00</em>
+                                </span>
+                                <span class="item-name">M1</span>
+                              </p>
+                              <p class="booked__item fgm">
+                                <span class="item-time">
+                                  <em class="time--start">14:00</em> ~
+                                  <em class="time--end">17:00</em>
+                                </span>
+                                <span class="item-name">FGM</span>
+                              </p>
+                              <p class="booked__item focusA">
+                                <span class="item-time">
+                                  <em class="time--start">14:00</em> ~
+                                  <em class="time--end">17:00</em>
+                                </span>
+                                <span class="item-name">FocusA</span>
+                              </p>
+                              <p class="booked__item focusA">
+                                <span class="item-time">
+                                  <em class="time--start">14:00</em> ~
+                                  <em class="time--end">17:00</em>
+                                </span>
+                                <span class="item-name">FocusA</span>
+                              </p>
+                              <p class="booked__item focusA">
+                                <span class="item-time">
+                                  <em class="time--start">14:00</em> ~
+                                  <em class="time--end">17:00</em>
+                                </span>
+                                <span class="item-name">FocusA</span>
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="cal-date">
+                            <p class="date-num"><span>2</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>3</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>4</span></p>
+                            <div class="booked__list">
+                              <p class="booked__item focusA">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">12:00</em>
+                                </span>
+                                <span class="item-name">FocusA</span>
+                              </p>
+                            </div>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>5</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>6</span></p>
+                            <div class="booked__list">
+                              <p class="booked__item fgd">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">15:00</em>
+                                </span>
+                                <span class="item-name">FGD</span>
+                              </p>
+                            </div>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>7</span></p>
+                            <div class="booked__list">
+                              <p class="booked__item focusB">
+                                <span class="item-time">
+                                  <em class="time--start">09:00</em> ~
+                                  <em class="time--end">11:00</em>
+                                </span>
+                                <span class="item-name">FocusB</span>
+                              </p>
+                              <p class="booked__item focusC">
+                                <span class="item-time">
+                                  <em class="time--start">16:00</em> ~
+                                  <em class="time--end">21:00</em>
+                                </span>
+                                <span class="item-name">FocusC</span>
+                              </p>
+                              <p class="booked__item m2">
+                                <span class="item-time">
+                                  <em class="time--start">17:00</em> ~
+                                  <em class="time--end">20:00</em>
+                                </span>
+                                <span class="item-name">FocusA</span>
+                              </p>
+                            </div>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>8</span></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="cal-date">
+                            <p class="date-num"><span>9</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>10</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>11</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>12</span></p>
+                            <div class="booked__list">
+                              <p class="booked__item trainingB">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">14:00</em>
+                                </span>
+                                <span class="item-name">TrainingB</span>
+                              </p>
+                            </div>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>13</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>14</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>15</span></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="cal-date">
+                            <p class="date-num"><span>16</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>17</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>18</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>19</span></p>
+                            <div class="booked__list">
+                              <p class="booked__item open">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">14:00</em>
+                                </span>
+                                <span class="item-name">Open</span>
+                              </p>
+                              <p class="booked__item wZone">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">14:00</em>
+                                </span>
+                                <span class="item-name">W01</span>
+                              </p>
+                            </div>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num today"><span>20</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>21</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>22</span></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="cal-date">
+                            <p class="date-num"><span>23</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>24</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>25</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>26</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>27</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>28</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"><span>29</span></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="cal-date">
+                            <p class="date-num"><span>30</span></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"></p>
+                          </td>
+                          <td class="cal-date">
+                            <p class="date-num"></p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <aside>
+      <div id="bookStateModal"></div>
+    </aside>
+  </div>
+
+  <script src="public/js/jquery-3.5.1.js"></script>
+  <script src="public/js/include.js"></script>
+  <script src="public/js/index.js"></script>
+  <script src="public/js/modal.js"></script>
+  <script src="public/js/bookCalendar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+/*** COMMON ***/
+.blind {
+  display: block;
+  position: absolute;
+  top: -99999px;
+  left: 0;
+}
+
+.item--small {
+  display: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.txt-info {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--font-c-info);
+}
+
+/** COMMON -> BTN **/
+.btn > button {
+  border: none;
+  background-color: transparent;
+}
+.btn > button,
+.btn > a {
+  cursor: pointer;
+}
+.btn > a {
+  display: inline-block;
+  padding: 0 24px;
+  border: 1px solid #aaa;
+  line-height: 2.8;
+  transition: var(--btn-transition);
+  cursor: pointer;
+}
+.btn > button:hover,
+.btn > a:hover {
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
+}
+.btn.confirm > button,
+.btn.confirm > a {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
+  line-height: 3;
+  transition: var(--btn-transition);
+}
+.btn.confirm > button:hover {
+  border: 1px solid #212121;
+  background-color: #212121;
+}
+.btn.cancel {
+  width: 40%;
+}
+.btn.cancel > button {
+  width: 100%;
+  line-height: 3;
+  border: 1px solid #e1e1e1;
+  background-color: #e1e1e1;
+  font-size: 15px;
+  color: #313131;
+  transition: var(--btn-transition);
+}
+
+/** COMMON -> INPUT **/
+input[type='date']::-webkit-calendar-picker-indicator {
+  width: 75%;
+  height: 30px;
+  border-radius: 2px;
+  background-image: url('../img/icon/Icon-calendar.svg');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: right;
+  color: #666;
+  cursor: pointer;
+}
+input[type='date']:hover::-webkit-calendar-picker-indicator {
+  background-image: url('../img/icon/icon-calendar-313131.svg');
+}
+
+.input-item {
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+.input-item.pwChk {
+  /* margin-top: -6px; */
+}
+.input-item:last-child {
+  margin-bottom: 0;
+}
+.input-label {
+  position: relative;
+}
+.input-label > .label-txt {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.input-label > input {
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 15px;
+  line-height: 3;
+}
+.input-label > input::placeholder {
+  color: #999;
+}
+.input-label > input:focus {
+  border: 1px solid #414141;
+}
+.input-label.fixed > input {
+  border: 1px solid #eee;
+  background-color: #f4f4f4;
+}
+.input-item.halfWidth {
+  display: inline-block;
+  width: calc(50% - 4px);
+}
+.input-item.job.halfWidth {
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+
+.input-item .txt-add {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff6060;
+}
+.input-item .txt-add.alert {
+  display: block;
+}
+.input-item > .txt-add {
+  margin: 2px 0 4px;
+}
+.input-label .hint-txt {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #ccc;
+}
+
+/** COMMON -> SELECT WRAP **/
+.select__wrap select {
+  position: relative;
+  width: auto;
+  height: 32px;
+  padding: 0 32px 0 10px;
+  border: 1px solid #ccc;
+  background-image: url('../img/icon/icon-select-default.svg');
+  background-repeat: no-repeat;
+  background-position: 89% 50%;
+  background-size: 11px;
+}
+.select__wrap select:focus {
+  border: 1px solid #999;
+  outline: none;
+  background-image: url('../img/icon/icon-select-focus.svg');
+  background-position: 89% 49%;
+}
+
+/** COMMON -> ACCEPT INPUT **/
+.accept-input {
+  display: block;
+  width: 100%;
+}
+.accept-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.accept-item .input-item {
+  width: unset !important;
+  cursor: pointer;
+}
+.accept-item:last-of-type {
+  margin-bottom: 0;
+}
+.accept-item .input-label {
+  font-size: 14px;
+  color: #414141;
+}
+.accept-item > a {
+  display: inline-block;
+  margin-left: 14px;
+  white-space: nowrap;
+  color: var(--font-c-link);
+}
+.accept-item > a > span {
+  display: inline-block;
+  height: 100%;
+  /* vertical-align: -2px; */
+}
+
+.option-select {
+  position: relative;
+  cursor: pointer;
+}
+.option-select > .option-selected {
+  position: relative;
+  width: 100%;
+}
+.option-select > .option__list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: var(--boxshadow-m-obj);
+}
+.option-select:hover > .option__list {
+  display: block;
+}
+.option-select .option__item {
+  padding: 6px 14px;
+}
+.option-select .option__item:first-child {
+  padding-top: 12px;
+}
+.option-select .option__item:last-child {
+  padding-bottom: 12px;
+}
+.option-select .option__item:hover {
+  background-color: #f6f6f6;
+}
+
+/** COMMON -> badge **/
+.badge--status {
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background-color: #bbb;
+  font-size: 14px;
+  color: #fff;
+  line-height: 2;
+  cursor: default;
+}
+.content--head .badge--status {
+  margin-top: -4px;
+}
+.badge--status.used,
+.badge--status.canceled {
+  border: 1px solid #bbb;
+  background-color: #bbb;
+}
+.badge--status.booked {
+  border: 1px solid #313131;
+  background-color: #313131;
+}
+
+/** COMMON -> num badge **/
+.num-badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/icon/icon-num-01.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.num-badge.num--02 {
+  background-image: url('../img/icon/icon-num-02.svg');
+}
+.num-badge.num--03 {
+  background-image: url('../img/icon/icon-num-03.svg');
+}
+
+/** COMMON -> list item - dot **/
+.item--dot {
+  position: relative;
+  padding-left: 14px;
+}
+.item--dot::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+/*** 1048px ***/
+@media all and (max-width: 1048px) {
+}
+/*** 1024px ***/
+@media all and (max-width: 1024px) {
+}
+/*** 960px ***/
+@media all and (max-width: 960px) {
+}
+/*** 768px ***/
+@media all and (max-width: 768px) {
+}
+/*** 680px ***/
+@media all and (max-width: 680px) {
+  /*** COMMON 680 ***/
+  .item--wide {
+    display: none !important;
+  }
+  .item--small {
+    display: block;
+  }
+}
+/*** 480px ***/
+@media all and (max-width: 480px) {
+  button,
+  .btn > button,
+  .btn > a {
+    font-size: 13px;
+  }
+
+  .input-label > input {
+    padding: 0 14px;
+  }
+
+  .select__wrap select {
+    height: 30px;
+    padding: 0 30px 0 8px;
+    font-size: 13px;
+  }
+}
