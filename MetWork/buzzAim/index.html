@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="버즈 에임">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="Buzz Aim">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <meta rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Buzz Aim</title>
+
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <!-- 섹션 - 좌 -->
+        <section class="layout-sect sect--left">
+          <div class="sect__inner">
+            <div class="column">
+              <!-- 컨텐츠박스 - 브랜드별 반응 -->
+              <div class="cont cont--reaction">
+                <div class="cont__box">
+                  <div class="box__inner">
+                    <div class="cont-hd__wrap">
+                      <div class="tap__list in">
+                        <p class="tap__item b-01 on"><span>브랜드A</span></p>
+                        <p class="tap__item b-02"><span>브랜드B</span></p>
+                        <p class="tap__item b-03"><span>브랜드C</span></p>
+                        <p class="tap__item b-04"><span>브랜드D</span></p>
+                      </div>
+                    </div>
+                    <div class="cont__wrap reaction">
+                      <div class="wrap-hd">
+                        <div class="wrap-title reaction">
+                          <span>😲 최근 고객 반응은 이렇게 변했습니다!</span>
+                        </div>
+                      </div>
+                      <div class="wrap-bd">
+                        <div class="bd__inner">
+                          <div class="reaction__wrap">
+                            <!-- 반응 - 오늘 -->
+                            <div class="reaction__item now">
+                              <p class="date"><span>24.12.04</span></p>
+                              <p class="txt">
+                                <span>제품 성능, 서비스 경험, 충전 속도 등에서 불만이 제기되었으나, 사전 예약 혜택과 같은 긍정적인 요소도 일부 언급됨</span>
+                              </p>
+                            </div>
+                            <!-- 반응 - 어제 -->
+                            <div class="reaction__item prev">
+                              <p class="date"><span>24.12.03</span></p>
+                              <p class="txt">
+                                <span>고객에 대한 응대 태도가 친절하다는 후기와 제품에 대한 전문 지식에 대한 칭찬이 나타남</span>
+                              </p>
+                            </div>
+                            <!-- 반응 - 어제 - 집계 X -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 컨텐츠박스 - 브랜드별 현황 -->
+              <div class="cont cont--status">
+                <div class="cont__box">
+                  <div class="box__inner">
+                    <div class="cont-hd__wrap">
+                      <div class="cont-title">
+                        <p>브랜드별 현황</p>
+                      </div>
+                    </div>
+                    <div class="cont__wrap">
+                      <div class="wrap-bd">
+                        <div class="bd__inner">
+                          <div class="status__wrap">
+                            <div class="brand-list-hd">
+                              <div class="brand-hd__item">
+                                <div class="hd-item-name"></div>
+                                <div class="hd-item-gauge post">게시글 수</div>
+                                <div class="hd-item-gauge emo">감성 평가</div>
+                              </div>
+                            </div>
+                            <ul class="brand-list-bd">
+                              <!-- 브랜드 A // 예시 -->
+                              <li class="brand__item" id="brandA">
+                                <div class="item--total">
+                                  <div class="item-name">브랜드A</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts"></p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit"></p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut"></p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat"></p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <ul class="sub__list">
+                                  <li class="sub__item">
+                                    <div class="item-name">채널A</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="sub__item">
+                                    <div class="item-name">채널B</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="sub__item">
+                                    <div class="item-name">채널C</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <!-- 브랜드 B // 예시 -->
+                              <li class="brand__item" id="brandB">
+                                <div class="item--total">
+                                  <div class="item-name">브랜드B</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts"></p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit"></p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut"></p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat"></p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <ul class="sub__list">
+                                  <li class="sub__item">
+                                    <div class="item-name">채널A</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="sub__item">
+                                    <div class="item-name">채널B</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="sub__item">
+                                    <div class="item-name">채널C</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <!-- 브랜드 C // 예시 -->
+                              <li class="brand__item" id="brandC">
+                                <div class="item--total">
+                                  <div class="item-name">브랜드C</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts"></p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit"></p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut"></p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat"></p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <ul class="sub__list">
+                                  <li class="sub__item">
+                                    <div class="item-name">채널A</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="sub__item">
+                                    <div class="item-name">채널B</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="sub__item">
+                                    <div class="item-name">채널C</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit"></p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut"></p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat"></p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 섹션 - 우 -->
+        <section class="layout-sect sect--right">
+          <div class="sect__inner">
+            <div class="column">
+              <!-- 컨텐츠박스 - 브랜드별 상세 -->
+              <div class="cont cont--detail">
+                <!-- 컨텐츠 탑 // 감성이유, 주제분석 등 탭 박스 -->
+                <div class="cont-top__box">
+                  <div class="top-left">
+                    <div class="cont-tab__wrap">
+                      <p class="tab__item"><span>감성 이유</span></p>
+                      <p class="tab__item"><span>주제 분석</span></p>
+                      <p class="tab__item"><span>상세 추이</span></p>
+                      <p class="tab__item disable"><span>AI 리포트</span></p>
+                    </div>
+                  </div>
+                  <div class="top-right">
+                    <p class="btn btn--ty01">
+                      <button>원문 다운로드</button>
+                    </p>
+                  </div>
+                </div>
+                <!-- 컨텐츠 // AI 감성평가 -->
+                <div class="cont__box">
+                  <div class="box__inner">
+                    <div class="cont-hd__wrap">
+                      <div class="cont-title">
+                        <p>AI 감성평가</p>
+                      </div>
+                      <div class="cont-tag">
+                        <ul class="tag__list">
+                          <li class="tag__item"><span>#브랜드A</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cont__wrap">
+                      <div class="wrap-bd">
+                        <div class="bd__inner">
+                          <!-- 감성 평가 // 긍정 -->
+                          <div class="emot__wrap posit">
+                            <div class="wrap-name">긍정적 평가 이유</div>
+                            <div class="emot__list">
+                              <div class="list__inner">
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 감성 평가 // 부정 -->
+                          <div class="emot__wrap negat">
+                            <div class="wrap-name">부정적 평가 이유</div>
+                            <div class="emot__list">
+                              <div class="list__inner">
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                                <p class="emot__item">
+                                  <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 컨텐츠 // 주제 분석 -->
+                <div class="cont__box">
+                  <div class="box__inner">
+                    <div class="cont-hd__wrap">
+                      <div class="cont-title">
+                        <p>주제 분석</p>
+                      </div>
+                      <div class="cont-tag">
+                        <ul class="tag__list">
+                          <li class="tag_item"><span>#브랜드 A</span></li>
+                          <li class="tag_item"><span>#주제 A</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cont__wrap">
+                      <div class="wrap-bd">
+                        <div class="bd__inner">
+                          <!-- 주제 분석 // 주제어 -->
+                          <div class="topic__wrap topic">
+                            <div class="list-name">
+                              <p class="name topic">주제</p>
+                              <p class="name amount">언급량</p>
+                              <p class="name emot">감성평가</p>
+                            </div>
+                            <div class="topic__list">
+                              <div class="list__inner">
+                                <!-- 주제 A -->
+                                <div class="topic__group">
+                                  <div class="topic__item l-ctgry">
+                                    <p class="topic-element topic">주제 A</p>
+                                    <div class="topic-element amount">
+                                      <div class="guage--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 A-1</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 A-2</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 A-3</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 A-4</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                </div>
+                                <!-- 주제 B -->
+                                <div class="topic__group">
+                                  <div class="topic__item l-ctgry">
+                                    <p class="topic-element topic">주제 B</p>
+                                    <div class="topic-element amount">
+                                      <div class="guage--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 B-1</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 B-2</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 B-3</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 B-4</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                </div>
+                                <!-- 주제 C -->
+                                <div class="topic__group">
+                                  <div class="topic__item l-ctgry">
+                                    <p class="topic-element topic">주제 C</p>
+                                    <div class="topic-element amount">
+                                      <div class="guage--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-1</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-2</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-3</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-4</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 주제 분석 // 내용 -->
+                          <div class="topic__wrap detail">
+                            <div class="wrap-name">내용</div>
+                            <!-- 주제 분석 // 내용 // 긍정 -->
+                            <div class="topic-detail__box">
+                              <div class="topic-detail__list posit">
+                                <div class="list__inner">
+                                  <p class="detail__item">
+                                    <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <!-- 주제 분석 // 내용 // 부정 -->
+                              <div class="topic-detail__list negat">
+                                <div class="list__inner">
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                  <p class="detail__item">
+                                    <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 컨텐츠 // 상세 추이 -->
+                <div class="cont__box">
+                  <div class="box__inner">
+                    <div class="cont-hd__wrap">
+                      <div class="cont-title">
+                        <p>주제 분석</p>
+                      </div>
+                      <div class="cont-tag">
+                        <ul class="tag__list">
+                          <li class="tag_item"><span>상세 추이</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cont__wrap">
+                      <div class="wrap-bd">
+                        <div class="bd__inner">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 컨텐츠 // AI 리포트 // disabled -->
+                <div class="cont__box disabled">
+                  <div class="box__inner">
+                    <div class="cont-hd__wrap">
+                      <div class="cont-title">
+                        <p>주제 분석</p>
+                      </div>
+                      <div class="cont-tag">
+                        <ul class="tag__list">
+                          <li class="tag_item"><span>AI 리포트</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cont__wrap">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="public/js/jquery-3.5.1.js"></script>
+  <script src="public/js/include.js"></script>
+</body>
+
+</html>
