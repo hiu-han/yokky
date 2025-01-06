@@ -1,0 +1,680 @@
+<footer>
+  <div class="footer_inner">
+    <h2 class='foot_logo'><img src="./resources/images/common/foot_logo.png" alt="Assembly Now"></h2>
+    <div class="foot_top clearFix">
+      <ul class="foot_menu">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="./service.html">서비스소개</a></li>
+        <li class="footer_service_policy"><a href="javascript:(0);">이용약관</a></li>
+        <li class="footer_personal_policy"><a href="javascript:(0);">개인정보처리방침</a></li>
+      </ul>
+      <div class="family_site">
+        <a href="#" class='family_site_btn'>패밀리 사이트</a>
+        <ul>
+          <li><a href="http://www.metrix.co.kr/" target='_blank'>메트릭스코퍼레이션</a></li>
+          <li><a href="http://www.polmetrix.com/" target='_blank'>폴메트릭스</a></li>
+          <li><a href="http://worklis.polmetrix.com/" target='_blank'>LIS</a></li>
+        </ul>
+      </div>
+    </div>
+    <address>
+      <div class="add_info add_top">
+        <div class="co_info"><span>상호</span>(주)폴메트릭스</div>
+        <div class="co_representative"><span>대표자</span>조일상</div>
+        <div class="co_regist_num"><span>사업자등록번호</span>439-87-01362</div>
+        <div class="co_address"><span>주소</span>06753 서울 서초구 양재천로 19길 42 세련빌딩 5층</div>
+        <div class="co_ask"><span>문의</span>02 6244 0710</div>
+      </div>
+      <!-- <div class="add_info add_top">
+        <div class="co_info"><span>상호</span>(주)폴메트릭스</div>
+        <div class="co_address"><span>주소</span>06753 서울 서초구 양재천로 19길 42 세련빌딩 5층</div>
+        <div class="co_ask"><span>문의</span>02 6244 0710</div>
+      </div>
+      <div class="add_info add_bottom">s
+        <div class="co_representative"><span>대표자</span>조일상</div>
+        <div class="co_regist_num"><span>사업자등록번호</span>439-87-01362</div>
+      </div> -->
+      <p class="copyright fr">CopyrightⓒAssembly Now All Rights Reserved.</p>
+    </address>
+  </div>
+
+  <div class="modal_wrap">
+    <div class="modal_bg"></div>
+
+    <!--  DOWN modal  -->
+    <div class="down_modal_wrap">
+      <div class="down_modal_inner">
+        <div class="modal_cls_btn"></div>
+        <div class="modal_content">
+          <span>파일 형식을 선택해주세요</span>
+        </div>
+        <div class="btn_wrap">
+          <p class="btns btn-hwp">
+            <a href="javascript:getCFileDownLoad('hwp');" class="btn">HWP</a>
+          </p>
+          <!-- <p class="btns btn-docx">
+            <a href="javascript:getCFileDownLoad('docx');" class="btn">DOCX</a>
+          </p> -->
+          <p class="btns btn-pdf">
+            <a href="javascript:getCFileDownLoad('pdf');" class="btn">PDF</a>
+          </p>
+          <!-- <p class="btns btn-cancel">
+            <a href="javascript:void(0);" class="btn">취소</a>
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+    <!--  LONG-TERM modal  -->
+    <div class="long_term_modal_wrap">
+      <div class="long_term_modal_inner">
+        <div class="modal_cls_btn"></div>
+        <div class="modal_content">
+          <div class="select_period">
+            <div class="sel_title_wrap">
+              <h4 class='sel_title'>기간별 이용권 선택</h4>
+              <p class='sel_explain'>해당 기간 내에 제한 없이 회의록을 이용하실 수 있습니다.</p>
+              <span class="event_info">론칭 이벤트로 2021년 말까지 25% 할인 프로모션 진행 중!</span>
+            </div>
+            <div class="sel_period_list">
+              <form action="">
+                <fieldset>
+                  <legend></legend>
+                  <ul class="period_list">
+                    <li class="period_item selected" id='month_06'>
+                      <span class="period_box clearFix">
+                        <input type="radio" id='per_month_06' name='voucher' checked>
+                        <label for="per_month_06">
+                          <span class="product_period">6개월</span>
+                          <span class="product_price">3,750,000원</span>
+                          <span class='product_bf_dc'>정가 5,000,000원</span>
+                        </label>
+                      </span>
+                    </li>
+                    <li class="period_item" id='month_12'>
+                      <span class="period_box clearFix">
+                        <input type="radio" id='per_month_12' name='voucher'>
+                        <label for="per_month_12">
+                          <span class="product_period">12개월</span>
+                          <span class="product_price">6,000,000원</span>
+                          <span class='product_bf_dc'>정가 8,000,000원</span>
+                        </label>
+                      </span>
+                    </li>
+                  </ul>
+                  <span class="submit_info">제출 시, 가입 이메일로 별도의 연락을 드립니다.</span>
+                  <div class="submit_btn_wrap">
+                    <button class="btn" id="longTermClose">취소하기</button>
+                    <button class="btn" id="longTermSubit">제출하기</button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  SERVICE POLICY modal -->
+    <div class="service_policy_modal_wrap policy_modal_wrap">
+      <div class="service_policy_modal_inner policy_modal_inner">
+        <div class="policy_title">서비스 이용약관</div>
+        <p class="btns btn-confirm"><a href="javascript:void(0);" class="btn">확 인</a></p>
+        <div class="service_policy policy_wrap">
+          <div class="policy_content">
+            <div class="sheet_wrap sheet_1">
+              <div class="sheet_title">제1장 총 칙</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_1_1">
+                  <div class="para_title">제 1조 목적</div>
+                  <div class="para_cont">
+                    <span>이 약관은 ㈜폴메트릭스와 회원 가입자(이하 회원)간의 Assembly NOW 서비스의 이용조건 및 절차에 관한 사항과 기타 필요 사항을 규정함을 목적으로
+                      합니다.</span>
+                  </div>
+                </li>
+                <li class="para_item para_1_2">
+                  <div class="para_title">제 2조 정의</div>
+                  <div class="para_cont">
+                    <span>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</span>
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        1) "서비스"라 함은 구현되는 단말기(PC, TV, 휴대형 단말기 등의 각종 유무선 장치를 포함)와 관계없이 이용자가 이용할 수 있는 Assembly NOW 제반 서비스를
+                        의미합니다.
+                      </li>
+                      <li class="sub_item">
+                        2) "이용자"라 함은 회사의 서비스에 접속하여 이 약관에 따라 회사가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+                      </li>
+                      <li class="sub_item">
+                        3) "회원"이라 함은 회사의 서비스에 접속하여 이 약관에 따라 회원 등록을 한 자로서, 계속적으로 회사가 제공하는 서비스를 이용할 수 있는 고객을 말합니다.
+                      </li>
+                      <li class="sub_item">
+                        4) "비회원"이라 함은 회원 등록을 하지 않고 회사가 제공하는 서비스를 이용하는 자를 말합니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_1_3">
+                  <div class="para_title">제 3조 효력의 발생 및 변경</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 약관은 회원에게 온라인을 통하여 공시함으로써 효력을 발생합니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 회사는 약관의 규제에 관한 법률, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관계 법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
+                      </li>
+                      <li class="sub_item">
+                        (3) 회사가 약관을 개정할 경우에는 적용일자 및 개정사유를 상당한 기간 동안 해당 사이트에 공지합니다.
+                      </li>
+                      <li class="sub_item">
+                        (4) 회원은 변경된 약관에 대해 거부할 권리가 있습니다. 회원은 변경된 약관이 공지된 뒤 7일 이내에 거부의사를 표명할 수 있으며, 회원이 거부하는 경우 회사는 7일의
+                        기간을
+                        정하여 회원에게 사전 통지 후 당해 회원과의 계약을 해지할 수 있습니다.
+                        만약, 회원이 거부의사를 표시하지 않고 서비스를 계속 이용하는 경우에는 변경된 약관에 동의하는 것으로 간주합니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_1_4">
+                  <div class="para_title">제 4조 약관 외 준칙</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 이 약관에 명시되지 않은 사항은 관계법령의 규정에 따릅니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_2">
+              <div class="sheet_title">제2장 회원 가입과 서비스 이용</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_2_1">
+                  <div class="para_title">제 1조 이용계약의 성립</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 이용계약은 회원의 약관내용에 대한 동의와 회원의 이용 신청에 대한 회사의 이용 승낙으로 성립됩니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 회사는 회원이 되고자 하는 자가 회사에서 요청하는 필수정보를 성실히 제공했을 때 필요한 사항을 확인한 후 가입을 승낙합니다. 단 회사는 다음 각호에 해당하는 경우
+                        회원등록의 승낙을 유보하거나 이용계약을 해지할 수 있습니다.
+                        <ul class="sub_min">
+                          <li class="min_item">
+                            ①실명이 아니거나 타인의 명의를 이용한 경우
+                          </li>
+                          <li class="min_item">
+                            ②가입신청서의 내용을 허위로 기재하여 가입신청을 하는 경우
+                          </li>
+                          <li class="min_item">
+                            ③미성년자가 법정대리인의 동의를 얻지 못한 경우
+                          </li>
+                          <li class="min_item">
+                            ④서비스 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우
+                          </li>
+                          <li class="min_item">
+                            ⑤제5장 제2조 의하여 회사가 계약을 해지했던 회원이 다시 회원 신청을 하는 경우
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_2_2">
+                  <div class="para_title">제 2조 서비스 이용</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 서비스의 이용은 연중무휴, 1일 24시간을 원칙으로 합니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 제1항의 이용시간은 정기점검 등의 필요로 인하여 회사가 정한 날 또는 시간은 그러하지 아니합니다.
+                      </li>
+                      <li class="sub_item">
+                        (3) 일부 서비스 이용 시 고객사가 의뢰한 내용에 적합하지 않다고 인정된 회원은 조사참여에 제한 받을 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_2_3">
+                  <div class="para_title">제 3조 저작권 및 지적재산권</div>
+                  <div class="para_cont">
+                    <span>서비스를 통해 제공되는 모든 저작물에 대한 저작권 및 기타 지식재산권은 회사에 귀속되며(다만, 저작물의 원저작자가 별도로 있는 경우 해당 저작물의 저작권은 원저작자에게
+                      있습니다), 아래와 같이 사용한 경우 이용 계약을 해지하고 법적 불이익을 받을 수 있습니다.</span>
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 약관은 회원에게 온라인을 통하여 공시함으로써 효력을 발생합니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 회사는 약관의 규제에 관한 법률, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관계 법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
+                      </li>
+                      <li class="sub_item">
+                        (3) 회사가 약관을 개정할 경우에는 적용일자 및 개정사유를 상당한 기간 동안 해당 사이트에 공지합니다.
+                      </li>
+                      <li class="sub_item">
+                        (4) 회원은 변경된 약관에 대해 거부할 권리가 있습니다. 회원은 변경된 약관이 공지된 뒤 7일 이내에 거부의사를 표명할 수 있으며, 회원이 거부하는 경우 회사는 7일의
+                        기간을
+                        정하여 회원에게 사전 통지 후 당해 회원과의 계약을 해지할 수 있습니다.
+                        만약, 회원이 거부의사를 표시하지 않고 서비스를 계속 이용하는 경우에는 변경된 약관에 동의하는 것으로 간주합니다.
+                      </li>
+                    </ul>
+                    <span>
+                      ※부정경쟁방지 및 영업비밀보호에 관한 법률 위반
+                      10년 이하의 징역 또는 5억원 이하의 벌금(다만, 벌금형에 처하는 경우 위반행위로 인한 재산상 이득액의 10배에 해당하는 금액이 5억원을 초과하면 그 재산상 이득액의 2배
+                      이상 10배 이하의 벌금 (제18조)
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_3">
+              <div class="sheet_title">제 3장 의무와 권리</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_3_1">
+                  <div class="para_title">제 1조 회사의 의무</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 회사는 이 약관에서 정한 바에 따라 계속적, 안정적으로 서비스를 제공하기 위하여 최선을 다하여 노력합니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 회사는 회원의 개인 신상 정보를 본인의 승낙 없이 타인에게 누설, 배포하지 않으며, 이를 보호하기 위해 노력합니다. 회원의 개인정보보호에 관한 기타 사항은
+                        정보통신망법 및 회사가 별도로 정한 "개인정보보호방침"에 따릅니다.
+                      </li>
+                      <li class="sub_item">
+                        (3) 회사는 회원으로부터 제기되는 의견이나 불만이 정당하다고 인정할 경우에는 즉시 처리하여야 합니다. 다만, 즉시 처리가 곤란한 경우에는 회원에게 그 사유와 처리일정을
+                        통보하여야 합니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_3_2">
+                  <div class="para_title">제 2조 회원의 의무</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 회원은 개인정보와 비밀번호에 관한 모든 관리의 책임이 있습니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 자신의 실명정보(ID)가 부정하게 사용된 경우, 반드시 회사에 즉시 그 사실을 통보해야 합니다.
+                      </li>
+                      <li class="sub_item">
+                        (3) 회원은 회사가 실시하는 조사에 대하여 성실한 자세로 정확하게 응답하여야 합니다.
+                      </li>
+                      <li class="sub_item">
+                        (4) 회원은 이 약관 및 관계법령에서 규정한 사항을 준수하여야 합니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_3_3">
+                  <div class="para_title">제 3조 회원의 권리</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 회원은 언제든지 이 약관에 대한 동의를 철회할 수 있습니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 회원은 언제든지 자신의 개인정보에 대한 열람을 요구할 수 있으며, 자신의 개인정보에 오류가 있는 경우 그 정정을 요구할 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_3_4">
+                  <div class="para_title">제 4조 회원 정보 정보변경</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 회원은 회원가입신청 시 기재한 사항이 변경되었을 경우 온라인의 회원정보 관리페이지에서 이를 변경해야 합니다. 변경사항을 회사에 알리지 않아 발생한 불이익에 대하여
+                        '회사'는 책임지지 않습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_4">
+              <div class="sheet_title">제 4장 계약의 변경</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_4_1">
+                  <div class="para_title">제 1조 계약사항의 변경</div>
+                  <div class="para_cont">
+                    이 약관은 ㈜폴메트릭스와 회원 가입자(이하 회원)간의 Assembly NOW 서비스의 이용조건 및 절차에 관한 사항과 기타 필요 사항을 규정함을 목적으로 합니다.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_5">
+              <div class="sheet_title">제 5장 계약의 해지 및 서비스 이용제한</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_5_1">
+                  <div class="para_title">제 1조 계약의 해지 등</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1)회원은 언제든지 고객센터 등을 통해 이용계약 해지 신청을 할 수 있습니다. 회원이 해지 신청한 경우 회사는 회원 본인 여부를 확인할 수 있으며, 관계법규 등이 정하는
+                        바에 따라 이를 즉시 처리합니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 회원이 이용 계약을 해지하고자 하는 때에는 회원 본인이 회사가 정한 탈퇴 절차를 통해 해지 신청을 하여야 합니다.
+                      </li>
+                      <li class="sub_item">
+                        (3) 회원이 서비스 이용계약을 해지할 경우, 회사가 제공하는 서비스의 이용계약이 일괄적으로 해지되며, 관계법 및 개인정보처리방침에 따라 회사가 회원정보를 보유하는 경우를
+                        제외하고는 해지 즉시 회원의 계정정보를 포함한 모든 데이터는 소멸됩니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_5_2">
+                  <div class="para_title">제 2조 이용제한</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 회사는 회원이 다음 각 호에 해당하는 사실이 발생했을 경우 사전 통지 또는 공지를 통해 이용 계약을 해지하거나 또는 기간을 정하여 서비스 이용을 중지할 수 있습니다.
+                        <ul class="sub_min">
+                          <li class="min_item">1) 회사가 제공하는 자원을 사용하여 공공 질서 및 사회적 통념에 반하는 행위를 하였을 때</li>
+                          <li class="min_item">2) 회사가 제공하는 자원을 사용하여 범죄적 행위에 관련된 행위를 하였을 때</li>
+                          <li class="min_item">3) 회사가 제공하는 자원을 사용하여 사회적 공익을 저해할 목적으로 서비스 이용을 계획 또는 실행하였을 때</li>
+                          <li class="min_item">4) 타인의 명예를 손상시키거나 불이익을 주는 행위를 하였을 때</li>
+                          <li class="min_item">5) 회사에서 요구하는 개인정보에 대해 허위임이 판명되었을 때</li>
+                          <li class="min_item">6) 기타 관련법령이나 회사가 정한 이용조건에 위배되는 행위를 하였을 때</li>
+                        </ul>
+                      </li>
+                      <li class="sub_item">
+                        2) "이용자"라 함은 회사의 서비스에 접속하여 이 약관에 따라 회사가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+                      </li>
+                      <li class="sub_item">
+                        3) "회원"이라 함은 회사의 서비스에 접속하여 이 약관에 따라 회원 등록을 한 자로서, 계속적으로 회사가 제공하는 서비스를 이용할 수 있는 고객을 말합니다.
+                      </li>
+                      <li class="sub_item">
+                        4) "비회원"이라 함은 회원 등록을 하지 않고 회사가 제공하는 서비스를 이용하는 자를 말합니다.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="para_item para_5_3">
+                  <div class="para_title">제 3조 계약해지와 이용 제한의 절차</div>
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        (1) 회사는 약관에 의하여 이용제한을 하고자 하는 경우에는 그 사유, 일시 및 기간을 정하여 공지, 전자우편, 서면 또는 전화 등의 방법에 의하여 해당 회원 또는
+                        대리인에게 통지합니다.
+                      </li>
+                      <li class="sub_item">
+                        (2) 제1항의 규정에 의하여 이용정지의 통지를 받은 회원 또는 그 대리인은 그 이용정지의 통지에 대하여 이의가 있을 때에는 이의신청을 할 수 있습니다.
+                      </li>
+                      <li class="sub_item">
+                        (3) 회사는 제2항의 규정에 의한 이의신청에 대하여 그 확인을 위한 기간까지 이용정지를 일시 연기할 수 있으며, 그 결과를 회원 또는 그 대리인에게 통지합니다.
+                      </li>
+                      <li class="sub_item">
+                        (4) 회사는 이용정지 기간 중에 그 이용정지 사유가 해소된 것이 확인된 경우에는 이용정지조치를 즉시 해제합니다.
+                      </li>
+                      <li class="sub_item">
+                        (5) 회사는 회사가 제공하는 서비스의 이용자가 게시하거나 등록하는 내용물이 다음 각 호에 해당된다고 판단되는 경우에 사전 통지 없이 삭제할 수 있습니다.
+                        <ul class="sub_min">
+                          <li class="min_item">1) 다른 회원 또는 제 3자의 명예를 손상시키는 내용인 경우</li>
+                          <li class="min_item">2) 국가의 안전을 위태롭게 하는 내용인 경우</li>
+                          <li class="min_item">3) 공공질서의 안녕 및 미풍양속을 해치는 내용인 경우</li>
+                          <li class="min_item">4) 국가의 경제질서를 파괴하거나 경제발전에 위해가 되는 내용인 경우</li>
+                          <li class="min_item">5) 범죄행위 기타 법률에서 금지하는 내용인 경우</li>
+                          <li class="min_item">6) 광고성 게시물을 무단 게재한 경우</li>
+                          <li class="min_item">7) 기타 회사에서 정한 규정에 위배되는 경우</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_6">
+              <div class="sheet_title">제 6장 손해배상</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_6_1">
+                  <div class="para_cont">
+                    <span>회원이 이 약관의 제2장 제3조, 제5장 제2조 제1항 각 호, 제5장 제3조 제5항 각 호 등의 행위를 하여 회사 및 제3자에게 손해를 입히거나, 기타 회원의 책임
+                      있는 사유에 의하여 회사 및 제3자에게 손해를 입힌 경우에는 회원은 그 손해를 배상하여야 합니다.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_7">
+              <div class="sheet_title">제 7장 관할 법원</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_7_1">
+                  <div class="para_cont">
+                    <span>본 약관과 관련된 소송은 ㈜폴메트릭스의 소재지 관할 법원으로 합니다.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_8">
+              <div class="sheet_title">부 칙</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_8_1">
+                  <div class="para_cont">
+                    <span>(시행일) 본 약관은 2021년 08월 24일부터 적용됩니다.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  PERSONAL POLICY modal  -->
+    <div class="personal_policy_modal_wrap policy_modal_wrap">
+      <div class="personal_policy_modal_inner policy_modal_inner">
+        <div class="policy_title">개인정보 수집 및 이용</div>
+        <p class="btns btn-confirm"><a href="javascript:void(0);" class="btn">확 인</a></p>
+        <div class="personal_policy policy_wrap">
+          <div class="policy_content">
+            <div class="sheet_wrap sheet_1">
+              <div class="sheet_title">1. 수집하는 개인정보의 항목</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_1_1">
+                  <div class="para_cont">
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        필수항목: 성명, 생년월일, 이메일 주소, 아이디, 비밀번호
+                      </li>
+                      <li class="sub_item">
+                        서비스 이용과정에서 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다.<br />
+                        : IP ADRESS, 쿠키, 방문 일시, 서비스 이용 기록, 불량 이용 기록
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_2">
+              <div class="sheet_title">2. 개인정보의 수집 및 이용목적</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_2_1">
+                  <div class="para_cont">
+                    <span>회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다. </span>
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 사례금 지급, 특정 서비스 제공, 본인인증 등
+                      </li>
+                      <li class="sub_item">
+                        회원 관리: 회원제 서비스 이용에 따른 본인 확인, 불량회원의 부정 이용 방지, 가입 의사 확인, 연령 확인, 만 14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부
+                        확인, 불만 처리 등 민원 처리, 고지사항 전달
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_3">
+              <div class="sheet_title">3. 개인정보의 보유 및 이용기간 </div>
+              <ul class="sheet_cont">
+                <li class="para_item para_3_1">
+                  <div class="para_cont">
+                    <span>
+                      가입일로부터 서비스를 제공하는 기간에 한하여 이용자의 개인정보를 보유 및 이용합니다. 회원 탈퇴를 요청하거나 개인정보의 수집 및 이용에 대한 동의를 철회하는 경우, 수집 및
+                      이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.
+                      단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.
+                    </span>
+                    <ul class="para_sub">
+                      <li class="sub_item">
+                        적립금 지급 내역: 5년(보존근거: 대금결제 및 재화 등의 공급에 관한 기록, 전자상거래 등에서의 소비자보호에 관한 법률)
+                      </li>
+                      <li class="sub_item">
+                        소비자 불만 또는 분쟁처리에 관한 기록: 3년(보존근거: 전자상거래 등에서의 소비자보호에 관한 법률)
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_4">
+              <div class="sheet_title">4. 개인정보 파기 절차 및 방법</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_4_1">
+                  <div class="para_title">가. 파기 절차</div>
+                  <div class="para_cont">
+                    <span>
+                      고객의 개인정보는 목적이 달성된 후 별도의 DB로 옮겨져 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라 (보유 및 이용기간 참조) 일정 기간 보관 후 파기되며, 동
+                      개인정보는 법률에 의한 경우가 아니고서는 보유되는 것 이외의 다른 목적으로 이용되지 않습니다.
+                    </span>
+                  </div>
+                </li>
+                <li class="para_item para_4_2">
+                  <div class="para_title">나. 파기 방법</div>
+                  <div class="para_cont">
+                    <span>
+                      종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통해 파기합니다.<br />
+                      전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheet_wrap sheet_5">
+              <div class="sheet_title">5. 개인정보 수집 동의 거부의 권리</div>
+              <ul class="sheet_cont">
+                <li class="para_item para_5_1">
+                  <div class="para_cont">
+                    <span>
+                      개인정보의 수집. 이용과 관련하여 개인정보 동의를 거부할 수 있습니다. 다만 이 개인정보는 조사 서비스 이용에 필요한 필수 정보이므로 동의하셔야 이후 절차를 진행할 수
+                      있습니다.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script>
+
+    /* ---- MODAL ON OFF ----*/
+    const downBtn = $(".list-down-btn");
+    const downModalCnsBtn = $(".down_modal_wrap .btn-cancel");
+
+    const modalWrap = $(".modal_wrap");
+    const downModal = $(".down_modal_wrap");
+    const longTermModal = $(".long_term_modal_wrap");
+    const serviceModal = $(".service_policy_modal_wrap");
+    const personalModal = $(".personal_policy_modal_wrap");
+
+    const MODALON_CLASSNAME = "modalOn";
+
+    const superModalHandler = {
+      modalWrapOn: function () {
+        $(modalWrap).addClass(MODALON_CLASSNAME);
+        $('html').css("overflow", "hidden");
+        $('body').css("width", "calc(100% - 17px)");
+        $('.modal_bg').on('scroll touchmove mousewheel', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        });
+      },
+      modalWrapOff: function () {
+        $(modalWrap).removeClass(MODALON_CLASSNAME);
+        $('html').css("overflow", "scroll");
+        $('body').css("width", "100%");
+        $('modal_bg').off('scroll touchmove mousewheel');
+      },
+    }
+
+    /*  DOWNLOAD confirm modal  */
+    $(downBtn).on("click", function (event) {
+      event.preventDefault();
+      superModalHandler.modalWrapOn();
+      $(downModal).addClass(MODALON_CLASSNAME);
+    })
+
+    $(downModalCnsBtn).on("click", function () {
+      superModalHandler.modalWrapOff();
+      $(downModal).removeClass(MODALON_CLASSNAME);
+    })
+    $(".down_modal_wrap .modal_cls_btn").on("click", function () {
+      superModalHandler.modalWrapOff();
+      $(downModal).removeClass(MODALON_CLASSNAME);
+    })
+
+    /*  LONG-TERM submit modal  */
+    $(".long_term_period .long-btn .btn").on("click", function () {
+      event.preventDefault();
+      superModalHandler.modalWrapOn();
+      $(longTermModal).addClass(MODALON_CLASSNAME);
+    })
+
+    $(".long_term_modal_wrap .submit_btn_wrap #longTermClose").on("click", function () {
+      event.preventDefault();
+      superModalHandler.modalWrapOff();
+      $(longTermModal).removeClass(MODALON_CLASSNAME);
+    })
+
+    $(".long_term_modal_wrap .modal_cls_btn").on("click", function () {
+      superModalHandler.modalWrapOff();
+      $(longTermModal).removeClass(MODALON_CLASSNAME);
+    })
+
+    /*  SERVICE POLICY modal  */
+    $(".use_agreement a").on("click", function (event) {
+      event.preventDefault();
+      superModalHandler.modalWrapOn();
+      $(serviceModal).addClass(MODALON_CLASSNAME);
+    })
+    $(".footer_service_policy").on("click", function (event) {
+      event.preventDefault();
+      superModalHandler.modalWrapOn();
+      $(serviceModal).addClass(MODALON_CLASSNAME);
+    })
+    $(".service_policy_modal_wrap .btn-confirm").on("click", function () {
+      superModalHandler.modalWrapOff();
+      $(serviceModal).removeClass(MODALON_CLASSNAME);
+    })
+
+    /*  PERSONAL POLICY modal  */
+    $(".personal_policy_wrap a").on("click", function (event) {
+      event.preventDefault();
+      superModalHandler.modalWrapOn();
+      $(personalModal).addClass(MODALON_CLASSNAME);
+    })
+    $(".footer_personal_policy").on("click", function (event) {
+      event.preventDefault();
+      superModalHandler.modalWrapOn();
+      $(personalModal).addClass(MODALON_CLASSNAME);
+    })
+    $(".personal_policy_modal_wrap .btn-confirm").on("click", function () {
+      superModalHandler.modalWrapOff();
+      $(personalModal).removeClass(MODALON_CLASSNAME);
+    })
+
+    /*  MODAL_BG OFF  */
+    $(".modal_bg").on("click", function () {
+      superModalHandler.modalWrapOff();
+      $(this).siblings("div").removeClass(MODALON_CLASSNAME);
+    })
+  </script>
+</footer>

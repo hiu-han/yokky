@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Assembly Now">
+  <meta property="og:url" content="http://asnow.co.kr">
+  <meta property="og:description" content="실시간 국회 회의록 서비스">
+  <meta property="og:image" content="images/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./resources/images/icon/favicon.png">
+  <title>실시간 국회 회의록 어쎔블리나우</title>
+
+  <link rel="stylesheet" href="./resources/css/common.css">
+  <link rel="stylesheet" href="./resources/css/layout.css">
+  <link rel="stylesheet" href="./resources/css/style.css">
+
+  <script src='./resources/js/jquery-3.5.1.js'></script>
+  <script src='./resources/js/include.js'></script>
+  <script src='./resources/js/main.js'></script>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="header"></div>
+
+    <div id="container">
+      <div id="contents-page">
+        <div class="content_wrap">
+          <h2 class='title'>회원가입</h2>
+          <div class="cont_inner center">
+            <div class="mypage_box">
+              <div class="mypage_inner">
+                <div class="user_info_wrap join">
+                  <form action="">
+                    <fieldset>
+                      <legend class='blind'>회원정보</legend>
+                      <div class="user_mail_wrap">
+                        <label for="join_mail">이메일</label>
+                        <input type="text" name='user_mail' id='join_mail' class='input-email'
+                          placeholder='이메일 주소로 인증 메일이 발송됩니다.'>
+                        <div class="btn-box"><a href="javascript:void(0);" class="btn">발송</a></div>
+                      </div>
+                      <div class="user_mail_wrap">
+                        <!-- <label for="verification_code"></label> -->
+                        <input type="text" name='user_mail' id='verification_code' class='input-veri'
+                          placeholder='인증번호'>
+                        <div class="btn-box"><a href="javascript:viod(0)" class="btn">확인</a></div>
+                      </div>
+                      <div class="user_pw_wrap">
+                        <label for="join_pw">비밀번호</label>
+                        <input type="password" name='user_pw' id='join_pw' class='input-pw'
+                          placeholder='8자리 이상 영문, 숫자, 특수문자를 혼합하여 입력'>
+                      </div>
+                      <div class="user_pw_wrap">
+                        <label for="join_pw_check">비밀번호 확인</label>
+                        <input type="password" name='join_pw_check' id='join_pw_check' class='input-pw' placeholder=''>
+                      </div>
+                      <div class="user_name_wrap">
+                        <label for="user_name">이름</label>
+                        <input type="text" name='user_name' id='user_name' class='input-name'>
+                      </div>
+                      <div class="user_hp_wrap">
+                        <label for="user_hp">휴대전화</label>
+                        <input type="text" name='user_hp' id='user_hp' class='input-ph'>
+                        <div class="btn-box"><a href="#" class="btn">인증</a></div>
+                      </div>
+                      <div class="user_birth_wrap">
+                        <label for="user_birth">생년월일</label>
+                        <input type="text" name='user_birth' id='user_birth' placeholder='YYYY/MM/DD'
+                          class='input-birth'>
+                      </div>
+                    </fieldset>
+                    <div class="terms_agree_wrap">
+                      <div class="use_agreement">
+                        <input type="checkbox" id='use_agree_chk'>
+                        <label for="use_agree_chk">서비스 이용약관에 동의합니다.</label>
+                        <a href="#">자세히보기</a>
+                      </div>
+                      <div class="personal_policy_wrap">
+                        <input type="checkbox" id='pers_pol_chk'>
+                        <label for="pers_pol_chk">개인정보처리방침에 동의합니다.</label>
+                        <a href="#">자세히보기</a>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="btn_wrap">
+                    <div class="btn-box change-btns"><a href="#" class="btn">회원가입</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+
+</html>

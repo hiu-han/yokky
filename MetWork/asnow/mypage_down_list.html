@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Assembly Now">
+  <meta property="og:url" content="http://asnow.co.kr">
+  <meta property="og:description" content="실시간 국회 회의록 서비스">
+  <meta property="og:image" content="images/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./resources/images/icon/favicon.png">
+  <title>실시간 국회 회의록 어쎔블리나우</title>
+
+  <link rel="stylesheet" href="./resources/css/common.css">
+  <link rel="stylesheet" href="./resources/css/layout.css">
+  <link rel="stylesheet" href="./resources/css/style.css">
+
+  <script src='./resources/js/jquery-3.5.1.js'></script>
+  <script src='./resources/js/include.js'></script>
+  <script src='./resources/js/main.js'></script>
+
+  <style>
+    #nav>li:nth-child(3)>a {
+      color: #2a2a2a;
+    }
+
+    #nav>li:nth-child(3)>a::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="header"></div>
+
+    <div id="container">
+      <div id="contents-page">
+        <div class="content_wrap">
+          <h2 class='title'>마이페이지</h2>
+          <div class='mypage_menu_wrap center'>
+            <ul class="mypage_menu">
+              <li class="mypage_list list_info"><a href="./mypage.html">정보관리</a></li>
+              <li class="mypage_list list_download now-on"><a href="#">다운로드내역</a></li>
+              <li class="mypage_list list_purchase"><a href="./mypage_purchase.html">결제내역</a></li>
+              <li class="mypage_list list_payment"><a href="./mypage_payment.html">구매하기</a></li>
+            </ul>
+          </div>
+          <div class="cont_inner center">
+            <div class="mypage_box">
+              <div class="mypage_inner">
+                <div class="mypage_title_wrap">
+                  <h3 class="mypage_title">회의록 다운로드 내역</h3>
+                </div>
+                <div class="down_list_wrap">
+                  <ul class="minutes_list_inner">
+                    <li class="list_title">
+                      <div class='title_minutes_name'><span>회의명</span></div>
+                      <div class="title_minutes_date"><span>회의일자</span></div>
+                      <div class="title_minutes_sort"><span>구분</span></div>
+                      <div class="title_minutes_time"><span>재생시간</span></div>
+                      <div class="title_minutes_down"><span>내려받기</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 국회(임시회)제05차
+                            국무총리(김부겸)임명동의에관한인사청문특별위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf off'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf off'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf off'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf'>pdf</span>
+                      </div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_minutes_name"><span><a href="./viewer.html">제388회 제2차 법제사법위원회
+                            04</a></span></div>
+                      <div class="list_minutes_date"><span>2021년 06월 17일</span></div>
+                      <div class="list_minutes_sort"><span>법사위</span></div>
+                      <div class="list_minutes_time"><span>40:00</span></div>
+                      <div class="list_minutes_down">
+                        <span class='icons icon-hwp'>hwp</span>
+                        <span class='icons icon-docx'>docx</span>
+                        <span class='icons icon-pdf'>pdf</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class='minutes_list_more'>
+                    <a href="#" class='btn'>더 보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+
+</html>

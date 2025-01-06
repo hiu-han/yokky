@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Assembly Now">
+  <meta property="og:url" content="http://asnow.co.kr">
+  <meta property="og:description" content="실시간 국회 회의록 서비스">
+  <meta property="og:image" content="images/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./resources/images/icon/favicon.png">
+  <title>실시간 국회 회의록 어쎔블리나우</title>
+
+  <link rel="stylesheet" href="./resources/css/common.css">
+  <link rel="stylesheet" href="./resources/css/layout.css">
+  <link rel="stylesheet" href="./resources/css/style.css">
+
+  <script src='./resources/js/jquery-3.5.1.js'></script>
+  <script src='./resources/js/include.js'></script>
+  <script src='./resources/js/main.js'></script>
+
+  <style>
+    #nav>li:nth-child(3)>a {
+      color: #2a2a2a;
+    }
+
+    #nav>li:nth-child(3)>a::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="header"></div>
+
+    <div id="container">
+      <div id="contents-page">
+        <div class="content_wrap">
+          <h2 class='title'>마이페이지</h2>
+          <div class='mypage_menu_wrap center'>
+            <ul class="mypage_menu">
+              <li class="mypage_list list_info"><a href="./mypage.html">정보관리</a></li>
+              <li class="mypage_list list_download"><a href="./mypage_down_list.html">다운로드내역</a></li>
+              <li class="mypage_list list_purchase now-on"><a href="#">결제내역</a></li>
+              <li class="mypage_list list_payment"><a href="./mypage_payment.html">구매하기</a></li>
+            </ul>
+          </div>
+          <div class="cont_inner center">
+            <div class="mypage_box">
+              <div class="mypage_inner">
+                <div class="mypage_title_wrap">
+                  <h3 class="mypage_title">이용권 구매 내역</h3>
+                </div>
+                <div class="purchase_list_wrap">
+                  <ul class="minutes_list_inner">
+                    <li class="list_title">
+                      <div class='title_pur_date'><span>결제일</span></div>
+                      <div class="title_pur_method"><span>결제수단</span></div>
+                      <div class="title_pur_sum"><span>결제금액</span></div>
+                      <div class="title_pur_access"><span>이용권</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-08-06</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-08-02</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                    <li class="list_minutes_wrap">
+                      <div class="list_pur_date"><span>2021-05-26</span></div>
+                      <div class="list_pur_method"><span>신용카드</span></div>
+                      <div class="list_pur_sum"><span>00000원</span></div>
+                      <div class="list_pur_access"><span>3개월</span></div>
+                    </li>
+                  </ul>
+                  <div class='minutes_list_more'>
+                    <a href="#" class='btn'>더 보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Assembly Now">
+  <meta property="og:url" content="http://asnow.co.kr">
+  <meta property="og:description" content="실시간 국회 회의록 서비스">
+  <meta property="og:image" content="images/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./resources/images/icon/favicon.png">
+  <title>실시간 국회 회의록 어쎔블리나우</title>
+
+  <link rel="stylesheet" href="./resources/css/common.css">
+  <link rel="stylesheet" href="./resources/css/layout.css">
+  <link rel="stylesheet" href="./resources/css/style.css">
+
+  <script src='./resources/js/jquery-3.5.1.js'></script>
+  <script src='./resources/js/include.js'></script>
+  <script src='./resources/js/main.js'></script>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="header"></div>
+
+    <div id="container">
+      <div id="contents-page">
+        <div class="content_wrap">
+          <h2 class='title'>실시간 회의록 서비스</h2>
+          <div class='search_wrap clearFix'>
+            <div class="search_method_wrap">
+              <a href='#'>전체</a>
+              <ul>
+                <li><a href="#">전체</a></li>
+                <li><a href="#">회의내용</a></li>
+                <li><a href="#">회의명</a></li>
+              </ul>
+            </div>
+            <div class="search_keyword minutes-list">
+              <div class="type_keyword">
+                <input type="text" id='search_minutes_keyword' name='keyword' placeholder="검색어를 입력하세요">
+                <label for="search_minutes_keyword">검색어를 입력하세요</label>
+              </div>
+              <p class="btn-box search-btn"><a href="#" class='icon-search'></a></p>
+            </div>
+          </div>
+          <div class="cont_inner center">
+            <div class="todays_minutes_box">
+              <div class="todays_inner">
+                <div class="todays_title_wrap">
+                  <h3 class="todays_title">오늘의 회의</h3>
+                  <div class="todays_date_box">
+                    <div class="todays_date">
+                      <p class='year'><span>2021</span>년</p>
+                      <p class="month"><span>08</span>월</p>
+                      <p class="day"><span>05</span>일</p>
+                    </div>
+                    <div class="todays_button">
+                      <p class="left-btns lr-btns"><a href="#" class="left lr-btn"></a></p>
+                      <p class="right-btns lr-btns"><a href="#" class="right lr-btn"></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="todays_minutes_wrap">
+                  <ul class="todays_minutes_list">
+                    <li class='todays_minutes'>
+                      <p class='todays_time'>10:00</p>
+                      <span class="todays_minutes_title uploaded"><em>제389회 국회(임시회) 제02차 산업통상자원중소벤처기업위원회</em></span>
+                    </li>
+                    <li class='todays_minutes'>
+                      <p class='todays_time'>10:00</p>
+                      <span class="todays_minutes_title uploaded"><em>제 388회 제 2차 법제사법위원회 회의록</em></span>
+                    </li>
+                    <li class='todays_minutes'>
+                      <p class='todays_time'>10:00</p>
+                      <span class="todays_minutes_title uploaded"><em>제 388회 제 2차 법제사법위원회 회의록</em></span>
+                    </li>
+                    <li class='todays_minutes'>
+                      <p class='todays_time'>10:00</p>
+                      <span class="todays_minutes_title minutes"><em>제 388회 제 2차 법제사법위원회 회의록</em></span>
+                    </li>
+                    <li class='todays_minutes'>
+                      <p class='todays_time'>10:00</p>
+                      <span class="todays_minutes_title minutes"><em>제 388회 제 2차 법제사법위원회 회의록</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+
+</html>

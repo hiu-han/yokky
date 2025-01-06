@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Assembly Now">
+  <meta property="og:url" content="http://asnow.co.kr">
+  <meta property="og:description" content="실시간 국회 회의록 서비스">
+  <meta property="og:image" content="images/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./resources/images/icon/favicon.png">
+  <title>실시간 국회 회의록 어쎔블리나우</title>
+
+  <link rel="stylesheet" href="./resources/css/common.css">
+  <link rel="stylesheet" href="./resources/css/layout.css">
+  <link rel="stylesheet" href="./resources/css/style.css">
+
+  <script src='./resources/js/jquery-3.5.1.js'></script>
+  <script src='./resources/js/include.js'></script>
+  <script src='./resources/js/main.js'></script>
+
+  <style>
+    span.result_section {
+      cursor: pointer;
+    }
+
+    .highlighted {
+      color: #9e9e9e;
+    }
+
+    video,
+    audio {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #nav>li:first-child>a {
+      color: #2a2a2a;
+    }
+
+    #nav>li:first-child>a::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="header"></div>
+
+    <div id="container">
+      <div id="contents-page">
+        <div class="content_wrap">
+          <h2 class='title'>회의록 열람</h2>
+          <div class="cont_inner center">
+            <div class="title_box clearFix">
+              <h3 class='minutes_title'>제 338회 제 2차 법제사법위원회</h3>
+              <div class="btn_wrap">
+                <p class='btn-box title-btn'><a href="#" class='btn'>목록보기</a></p>
+                <p class='btn-box title-btn'><a href="#" class='btn'>내려받기</a></p>
+              </div>
+            </div>
+            <div class="media_box clearFix">
+              <div class="media_box_minutes">
+                <div class="control_box">
+                  <div class="control_btn">
+                    <!-- <p class='btn-play'><a href="javascript:void(0)" class='icon-play' title='재생'></a></p> -->
+                    <p class='btn-pause'><a href="javascript:void(0)" class='icon-pause' title='일시정지'></a></p>
+                  </div>
+                  <div class="control_time">
+                    <div class="slider_time">
+                      <!-- <div class='time_range'>
+                        <div class="slider_range" style='width:8%;'></div>
+                        <span class="slider_handle" style='left:8%;'></span>
+                      </div> -->
+                      <input type="range" id="time_range" max="100" value="0" style="width: 100%;">
+                    </div>
+                    <div class='state_time'>
+                      <span class='remain_time'>03:20</span>
+                      <em>/</em>
+                      <span class='whole_time'>40:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="minutes_box">
+                  <div class="minutes_inner">
+                    <!-- 회의록 내용 -->
+                    존경하는 국민 여러분! 박병석 국회의장님을 비롯한 선배․동료 의원 여러분! 김부겸 국무총리를 비롯한 국무위원 여러분! 국민의힘 원내대표 김기현입니다. 오늘 연설을 시작하기에 앞서
+                    우리 국민의힘에 혁신의 바람을 넣어 주신 국민 여러분들께 진심으로 감사드립니다.<br /><br />
+
+                    의원님들께 묻고 싶습니다. 우리는 왜 정치를 하고 있습니까? 각자 철학과 가치관은 다를지라도 국민을 위하겠다는 그 마음, 그 마음만은 같다고 저는 믿고 싶습니다. 여러분 지금
+                    민생이 어떻습니까? 국가행복지수 OECD 국가 중 최하위권입니다. 지난해 합계출산율, 0.84명으로 꼴찌입니다.<br /><br />
+
+                    반면에 노인빈곤율, 압도적 1위입니다. 자살률, <i class='now'>OECD 회원 평균의 2배입니다.</i> 청년실업률 현재 10%를 기록 중인데 청년 체감실업률 무려
+                    27%에 육박합니다. 민주화를 성취한
+                    세계 11위 경제대국인데도 불구하고 국민의 삶은 이렇게 점점 힘겨워지고 있습니다.<br /><br />
+
+                    가난한 대학생, 학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다. 그런데 최저임금이 인상되고 근로시간 제한되었다고 해서 여기저기 옮겨 다닐 수밖에
+                    없습니다. <strong>아르바이트</strong> 하고 취직 준비도 해야 되는데 이 대학생 동시에 두 개 다 하면서 졸업하고 취업 무사히 할 수 있겠습니까? 어떤 가게 사장님,
+                    코로나 직격탄 맞았습니다.<br /><br />
+
+                    장사 안 됩니다. 월세 밀립니다. 할 수 없이 <strong>아르바이트</strong>생 내보내고 혼자서 버텨 봤지만 결국 가게를 접게 되었습니다. 그런데 이 사장님, 다시 일어날
+                    기회가 있기나 하겠습니까? 한 부부, 몇 년 전에 전세금에다 대출을 더해서 아파트 하나 장만했습니다. 그런데 아파트 값이 붕 뛰었습니다. 갑자기 폭증했습니다. 그러더니 세금폭탄이
+                    날아왔습니다. 아파트 처분하고 전세로 가려니까 나온 매물이 없습니다. 수천만 원 양도세까지 나온답니다. 이 부분 앞으로 어떻게 해야 되겠습니까? 이게 특별한 얘기가 아닙니다. 우리
+                    주변에 흔히 지금 널려 있는 일상의 얘기입니다.<br /><br />
+
+                    성실하게 살아온 분들 지금 미래가 막막합니다. 국민은 묻고 있습니다, ‘도대체 얼마나 노력해야 일자리를 얻을 수 있습니까? 그리고 얼마나 걸려야, 얼마를 모아야 집을 살 수 있다는
+                    겁니까?’<br /><br />
+
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptas? Eaque numquam ipsa eum
+                    delectus quis tempore cumque ducimus autem magni quos, reiciendis, debitis sunt, nam temporibus sint
+                    consequuntur nobis dignissimos totam facere placeat aut harum fugiat accusamus? Adipisci ratione
+                    iste neque mollitia, libero maxime odit distinctio, repellat repudiandae aliquam soluta magni
+                    doloribus, voluptas maiores eligendi atque. Vel suscipit, veritatis reiciendis, voluptates odit
+                    ducimus quaerat, nisi iure fugit aut delectus laboriosam expedita est! Molestiae quo ea reiciendis,
+                    saepe repudiandae nam delectus optio quam autem est veritatis laudantium aut, dignissimos
+                    laboriosam. Minus officia accusantium nesciunt blanditiis, facere dolor, perferendis quasi adipisci
+                    ipsam fugiat minima cupiditate explicabo error! Magnam at ratione rerum rem quas architecto aliquam
+                    aut similique perferendis, eius excepturi ut sapiente! Ullam optio laudantium molestiae? Cum
+                    corporis earum ratione corrupti a veritatis totam natus adipisci. Perferendis obcaecati possimus
+                    consectetur sit aperiam! At voluptatum explicabo minima iusto ducimus dolorum dolorem culpa, impedit
+                    dicta quos labore rem voluptatem nihil sed corporis asperiores ipsum quam cumque beatae unde!
+                    Officia, fuga et aliquid consequatur minus recusandae quisquam ut ex accusantium asperiores, fugit
+                    at odit provident commodi animi est earum nulla illum necessitatibus reprehenderit blanditiis quia!
+                    Velit officia incidunt magni, cupiditate nostrum similique in at voluptates eaque, iste minima
+                    exercitationem unde. Exercitationem vel distinctio nisi commodi illum! Quo, voluptatum ex.
+                    Blanditiis, aperiam ullam! Laborum aperiam vel temporibus possimus ad est maxime minus veniam nemo
+                    unde voluptatibus accusamus, amet doloremque neque nulla ullam natus totam sit fugit blanditiis aut.
+                    Distinctio accusantium corporis laboriosam aspernatur. Alias qui magni ullam repudiandae vero atque
+                    ipsam asperiores delectus recusandae! Odio ipsa aliquam ipsam sunt optio asperiores expedita dolorem
+                    tenetur perspiciatis nisi repudiandae reiciendis veniam magnam quos tempore eius neque eligendi
+                    culpa perferendis distinctio officia voluptatum autem, aliquid consectetur. Perferendis ipsam
+                    doloribus nulla, ullam quis expedita laboriosam dicta atque hic ad?
+
+                  </div>
+                </div>
+              </div>
+              <div class="media_box_search">
+                <div class="search_keyword">
+                  <div class="type_keyword">
+                    <input type="text" id='keyword' name='keyword' placeholder="검색어를 입력하세요">
+                    <label for="keyword">검색어를 입력하세요</label>
+                  </div>
+                  <p class="btn-box search-btn"><a href="#" class='icon-search'></a></p>
+                </div>
+                <div class="search_result">
+                  <div class="result_wrap">
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:47</em>
+                      <span class='result_section'><strong>아르바이트</strong> 하고 취직 준비도 해야되는데 이 대학생 동시에 두 개 다 하면서 졸업하고 취업
+                        우사리</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>할 수 없으니 <strong>아르바이트</strong>생 내보내고 혼자서 버텨 봤지만 결국 가게를 접게
+                        되었습니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+                    <p class="result_box">
+                      <em class='time_stamp'>00:01:40</em>
+                      <span class='result_section'>학비 벌기 위해서 <strong>아르바이트</strong> 두 개, 세 개 뜁니다.</span>
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+
+</html>
