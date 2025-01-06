@@ -1,2 +1,0 @@
-# yokky
- momentum
