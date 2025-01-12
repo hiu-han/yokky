@@ -1,4 +1,4 @@
 $(document).ready(function () {
-  $('#header').load('/Metwork/gcgfPanelSurvey/include/header.html');
-  $('#footer').load('/Metwork/gcgfPanelSurvey/include/footer.html');
+  $('#header').load('/MetWork/gcgfPanelSurvey/include/header.html');
+  $('#footer').load('/MetWork/gcgfPanelSurvey/include/footer.html');
 });
