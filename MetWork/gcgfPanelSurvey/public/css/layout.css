@@ -1,0 +1,225 @@
+/*** HEADER ***/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 500;
+  box-shadow: var(--bxsh-l);
+}
+.hd__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  height: var(--ht-hd);
+  margin: 0 auto;
+}
+/** HEADER > LOGO **/
+.logo > a > span {
+  display: inline-block;
+  font-family: var(--ft-gr);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: var(--ht-hd);
+  word-break: keep-all;
+}
+
+/** HEADER > NAV **/
+.nav__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.nav__item > a {
+  display: block;
+  position: relative;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: var(--ht-hd);
+  word-break: keep-all;
+}
+.nav__item > a:hover {
+  color: var(--cl-primary);
+}
+.nav__item > a::after {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0px;
+  background-color: var(--cl-primary);
+}
+
+#navOpener {
+  display: none;
+}
+
+/** HEADER > USER MENU **/
+.login > a {
+  color: #515151;
+  color: var(--cl-primary);
+  font-weight: 500;
+  line-height: var(--ht-hd);
+}
+
+/*** FOOTER ***/
+footer {
+  border-top: 1px solid var(--cl-ln-conbox-default);
+}
+.ft__inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 28px 0;
+  margin: 0 auto;
+}
+footer .logo__wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 64px;
+  margin-bottom: 24px;
+}
+footer .logo__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+footer .logo__item .logo-type {
+  font-size: 15px;
+  color: var(--cl-txt-sub);
+}
+footer .logo__item .logo {
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+footer .logo__item.logo-01 .logo {
+  width: 240px;
+  background-image: url('../img/common/logo-01.svg');
+}
+footer .logo__item.logo-02 .logo {
+  background-image: url('../img/common/logo.png');
+}
+.copyright {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+
+@media all and (max-width: 640px) {
+  header {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+  .hd__inner {
+    display: block;
+    height: var(--ht-hd-640);
+  }
+  .logo {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .logo > a > span {
+    font-size: 18px;
+    line-height: var(--ht-hd-640);
+  }
+  .hd--center {
+    position: fixed;
+    top: 62px;
+    right: -259px;
+    width: 250px;
+    padding: 14px;
+    border-radius: 18px 0 0 18px;
+    background-color: #fff;
+    box-shadow: var(--bxsh-l);
+    z-index: 100;
+    transition: var(--trst-l);
+  }
+  .hd--center.nowOn {
+    right: 0;
+  }
+  header .hd--right {
+    display: none;
+  }
+  .nav__list {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .nav__list .nav__item > a {
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 400 !important;
+    line-height: 3;
+    color: #313131;
+  }
+  .nav__list .nav__item:hover > a {
+    background-color: #f6f6f6;
+  }
+  .nav__list .nav__item > a::after {
+    display: none !important;
+  }
+
+  #navOpener {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -50px;
+  }
+  #navOpener > button {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px 0 0 10px;
+    background-color: #fff;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+  }
+  #navOpener > button {
+    background-image: url('../img/icon/icon-arrow-to-left.svg');
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+  }
+  #navOpener.nowOn > button {
+    border-radius: 10px;
+    background-image: url('../img/icon/icon-x.svg');
+    background-size: 22px;
+  }
+
+  .ft__inner {
+    padding: 14px 0;
+  }
+  footer .logo__wrap {
+    display: block;
+    margin-bottom: 24px;
+  }
+  footer .logo__item {
+    justify-content: center;
+  }
+  footer .logo__item:last-child {
+    margin-bottom: 0;
+  }
+  footer .logo__item .logo-type {
+    font-size: 14px;
+  }
+  footer .logo__item .logo {
+    width: 114px;
+  }
+  footer .logo__item.logo-01 .logo {
+    width: 230px;
+  }
+  .copyright {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,107 @@
+strong {
+  font-weight: 600;
+}
+
+/** COMMON > BTN **/
+.btn {
+  display: inline-block;
+}
+.btn > a,
+.btn > button {
+  display: inline-block;
+  padding: 0 16px;
+  border: 1px solid #a1a1a4;
+  background-color: #fff;
+  border-radius: 4px;
+  line-height: 34px;
+  font-size: 14px;
+  transition: var(--trst-s);
+}
+.btn:hover > a,
+.btn:hover > button {
+  border: 1px solid #515151;
+  background-color: #f1f1f4;
+}
+.btn.btn-01 > a,
+.btn.btn-01 > button {
+  border: 1px solid var(--cl-primary);
+  background-color: var(--cl-primary);
+  color: #fff;
+}
+.btn.btn-01:hover > a,
+.btn.btn-01:hover > button {
+  border: 1px solid var(--cl-primary-hover);
+  background-color: var(--cl-primary-hover);
+}
+.btn.btn-02 > a,
+.btn.btn-02 > button {
+  border: 1px solid #a1a1a4;
+  background-color: #fff;
+}
+.btn.btn-02:hover > a,
+.btn.btn-02:hover > button {
+  border: 1px solid #515151;
+  background-color: #f1f1f4;
+}
+.btn.btn-rd > a,
+.btn.btn-rd > button {
+  border: 1px solid tomato;
+  background-color: tomato;
+  color: #fff;
+}
+.btn.btn-rd:hover > a,
+.btn.btn-rd:hover > button {
+  border: 1px solid rgb(234, 84, 58);
+  background-color: rgb(234, 84, 58);
+}
+
+.btn.btn--icon > button,
+.btn.btn--icon > a {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url('../img/icon/icon-plus.svg');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+
+/** INPUT **/
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='text'] {
+  display: inline-block;
+  border: 1px solid #b1b1b3;
+  font-size: 15px;
+  line-height: 34px;
+  padding: 0 12px;
+}
+input[type='email']:read-only,
+input[type='number']:read-only,
+input[type='text']:read-only {
+  border: 1px solid #d1d1d3;
+  background-color: #f8f8fa;
+  color: #616161;
+}
+textarea {
+  width: 100%;
+  height: 40vh;
+  padding: 20px 24px;
+  background-color: #f8f8f9;
+  border: 1px solid #b1b1b3;
+  resize: none;
+}
+
+@media all and (max-width: 640px) {
+  /** COMMON > BTN // 640px **/
+  .btn > a,
+  .btn > button {
+    padding: 0 14px;
+    font-size: 13px;
+  }
+}

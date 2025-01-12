@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 158 158">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cceefe;
+      }
+
+      .cls-2 {
+        fill: #00eddd;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 136)  -->
+  <g>
+    <g id="_레이어_1" data-name="레이어_1">
+      <g>
+        <rect class="cls-1" x="68.7" y="50" width="20" height="88.4"/>
+        <rect class="cls-1" x="62.1" y="50" width="33.2" height="15.9"/>
+        <rect class="cls-1" x="62.1" y="122.5" width="33.2" height="15.9"/>
+        <rect class="cls-1" x="115.1" y="50" width="20" height="88.4"/>
+        <rect class="cls-1" x="108.5" y="50" width="33.2" height="15.9"/>
+        <rect class="cls-1" x="108.5" y="122.5" width="33.2" height="15.9"/>
+        <rect class="cls-1" x="22.3" y="50" width="20" height="88.4"/>
+        <rect class="cls-1" x="15.8" y="50" width="33.2" height="15.9"/>
+        <rect class="cls-1" x="15.8" y="122.5" width="33.2" height="15.9"/>
+        <path class="cls-2" d="M156.4,145.1h0s0,0,0,0H1.1c0-8.1,5.9-14.6,13.3-14.6h128.8c7.3,0,13.3,6.5,13.3,14.6Z"/>
+        <path class="cls-2" d="M150.4,44.3v13.7s0,0,0,0H7.1v-13.7L78.7,11.4l71.6,32.9Z"/>
+        <image width="439" height="334" transform="translate(-20.4 13.9) scale(.2)" xlink:href="icon-foundation-1.png"/>
+        <image width="439" height="334" transform="translate(-20.4 94.3) scale(.2)" xlink:href="icon-foundation-2.png"/>
+        <image width="440" height="334" transform="translate(25.9 13.9) scale(.2)" xlink:href="icon-foundation-3.png"/>
+        <image width="440" height="334" transform="translate(25.9 94.3) scale(.2)" xlink:href="icon-foundation-4.png"/>
+        <image width="439" height="334" transform="translate(72.5 13.9) scale(.2)" xlink:href="icon-foundation-5.png"/>
+        <image width="439" height="334" transform="translate(72.5 94.3) scale(.2)" xlink:href="icon-foundation-6.png"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 158 158">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffd281;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #00eddd;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 136)  -->
+  <g class="cls-2">
+    <g id="_레이어_1" data-name="레이어_1">
+      <g>
+        <path class="cls-5" d="M131,53.6h-54.6c-12.4,0-22.4,10-22.4,22.4v22c0,12.4,10,22.4,22.4,22.4h56.3l12.4,21c2.7,3.6,8.4,1.7,8.4-2.8v-62.6c0-12.4-10-22.4-22.4-22.4Z"/>
+        <path class="cls-1" d="M103.7,47.4v22c0,12.4-10,22.4-22.4,22.4H25l-12.4,21c-2.7,3.6-8.4,1.7-8.4-2.8v-62.6c0-12.4,10-22.4,22.4-22.4h54.6c12.4,0,22.4,10,22.4,22.4Z"/>
+        <g class="cls-3">
+          <image width="509" height="460" transform="translate(17.8 17.5) scale(.2)" xlink:href="icon-contact-1.png"/>
+        </g>
+        <circle class="cls-4" cx="77.1" cy="60" r="7.4"/>
+        <circle class="cls-4" cx="53.9" cy="60" r="7.4"/>
+        <circle class="cls-4" cx="30.7" cy="60" r="7.4"/>
+      </g>
+    </g>
+  </g>
+</svg>

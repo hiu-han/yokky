@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 41.6 41.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #313131;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-download" data-name="Icon feather-download">
+    <path id="_패스_539" data-name="패스 539" class="cls-1" d="M2.5,37.6V4"/>
+    <path id="_패스_540" data-name="패스 540" class="cls-1" d="M25.1,10.1l-10.7,10.7,10.7,10.7"/>
+    <path id="_패스_541" data-name="패스 541" class="cls-1" d="M14.4,20.8h25.7"/>
+  </g>
+</svg>
