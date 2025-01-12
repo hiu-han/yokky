@@ -1,0 +1,79 @@
+:root {
+  /* 규격 */
+  --wd-center: 1200px;
+  --wd-wide: 1400px;
+  --ht-hd: 64px;
+  --ht-hd-mb: 54px;
+
+  /* 모서리 */
+  --rds: 6px;
+
+  /* 색상 */
+  --cl-primary: #4a6de1;
+  --cl-primary-hover: rgb(57, 90, 200);
+  --cl-primary-bg: #eaefff;
+
+  /* 배경 색상 */
+  /* --bg-body: #fdfdff; */
+  --bg-body: #f4f4f7;
+  --bg-cnts: #f4f4f7;
+  --bg-tb-th: #e2e2e5;
+  --bg-tb-th-thead: #f2f2f5;
+  --bg-txt: #dce4fe;
+
+  /* 선 색상 */
+  --ln-bx-l: #c8d1ef;
+  --ln-ipt-df: #ddd;
+  --ln-ipt-focus: #bbb;
+  --ln-tb: #d1d1d4;
+  --ln-tb: #cacacd;
+
+  /* 버튼 선 색상 */
+  --btn-df: #888;
+
+  /* 글자 색상 */
+  --txt-soft: #616161;
+  --txt-th: #414141;
+  --txt-td: #616161;
+
+  /* 모션 */
+  --trst-l: 0.4s ease-out;
+  --trst-s: 0.2s ease-out;
+
+  /* 박스셰도우 */
+  --bxsh-l: 1px 3px 12px rgba(0, 0, 0, 0.15);
+  --bxsh-s: 1px 3px 8px rgba(0, 0, 0, 0.1);
+  --bxsh-cl: 1px 3px 6px rgba(74, 109, 225, 0.2);
+
+  /* 서체 */
+  --ft-gr: 'Goorm Sans', 'Pretendard', 'Noto Sans KR', Apple Gothic,
+    'sans-serif';
+}
+
+/*** MAIN ***/
+#wrap {
+  width: 100%;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+#main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 146px);
+  padding-top: var(--ht-hd);
+  padding-bottom: 74px;
+}
+.wrapper {
+  margin-top: 44px;
+}
+
+.page-cntts {
+  width: 100%;
+  max-width: var(--wd-center);
+  padding: 0 14px;
+  margin: 24px auto 0;
+}
+.page-cntts:first-child {
+  margin-top: 34px;
+}

@@ -1,0 +1,516 @@
+<!-- 매출 및 고용지표 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="경제자유구역 입주사업체 실태조사 DB 관리시스템">
+  <meta property="og:url" content="http://metrix.urx.co.kr/fez_db/">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="/public/img/icon/favicon.svg">
+  <title>사업체 통계</title>
+
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <style>
+    .hd__inner {
+      max-width: var(--wd-wide);
+    }
+
+    .nav__item.nav--stats>a {
+      color: var(--cl-primary);
+      font-weight: 500;
+    }
+
+    .nav__item.nav--stats>a::after {
+      content: '';
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--cl-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap" class="stats-page stats-sales-employment-page">
+    <div id="header"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <!-- 섹션 - 페이지 탑 -->
+        <section class="page-top">
+          <!-- 페이지 타이틀 -->
+          <div class="page-title">
+            <h2>사업체 통계</h2>
+          </div>
+        </section>
+
+        <!-- 섹션 - 페이지 콘텐츠 // 사업체 통계 - 매출 및 고용지표 -->
+        <section class="page-contents contents-stats sales-employment">
+          <!-- 콘텐츠 - 매출 및 고용지표 -->
+          <div class="contents__box">
+            <div class="contents__inner">
+              <div class="stats__wrap module">
+                <!-- 콘텐츠 탑 -->
+                <div class="contents-top">
+                  <div class="top--left">
+                    <div class="contents-tab">
+                      <ul class="tab__list">
+                        <li class="tab__item salesEmployment nowOn">
+                          <p class="tab-name">
+                            <a href="/stats/salesEmployment.html">매출 및 고용지표</a>
+                          </p>
+                        </li>
+                        <li class="tab__item investExport">
+                          <p class="tab-name">
+                            <a href="/stats/investmentExport.html">연간 투자액 / 수출액</a>
+                          </p>
+                        </li>
+                        <li class="tab__item strategicIndustry">
+                          <p class="tab-name">
+                            <a href="/stats/strategicIndustry.html">핵심전략산업</a>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- 콘텐츠 바디 - 매출 및 고용지표 -->
+                <div class="contents--bd contents-sales-employment">
+                  <div class="stats--divided">
+                    <!-- 통계 - 차트 -->
+                    <div class="divided--left">
+                      <div class="divided-title">
+                        <p>경제자유구역별 매출 및 고용 실태조사</p>
+                      </div>
+                      <div class="divided__wrap">
+                        <!-- 사업체 수 -->
+                        <div class="divided__item item--01">
+                          <div class="item-title">
+                            <p class="item-name">사업체 수</p>
+                            <p class="item-total">31,219</p>
+                          </div>
+                          <div class="item-chart" id="divChartItem01">
+                            <!-- ** 사업체 수 차트 노출 ** -->
+                            <canvas id="chartItem01" width="100%" height="250px"></canvas>
+                          </div>
+                        </div>
+                        <!-- 매출액 -->
+                        <div class="divided__item item--02">
+                          <div class="item-title">
+                            <p class="item-name">매출액</p>
+                            <p class="item-total">157,782,003</p>
+                          </div>
+                          <div class="item-chart" id="divChartItem02">
+                            <!-- ** 매출액 차트 노출 ** -->
+                            <canvas id="chartItem02" width="100%" height="250px"></canvas>
+                          </div>
+                        </div>
+                        <!-- 고용인원 -->
+                        <div class="divided__item item--03">
+                          <div class="item-title">
+                            <p class="item-name">고용인원</p>
+                            <p class="item-total">437,045</p>
+                          </div>
+                          <div class="item-chart" id="divChartItem03">
+                            <!-- ** 교용인원 차트 노출 ** -->
+                            <canvas id="chartItem03" width="100%" height="250px"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 통계 - 연도별 -->
+                    <div class="divided--right">
+                      <!-- 기준년도 탭 -->
+                      <div class="y-by-y__wrap">
+                        <div class="y-tab">
+                          <p class="tab-title">기준년도 선택 (3년)</p>
+                          <ul class="tab__list">
+                            <li class="tab__item nowOn">
+                              <p class="tab-name">2023</p>
+                            </li>
+                            <li class="tab__item">
+                              <p class="tab-name">2022</p>
+                            </li>
+                            <li class="tab__item">
+                              <p class="tab-name">2021</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- 연도별 상세 -->
+                      <div class="y-detail">
+                        <!-- 사업분야별 -->
+                        <div class="detail--tb field">
+                          <table>
+                            <colgroup>
+                              <col width="">
+                              <col width="">
+                              <col width="">
+                              <col width="">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>사업분야별</th>
+                                <th>사업체 수(개)</th>
+                                <th>매출액(백만원)</th>
+                                <th>고용인원(명)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>업종1</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종2</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종3</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종4</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종5</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종6</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종7</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종8</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종9</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종10</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종11</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>업종12</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr class="tr--total">
+                                <th>합계</th>
+                                <td>99,999</td>
+                                <td>999,999,999</td>
+                                <td>999,999</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- 경제자유구역별 -->
+                        <div class="detail--tb fez">
+                          <table>
+                            <colgroup>
+                              <col width="">
+                              <col width="">
+                              <col width="">
+                              <col width="">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>경제자유구역별</th>
+                                <th>사업체 수(개)</th>
+                                <th>매출액(백만원)</th>
+                                <th>고용인원(명)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>인천 (IFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>부산진해 (BJFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>광양만권 (GFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>경기 (GGFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>대구경북 (DGFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>동해안권 (EFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>충북 (CBFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>광주 (GJFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr>
+                                <th>울산 (UFEZ)</th>
+                                <td>12,437</td>
+                                <td>123,456,789</td>
+                                <td>167,931</td>
+                              </tr>
+                              <tr class="tr--total">
+                                <th>합계</th>
+                                <td>99,999</td>
+                                <td>999,999,999</td>
+                                <td>999,999</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="/public/js/jquery-3.5.1.js"></script>
+  <script src="/public/js/chart.umd.js"></script>
+  <script src="/public/js/chartjs-plugin-datalabels.min.js"></script>
+  <script src="/public/js/include.js"></script>
+
+  <script>
+    // 막대차트 데이터 배열 (각 차트의 data)
+    const chartData = [
+      {
+        data: [12, 19, 3, 5, 2, 3, 10, 8, 6]
+      },
+      {
+        data: [52, 190, 134, 156, 120, 39, 101, 89, 69]
+      },
+      {
+        data: [120, 90, 30, 55, 23, 38, 104, 87, 69]
+      }
+    ];
+
+    // 막대차트를 그릴 컨텍스트 배열
+    const ctx = Array.from({ length: chartData.length }, (_, i) =>
+      document.getElementById(`chartItem0${i + 1}`)
+    );
+
+    // 막대차트 생성
+    ctx.forEach((ctx, index) => {
+      new Chart(ctx, {
+        plugins: [ChartDataLabels],
+        type: 'bar',
+        data: {
+          labels: ['인천', '부산진해', '광양만권', '경기', '대구경북', '동해안권', '충북', '광주', '울산'],
+          datasets: [{
+            data: chartData[index].data,
+            backgroundColor: [
+              // 'rgba(255, 99, 132, 0.2)',
+              // 'rgba(54, 162, 235, 0.2)',
+              // 'rgba(255, 206, 86, 0.2)',
+              // 'rgba(75, 192, 192, 0.2)',
+              // 'rgba(153, 102, 255, 0.2)',
+              // 'rgba(255, 159, 64, 0.2)',
+              // 'rgba(255, 99, 132, 0.2)',
+              // 'rgba(54, 162, 235, 0.2)',
+              // 'rgba(255, 206, 86, 0.2)'
+              '#ff747333',
+              '#ffc85233',
+              '#47b8e033',
+              '#6a60a933',
+              '#f1d14b33',
+              '#fc913a33',
+              '#4556c733',
+              '#8fa6bf33',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              // 'rgba(255, 99, 132, 1)',
+              // 'rgba(54, 162, 235, 1)',
+              // 'rgba(255, 206, 86, 1)',
+              // 'rgba(75, 192, 192, 1)',
+              // 'rgba(153, 102, 255, 1)',
+              // 'rgba(255, 159, 64, 1)',
+              // 'rgba(255, 99, 132, 1)',
+              // 'rgba(54, 162, 235, 1)',
+              // 'rgba(255, 206, 86, 1)'
+              '#ff7473',
+              '#ffc852',
+              '#47b8e0',
+              '#6a60a9',
+              '#f1d14b',
+              '#fc913a',
+              '#4556c7',
+              '#8fa6bf',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: false
+            },
+            datalabels: {
+              color: [
+                // 'rgba(255, 99, 132, 1)',
+                // 'rgba(54, 162, 235, 1)',
+                // 'rgba(255, 206, 86, 1)',
+                // 'rgba(75, 192, 192, 1)',
+                // 'rgba(153, 102, 255, 1)',
+                // 'rgba(255, 159, 64, 1)',
+                // 'rgba(255, 99, 132, 1)',
+                // 'rgba(54, 162, 235, 1)',
+                // 'rgba(255, 206, 86, 1)'
+                '#ff7473',
+                '#ffc852',
+                '#47b8e0',
+                '#6a60a9',
+                '#f1d14b',
+                '#fc913a',
+                '#4556c7',
+                '#8fa6bf',
+                'rgba(255, 159, 64, 1)'
+              ],
+              font: {
+                weight: '500',
+                size: '15px'
+              }
+            }
+          },
+          indexAxis: 'y',
+          maxBarThickness: 30
+        }
+      })
+    });
+
+    // 차트 01 - 사업체 수
+    // var ctx01 = document.getElementById('chartItem01');
+    // var chart01 = new Chart(ctx01, {
+    //   type: 'bar',
+    //   data: {
+    //     labels: ['인천', '부산진해', '광양만권', '경기', '대구경북', '동해안권', '충북', '광주', '울산'],
+    //     datasets: [{
+    //       label: '# of Votes',
+    //       data: [12, 19, 3, 5, 2, 3, 10, 8, 6],
+    //       backgroundColor: [
+    //         'rgba(255, 99, 132, 0.2)',
+    //         'rgba(54, 162, 235, 0.2)',
+    //         'rgba(255, 206, 86, 0.2)',
+    //         'rgba(75, 192, 192, 0.2)',
+    //         'rgba(153, 102, 255, 0.2)',
+    //         'rgba(255, 159, 64, 0.2)',
+    //         'rgba(255, 99, 132, 0.2)',
+    //         'rgba(54, 162, 235, 0.2)',
+    //         'rgba(255, 206, 86, 0.2)'
+    //       ],
+    //       borderColor: [
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)',
+    //         'rgba(75, 192, 192, 1)',
+    //         'rgba(153, 102, 255, 1)',
+    //         'rgba(255, 159, 64, 1)',
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)'
+    //       ],
+    //       borderWidth: 1,
+    //       // barThickness: 20
+    //     }]
+    //   },
+    //   options: {
+    //     plugins: {
+    //       legend: {
+    //         display: false
+    //       },
+    //     },
+    //     indexAxis: 'y',
+    //     maxBarThickness: 30,
+    //   }
+    // });
+
+
+  </script>
+</body>
+
+</html>

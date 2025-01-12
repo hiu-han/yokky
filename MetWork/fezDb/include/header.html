@@ -1,0 +1,45 @@
+<header>
+  <div class="hd__inner">
+    <div class="hd--left">
+      <div class="logo__wrap">
+        <h1 class="logo"><a href="/index.html">경제자유구역 DB 프로그램</a></h1>
+      </div>
+    </div>
+    <div class="hd--right" id="menu">
+      <div class="nav__wrap">
+        <p class="btn btn--mo btn--cls" id="menuCloser">
+          <button>cls</button>
+        </p>
+        <nav>
+          <ul class="nav__list">
+            <li class="nav__item nav--stats"><a href="/stats/salesEmployment.html">사업체 통계</a></li>
+            <li class="nav__item nav--state"><a href="/company/companyState.html">사업체 현황</a></li>
+            <li class="nav__item nav--search"><a href="/index.html">사업체 정보 검색</a></li>
+            <li class="nav__item nav--down"><a href="/company/infoDown.html">사업체 정보 추출</a></li>
+            <li class="nav__item nav--user"><a href="/user/login.html">로그아웃</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <p class="btn btn--mo btn--ham" id="menuOpener">
+      <button>MENU</button>
+    </p>
+  </div>
+</header>
+
+<script>
+  const menuOpener = document.getElementById('menuOpener'),
+    menuCloser = document.getElementById('menuCloser'),
+    hdMenu = document.getElementById('menu');
+
+  const NOWON_CLASSNAME = 'nowOn';
+
+  function menuOpen() {
+    hdMenu.classList.add(NOWON_CLASSNAME);
+  };
+  function menuClose() {
+    hdMenu.classList.remove(NOWON_CLASSNAME);
+  }
+  menuOpener.addEventListener('click', menuOpen);
+  menuCloser.addEventListener('click', menuClose);
+</script>

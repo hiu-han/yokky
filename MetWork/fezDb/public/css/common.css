@@ -1,0 +1,314 @@
+strong {
+  font-weight: 600;
+}
+strong.color {
+  color: var(--cl-primary);
+}
+
+.screen-out {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/** COMMON > BTN **/
+.btn {
+  display: inline-block;
+}
+.btn > a,
+.btn > button {
+  display: inline-block;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid var(--cl-primary);
+  background-color: #fff;
+  font-size: 14px;
+  color: var(--cl-primary);
+  line-height: 34px;
+  letter-spacing: -0.05rem;
+  transition: var(--trst-s);
+  cursor: pointer;
+}
+.btn:hover > a,
+.btn:hover > button {
+  border: 1px solid var(--cl-primary-hover);
+  color: var(--cl-primary-hover);
+  box-shadow: var(--bxsh-s);
+}
+.btn.ty--01 > a,
+.btn.ty--01 > button {
+  background-color: var(--cl-primary);
+  color: #fff;
+}
+.btn.ty--01:hover > a,
+.btn.ty--01:hover > button {
+  background-color: var(--cl-primary-hover);
+}
+.btn.wide {
+  width: 100%;
+}
+.btn.wide > a,
+.btn.wide > button {
+  width: 100%;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+/** COMMON > INPUT **/
+.input-label {
+  display: inline-block;
+}
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'] {
+  padding: 0 8px;
+  border-radius: 4px;
+  border: 1px solid var(--ln-ipt-df);
+  background-color: #fafafd;
+  font-size: 13px;
+  color: var(--txt-soft);
+  line-height: 28px;
+}
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='password']:focus {
+  border: 1px solid var(--ln-ipt-focus);
+  background-color: #fff;
+}
+
+/* COMMON > INPUT > SEARCH WRAP */
+.search__wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.search__wrap .input-label {
+  flex-grow: 1;
+}
+.search__wrap input {
+  width: 100%;
+  line-height: 34px;
+  border-radius: 4px 0 0 4px;
+}
+.search__wrap .btn {
+  margin-left: -1px;
+}
+.search__wrap .btn > button,
+.search__wrap .btn > a {
+  padding: 0 14px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* COMMON > INPUT > RADIO WRAP */
+.input-label > input[type='radio'] {
+  display: none;
+}
+.input-label > input[type='radio'] + .label-txt {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--txt-soft);
+  cursor: pointer;
+}
+.input-label > input[type='radio']:checked + .label-txt {
+  font-weight: 500;
+  color: #414141;
+}
+
+/* COMMON > INPUT > RADIO BTN */
+.btn.btn--chk input[type='checkbox'] {
+  display: none;
+}
+.btn.btn--chk .label-txt {
+  display: inline-block;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid var(--cl-primary);
+  background-color: var(--cl-primary);
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  line-height: 34px;
+  letter-spacing: -0.05rem;
+  transition: var(--trst-s);
+  cursor: pointer;
+}
+.btn.btn--chk.wide {
+  width: 100%;
+}
+.btn.btn--chk.wide .btn-label {
+  display: block;
+}
+.btn.btn--chk.wide .label-txt {
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+}
+.btn.btn--chk.wide .label-txt:hover {
+  border: 1px solid var(--cl-primary-hover);
+  background-color: var(--cl-primary-hover);
+}
+.btn.btn--chk.opener .label-txt {
+  position: relative;
+  border: 1px solid var(--cl-primary-bg);
+  background-color: var(--cl-primary-bg);
+  height: 32px;
+}
+.btn.btn--chk.opener .label-txt:hover {
+  border: 1px solid var(--cl-primary-bg-hover);
+  background-color: var(--cl-primary-bg-hover);
+}
+.btn.btn--chk.opener .label-txt::before {
+  content: '상세검색';
+  display: inline-block;
+  font-size: 14px;
+  line-height: 32px;
+  color: var(--cl-primary-deep);
+  vertical-align: top;
+}
+.btn.btn--chk.opener .chk-toggle:checked + .label-txt::before {
+  content: '상세검색 닫기';
+}
+.btn.btn--chk.opener .label-txt::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 32px;
+  margin-left: 7px;
+  background-image: url('../img/icon/icon-select-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: center;
+  opacity: 0.8;
+}
+.btn.btn--chk.opener .chk-toggle:checked + .label-txt::after {
+  transform: translateY(-1px) rotate(180deg);
+}
+
+/** COMMON > SELECT **/
+.select__wrap {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 180px;
+  background-color: #fff;
+}
+.select__wrap > select {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  padding: 0 32px 0 8px;
+  border-radius: 4px;
+  border: 1px solid var(--ln-ipt-focus);
+  background-color: transparent;
+  font-size: 13px;
+  color: var(--txt-soft);
+  cursor: pointer;
+  z-index: 10;
+}
+.select__wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-image: url('../img/icon/icon-select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 53%;
+  background-size: 8px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/** COMMON > UPLOAD **/
+.upload__wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 0;
+  position: relative;
+  background-color: #fff;
+}
+.upload__wrap .input-label.file {
+  display: inline-block;
+  width: 100%;
+  max-width: 360px;
+  height: 36px;
+  padding: 0 5px;
+  border-radius: 4px 0px 0px 4px;
+  border: 1px solid var(--ln-ipt-focus);
+  line-height: 34px;
+  cursor: pointer;
+}
+.upload__wrap .input-label.file input {
+  font-size: 14px;
+  cursor: pointer;
+}
+.upload__wrap .input-label.submit input {
+  display: none;
+}
+.upload__wrap .input-label.submit .label-txt {
+  display: inline-block;
+  padding: 0 12px;
+  margin-left: -1px;
+  border-radius: 0px 4px 4px 0px;
+  background-color: var(--cl-primary);
+  font-size: 14px;
+  line-height: 36px;
+  color: #fff;
+  word-break: keep-all;
+  transition: var(--trst-s);
+  cursor: pointer;
+}
+.upload__wrap .input-label.submit .label-txt:hover {
+  background-color: var(--cl-primary-hover);
+}
+
+@media all and (max-width: 640px) {
+  /** COMMON > BTN - 640px **/
+  .btn > a,
+  .btn > button {
+    font-size: 13px;
+  }
+  .btn.wide > a,
+  .btn.wide > button {
+    font-size: 14px;
+    line-height: 38px;
+  }
+  .btn.btn--chk.wide .label-txt {
+    font-size: 14px;
+  }
+
+  /** COMMON > INPUT - 640px **/
+  /* COMMON > INPUT > RADIO BTN - 640px */
+  .input-label > input[type='radio'] + .label-txt {
+    font-size: 13px;
+  }
+
+  /** COMMON > SELECT - 640px **/
+  .contents-top > .top--left .select__wrap {
+    width: 80px;
+  }
+
+  /** COMMON > UPLOAD - 640px **/
+  .upload__wrap {
+    width: calc(100% - 88px);
+  }
+  .upload__wrap .input-label.file {
+    width: auto;
+    /* max-width: 190px; */
+    font-size: 13px;
+  }
+  .upload__wrap .input-label.file input {
+    width: 100%;
+  }
+  .upload__wrap .input-label.submit .label-txt {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,249 @@
+<!-- 사업체 정보 추출 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="경제자유구역 입주사업체 실태조사 DB 관리시스템">
+  <meta property="og:url" content="http://metrix.urx.co.kr/fez_db/">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="/public/img/icon/favicon.svg">
+  <title>사업체 정보 추출</title>
+
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <style>
+    .nav__item.nav--down>a {
+      color: var(--cl-primary);
+      font-weight: 500;
+    }
+
+    .nav__item.nav--down>a::after {
+      content: '';
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--cl-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap" class="info-down-page">
+    <div id="header"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <!-- 섹션 - 페이지 탑 -->
+        <section class="page-top">
+          <!-- 페이지 타이틀 -->
+          <div class="page-title">
+            <h2>사업체 정보 추출</h2>
+          </div>
+        </section>
+
+        <!-- 섹션 - 페이지 콘텐츠 // 사업체 정보 추출 -->
+        <section class="page-contents contents-down">
+          <!-- 콘텐츠 - 정보 추출 -->
+          <div class="contents__box infoDown">
+            <div class="contents__inner">
+              <div class="down__wrap module">
+                <!-- 콘텐츠 탑 -->
+                <div class="contents-top">
+                  <div class="top--left">
+                    <div class="contents-info">
+                      <p class="info-subs">사업체 정보 추출을 위한 <strong class="color">조건을 설정</strong> 후 하단의 <strong
+                          class="color">다운로드 버튼을 클릭</strong>해
+                        주세요.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 콘텐츠 바디 - 사업체 정보 추출 -->
+                <div class="contents-bd info-down">
+                  <div class="contents--tb">
+                    <table>
+                      <colgroup>
+                        <col width="">
+                        <col width="">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>지역</th>
+                          <td>
+                            <div class="select__wrap select--region">
+                              <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">지역1</option>
+                                <option value="">지역2</option>
+                                <option value="">지역3</option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>업종</th>
+                          <td>
+                            <div class="select__wrap select--type">
+                              <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">업종1</option>
+                                <option value="">업종2</option>
+                                <option value="">업종3</option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>사업 분야</th>
+                          <td>
+                            <div class="select__wrap select--field">
+                              <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">분야1</option>
+                                <option value="">분야2</option>
+                                <option value="">분야3</option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>기업 규모</th>
+                          <td>
+                            <div class="select__wrap select--size">
+                              <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">규모1</option>
+                                <option value="">규모2</option>
+                                <option value="">규모3</option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>회사 형태</th>
+                          <td>
+                            <div class="select__wrap select--form">
+                              <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">형태1</option>
+                                <option value="">형태2</option>
+                                <option value="">형태3</option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>조사 완료 여부</th>
+                          <td>
+                            <div class="td-subs__wrap">
+                              <ul class="y-opt__list">
+                                <li class="y-opt__item item-1">
+                                  <p class="item-name">2020년</p>
+                                  <div class="item-opt">
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-1">
+                                      <span class="label-txt">전체</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-1">
+                                      <span class="label-txt">완료</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-1">
+                                      <span class="label-txt">미완료</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="y-opt__item item-2">
+                                  <p class="item-name">2021년</p>
+                                  <div class="item-opt">
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-2">
+                                      <span class="label-txt">전체</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-2">
+                                      <span class="label-txt">완료</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-2">
+                                      <span class="label-txt">미완료</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="y-opt__item item-3">
+                                  <p class="item-name">2022년</p>
+                                  <div class="item-opt">
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-3">
+                                      <span class="label-txt">전체</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-3">
+                                      <span class="label-txt">완료</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-3">
+                                      <span class="label-txt">미완료</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="y-opt__item item-4">
+                                  <p class="item-name">2023년</p>
+                                  <div class="item-opt">
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-4">
+                                      <span class="label-txt">전체</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-4">
+                                      <span class="label-txt">완료</span>
+                                    </label>
+                                    <label class="input-label">
+                                      <input type="radio" name="opt-4">
+                                      <span class="label-txt">미완료</span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- 콘텐츠 보톰 - 다운로드 버튼 -->
+                <div class="contents-bottom">
+                  <div class="btns btns--bottom">
+                    <p class="btn ty--01">
+                      <a href="/index.html">다운로드</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="/public/js/jquery-3.5.1.js"></script>
+  <script src="/public/js/include.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,481 @@
+<!-- 인덱스 페이지 // 사업체 정보 검색 페이지를 가져오는 것?? 검토 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="경제자유구역 입주사업체 실태조사 DB 관리시스템">
+  <meta property="og:url" content="http://metrix.urx.co.kr/fez_db/">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="/public/img/icon/favicon.svg">
+  <title>사업체 정보 검색</title>
+
+  <link rel="stylesheet" href="public/css/style.css">
+  <style>
+    .nav__item.nav--search>a {
+      color: var(--cl-primary);
+      font-weight: 500;
+    }
+
+    .nav__item.nav--search>a::after {
+      content: '';
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--cl-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap" class="company-search-page">
+    <div id="header"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <!-- 섹션 - 페이지 탑 -->
+        <section class="page-top">
+          <!-- 페이지 타이틀 -->
+          <div class="page-title">
+            <h2>사업체 정보 검색</h2>
+          </div>
+        </section>
+
+        <!-- 섹션 - 페이지 컨텐츠 // 검색 -->
+        <section class="page-contents contents--search-companys">
+          <div class="contents-top">
+            <p class="contents-title">정보 검색</p>
+          </div>
+          <div class="contents-bd">
+            <!-- 컨텐츠 - 검색 -->
+            <div class="contents__box searchKeyword">
+              <div class="contents__inner">
+                <div class="search-keyword__wrap">
+                  <!-- 검색 타입 // radio로 작성하였으나 select도 고려 // 다중 선택인지 문의 필요 -->
+                  <div class="search-type module">
+                    <div class="option__wrap">
+                      <label class="input-label" id="tyAll">
+                        <input type="radio" name="searchType" checked>
+                        <span class="label-txt">전체</span>
+                      </label>
+                      <label class="input-label" id="tyField">
+                        <input type="radio" name="searchType">
+                        <span class="label-txt">사업분야별</span>
+                      </label>
+                      <label class="input-label" id="tyCategory">
+                        <input type="radio" name="searchType">
+                        <span class="label-txt">산업분류별</span>
+                      </label>
+                      <label class="input-label" id="tyZone">
+                        <input type="radio" name="searchType">
+                        <span class="label-txt">경제자유구역별</span>
+                      </label>
+                      <label class="input-label" id="tyRegion">
+                        <input type="radio" name="searchType">
+                        <span class="label-txt">지구별</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- 키워드 검색 -->
+                  <div class="search-keyword module">
+                    <div class="search__wrap">
+                      <label class="input-label">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                      </label>
+                      <p class="btn ty--01 btn-search">
+                        <button>사업체 검색</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 콘텐츠 - 상세검색 -->
+            <div class="contents__box searchDetail contents--hide">
+              <div class="contents__inner">
+                <div class="search-detail__wrap">
+                  <div class="search__box module hide">
+                    <!-- 상세검색 옵션 -->
+                    <div class="detail-option contents--tb">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>경제자유구역</th>
+                            <td>
+                              <div class="select__wrap">
+                                <select name="" id="">
+                                  <option value="default">옵션 선택</option>
+                                  <option value="">인천</option>
+                                  <option value="">경기</option>
+                                  <option value="">강원</option>
+                                  <option value="">충북</option>
+                                  <option value="">광주</option>
+                                  <option value="">광양만</option>
+                                  <option value="">부산진해</option>
+                                  <option value="">울산</option>
+                                  <option value="">대구경북</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>지구</th>
+                            <td>
+                              <div class="select__wrap select--region">
+                                <select name="" id="">
+                                  <option value="select">선택</option>
+                                  <option value="">지구1</option>
+                                  <option value="">지구2</option>
+                                  <option value="">지구3</option>
+                                  <option value="">지구4</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>업종</th>
+                            <td>
+                              <div class="select__wrap select--category">
+                                <select name="" id="">
+                                  <option value="select">선택</option>
+                                  <option value="">업종01</option>
+                                  <option value="">업종02</option>
+                                  <option value="">업종03</option>
+                                  <option value="">업종04</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>사업 분야</th>
+                            <td>
+                              <div class="select__wrap select--field">
+                                <select name="" id="">
+                                  <option value="select">선택</option>
+                                  <option value="">IT제조</option>
+                                  <option value="">IT서비스</option>
+                                  <option value="">SW</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>사업체 규모</th>
+                            <td>
+                              <div class="select__wrap select--size">
+                                <select name="" id="">
+                                  <option value="select">선택</option>
+                                  <option value="">대기업</option>
+                                  <option value="">중소기업</option>
+                                  <option value="">벤처기업</option>
+                                  <option value="">기타</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>사업체명</th>
+                            <td>
+                              <div class="input__wrap input--corp">
+                                <label class="input-label">
+                                  <input type="text" placeholder="사업체명을 입력하세요.">
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>대표자명</th>
+                            <td>
+                              <div class="input__wrap input--ceo">
+                                <label class="input-label">
+                                  <input type="text" placeholder="대표자명을 입력하세요.">
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>
+                              <div class="input__wrap input--corp-num">
+                                <label class="input-label">
+                                  <input type="number" placeholder="사업자등록번호를 입력하세요.">
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>사업체 형태</th>
+                            <td>
+                              <div class="select__wrap select--form">
+                                <select name="" id="">
+                                  <option value="select">선택</option>
+                                  <option value="">개인사업체</option>
+                                  <option value="">회사법인</option>
+                                  <option value="">회사이외의 법인</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- 상세검색 버튼 -->
+                    <div class="btn__wrap">
+                      <p class="btn ty--01 wide">
+                        <button>상세검색</button>
+                      </p>
+                    </div>
+                  </div>
+                  <!-- 상세검색 여닫기 -->
+                  <div class="opener__wrap">
+                    <p class="btn btn--chk opener wide">
+                      <label class="btn-label wide">
+                        <input type="checkbox" class="chk-toggle">
+                        <span class="label-txt"></span>
+                      </label>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 섹션 - 페이지 컨텐츠 // 검색 결과 -->
+        <section class="page-contents contents--search-results">
+          <div class="contents-top">
+            <p class="contents-title">검색 결과</p>
+          </div>
+          <div class="contents-bd">
+            <!-- 컨텐츠 - 검색결과 리스트 -->
+            <div class="contents__box resultsList">
+              <div class="contents__inner">
+                <div class="results-list__wrap module">
+                  <!-- 테이블 탑 -->
+                  <div class="tb-top">
+                    <div class="top--left">
+                      <!-- 검색결과 수 -->
+                      <div class="tb-total">
+                        <p>총 <span class="total-num">4182</span>건</p>
+                      </div>
+                    </div>
+                    <div class="top--center">
+                      <ul class="pagination__list">
+                        <li class="page-arrow page-first disable"><button>
+                            << </button>
+                        </li>
+                        <!-- .page-arrow >> 넘어갈 페이지가 없을 경우 >> addClass '.disable' -->
+                        <li class="page-arrow page-prev disable"><button>
+                            < </button>
+                        </li>
+                        <!-- 현재페이지 >> .page-count >> addClass '.now-on' -->
+                        <li class="page-count now-on"><button>1</button></li>
+                        <li class="page-count"><button>2</button></li>
+                        <li class="page-count"><button>3</button></li>
+                        <li class="page-count"><button>4</button></li>
+                        <li class="page-count"><button>5</button></li>
+                        <li class="page-count"><button>6</button></li>
+                        <li class="page-count"><button>7</button></li>
+                        <li class="page-count"><button>8</button></li>
+                        <li class="page-count"><button>9</button></li>
+                        <li class="page-count"><button>10</button></li>
+                        <!-- <li class="page-count"><button>2</button></li>
+                      <li class="page-count"><button>3</button></li>
+                      <li class="page-count"><button>4</button></li>
+                      <li class="page-count"><button>5</button></li> -->
+                        <li class="page-arrow page-next"><button>></button></li>
+                        <li class="page-arrow page-last"><button>>></button></li>
+                      </ul>
+                    </div>
+                    <div class="top--right"></div>
+                  </div>
+
+                  <!-- 테이블 // 검색 결과 리스트 -->
+                  <div class="contents--tb">
+                    <table>
+                      <colgroup>
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>No.</th>
+                          <th>사업자등록번호</th>
+                          <th>사업체명</th>
+                          <th>대표자명</th>
+                          <th>사업분야</th>
+                          <th>업종</th>
+                          <th>지역</th>
+                          <th>세부주소</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>6075567914</td>
+                          <td>부산해운대대리점</td>
+                          <td>홍성철</td>
+                          <td>IT서비스</td>
+                          <td>전자상거래소매업</td>
+                          <td>01.경기</td>
+                          <td>경기 용인시 수지구 풍덕천로 1495층 공정 5306호(풍덕천동,현대그린프라자)</td>
+                          <td>
+                            <p class="btn btn--td"><a href="company/companyDetail.html">상세정보</a></p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="public/js/jquery-3.5.1.js"></script>
+  <script src="public/js/include.js"></script>
+</body>
+
+</html>

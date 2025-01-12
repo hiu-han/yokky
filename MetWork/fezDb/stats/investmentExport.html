@@ -1,0 +1,304 @@
+<!-- 연간 투자액 / 수출액 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="경제자유구역 입주사업체 실태조사 DB 관리시스템">
+  <meta property="og:url" content="http://metrix.urx.co.kr/fez_db/">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="/public/img/icon/favicon.svg">
+  <title>사업체 통계</title>
+
+  <link rel="stylesheet" href="/public/css/style.css">
+  <style>
+    .hd__inner {
+      max-width: var(--wd-wide);
+    }
+
+    .nav__item.nav--stats>a {
+      color: var(--cl-primary);
+      font-weight: 500;
+    }
+
+    .nav__item.nav--stats>a::after {
+      content: '';
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--cl-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap" class="stats-page stats-invest-export-page">
+    <div id="header"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <!-- 섹션 - 페이지 탑 -->
+        <section class="page-top">
+          <!-- 페이지 타이틀 -->
+          <div class="page-title">
+            <h2>사업체 통계</h2>
+          </div>
+        </section>
+
+        <!-- 섹션 - 페이지 콘텐츠 // 사업체 통계 - 연간 투자액 / 수출액 -->
+        <section class="page-contents contents-stats invest-export">
+          <!-- 콘텐츠 - 연간 투자액 / 수출액 -->
+          <div class="contents__box">
+            <div class="contents__inner">
+              <div class="stats__wrap module">
+                <!-- 콘텐츠 탑 -->
+                <div class="contents-top">
+                  <div class="top--left">
+                    <div class="contents-tab">
+                      <ul class="tab__list">
+                        <li class="tab__item salesEmployment">
+                          <p class="tab-name">
+                            <a href="/stats/salesEmployment.html">매출 및 고용지표</a>
+                          </p>
+                        </li>
+                        <li class="tab__item investExport nowOn">
+                          <p class="tab-name">
+                            <a href="/stats/investmentExport.html">연간 투자액 / 수출액</a>
+                          </p>
+                        </li>
+                        <li class="tab__item strategicIndustry">
+                          <p class="tab-name">
+                            <a href="/stats/strategicIndustry.html">핵심전략산업</a>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- 콘텐츠 바디 - 연간 투자액 / 수출액 -->
+                <div class="contents--bd contents-invest-export">
+                  <div class="stats__box">
+                    <!-- 연간 투자액 -->
+                    <div class="stats__item item--01">
+                      <div class="item-title">
+                        <p class="item-name">연간 투자액</p>
+                      </div>
+                      <div class="item-chart" id="divChartYInvest">
+                        <!-- ** 연간 투자액 차트 노출 ** -->
+                        <canvas id="chartY1" width="100%" height="30"></canvas>
+                      </div>
+                    </div>
+                    <!-- 연간 수출액 -->
+                    <div class="stats__item item--02">
+                      <div class="item-title">
+                        <p class="item-name">연간 수출액</p>
+                      </div>
+                      <div class="item-chart" id="divChartYExport">
+                        <!-- ** 연간 수출액 차트 노출 ** -->
+                        <canvas id="chartY2" width="100%" height="30"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="/public/js/jquery-3.5.1.js"></script>
+  <script src="/public/js/chart.umd.js"></script>
+  <script src="/public/js/chartjs-plugin-datalabels.min.js"></script>
+  <script src="/public/js/include.js"></script>
+
+  <script>
+    // 연간 막대차트 chartY (각 차트의 data)
+    const chartYData = [
+      {
+        data: [12, 19, 3, 5, 2, 3, 10, 8, 6]
+      },
+      {
+        data: [52, 190, 134, 156, 120, 39, 101, 89, 69]
+      }
+    ];
+
+    // 연간 막대차트를 그릴 컨텍스트 배열
+    const ctxY = Array.from({ length: chartYData.length }, (_, i) =>
+      document.getElementById(`chartY${i + 1}`)
+    );
+
+    // 연간 막대차트 생성
+    ctxY.forEach((ctx, index) => {
+      new Chart(ctx, {
+        plugins: [ChartDataLabels],
+        type: 'bar',
+        data: {
+          labels: ['인천', '부산진해', '광양만권', '경기', '대구경북', '동해안권', '충북', '광주', '울산'],
+          datasets: [{
+            data: chartYData[index].data,
+            backgroundColor: [
+              '#ff747333',
+              '#ffc85233',
+              '#47b8e033',
+              '#6a60a933',
+              '#f1d14b33',
+              '#fc913a33',
+              '#4556c733',
+              '#8fa6bf33',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              '#ff7473',
+              '#ffc852',
+              '#47b8e0',
+              '#6a60a9',
+              '#f1d14b',
+              '#fc913a',
+              '#4556c7',
+              '#8fa6bf',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false
+            },
+            tootip: {
+              enabled: false
+            },
+            datalabels: {
+              formatter: function (value, context) {
+                var idx = context.dataIndex; // 각 데이터 인덱스
+                // 출력 텍스트
+                return context.chart.data.labels[idx] + '\n' + value;
+              },
+              font: {
+                weight: '500',
+                size: '17px',
+                lineHeight: '1.2'
+              },
+              color: [
+                '#ff7473',
+                '#ffc852',
+                '#47b8e0',
+                '#6a60a9',
+                '#f1d14b',
+                '#fc913a',
+                '#4556c7',
+                '#8fa6bf',
+                'rgba(255, 159, 64, 1)'
+              ],
+              font: {
+                weight: '500',
+                size: '15px'
+              },
+              textAlign: 'center',
+              align: 'center',
+            }
+          },
+          maxBarThickness: 45
+        }
+      })
+    });
+
+    // 차트 chartYInvest 연간투자액
+    // var ctxYI = document.getElementById('chartYInvest');
+    // var chartYI = new Chart(ctxYI, {
+    //   type: 'bar',
+    //   data: {
+    //     labels: ['인천', '부산진해', '광양만권', '경기', '대구경북', '동해안권', '충북', '광주', '울산'],
+    //     datasets: [{
+    //       label: '# of Votes',
+    //       data: [12, 19, 3, 5, 2, 3, 10, 8, 6],
+    //       backgroundColor: [
+    //         'rgba(255, 99, 132, 0.2)',
+    //         'rgba(54, 162, 235, 0.2)',
+    //         'rgba(255, 206, 86, 0.2)',
+    //         'rgba(75, 192, 192, 0.2)',
+    //         'rgba(153, 102, 255, 0.2)',
+    //         'rgba(255, 159, 64, 0.2)',
+    //         'rgba(255, 99, 132, 0.2)',
+    //         'rgba(54, 162, 235, 0.2)',
+    //         'rgba(255, 206, 86, 0.2)'
+    //       ],
+    //       borderColor: [
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)',
+    //         'rgba(75, 192, 192, 1)',
+    //         'rgba(153, 102, 255, 1)',
+    //         'rgba(255, 159, 64, 1)',
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)'
+    //       ],
+    //       borderWidth: 1,
+    //       // barThickness: 20
+    //     }]
+    //   },
+    //   options: {
+    //     maxBarThickness: 40
+    //   }
+    // })
+
+    // 차트 chartYExport 연간수출액
+    // var ctxYE = document.getElementById('chartYExport');
+    // var chartYE = new Chart(ctxYE, {
+    //   type: 'bar',
+    //   data: {
+    //     labels: ['인천', '부산진해', '광양만권', '경기', '대구경북', '동해안권', '충북', '광주', '울산'],
+    //     datasets: [{
+    //       label: '# of Votes',
+    //       data: [12, 19, 3, 5, 2, 3, 10, 8, 6],
+    //       backgroundColor: [
+    //         'rgba(255, 99, 132, 0.2)',
+    //         'rgba(54, 162, 235, 0.2)',
+    //         'rgba(255, 206, 86, 0.2)',
+    //         'rgba(75, 192, 192, 0.2)',
+    //         'rgba(153, 102, 255, 0.2)',
+    //         'rgba(255, 159, 64, 0.2)',
+    //         'rgba(255, 99, 132, 0.2)',
+    //         'rgba(54, 162, 235, 0.2)',
+    //         'rgba(255, 206, 86, 0.2)'
+    //       ],
+    //       borderColor: [
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)',
+    //         'rgba(75, 192, 192, 1)',
+    //         'rgba(153, 102, 255, 1)',
+    //         'rgba(255, 159, 64, 1)',
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)'
+    //       ],
+    //       borderWidth: 1,
+    //       // barThickness: 20
+    //     }]
+    //   },
+    //   options: {
+    //     maxBarThickness: 40
+    //   }
+    // })
+  </script>
+</body>
+
+</html>

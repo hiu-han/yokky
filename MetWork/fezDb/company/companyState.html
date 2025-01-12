@@ -1,0 +1,288 @@
+<!-- 사업체 현황 페이지 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="경제자유구역 입주사업체 실태조사 DB 관리시스템">
+  <meta property="og:url" content="http://metrix.urx.co.kr/fez_db/">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="/public/img/icon/favicon.svg">
+  <title>2023년 사업체 현황</title>
+
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <style>
+    .nav__item.nav--state>a {
+      color: var(--cl-primary);
+      font-weight: 500;
+    }
+
+    .nav__item.nav--state>a::after {
+      content: '';
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--cl-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap" class="corp-state-page">
+    <div id="header"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <!-- 섹션 - 페이지 탑 -->
+        <section class="page-top">
+          <!-- 페이지 타이틀 -->
+          <div class="page-title">
+            <h2>2023년 사업체 현황 페이지</h2>
+          </div>
+        </section>
+
+        <!-- 섹션 - 페이지 콘텐츠 // 사업체 현황 -->
+        <section class="page-contents contents-state">
+          <!-- 콘텐츠 - 사업체 현황 -->
+          <div class="contents__box corpState">
+            <div class="contents__inner">
+              <div class="state__wrap module">
+                <!-- 콘텐츠 탑 -->
+                <div class="contents-top">
+                  <div class="top--left">
+                    <div class="contents-search">
+                      <div class="select__wrap select--week">
+                        <select name="" id="">
+                          <option value="">주차</option>
+                          <option value="">10주차</option>
+                          <option value="">9주차</option>
+                          <option value="">8주차</option>
+                          <option value="">7주차</option>
+                          <option value="">6주차</option>
+                          <option value="">5주차</option>
+                          <option value="">4주차</option>
+                          <option value="">3주차</option>
+                          <option value="">2주차</option>
+                          <option value="">1주차</option>
+                        </select>
+                      </div>
+                      <div class="upload__wrap">
+                        <label class="input-label file">
+                          <input type="file" required>
+                        </label>
+                        <label class="input-label submit">
+                          <input type="submit">
+                          <span class="label-txt">업로드</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 콘텐츠 바디 - 사업체 현황 -->
+                <div class="contents-bd corp-state">
+                  <div class="contents--tb">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>
+                            <div class="th-sortation">
+                              <span class="sort-1">업종</span>
+                              <span class="sort-2">경제자유구역청</span>
+                            </div>
+                          </th>
+                          <th>업종1</th>
+                          <th>업종2</th>
+                          <th>업종3</th>
+                          <th>업종4</th>
+                          <th>업종5</th>
+                          <th>업종6</th>
+                          <th>업종7</th>
+                          <th>업종8</th>
+                          <th>업종9</th>
+                          <th>업종10</th>
+                          <th>업종11</th>
+                          <th>업종12</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>인천 (IFEZ)</th>
+                          <td>120</td>
+                          <td>98</td>
+                          <td>54</td>
+                          <td>88</td>
+                          <td>24</td>
+                          <td>75</td>
+                          <td>101</td>
+                          <td>63</td>
+                          <td>67</td>
+                          <td>32</td>
+                          <td>14</td>
+                          <td>54</td>
+                        </tr>
+                        <tr>
+                          <th>부산진해 (BJFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>광양만권 (GFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>경기 (GGFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>대구경북 (DGFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>동해안권 (EFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>충북 (CBFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>광주 (GJFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>울산 (UFEZ)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr class="tr--total">
+                          <th>합계</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="/public/js/jquery-3.5.1.js"></script>
+  <script src="/public/js/include.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.004" height="23.137" viewBox="0 0 13.004 23.137">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="13.004" height="23.137" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="반복_그리드_1" data-name="반복 그리드 1" clip-path="url(#clip-path)">
+    <g transform="translate(24917.684 22951.576)">
+      <path id="Icon_metro-next" data-name="Icon metro-next" d="M25.215,6.748V29.885H21.5V19.368L12.211,29.885V6.748L21.5,17.265V6.748Z" transform="translate(-24892.469 -22921.691) rotate(180)" fill="#283d83"/>
+    </g>
+  </g>
+</svg>
