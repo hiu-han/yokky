@@ -1,4 +1,4 @@
 $(document).ready(function () {
-  $('#header').load('include/header.html');
-  $('#footer').load('include/footer.html');
+  $('#header').load('/MetWork/fezDb/include/header.html');
+  $('#footer').load('/MetWork/fezDb/include/footer.html');
 });
