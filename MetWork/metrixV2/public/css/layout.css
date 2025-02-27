@@ -8,16 +8,24 @@ section:last-child {
 }
 .container,
 .include-container,
-.site-news-container {
+.site-news-container,
+.site-banner-container {
   position: relative;
-  width: 1000px;
+  width: 1100px;
   height: 100%;
   padding: 0 20px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-.site-news-container {
+.site-news-container,
+.site-banner-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
   height: auto;
+}
+.site-banner-container {
+  margin-top: 24px;
 }
 section .container {
   padding-top: 60px;
@@ -89,8 +97,8 @@ nav {
 .gnb > .menu-item {
   display: inline-block;
   position: relative;
-  padding: 0 28px;
-  font-size: 1rem;
+  padding: 0 20px;
+  font-size: 16px;
 }
 .gnb > .menu-item > a {
   display: inline-block;
@@ -100,6 +108,7 @@ nav {
   font-weight: 400;
   text-align: center;
   color: #aaa;
+  white-space: nowrap;
   transition: 0.25s;
 }
 .gnb > .menu-item > a::after {
@@ -253,6 +262,7 @@ address {
   position: fixed;
   bottom: 60px;
   right: 40px;
+  z-index: 100;
   padding: 5px;
   border-radius: 19px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -260,7 +270,6 @@ address {
   box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: 0.4s;
-  /* opacity: 0.7; */
 }
 #imgOnBanner.hide {
   right: -280px;

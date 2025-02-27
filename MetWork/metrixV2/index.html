@@ -8,11 +8,12 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="MetriX Research">
   <meta property="og:url" content="http://www.metrix.co.kr">
-  <meta property="og:description" content="메트릭스 리서치">
+  <meta property="og:description" content="메트릭스">
   <meta property="og:image" content="public/img/common/img-share.png">
   <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
-  <title>메트릭스 리서치</title>
+  <title>메트릭스</title>
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="public/css/style.css">
 
   <style>
@@ -44,8 +45,7 @@
                       <h4 class="banner-title">국가승인통계를 산출하는, <wbr>믿을 수 있는 국가통계 생산 기관</h4>
                       <p class="banner-title-sub">국가승인통계 산출기관(최근 3년간 55건 산출), 2020년 공공사회조사시장 국내시장점유율
                         12%의 TOP3 공공사회조사기관. 분야별로 매출액 기준 산업분야 1위, 농림수산분야 2위, 교육분야 1위를 유지 중이고 그 외 행정·지자체, 노동·복지, 문화,
-                        교통·환경,
-                        재정·금융, 외교·통일·국방 등 공공사회조사 전분야에서 다양한 통계조사 프로젝트를 수행하고 있습니다.</p>
+                        교통·환경, 재정·금융, 외교·통일·국방 등 공공사회조사 전분야에서 다양한 통계조사 프로젝트를 수행하고 있습니다.</p>
                     </div>
                     <div class="banner-title-wrap mode-ta">
                       <h4 class="banner-title">국가승인통계를 산출하는, <br>믿을 수 있는 국가통계 생산 기관</h4>
@@ -124,8 +124,10 @@
 
         <section class="site-news">
           <div class="site-news-container">
-            <h3 class="site-news-title">메트릭스리서치 소식</h3>
-            <div class="site-news-content clearFix">
+            <!-- <h3 class="site-news-title">메트릭스리서치 소식</h3> -->
+            <!-- 메트릭스 공지 / 소식 -->
+            <!-- <div class="site-news-content clearFix"> -->
+            <div class="site-news-content">
               <div class="content-quick-item content-quick-press">
                 <article class="artic-quick-press">
                   <div class="quick-title-wrap">
@@ -213,6 +215,311 @@
                 </article>
               </div>
             </div>
+
+            <!-- 키워드 뉴스 -->
+            <div class="site-keyword-content">
+              <div class="content-quick-item content-keyword">
+                <article class="artic-keyword">
+                  <div class="quick-title-wrap">
+                    <h4 class="quick-title">Keyword news</h4>
+                    <span class="quick-title-sub">뜨고 있는 뉴스 키워드</span>
+                    <p class="btn-more-plus">
+                      <a href="./keyword.html"></a>
+                    </p>
+                  </div>
+                  <div class="quick-desc-wrap">
+                    <div class="quick-desc-inner">
+                      <div class="quick-desc">
+                        <!-- 트렌드 키워드 -->
+                        <div id="idxTrdSwpContainer" class="artic-rank-wrap swiper-container swiper">
+                          <div id="idxTrdSwpPagination" class="swiper-pagination"></div>
+                          <ul class="trend-rank-wrap swiper-wrapper">
+                            <li class="trend-rank-list politics-list swiper-slide">
+                              <h4>정치</h4>
+                              <ul class="rank-list">
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">1</p>
+                                  <span class="item-keyword">대통령</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">2</p>
+                                  <span class="item-keyword">민주당</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">3</p>
+                                  <span class="item-keyword">탄핵</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">4위</p>
+                                  <span class="item-keyword">국민의힘</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">5위</p>
+                                  <span class="item-keyword">대선</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">6위</p>
+                                  <span class="item-keyword">이재명</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">7위</p>
+                                  <span class="item-keyword">계엄</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">8위</p>
+                                  <span class="item-keyword">더불어민주당</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">9위</p>
+                                  <span class="item-keyword">중도</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">10위</p>
+                                  <span class="item-keyword">윤석열</span>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="trend-rank-list politics-list swiper-slide">
+                              <h4>경제</h4>
+                              <ul class="rank-list">
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">1</p>
+                                  <span class="item-keyword">투자</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">2</p>
+                                  <span class="item-keyword">반도체</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">3</p>
+                                  <span class="item-keyword">관세</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">4위</p>
+                                  <span class="item-keyword">트럼프</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">5위</p>
+                                  <span class="item-keyword">증권</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">6위</p>
+                                  <span class="item-keyword">보험</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">7위</p>
+                                  <span class="item-keyword">삼성</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">8위</p>
+                                  <span class="item-keyword">은행</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">9위</p>
+                                  <span class="item-keyword">지방</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">10위</p>
+                                  <span class="item-keyword">자동차</span>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="trend-rank-list politics-list swiper-slide">
+                              <h4>사회</h4>
+                              <ul class="rank-list">
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">1</p>
+                                  <span class="item-keyword">대통령</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">2</p>
+                                  <span class="item-keyword">안전</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">3</p>
+                                  <span class="item-keyword">경찰</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">4위</p>
+                                  <span class="item-keyword">탄핵</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">5위</p>
+                                  <span class="item-keyword">병원</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">6위</p>
+                                  <span class="item-keyword">재판</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">7위</p>
+                                  <span class="item-keyword">청년</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">8위</p>
+                                  <span class="item-keyword">부산</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">9위</p>
+                                  <span class="item-keyword">의료</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">10위</p>
+                                  <span class="item-keyword">환경</span>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="trend-rank-list politics-list swiper-slide">
+                              <h4>IT·과학</h4>
+                              <ul class="rank-list">
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">1</p>
+                                  <span class="item-keyword">데이터</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">2</p>
+                                  <span class="item-keyword">반도체</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">3</p>
+                                  <span class="item-keyword">투자</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">4위</p>
+                                  <span class="item-keyword">클라우드</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">5위</p>
+                                  <span class="item-keyword">게임</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">6위</p>
+                                  <span class="item-keyword">중국</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">7위</p>
+                                  <span class="item-keyword">로봇</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">8위</p>
+                                  <span class="item-keyword">통신</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">9위</p>
+                                  <span class="item-keyword">아이폰</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">10위</p>
+                                  <span class="item-keyword">환경</span>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="trend-rank-list politics-list swiper-slide">
+                              <h4>연예</h4>
+                              <ul class="rank-list">
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">1</p>
+                                  <span class="item-keyword">이혼</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">2</p>
+                                  <span class="item-keyword">진스</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">3</p>
+                                  <span class="item-keyword">연애</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">4위</p>
+                                  <span class="item-keyword">보험</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">5위</p>
+                                  <span class="item-keyword">전속</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">6위</p>
+                                  <span class="item-keyword">차주영</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">7위</p>
+                                  <span class="item-keyword">하이브</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">8위</p>
+                                  <span class="item-keyword">에녹</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">9위</p>
+                                  <span class="item-keyword">데이트</span>
+                                </li>
+                                <li class="rank-item item-subs">
+                                  <p class="item-standing">10위</p>
+                                  <span class="item-keyword">주연</span>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <div class="slide-btn-wrap">
+                            <p id="idxTrdPrev" class="slide-btn slide-left swiper-button-prev"></p>
+                            <p id="idxTrdNext" class="slide-btn slide-right swiper-button-next"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- 사이트 배너 컨테이너 -->
+          <div class="site-banner-container">
+            <!-- 메트릭스 배너 광고 -->
+            <div class="site-banner-content metworks">
+              <div class="content-quick-item content-banner-metworks">
+                <article class="artic-metworks">
+                  <div class="quick-desc-wrap">
+                    <div class="quick-desc-inner">
+                      <div class="quick-desc">
+                        <!-- 메트웍스 이미지 배너 -->
+                        <div id="mwsBannerContainer" class="artic-metworks-wrap swiper-container swiper">
+                          <div id="mwsBannerPagination" class="swiper-pagination"></div>
+                          <ul class="metworks-banner-wrap swiper-wrapper">
+                            <li class="metworks-banner-item swiper-slide">
+                              <a href="https://metworks.co.kr/home/guide/notice_view.php?no=82&ss=page%3D%26sse%3D%26skind%3D%26skind%3D"
+                                target="_blank">
+                                <img src="public/img/main/banner_etc_sns.png" alt="">
+                              </a>
+                            </li>
+                            <li class="metworks-banner-item swiper-slide">
+                              <a href="https://youtu.be/DwbiofBRb38" target="_blank">
+                                <img src="public/img/main/banner_00.jpg" alt="">
+                              </a>
+                            </li>
+                            <li class="metworks-banner-item swiper-slide">
+                              <a href="https://www.metworks.co.kr/" target="_blank">
+                                <img src="public/img/main/banner_02.jpg" alt="">
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- 공공사회조사시장 현황조사 -->
+            <div class="site-banner-content whatsNew">
+              <div class="content-quick-item content-banner-metworks">
+                <article class="artic-whatsnew">
+                  <div class="quick-desc-wrap">
+
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -223,9 +530,11 @@
   </div>
 
   <script src='public/js/jquery-3.5.1.js'></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src='public/js/include.js'></script>
   <script src='public/js/main.js'></script>
   <script src="public/js/index.js"></script>
+  <script src='public/js/lib.js'></script>
 </body>
 
 </html>
