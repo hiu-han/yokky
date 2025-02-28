@@ -97,7 +97,7 @@ nav {
 .gnb > .menu-item {
   display: inline-block;
   position: relative;
-  padding: 0 20px;
+  padding: 0 18px;
   font-size: 16px;
 }
 .gnb > .menu-item > a {
@@ -123,6 +123,23 @@ nav {
   background: linear-gradient(90deg, #2d2f91, #8d48b2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   transition: all 0.3s;
+}
+.m-gnb > .menu-item {
+  position: relative;
+}
+.gnb > .menu-item.menu-item-data > a::before,
+.m-gnb > .menu-item.menu-item-data > a::before {
+  content: 'New';
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: -12px;
+  font-size: 12px;
+  color: #e75613;
+  text-shadow: 0px 0px 16px rgba(255, 255, 255, 0.8);
+}
+.m-gnb > .menu-item.menu-item-data > a::before {
+  left: 34%;
 }
 #mainHeader .gnb > .menu-item > a::after {
   background: rgba(251, 251, 251, 0.7);

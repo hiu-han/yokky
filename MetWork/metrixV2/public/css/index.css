@@ -161,43 +161,77 @@ section.site-news {
 }
 
 .site-news .site-news-content {
-  width: 64%;
-  min-width: 640px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  /* width: 64%; */
+  width: 654px;
+  /* min-width: 640px; */
 }
 
 .site-news .content-quick-item {
   /* width: calc(50% - 10px); */
   width: 100%;
   /* padding: 50px 40px 100px; */
-  /* padding: 34px 34px 50px; */
   padding: 24px 34px 48px;
   background-color: #fff;
   box-sizing: border-box;
 }
+/* .site-news .content-quick-press {
+  float: left;
+}
+.site-news .content-quick-notice {
+  float: right;
+} */
 .site-news .site-banner-content.metworks .content-quick-item {
   background-color: transparent;
 }
 .site-news .site-banner-container .content-quick-item {
   padding: 0px;
 }
-
 .site-news .site-banner-content.metworks {
-  width: 64%;
-  width: 100%;
-  min-width: 640px;
+  /* width: 64%; */
+  width: 654px;
+  /* width: 100%; */
+  /* min-width: 640px; */
 }
 .site-news .site-banner-content.whatsNew {
-  display: none;
+  /* display: none; */
   /* width: 36%; */
+  width: 36%;
+  height: 102px;
+  overflow: hidden;
+}
+#whatsNewBanner {
+  width: 100%;
+}
+#whatsNewBanner > a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  /* background-image: url('../img/main/banner_2024.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  /* background-position: 0px; */
+}
+#whatsNewBanner > a > img {
+  width: 100%;
 }
 
 .site-news .quick-title-wrap {
   position: relative;
   /* margin-bottom: 50px; */
   margin-bottom: 22px;
+}
+.site-news .quick-title-wrap .alert {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3px;
+  bottom: 0;
+  right: 0;
+  font-size: 13px;
+  color: #e44646;
 }
 .site-news .quick-title-wrap .quick-title {
   /* font-size: 28px; */
@@ -222,6 +256,8 @@ section.site-news {
 .site-news .quick-title-wrap .btn-more-plus > a {
   display: block;
   position: relative;
+  width: 100%;
+  height: 100%;
   text-indent: -99999px;
 }
 .site-news .quick-title-wrap .btn-more-plus > a::before,
@@ -433,7 +469,12 @@ section.site-news {
     width: 100%;
   }
   .site-news .site-banner-content.metworks {
+    width: 100%;
     min-width: unset;
+  }
+  .site-news .site-banner-content.whatsNew {
+    width: 50%;
+    height: 30vw;
   }
 }
 
@@ -508,6 +549,11 @@ section.site-news {
   }
   .quick-date-wrap .quick-date {
     font-size: 16px;
+  }
+
+  .site-news .site-banner-content.whatsNew {
+    width: 100%;
+    height: 48vw;
   }
 }
 
