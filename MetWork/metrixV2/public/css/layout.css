@@ -24,6 +24,9 @@ section:last-child {
   gap: 24px;
   height: auto;
 }
+.site-news-container {
+  align-items: stretch;
+}
 .site-banner-container {
   margin-top: 24px;
 }
