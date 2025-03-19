@@ -1,0 +1,23 @@
+.go-test-wrap {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  opacity: 0;
+}
+.circle-btn {
+  border-radius: 50%;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 15%) 0px 4px 16px,
+    rgb(255 255 255 / 12%) 0px 0px 2px inset;
+}
+.circle-btn > a {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-image: url('../img/common/go-next-circle-fff.svg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}

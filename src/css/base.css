@@ -1,0 +1,10 @@
+:root {
+  --test-color: #f3f4f7;
+}
+
+/* VAR >> DARK MODE */
+[data-theme='dark'] {
+  --test-color: #212121;
+}
+
+/*** MAIN ***/
