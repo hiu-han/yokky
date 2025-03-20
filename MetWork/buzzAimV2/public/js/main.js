@@ -1,3 +1,4 @@
+// 우측 > 상세추이 > 차트 샘플
 const chartConfigs = [
   {
     id: 'chartA1',
@@ -154,12 +155,13 @@ function typing() {
 setInterval(typing, 100);
 */
 
+// 좌측 > 오늘의 한마디 > 타이핑효과
 const typingTxt = document.querySelector('.typing');
 const cursor = document.querySelector('.cursor');
 
 const typing = function (_, counter = 0) {
   const txt =
-    '로보락 S8 MaxV Ultra에 대한 고객들의 반응은 대체로 긍정적이지만, 흡입력과 장애물 인식 기능에 대한 아쉬움이 존재하며, 가격 대비 성능에 대한 고민도 나타나고 있습니다. 일부 사용자는 로봇청소기의 편리함과 청소 효율성에 만족하고 있지만, 다른 브랜드와의 비교를 통해 로보락의 가성비에 의문을 제기하기도 했습니다.';
+    '로보락 제품에 대한 고객들의 반응은 대체로 긍정적이지만, 물걸레 청소 시 발생하는 냄새 문제와 관련된 불만이 많으며, 가격 대비 성능에 대한 고민도 존재하는 것으로 요약할 수 있습니다. ';
 
   setInterval(() => {
     if (txt.length === counter) {
@@ -172,3 +174,50 @@ const typing = function (_, counter = 0) {
 };
 
 window.addEventListener('load', typing);
+
+// 우측 > AI 감성 평가 > 자동 슬라이드 효과
+function startEmotAutoSlide(container, delay) {
+  const list = container.querySelector('.list__inner');
+  let items = Array.from(container.querySelectorAll('.emot__item'));
+
+  function updateClasses() {
+    items.forEach((el) => el.classList.remove('first', 'second', 'third'));
+    if (items.length > 0) items[0].classList.add('first');
+    if (items.length > 1) items[1].classList.add('second');
+    if (items.length > 2) items[2].classList.add('third');
+  }
+
+  function slideUp() {
+    if (
+      items.length === 0 ||
+      list.scrollHeight <= list.parentElement.clientHeight
+    )
+      return;
+
+    const firstItem = items[0];
+    const shiftHeight = firstItem.offsetHeight + 5;
+
+    list.style.transition = 'transform 0.5s ease-in-out';
+    list.style.transform = `translateY(-${shiftHeight}px)`;
+
+    setTimeout(() => {
+      list.style.transition = 'none';
+      list.style.transform = 'translateY(0)';
+
+      list.appendChild(firstItem);
+      items.push(items.shift());
+      updateClasses();
+    }, 500);
+  }
+
+  updateClasses();
+  setTimeout(() => {
+    setInterval(slideUp, 3000);
+  }, delay);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const containers = document.querySelectorAll('.emot__list');
+  startEmotAutoSlide(containers[0], 1000);
+  startEmotAutoSlide(containers[1], 2100);
+});
