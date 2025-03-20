@@ -22,7 +22,7 @@ strong.color {
 .cursor {
   display: inline-block;
   width: 2px;
-  height: 19px;
+  height: 18px;
   margin-left: 0px;
   background-color: var(--cl-primary);
   text-indent: -99999px;

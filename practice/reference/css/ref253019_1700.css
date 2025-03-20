@@ -1,0 +1,63 @@
+.body {
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  font-size: 10px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1280px;
+  height: 600px;
+  padding: 50px;
+}
+
+.banner {
+  height: 500px;
+  overflow: hidden;
+}
+
+.banner > div {
+  height: 100%;
+  width: 100%;
+  background-image: url(img/newyork.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.banner .container {
+  position: absolute;
+  width: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner div h2 {
+  color: #fedc45;
+  font-size: 5em;
+  display: inline;
+}
+
+.banner div .cursor {
+  color: #fedc45;
+  font-size: 5em;
+  opacity: 1;
+}
+
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink_animate {
+  animation-name: blink-effect;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+  /* step-end 또는 step(1)을 넣지 않으면 transition이 일어난다*/
+}

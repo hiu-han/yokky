@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
+  <title>gpt2503201317</title>
+
+  <link rel="stylesheet" href="css/gpt2503201317.css">
+</head>
+
+<body>
+  <!-- question wrap -->
+  <div class="q-wrap">
+    <h3 class="q-title">세로 슬라이드 말풍선 2차</h3>
+    <div class="q-date">250320_1317</div>
+    <div class="q-subs">
+      <p class="txt">
+        큰 박스 내부에 수많은 작은 박스가 세로 한줄로 정렬되어있어. 작은 박스들의 높이는 내부 텍스트 길이에 따라 달라. 큰 박스의 높이는 고정이고 내부의 작은 박스들은 슬라이드 방식으로 하나씩 자동으로
+        올라가지. 작은 박스는 0개에서 몇개라도 될 수 있어. 작은 박스들의 총 높이가 큰박스의 높이보다 커져서 스크롤이 생기면 슬라이드 모션이 동작하지. 작은 박스 하나씩 하나씩 올라가는 거야. 모션이
+        진행되면서 가장 위의 작은 박스에 ‘first’라는 클래스명을, 두번째 오는 작은 박스는 ‘second’, 세번째 오는 작은 박스는 ‘third’라는 클래스명을 넣어줘. 물론 first, second,
+        third라는 클래스명은 하나씩만 존재해야하지. 이걸 js를 활용해서 만들어줘
+      </p>
+      <p class="txt added">
+        작은 박스들은 높이가 여러가지라구
+      </p>
+    </div>
+  </div>
+
+  <!-- answer wrap -->
+  <div class="a__wrap">
+    <div class="a-subs">
+      <div class="a-txt">
+        작은 박스들의 높이가 각각 다르더라도 자연스럽게 하나씩 슬라이드되는 방식으로 수정했어!
+      </div>
+      <div class="a-txt__box">
+        <div class="a-txt-head">🔹 개선된 기능</div>
+        <ol class="a-txt__olist">
+          <li class="a-txt__item">1. 작은 박스들의 높이가 다 달라도 정상적으로 슬라이드됨</li>
+          <li class="a-txt__item">2. 가장 위의 박스가 사라지지 않고 마지막으로 이동함</li>
+          <li class="a-txt__item">3. 'first', 'second', 'third' 클래스가 적절히 유지됨</li>
+          <li class="a-txt__item">4. 자연스러운 슬라이드 애니메이션 적용</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- code wrap -->
+  <div class="c__wrap">
+    <div class="container">
+      <div class="list">
+        <div class="item">Box 1 - Short</div>
+        <div class="item" style="padding: 20px;">Box 2 - Medium</div>
+        <div class="item" style="padding: 30px;">Box 3 - Tall</div>
+        <div class="item">Box 4 - Short</div>
+        <div class="item" style="padding: 40px;">Box 5 - Taller</div>
+        <div class="item">Box 6 - Short</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- result wrap -->
+  <div class="r__wrap">
+    <div class="a-subs">
+      <div class="a-txt__box">
+        <div class="a-txt-head">🎯 동작 방식</div>
+        <ul class="a-txt__ulist">
+          <li class="a-txt__item">작은 박스들의 높이가 달라도 자연스럽게 슬라이드됨</li>
+          <li class="a-txt__item">맨 위의 박스가 하나씩 올라가면서 맨 아래로 이동</li>
+          <li class="a-txt__item">클래스(first, second, third)가 정확하게 유지됨</li>
+          <li class="a-txt__item">박스 개수가 많아 스크롤이 생길 때만 동작</li>
+          <li class="a-txt__item">애니메이션이 부드럽게 적용됨</li>
+        </ul>
+      </div>
+      <div class="a-txt">
+        <p>이제 어떤 크기의 박스가 들어와도 문제없이 동작할 거야! 🎉</p>
+        <p>혹시 추가 수정이 필요하면 말해줘~ 😊</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startAutoSlide() {
+      const list = document.querySelector('.list');
+      let items = Array.from(document.querySelectorAll('.item'));
+
+      function updateClasses() {
+        items.forEach(el => el.classList.remove('first', 'second', 'third'));
+        if (items.length > 0) items[0].classList.add('first');
+        if (items.length > 1) items[1].classList.add('second');
+        if (items.length > 2) items[2].classList.add('third');
+      }
+
+      function slideUp() {
+        if (items.length === 0 || list.scrollHeight <= list.parentElement.clientHeight) return;
+
+        const firstItem = items[0];
+        const shiftHeight = firstItem.offsetHeight + 5; // 아이템의 실제 높이 + gap
+
+        list.style.transition = 'transform 0.5s ease-in-out';
+        list.style.transform = `translateY(-${shiftHeight}px)`;
+
+        setTimeout(() => {
+          list.style.transition = 'none';
+          list.style.transform = 'translateY(0)';
+
+          list.appendChild(firstItem); // 맨 위 아이템을 맨 아래로 이동
+          items.push(items.shift());  // 배열에서도 순서 변경
+          updateClasses();
+        }, 500);
+      }
+
+      updateClasses();
+      setInterval(slideUp, 2000);
+    }
+
+    document.addEventListener('DOMContentLoaded', startAutoSlide);
+  </script>
+</body>
+
+</html>

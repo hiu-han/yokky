@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
+  <title>ref253019_1700</title>
+
+  <link rel="stylesheet" href="css/ref253019_1700.css">
+</head>
+
+<body>
+  <!-- head wrap -->
+  <div class="h__wrap">
+    <div class="a-subs">
+      <div class="a-txt__box">
+        <div class="a-txt-head">📖 출처</div>
+        <ul class="a-txt__ulist">
+          <li class="a-txt__item">
+            <a
+              href="https://velog.io/@oneook/%ED%83%80%EC%9D%B4%ED%95%91-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0-JS-Snippets">
+              타이핑 애니메이션 만들기 | JS Snippets_210805
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- code wrap -->
+  <div class="c__wrap">
+    <section class="wrapper">
+      <article class="banner">
+        <div>
+          <div class="container">
+            <h2 class="blinking__txt"></h2>
+            <span class="cursor">|</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <script>
+    const h2 = document.querySelector('.blinking__txt');
+    const cursor = document.querySelector('.cursor');
+
+    const typing = function (_, counter = 0) {
+      // 출력할 내용
+      const txt = `I'm Yokky.\nPleased to meet you 👋`;
+
+      setInterval(() => {
+        // 글자가 모두 출력되면 setInterval을 멈출 것
+        if (txt.length === counter) {
+          cursor.classList.add('blink_animate');
+          return;
+        };
+        // 문자열 하나하나 h2의 텍스트 컨텐츠로 추가한다 
+        h2.textContent += txt[counter];
+        // 카운터 증산
+        counter++;
+      }, 80);
+    };
+
+    // 페이지 요소가 로드되면 타이핑 애니메이션을 수행할 것
+    window.addEventListener('load', typing);
+  </script>
+</body>
+
+</html>
