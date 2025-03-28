@@ -181,10 +181,22 @@ function startEmotAutoSlide(container, delay) {
   let items = Array.from(container.querySelectorAll('.emot__item'));
 
   function updateClasses() {
-    items.forEach((el) => el.classList.remove('first', 'second', 'third'));
+    items.forEach((el) =>
+      el.classList.remove(
+        'first',
+        'second',
+        'third',
+        'fourth',
+        'fifth',
+        'sixth'
+      )
+    );
     if (items.length > 0) items[0].classList.add('first');
     if (items.length > 1) items[1].classList.add('second');
     if (items.length > 2) items[2].classList.add('third');
+    if (items.length > 3) items[3].classList.add('fourth');
+    if (items.length > 4) items[4].classList.add('fifth');
+    if (items.length > 5) items[5].classList.add('sixth');
   }
 
   function slideUp() {
@@ -216,8 +228,37 @@ function startEmotAutoSlide(container, delay) {
   }, delay);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const containers = document.querySelectorAll('.emot__list');
   startEmotAutoSlide(containers[0], 1000);
   startEmotAutoSlide(containers[1], 2100);
+});
+
+// 우측 > AI 주제 분석 관련 >> 운영서버의 내용 일단 그대로 복붙 >> 정리하자
+// 카테고리별 클릭 이벤트 추가 ( 1) "#카테고리" 변경  2) classList(on)변경)
+let topicItems = document
+  .querySelector('.topic__list')
+  .querySelectorAll('.topic__item');
+topicItems.forEach((tItem) => {
+  // console.log(tItem);
+  tItem.addEventListener('click', () => {
+    // 1) "#카테고리" 변경
+    let category_idx = tItem.id.split('_');
+    // console.log(category_idx);
+    let category_idx2 = category_idx.pop();
+    let category_idx1 = category_idx.pop();
+    // console.log(category_idx1, category_idx2);
+    getTopicContent(brand_idx, category_idx1, category_idx2);
+    // 2) classList(on)변경
+    let beforetItemOn = document
+      .querySelector('.topic__list')
+      .querySelector('.on');
+    beforetItemOn.classList.remove('on');
+    tItem.classList.add('on');
+
+    // 우측 텍스트박스 컨텐츠 제목 > 선택한 카테고리 이름으로 변경하기 // 한희재 250327_1540
+    let tItemName = tItem.querySelector('.topic-element');
+    let selectedtItemName = document.querySelector('#detailTopicName');
+    selectedtItemName.innerText = tItemName.textContent;
+  });
 });

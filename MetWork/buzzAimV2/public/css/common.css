@@ -267,3 +267,30 @@ input[type='date']:focus::-webkit-calendar-picker-indicator {
   background-color: var(--cl-primary);
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
+
+/* SELECT */
+.select__wrap {
+  position: relative;
+}
+select {
+  display: inline-block;
+  width: auto;
+  height: 26px;
+  padding: 0 26px 0 11px;
+  border-radius: 6px;
+  border: 1px solid #d1d1d1;
+  background-image: url('../img/icon/icon-select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 84% 50%;
+  background-size: 8px;
+  font-size: 12.5px;
+  color: #616161;
+  line-height: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+select:focus {
+  outline: none;
+  border: 1px solid var(--cl-primary);
+  font-weight: 500;
+}
