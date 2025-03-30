@@ -36,3 +36,20 @@
 
 <li class="banner__item nowOn"></li>
 **/
+
+/** className 특수 요소 지칭
+  1) 페이지 구분 - 주로 #wrap에 추가한다.
+  .pg--index
+  .pg--contact
+  ...
+
+  2) 페이지 구분 // 규격 - 주로 특정 너비나 높이의 페이지를 구분한다.
+  .w--full
+  .w--center
+  ...
+
+  3) 페이지 구분 // 타입 - 주로 특정 기능적 타입의 페이지를 구분한다.
+  .ty--board
+  .ty--list
+  ...
+**/

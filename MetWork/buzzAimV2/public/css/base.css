@@ -465,7 +465,7 @@
 .brand__item .count,
 .topic__item .count {
   position: absolute;
-  top: 53%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 12px;
@@ -475,13 +475,14 @@
   word-break: keep-all;
 }
 .brand__item .count {
-  line-height: 15px;
-  padding: 0 4px;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.6);
-  font-size: 11px;
-  font-weight: 500;
-  color: #616161;
+  /* line-height: 15px; */
+  /* padding: 0 4px; */
+  /* border-radius: 4px; */
+  /* background-color: rgba(255, 255, 255, 0.6); */
+  /* font-size: 11px; */
+  font-size: 12px;
+  /* font-weight: 500; */
+  /* color: #616161; */
 }
 .brand__item .item-gauge.emo .gauge--100 {
   display: flex;
@@ -492,9 +493,13 @@
 .brand__item .gauge--neut,
 .brand__item .gauge--negat {
   position: relative;
+  transition: 0.25s;
 }
 .brand__item .gauge--posit {
   background-color: rgba(43, 93, 244, 0.8);
+}
+.brand__item .gauge--posit:hover {
+  border: 3px solid rgba(35, 82, 226, 0.8);
 }
 .brand__item .gauge--neut {
   background-color: rgba(251, 196, 0, 0.8);
