@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
+  <title>gpt250403-1109</title>
+  <style>
+    body {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .container {
+      width: 200px;
+      height: 300px;
+      overflow: hidden;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    .box-wrapper {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .box {
+      width: 100%;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      background: lightgrey;
+      transition: background 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    }
+
+    .first {
+      background: red;
+    }
+
+    .second {
+      background: blue;
+    }
+
+    .third {
+      background: green;
+    }
+
+    .reset-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- code wrap -->
+  <div class="c__wrap">
+    <div class="wrapper">
+      <div class="container" id="container1">
+        <div class="box-wrapper"></div>
+      </div>
+      <div class="container" id="container2">
+        <div class="box-wrapper"></div>
+      </div>
+      <div class="reset-buttons">
+        <button onclick="resetAllBoxes()">리셋</button>
+      </div>
+    </div>
+  </div>
+  <!-- question wrap -->
+  <div class="q-wrap">
+    <h3 class="q-title">세로 슬라이드 말풍선 2-a차</h3>
+    <div class="q-date">2503403_1036</div>
+    <div class="q-subs">
+      <p class="txt">
+      <pre>
+          아래의 조건을 참고해서 html, css, js로 만들어줘
+
+        1. 구성요소
+        - 고정된 크기의 큰 박스 내부에 높이가 다양한 작은 박스들이 세로로 정렬됨.
+        - 큰 박스는 같은 클래스 명의 두가지.
+        - 작은 박스들의 총 높이가 큰 박스보다 크면 자동 슬라이드 시작.
+        - 클릭하면 작은 박스의 내용과 갯수 높이가 다르게 구성되는 리셋버튼 네가지.
+
+        2. 슬라이드 효과
+        - 작은 박스들의 총 높이가 큰 박스를 초과하면 슬라이드 시작.
+        - 가장 위의 작은 박스가 first, 그다음이 second, 세번째에 third 클래스 부여됨.
+        - first, second, third 클래스에 각각 다른 배경색으로 적용, 그외의 작은 박스들은 light grey 색상으로 표현.
+        - 하나씩 올라가면서 맨 위의 박스가 마지막으로 이동.
+        - 두개의 큰 박스가 각각 독립적으로 동작.
+
+        3. 클래스명 유지
+        - first, second, third 클래스가 정확히 하나씩만 존재하도록 처리.
+
+        4. 자동 슬라이드 모션
+        - 작은 박스는 2초마다 하나씩 올라감.
+        - 두번째 큰 박스는 슬라이드 모션이 1초 뒤에 작동.
+        - 모든 동작이 자연스러워 보이도록 모션 효과 적용!
+        - first, second, third 배경색이 변할때 자연스럽게 변화.
+
+        5. 슬라이드 리셋
+        - 리셋버튼을 누르면 모든 큰 박스 내부의 기존의 작은박스를 없애고 새로운 작은 박스 구성을 가져온 뒤 슬라이드 동작 초기화.
+        - 작은 박스를 새로이 구성하는 함수와 슬라이드 관련 함수를 따로 분리해줘.
+        </pre>
+      </p>
+      <p class="txt added">
+        동작이 자연스럽지 않잖아
+      </p>
+      <p class="txt added">
+        작은 박스들이 올라갈때마다 슬라이드가 튀어보여 자연스러운 흐름으로 만들어줘
+      </p>
+      <p class="txt added">
+        왜 큰 박스가 하나만 작동하는 거야?
+      </p>
+      <p class="txt added">
+        리셋 버튼 클릭 후에 박스가 하나만 작동하잖아... 두가지 다 작동해야지
+      </p>
+      <p class="txt added">
+        리셋버튼을 누른 후에 가끔씩 큰 박스가 하나만 작동해
+      </p>
+      <p class="txt added">
+        슬라이드 동작에 대한 함수와 박스를 구성하는 함수, 리셋하는 함수를 철저하게 분리해줘
+      </p>
+      <p class="txt added last">
+        리셋 후에 슬라이드가 작동하지 않는 경우도 자주 있어, 리셋 후에 큰박스 두가지의 슬라이드가 모두 동작하는지 확인하고 이상이 있으면 동작하지 않는 큰 박스의 슬라이드를 작동하게 해줘
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function createBoxes(containerId) {
+      const container = document.getElementById(containerId).querySelector('.box-wrapper');
+      container.innerHTML = '';
+      let totalHeight = 0;
+      let boxes = [];
+      for (let i = 0; i < Math.floor(Math.random() * 5) + 5; i++) {
+        let height = Math.floor(Math.random() * 50) + 30;
+        totalHeight += height;
+        let box = document.createElement('div');
+        box.classList.add('box');
+        box.style.height = height + 'px';
+        box.textContent = `Box ${i + 1}`;
+        boxes.push(box);
+      }
+      boxes.forEach(box => container.appendChild(box));
+      updateClasses(container);
+      return totalHeight;
+    }
+
+    function slideBoxes(containerId) {
+      const container = document.getElementById(containerId);
+      const wrapper = container.querySelector('.box-wrapper');
+
+      if (container.dataset.interval) {
+        clearInterval(Number(container.dataset.interval));
+      }
+
+      let interval = setInterval(() => {
+        let firstBox = wrapper.firstElementChild;
+        let height = firstBox.clientHeight;
+        wrapper.style.transform = `translateY(-${height}px)`;
+
+        setTimeout(() => {
+          wrapper.appendChild(firstBox);
+          wrapper.style.transition = 'none';
+          wrapper.style.transform = 'translateY(0)';
+          void wrapper.offsetWidth;
+          wrapper.style.transition = 'transform 0.8s ease-in-out';
+          updateClasses(wrapper);
+        }, 800);
+      }, 2000);
+
+      container.dataset.interval = interval;
+    }
+
+    function updateClasses(wrapper) {
+      const boxes = wrapper.children;
+      Array.from(boxes).forEach(box => box.classList.remove('first', 'second', 'third'));
+      if (boxes.length > 0) boxes[0].classList.add('first');
+      if (boxes.length > 1) boxes[1].classList.add('second');
+      if (boxes.length > 2) boxes[2].classList.add('third');
+    }
+
+    function resetContainer(containerId, delay) {
+      const container = document.getElementById(containerId);
+      if (container.dataset.interval) {
+        clearInterval(Number(container.dataset.interval));
+      }
+      let totalHeight = createBoxes(containerId);
+      setTimeout(() => {
+        if (totalHeight > container.clientHeight) {
+          slideBoxes(containerId);
+        } else {
+          container.dataset.interval = '';
+        }
+      }, delay);
+    }
+
+    function resetAllBoxes() {
+      resetContainer('container1', 0);
+      resetContainer('container2', 1000);
+
+      setTimeout(() => {
+        if (!document.getElementById('container1').dataset.interval) {
+          slideBoxes('container1');
+        }
+        if (!document.getElementById('container2').dataset.interval) {
+          slideBoxes('container2');
+        }
+      }, 2000);
+    }
+
+    resetAllBoxes();
+  </script>
+</body>
+
+</html>
