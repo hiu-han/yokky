@@ -1,5 +1,25 @@
 :root {
-  --test-color: #f3f4f7;
+  /* COLOR */
+  /* --cl-primary: #fff100; */
+  /* --cl-primary: #efd234; */
+  /* --cl-primary: #fda228; */
+  /* --cl-primary: #fff854; */
+  /* --cl-primary: #ffdb58; */
+  --cl-primary: #ffd700;
+  --cl-ft-primary: #2a1f0e;
+  --cl-ft-light: #c0c0c0;
+
+  /* FONT FAMILY */
+  --ft-fs-r: 'FlightSans-Regular';
+  --ft-fs-b: 'FlightSans-Bold';
+  --ft-agr-b: 'SBAggroB';
+  --ft-agr-M: 'SBAggroM';
+  --ft-agr-l: 'SBAggroL';
+  --ft-rb: 'RIDIBatang';
+
+  /* TRANSITION */
+  --trst-s: 0.25s ease-in-out;
+  --trst-m: 0.35s ease-in-out;
 }
 
 /* VAR >> DARK MODE */
@@ -8,3 +28,95 @@
 }
 
 /*** MAIN ***/
+#wrap.pg--index .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+/** MAIN > INDEX PAGE **/
+/* MAIN > INDEX PAGE > main-slogan */
+.slogan__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.slogan__wrap .txt {
+  width: 700px;
+  height: 184px;
+  text-align: center;
+  vertical-align: middle;
+}
+.slogan__wrap .typing {
+  font-family: var(--ft-agr-b);
+  font-size: 74px;
+  color: var(--cl-ft-primary);
+  line-height: 1.2;
+}
+.slogan__wrap .cursor {
+  height: 70px;
+  margin-top: 4px;
+}
+
+/* MAIN > INDEX PAGE > main-menu */
+.main-menu .menu__list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  justify-content: space-between;
+}
+.main-menu .menu__item {
+  width: 25%;
+}
+.main-menu .menu__item > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+.main-menu .menu__item > a > span {
+  display: inline-block;
+  width: 80px;
+  text-align: left;
+  white-space: nowrap;
+  transition: var(--trst-s);
+}
+.main-menu .menu__item .num {
+  font-size: 14px;
+  color: var(--cl-ft-light);
+}
+.main-menu .menu__item:hover .num {
+  color: var(--cl-primary);
+}
+.main-menu .menu__item .name {
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+}
+.main-menu .menu__item .name > em {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: var(--trst-m);
+}
+.main-menu .menu__item .name .normal {
+  pointer-events: unset;
+}
+.main-menu .menu__item:hover .name .normal {
+  bottom: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.main-menu .menu__item .name .hover {
+  bottom: -100%;
+  font-family: var(--ft-rb);
+  opacity: 0;
+  pointer-events: none;
+}
+.main-menu .menu__item:hover .name .hover {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: unset;
+}

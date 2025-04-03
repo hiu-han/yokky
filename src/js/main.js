@@ -1,25 +1,19 @@
-// *** 헤더, 푸터 등 돔 콘텐츠 로더
-document.addEventListener('DOMContentLoaded', function () {
-  const containers = document.querySelectorAll('.loaded-container');
+// 좌측 > 오늘의 한마디 > 타이핑효과
+const typingTxt = document.querySelector('.typing');
+const cursor = document.querySelector('.cursor');
 
-  containers.forEach((container) => {
-    const src = container.getAttribute('data-src');
+const typing = function (_, counter = 0) {
+  const txt = `Website for
+  My digital dreams.`;
 
-    if (src) {
-      fetch(src)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`Failed to load ${src}`);
-          }
-          return response.text();
-        })
-        .then((html) => {
-          container.innerHTML = html;
-        })
-        .catch((error) => {
-          console.error('Error loading HTML:', error);
-          container.innerHTML = `<p style="color: red;">Failed to load content.</p>`;
-        });
+  setInterval(() => {
+    if (txt.length === counter) {
+      cursor.classList.add('blink_animate');
+      return;
     }
-  });
-});
+    typingTxt.textContent += txt[counter];
+    counter++;
+  }, 110);
+};
+
+window.addEventListener('load', typing);

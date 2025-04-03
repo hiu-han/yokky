@@ -1,40 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="./img/common/favicon.png">
-  <link rel="canonical" href="https://yokky.kr">
-  <title>HOME</title>
-  <meta name="description" content="Heejae's Portfolio">
+  <meta property="og:locale" content="ko_KR">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yokky.kr">
-  <meta property="og:title" content="Heejae Han">
-  <meta property="og:description" contnet="Heejae Han - Portfolio">
-  <meta property="og:image" content="/image/common/image-sharing.jpg">
-  <meta property="og:imgae:type" content="image/jpg">
+  <meta property="og:title" content="포트폴리오">
+  <meta property="og:url" content="https://yokky.kr/">
+  <meta property="og:image" content="https://yokkyo.kr/src/assets/img/common/share.png">
+  <meta property="og:description" content="요끼의 포트폴리오">
+  <meta property="og:site_name" content="Yokky's portfolio">
   <meta property="og:width" content="1200">
-  <meta property="og:height:" content="630">
-  <meta name="theme-color" content="#ebebeb">
+  <meta property="og:height" content="630">
 
-  <link rel="stylesheet" href="./css/main/reset.css">
-  <link rel="stylesheet" href="./css/main/style.css">
+  <title>Yokky</title>
+
+  <script src="./src/js/include.js"></script>
+
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-  <div id="wrap">
-    <div id="header"></div>
+  <div id="wrap" class="pg--index w--full">
+    <!-- <div id="header" class="loaded-container" data-src="./include/mainHeader.html"></div> -->
+    <div data-include-path="./include/mainHeader.html"></div>
 
     <div id="main">
+      <div class="wrapper">
+        <!-- 메인 슬로건 // 이름, 슬로건 등의 텍스트 -->
+        <section class="main-slogan">
+          <div class="slogan__wrap">
+            <div class="txt">
+              <!-- 슬로건 텍스트 // 타이핑이펙트 -->
+              <span class="typing">
+                <!-- HeeJae Han. -->
+              </span>
+              <span class="cursor"></span>
+            </div>
+          </div>
+        </section>
 
+        <!-- 메인 메뉴 -->
+        <section class="main-menu">
+          <div class="menu__wrap">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="about/about.html">
+                  <span class="num">01</span>
+                  <span class="name">
+                    <em class="normal">About</em>
+                    <em class="hover">About</em>
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="works/works.html">
+                  <span class="num">02</span>
+                  <span class="name">
+                    <em class="normal">Works</em>
+                    <em class="hover">Works</em>
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="playground/playground.html">
+                  <span class="num">03</span>
+                  <span class="name">
+                    <em class="normal">Playground</em>
+                    <em class="hover">Playground</em>
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="contact/contact.html">
+                  <span class="num">04</span>
+                  <span class="name">
+                    <em class="normal">Contact</em>
+                    <em class="hover">Contact</em>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 메인 슬라이드 // 다른 컨텐츠로 고려 중 -->
+        <section class="main-slider">
+          슬라이드 쇼
+        </section>
+      </div>
     </div>
 
-    <div id="footer"></div>
+    <!-- <div id="asideFloatBtn" class="loaded-container" data-src="./include/asideFloatBtn.html"></div> -->
+    <div data-include-path="./include/asideFloatBtn.html"></div>
+    <!-- <div id="footer" class="loaded-container" data-src="./include/footer.html"></div> -->
+    <div data-include-path="./include/footer.html"></div>
+
+
   </div>
 
-  <script></script>
+  <script src="./src/js/jquery-3.5.1.js"></script>
+  <!-- <script src="./src/js/include.js"></script> -->
+  <script src="./src/js/main.js"></script>
+  <script>
+
+  </script>
 </body>
 
 </html>

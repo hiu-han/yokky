@@ -1,0 +1,27 @@
+.typing {
+  display: inline;
+}
+.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-left: 2px;
+  vertical-align: top;
+  background-color: var(--cl-primary);
+  text-indent: -99999px;
+  pointer-events: none;
+  opacity: 1;
+}
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+.blink_animate {
+  /* animation-name: blink;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end; */
+  animation: blink-effect 1200ms step-end infinite;
+  /* step-end 또는 step(1)을 넣지 않으면 transition이 일어난다*/
+}

@@ -176,62 +176,119 @@ const typing = function (_, counter = 0) {
 window.addEventListener('load', typing);
 
 // 우측 > AI 감성 평가 > 자동 슬라이드 효과
-function startEmotAutoSlide(container, delay) {
-  const list = container.querySelector('.list__inner');
-  let items = Array.from(container.querySelectorAll('.emot__item'));
+// function startEmotAutoSlide(container, delay) {
+//   const list = container.querySelector('.list__inner');
+//   let items = Array.from(container.querySelectorAll('.emot__item'));
 
-  function updateClasses() {
-    items.forEach((el) =>
-      el.classList.remove(
-        'first',
-        'second',
-        'third',
-        'fourth',
-        'fifth',
-        'sixth'
-      )
-    );
-    if (items.length > 0) items[0].classList.add('first');
-    if (items.length > 1) items[1].classList.add('second');
-    if (items.length > 2) items[2].classList.add('third');
-    if (items.length > 3) items[3].classList.add('fourth');
-    if (items.length > 4) items[4].classList.add('fifth');
-    if (items.length > 5) items[5].classList.add('sixth');
-  }
+//   function updateClasses() {
+//     items.forEach((el) =>
+//       el.classList.remove(
+//         'first',
+//         'second',
+//         'third',
+//         'fourth',
+//         'fifth',
+//         'sixth'
+//       )
+//     );
+//     if (items.length > 0) items[0].classList.add('first');
+//     if (items.length > 1) items[1].classList.add('second');
+//     if (items.length > 2) items[2].classList.add('third');
+//     if (items.length > 3) items[3].classList.add('fourth');
+//     if (items.length > 4) items[4].classList.add('fifth');
+//     if (items.length > 5) items[5].classList.add('sixth');
+//   }
 
-  function slideUp() {
-    if (
-      items.length === 0 ||
-      list.scrollHeight <= list.parentElement.clientHeight
-    )
-      return;
+//   function slideUp() {
+//     if (
+//       items.length === 0 ||
+//       list.scrollHeight <= list.parentElement.clientHeight
+//     )
+//       return;
 
-    const firstItem = items[0];
-    const shiftHeight = firstItem.offsetHeight + 5;
+//     const firstItem = items[0];
+//     const shiftHeight = firstItem.offsetHeight + 5;
 
-    list.style.transition = 'transform 0.5s ease-in-out';
-    list.style.transform = `translateY(-${shiftHeight}px)`;
+//     list.style.transition = 'transform 0.5s ease-in-out';
+//     list.style.transform = `translateY(-${shiftHeight}px)`;
+
+//     setTimeout(() => {
+//       list.style.transition = 'none';
+//       list.style.transform = 'translateY(0)';
+
+//       list.appendChild(firstItem);
+//       items.push(items.shift());
+//       updateClasses();
+//     }, 500);
+//   }
+
+//   updateClasses();
+//   setTimeout(() => {
+//     setInterval(slideUp, 3000);
+//   }, delay);
+// }
+
+// window.addEventListener('load', () => {
+//   const containers = document.querySelectorAll('.emot__list');
+//   startEmotAutoSlide(containers[0], 1000);
+//   startEmotAutoSlide(containers[1], 2100);
+// });
+
+// 우측 > AI 감성 평가 > 자동 슬라이드 효과 - 02-250402
+let emotSlideIntervals = [];
+
+function startEmotAutoSlide(containers) {
+  emotSlideIntervals.forEach((interval) => clearInterval(interval));
+  emotSlideIntervals = [];
+
+  containers.forEach((container, index) => {
+    const list = container.querySelector('.list__inner');
+    let items = Array.from(container.querySelectorAll('.emot__item'));
+
+    function updateClasses() {
+      items.forEach((el) => el.classList.remove('first', 'second', 'third'));
+      if (items.length > 0) items[0].classList.add('first');
+      if (items.length > 1) items[1].classList.add('second');
+      if (items.length > 2) items[2].classList.add('third');
+    }
+
+    function slideUp() {
+      if (items.length === 0 || list.scrollHeight <= container.clientHeight)
+        return;
+
+      const firstItem = items[0];
+      const shiftHeight = firstItem.offsetHeight + 5;
+
+      list.style.transition = 'transform 0.5s ease-in-out';
+      list.style.transform = `translateY(-${shiftHeight}px)`;
+
+      setTimeout(() => {
+        list.style.transition = 'none';
+        list.style.transform = 'translateY(0)';
+        list.appendChild(firstItem);
+        items.push(items.shift());
+        updateClasses();
+      }, 500);
+    }
+
+    updateClasses();
 
     setTimeout(() => {
-      list.style.transition = 'none';
-      list.style.transform = 'translateY(0)';
-
-      list.appendChild(firstItem);
-      items.push(items.shift());
-      updateClasses();
-    }, 500);
-  }
-
-  updateClasses();
-  setTimeout(() => {
-    setInterval(slideUp, 3000);
-  }, delay);
+      emotSlideIntervals[index] = setInterval(slideUp, 2000);
+    }, index * 1000);
+  });
 }
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const containers = document.querySelectorAll('.emot__list');
-  startEmotAutoSlide(containers[0], 1000);
-  startEmotAutoSlide(containers[1], 2100);
+  startEmotAutoSlide(containers);
+
+  document.querySelectorAll('.cont--reaction .tap__item').forEach((button) => {
+    button.addEventListener('click', () => {
+      console.log('btn clicked');
+      startEmotAutoSlide(containers);
+    });
+  });
 });
 
 // 우측 > AI 주제 분석 관련 >> 운영서버의 내용 일단 그대로 복붙 >> 정리하자

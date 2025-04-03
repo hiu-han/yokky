@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Auto Sliding Box</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .container-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+
+    .container {
+      width: 300px;
+      height: 200px;
+      /* 고정 높이 */
+      overflow: hidden;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: absolute;
+      top: 0;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .item {
+      width: 100%;
+      padding: 10px;
+      background: lightgray;
+      border: 1px solid black;
+    }
+
+    .first {
+      background: red;
+      color: white;
+    }
+
+    .second {
+      background: orange;
+      color: white;
+    }
+
+    .third {
+      background: yellow;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- question wrap -->
+  <div class="q-wrap">
+    <h3 class="q-title">세로 슬라이드 말풍선 4차</h3>
+    <div class="q-date">250401_1420</div>
+    <div class="q-subs">
+      <p class="txt">
+        큰 박스 내부에 수많은 작은 박스가 세로 한줄로 정렬되어있어. 작은 박스들의 높이는 내부 텍스트 길이에 따라 달라. 큰 박스의 높이는 고정이고 내부의 작은 박스들은 슬라이드 방식으로 하나씩 자동으로
+        올라가지. 작은 박스는 0개에서 몇개라도 될 수 있어. 작은 박스들의 총 높이가 큰박스의 높이보다 커져서 스크롤이 생기면 슬라이드 모션이 동작하지. 작은 박스 하나씩 하나씩 올라가는 거야. 모션이
+        진행되면서 가장 위의 작은 박스에 ‘first’라는 클래스명을, 두번째 오는 작은 박스는 ‘second’, 세번째 오는 작은 박스는 ‘third’라는 클래스명을 넣어줘. 물론 first, second,
+        third라는 클래스명은 하나씩만 존재해야하지. 이걸 js를 활용해서 만들어줘
+      </p>
+      <p class="txt added">
+        작은 박스들은 높이가 여러가지라구
+      </p>
+      <p class="txt added">
+        만들어 준 큰 박스와 또다른 박스가 옆에 같이 있어. 큰 박스 둘 다 내부에서 작은 박스들이 자동으로 슬라이드 되지. 두번째 박스는 1초 뒤에 슬라이드를 시작하게 해줘
+      </p>
+      <p class="txt added">
+        자, 네가지 버튼이 있어. 각 버튼을 누르면 큰 박스 내부 작은 박스의 텍스트 내용이 달라진다고 치자. 각 버튼을 누르면 자동 슬라이드 기능이 새로 시작되도록 해줘
+      </p>
+    </div>
+  </div>
+
+  <!-- answer wrap -->
+  <div class="a__wrap">
+    <div class="a-subs">
+      <div class="a-txt__box">
+        <div class="a-txt-head">✅ 업데이트된 기능</div>
+        <ol class="a-txt__olist">
+          <li class="a-txt__item">1. 네 개의 버튼 추가 → 버튼을 누르면 해당하는 내용으로 작은 박스들의 텍스트가 변경됨</li>
+          <li class="a-txt__item">2. 자동 슬라이드 리셋 → 버튼을 누르면 슬라이드 기능이 새로 시작됨</li>
+          <li class="a-txt__item">3. 각 박스 내부의 슬라이드가 개별적으로 적용됨</li>
+          <li class="a-txt__item">4. 두 번째 박스는 첫 번째보다 1초 늦게 슬라이드 시작 유지</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- code wrap -->
+  <div class="c__wrap">
+    <div class="wrapper">
+      <!-- 버튼들 -->
+      <div class="buttons">
+        <button data-set="1">데이터 1</button>
+        <button data-set="2">데이터 2</button>
+        <button data-set="3">데이터 3</button>
+        <button data-set="4">데이터 4</button>
+      </div>
+
+      <!-- 두 개의 큰 박스 -->
+      <div class="container-wrapper">
+        <div class="container" id="box1"></div>
+        <div class="container" id="box2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- result wrap -->
+  <div class="r__wrap">
+    <div class="a-subs">
+      <div class="a-txt__box">
+        <div class="a-txt-head">🔥 업데이트된 동작 방식</div>
+        <ul class="a-txt__ulist">
+          <li class="a-txt__item">✅ 버튼을 누르면 작은 박스들의 내용이 변경됨</li>
+          <li class="a-txt__item">✅ 슬라이드 애니메이션이 새로 시작됨 (이전 애니메이션 초기화)</li>
+          <li class="a-txt__item">✅ 두 번째 박스는 첫 번째보다 1초 늦게 슬라이드 시작 유지</li>
+          <li class="a-txt__item">✅ 각 박스 내부에서 'first', 'second', 'third' 클래스가 유지됨</li>
+          <li class="a-txt__item">✅ 부드러운 슬라이드 애니메이션 적용</li>
+        </ul>
+      </div>
+      <div class="a-txt">
+        <p>이제 버튼을 누를 때마다 새로운 데이터가 적용되면서 자동 슬라이드가 새로 시작될 거야! 🚀</p>
+        <p>혹시 더 수정할 부분 있으면 알려줘~ 😊</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const dataSets = {
+      1: [
+        ["Box 1 - A", "Box 2 - B", "Box 3 - C", "Box 4 - D", "Box 5 - E", "Box 6 - F"],
+        ["Item A1", "Item B2", "Item C3", "Item D4", "Item E5", "Item F6"]
+      ],
+      2: [
+        ["Apple", "Banana", "Cherry", "Dates", "Elderberry", "Fig"],
+        ["Grape", "Honeydew", "Ice Cream", "Jam", "Kiwi", "Lemon"]
+      ],
+      3: [
+        ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        ["Sunday", "Rainy", "Sunny", "Cloudy", "Windy", "Snowy"]
+      ],
+      4: [
+        ["Dog", "Cat", "Rabbit", "Horse", "Elephant", "Tiger"],
+        ["Lion", "Panda", "Giraffe", "Kangaroo", "Penguin", "Zebra"]
+      ]
+    };
+
+    let slideIntervals = {};
+
+    function createList(items) {
+      return `
+            <div class="list">
+                ${items.map(text => `<div class="item">${text}</div>`).join('')}
+            </div>
+        `;
+    }
+
+    function startAutoSlide(container, delay) {
+      const list = container.querySelector('.list');
+      let items = Array.from(container.querySelectorAll('.item'));
+
+      function updateClasses() {
+        items.forEach(el => el.classList.remove('first', 'second', 'third'));
+        if (items.length > 0) items[0].classList.add('first');
+        if (items.length > 1) items[1].classList.add('second');
+        if (items.length > 2) items[2].classList.add('third');
+      }
+
+      function slideUp() {
+        if (items.length === 0 || list.scrollHeight <= list.parentElement.clientHeight) return;
+
+        const firstItem = items[0];
+        const shiftHeight = firstItem.offsetHeight + 5;
+
+        list.style.transition = 'transform 0.5s ease-in-out';
+        list.style.transform = `translateY(-${shiftHeight}px)`;
+
+        setTimeout(() => {
+          list.style.transition = 'none';
+          list.style.transform = 'translateY(0)';
+          list.appendChild(firstItem);
+          items.push(items.shift());
+          updateClasses();
+        }, 500);
+      }
+
+      updateClasses();
+      clearInterval(slideIntervals[container.id]);
+      slideIntervals[container.id] = setInterval(slideUp, 2000);
+    }
+
+    function updateContent(dataSetIndex) {
+      const [box1Data, box2Data] = dataSets[dataSetIndex];
+
+      document.getElementById('box1').innerHTML = createList(box1Data);
+      document.getElementById('box2').innerHTML = createList(box2Data);
+
+      startAutoSlide(document.getElementById('box1'), 0);
+      startAutoSlide(document.getElementById('box2'), 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateContent(1);
+
+      document.querySelectorAll('.buttons button').forEach(button => {
+        button.addEventListener('click', () => {
+          const dataSetIndex = button.getAttribute('data-set');
+          updateContent(dataSetIndex);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

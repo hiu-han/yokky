@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Auto Sliding Box</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .container-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+
+    .container {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: absolute;
+      top: 0;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .item {
+      width: 100%;
+      padding: 10px;
+      background: lightgray;
+      border: 1px solid black;
+    }
+
+    .first {
+      background: red;
+      color: white;
+    }
+
+    .second {
+      background: orange;
+      color: white;
+    }
+
+    .third {
+      background: yellow;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- question wrap -->
+  <div class="q-wrap">
+    <h3 class="q-title">세로 슬라이드 말풍선 6차</h3>
+    <div class="q-date">250402_1630</div>
+    <div class="q-subs">
+      <p class="txt">
+        큰 박스 내부에 수많은 작은 박스가 세로 한줄로 정렬되어있어. 작은 박스들의 높이는 내부 텍스트 길이에 따라 달라. 큰 박스의 높이는 고정이고 내부의 작은 박스들은 슬라이드 방식으로 하나씩 자동으로
+        올라가지. 작은 박스는 0개에서 몇개라도 될 수 있어. 작은 박스들의 총 높이가 큰박스의 높이보다 커져서 스크롤이 생기면 슬라이드 모션이 동작하지. 작은 박스 하나씩 하나씩 올라가는 거야. 모션이
+        진행되면서 가장 위의 작은 박스에 ‘first’라는 클래스명을, 두번째 오는 작은 박스는 ‘second’, 세번째 오는 작은 박스는 ‘third’라는 클래스명을 넣어줘. 물론 first, second,
+        third라는 클래스명은 하나씩만 존재해야하지. 이걸 js를 활용해서 만들어줘
+      </p>
+      <p class="txt added">
+        작은 박스들은 높이가 여러가지라구
+      </p>
+      <p class="txt added">
+        만들어 준 큰 박스와 또다른 박스가 옆에 같이 있어. 큰 박스 둘 다 내부에서 작은 박스들이 자동으로 슬라이드 되지. 두번째 박스는 1초 뒤에 슬라이드를 시작하게 해줘
+      </p>
+      <p class="txt added">
+        자, 네가지 버튼이 있어. 각 버튼을 누르면 큰 박스 내부 작은 박스의 텍스트 내용이 달라진다고 치자. 각 버튼을 누르면 자동 슬라이드 기능이 새로 시작되도록 해줘
+      </p>
+      <p class="txt added">
+        페이지가 열리면 자동으로 슬라이드가 되는 거야. 그런데 버튼을 누르면 자동 슬라이드를 새로 시작해줘. 내부의 텍스트는 가져오지 않아도 돼
+      </p>
+      <p class="txt added">
+        container를 아이디 구분하지 말고 동일 class라고 생각하고 해줘
+      </p>
+    </div>
+  </div>
+
+  <!-- answer wrap -->
+  <div class="a__wrap">
+    <div class="a-subs">
+      <div class="a-txt__box">
+        <div class="a-txt-head">✅ 업데이트된 기능</div>
+        <ol class="a-txt__olist">
+          <li class="a-txt__item">1. container를 ID로 구분하지 않고, 공통 .container 클래스로 처리</li>
+          <li class="a-txt__item">2. 여러 개의 .container가 있어도 개별적으로 자동 슬라이드</li>
+          <li class="a-txt__item">3. 버튼 클릭 시 모든 .container의 슬라이드를 다시 시작</li>
+          <li class="a-txt__item">4. 첫 번째 .container는 바로 시작, 두 번째부터는 1초씩 지연 시작</li>
+          <li class="a-txt__item">5. .first, .second, .third 클래스가 각 박스 내부에서 유지됨</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- code wrap -->
+  <div class="c__wrap">
+    <div class="wrapper">
+      <!-- 버튼들 -->
+      <div class="buttons">
+        <button>리셋 1</button>
+        <button>리셋 2</button>
+        <button>리셋 3</button>
+        <button>리셋 4</button>
+      </div>
+
+      <!-- 여러 개의 큰 박스 -->
+      <div class="container-wrapper">
+        <div class="container">
+          <div class="list">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="list">
+            <div class="item">Item A</div>
+            <div class="item">Item B</div>
+            <div class="item">Item C</div>
+            <div class="item">Item D</div>
+            <div class="item">Item E</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- result wrap -->
+  <div class="r__wrap">
+    <div class="a-subs">
+      <div class="a-txt__box">
+        <div class="a-txt-head">🔥 업데이트된 동작 방식</div>
+        <ul class="a-txt__ulist">
+          <li class="a-txt__item">✅ ID 없이 .container 클래스로 모든 슬라이드 처리</li>
+          <li class="a-txt__item">✅ 각 .container가 개별적으로 슬라이드됨</li>
+          <li class="a-txt__item">✅ 페이지가 열리면 자동으로 슬라이드 시작</li>
+          <li class="a-txt__item">✅ 두 번째 박스는 첫 번째보다 1초 뒤에 슬라이드 시작</li>
+          <li class="a-txt__item">✅ 버튼을 누르면 모든 .container의 슬라이드가 다시 시작</li>
+          <li class="a-txt__item">✅ first, second, third 클래스 유지</li>
+        </ul>
+      </div>
+      <div class="a-txt">
+        <p>이제 .container가 몇 개든 개별적으로 자동 슬라이드가 진행되고, 버튼을 누르면 모든 슬라이드가 재시작될 거야! 🚀</p>
+        <p>더 수정할 부분 있으면 알려줘~ 😊</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startAutoSlide(container, delay = 0) {
+      setTimeout(() => {
+        let intervalId;
+
+        function updateClasses() {
+          const items = container.querySelectorAll('.item');
+          items.forEach((item) => item.classList.remove('first', 'second', 'third'));
+          if (items[0]) items[0].classList.add('first');
+          if (items[1]) items[1].classList.add('second');
+          if (items[2]) items[2].classList.add('third');
+        }
+
+        function slideItems() {
+          const firstItem = container.querySelector('.item');
+          if (firstItem) {
+            container.appendChild(firstItem);
+            updateClasses();
+          }
+        }
+
+        function resetAndRestart() {
+          clearInterval(intervalId);
+          updateClasses();
+          intervalId = setInterval(slideItems, 3000);
+        }
+
+        updateClasses();
+        intervalId = setInterval(slideItems, 3000);
+
+        container.dataset.intervalId = intervalId;
+      }, delay);
+    }
+
+    function resetSlide(container) {
+      clearInterval(container.dataset.intervalId);
+      startAutoSlide(container);
+    }
+
+    // 모든 컨테이너에 대해 자동 슬라이드 시작
+    const containers = document.querySelectorAll('.container');
+    containers.forEach((container, index) => startAutoSlide(container, index * 1000));
+
+    // 버튼 클릭 시 슬라이드 리셋
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        containers.forEach((container) => resetSlide(container));
+      });
+    });
+  </script>
+
+</body>
+
+</html>

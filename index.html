@@ -5,43 +5,67 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="포트폴리오">
-  <meta property="og:url" content="https://yokky.kr/">
-  <meta property="og:image" content="https://yokkyo.kr/src/assets/img/common/share.png">
-  <meta property="og:description" content="요끼의 포트폴리오">
-  <meta property="og:site_name" content="Yokky's portfolio">
-  <meta property="og:width" content="1200">
-  <meta property="og:height" content="630">
+  <title>Getting ready</title>
 
-  <title>Yokky</title>
+  <script src="./src/js/include.js"></script>
 
-  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-  <div id="wrap" class="pg--index w--full">
-    <div id="header" class="loaded-container" data-src="./include/mainHeader.html"></div>
-
-    <div id="main">
-      <div class="wrapper">
-        <section class="main-slider">
-          슬라이드 쇼
-        </section>
+  <section class="center">
+    <div class="today_wrap">
+      <h2 id="today"></h2>
+    </div>
+    <div class="clock_wrap">
+      <h2 id="clock">00:00:00</h2>
+    </div>
+    <div class="login_wrap">
+      <form id="login-form" class="hidden">
+        <input class="user_name" required maxlength="15" type="text" placeholder="What is your name?" />
+        <input type="submit" value="Log in">
+      </form>
+      <div class="greeting_wrap hidden">
+        <h1 id="greeting"></h1>
+        <button id="logout">Log out</button>
       </div>
     </div>
-
-    <div id="asideFloatBtn" class="loaded-container" data-src="./include/asideFloatBtn.html"></div>
-    <div id="footer" class="loaded-container" data-src="./include/footer.html"></div>
-
+    <div class="todo_wrap">
+      <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+  </section>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <div id="weather">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
-  <script src="./src/js/jquery-3.5.1.js"></script>
-  <script src="./src/js/main.js"></script>
-  <script>
+  <!-- <aside class="float-btn-wrap">
+    <div class="go-test-wrap">
+      <p class="btn circle-btn go-btn">
+        <a href="works.html"></a>
+      </p>
+    </div>
+  </aside> -->
+  <div data-include-path="./include/asideFloatBtn.html"></div>
 
-  </script>
+  <script src="./script.js"></script>
+  <script src="./js/greetings.js"></script>
+  <script src="./js/clock.js"></script>
+  <script src="./js/quotes.js"></script>
+  <script src="./js/background.js"></script>
+  <script src="./js/todo.js"></script>
+  <script src="./js/weather.js"></script>
 </body>
 
 </html>
