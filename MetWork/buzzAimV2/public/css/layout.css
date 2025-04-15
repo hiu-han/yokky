@@ -140,3 +140,102 @@ footer::before {
 }
 
 /*** ASIDE ***/
+.loading__box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.loading-logo {
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: logo-blink 3s ease-in-out infinite;
+}
+.loading-logo > img {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.loading-logo > .logo-dot {
+  display: block;
+  position: absolute;
+  bottom: 6px;
+  right: -14px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--cl-primary);
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+}
+.spinner .bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 20px;
+  background: black;
+  opacity: 0;
+  transform: rotate(calc(30deg * var(--i))) translateY(-70px);
+  transform-origin: center center;
+  animation: spin 1.2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+  border-radius: 2px;
+  z-index: 1;
+}
+
+@keyframes logo-blink {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+
+  72% {
+    opacity: 1;
+  }
+
+  /* 살짝 깜빡 */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

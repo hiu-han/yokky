@@ -63,6 +63,10 @@ strong.color {
 .btn > button:hover {
   box-shadow: var(--bxsd-s);
 }
+.btn > a:active,
+.btn > button:active {
+  transform: scale(0.9);
+}
 .btn.btn--ty01 > a,
 .btn.btn--ty01 > button {
   border: 1px solid var(--cl-primary);

@@ -1006,8 +1006,7 @@ em.bord {
   padding-bottom: 10px;
 }
 .swiper-pagination {
-  /* display: flex; */
-  display: none;
+  display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   gap: 8px;
@@ -1016,7 +1015,6 @@ em.bord {
   margin-bottom: 10px;
 }
 #idxTrdSwpContainer .swiper-pagination {
-  display: flex;
   margin-top: 14px;
   margin-bottom: 24px;
 }
@@ -1624,9 +1622,6 @@ em.bord {
   }
 
   /* ---- SWIPER UNIT // 480px ---- */
-  .swiper-pagination {
-    display: flex;
-  }
   .swiper-wrapper {
     display: flex;
     flex-wrap: nowrap;

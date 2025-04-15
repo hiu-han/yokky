@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="public/img/icon/favicon.png">
+  <title>gpt250403-1036</title>
+  <style>
+    .loading-box {
+      width: 480px;
+      height: 360px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .spinner {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .bar {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 20px;
+      background: black;
+      opacity: 0;
+      transform: rotate(calc(30deg * var(--i))) translateY(-60px);
+      transform-origin: center center;
+      animation: blink 1.2s linear infinite;
+      animation-delay: calc(0.1s * var(--i));
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      30% {
+        opacity: 0.4;
+      }
+
+      60% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- question wrap -->
+  <div class="q-wrap">
+    <h3 class="q-title">세로 슬라이드 말풍선 2-a차</h3>
+    <div class="q-date">2503403_1036</div>
+    <div class="q-subs">
+      <p class="txt">
+        페이지에 데이터가 모두 불러졌을 때가지 보여줄 로딩 이미지가 필요한데, 480x360 하얀 배경 박스 내부에 로고가 있고 그 주변에 시계의 5분단위 표시막대 처럼 작은 막대가 둘러져 있어. 그 작은
+        막대들이 차례로 하나씩 자연스럽게 나타났다가 페이드아웃 되는 애니메이션이 반복 되는 거야
+      </p>
+      <p class="txt added last">
+        로고가 중심에 있고 그 로고 주변을 작은 막대들이 둥글게 둘러싸는 형태야. 수정해줄 수 있어??
+      </p>
+    </div>
+  </div>
+
+  <!-- answer wrap -->
+  <div class="a__wrap">
+    <div class="a-subs">
+      <!-- <div class="a-txt">
+        설명해주신 로딩 이미지를 HTML/CSS로 구현해볼게요. 전체 구조는 이렇고:
+      </div> -->
+      <div class="a-txt__box">
+        <div class="a-txt-head">✅ 설명해주신 로딩 이미지를 HTML/CSS로 구현해볼게요. 전체 구조는 이렇고:</div>
+        <ol class="a-txt__olist">
+          <li class="a-txt__item">하얀 배경 박스 (480x360)</li>
+          <li class="a-txt__item">중앙에 로고</li>
+          <li class="a-txt__item">로고 주변 원형으로 배치된 12개의 막대 (시계 5분 단위)</li>
+          <li class="a-txt__item">막대는 시계방향으로 하나씩 나타났다 사라지는 애니메이션</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- code wrap -->
+  <div class="c__wrap">
+    <div class="wrapper">
+      <div class="loading-box">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <div class="spinner">
+          <!-- 12 막대 -->
+          <div class="bar" style="--i:0;"></div>
+          <div class="bar" style="--i:1;"></div>
+          <div class="bar" style="--i:2;"></div>
+          <div class="bar" style="--i:3;"></div>
+          <div class="bar" style="--i:4;"></div>
+          <div class="bar" style="--i:5;"></div>
+          <div class="bar" style="--i:6;"></div>
+          <div class="bar" style="--i:7;"></div>
+          <div class="bar" style="--i:8;"></div>
+          <div class="bar" style="--i:9;"></div>
+          <div class="bar" style="--i:10;"></div>
+          <div class="bar" style="--i:11;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- result wrap -->
+  <div class="r__wrap">
+    <div class="a-subs">
+      <div class="a-txt__box">
+        <div class="a-txt-head">✅ 설명</div>
+        <ul class="a-txt__ulist">
+          <li class="a-txt__item">✅ .spinner는 로고 중심에 위치한 원형 애니메이션 컨테이너고,</li>
+          <li class="a-txt__item">✅ .bar는 각각 다른 각도로 배치되고, --i 값을 기준으로 애니메이션 딜레이가 다르게 들어가 있어.</li>
+          <li class="a-txt__item">✅ @keyframes blink는 각 막대가 한 번 나타났다 페이드아웃되는 동작을 정의하고, 전체적으로 부드럽게 이어져서 반복돼.</li>
+        </ul>
+      </div>
+      <div class="a-txt added">
+        <p>이제 로고는 정확히 가운데 있고,<br>
+          그걸 중심으로 12개의 막대가 원 형태로 동그랗게 둘러싸는 형태로 바뀌었어!<br>
+          막대는 차례차례 나타났다 사라지면서 시계 도는 느낌도 나고.<br>
+          <br>
+          디자인적으로 조정하고 싶은 거 더 있어?<br>
+          예를 들어 막대 간격을 더 넓게, 더 작게, 로고 크기 조정,<br>
+          아니면 전체 배경을 살짝 투명하게 하고 싶다든지 그런 것도 바로 해줄게!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

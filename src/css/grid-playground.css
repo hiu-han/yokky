@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.control-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-preview {
+  border: 2px solid #444;
+  background: white;
+  min-height: 300px;
+  padding: 10px;
+  display: grid;
+  transition: all 0.3s ease;
+}
+
+.grid-item {
+  background: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.grid-item.selected {
+  outline: 3px solid #ff9800;
+}
+
+.grid-item .label {
+  font-size: 11px;
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+  border-radius: 3px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.viewport-slider {
+  margin: 20px 0;
+}
+
+.viewport-slider input {
+  width: 100%;
+}
+
+.viewport-box {
+  border: 1px dashed #999;
+  overflow-x: auto;
+  background: #fff;
+  padding: 10px;
+}
+
+.grid-preview.with-named-areas {
+  grid-template-areas:
+    'header header header'
+    'sidebar content content'
+    'footer footer footer';
+}
+
+.grid-preview.with-named-areas .grid-item[data-area='header'] {
+  grid-area: header;
+}
+
+.grid-preview.with-named-areas .grid-item[data-area='sidebar'] {
+  grid-area: sidebar;
+}
+
+.grid-preview.with-named-areas .grid-item[data-area='content'] {
+  grid-area: content;
+}
+
+.grid-preview.with-named-areas .grid-item[data-area='footer'] {
+  grid-area: footer;
+}
+
+.save-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.save-controls input[type='text'] {
+  flex: 1;
+  padding: 6px;
+}
+
+.saved-list {
+  margin-top: 10px;
+}
+
+.saved-list ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.saved-list li {
+  background: #fff;
+  padding: 6px 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.saved-list button {
+  margin-left: 10px;
+  padding: 2px 6px;
+}

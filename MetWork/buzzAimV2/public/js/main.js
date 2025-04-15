@@ -156,24 +156,139 @@ setInterval(typing, 100);
 */
 
 // 좌측 > 오늘의 한마디 > 타이핑효과
+// const typingTxt = document.querySelector('.typing');
+// const cursor = document.querySelector('.cursor');
+
+// const typing = function (_, counter = 0) {
+//   const txt =
+//     '로보락 제품에 대한 고객들의 반응은 대체로 긍정적이지만, 물걸레 청소 시 발생하는 냄새 문제와 관련된 불만이 많으며, 가격 대비 성능에 대한 고민도 존재하는 것으로 요약할 수 있습니다. ';
+
+//   setInterval(() => {
+//     if (txt.length === counter) {
+//       cursor.classList.add('blink_animate');
+//       return;
+//     }
+//     typingTxt.textContent += txt[counter];
+//     counter++;
+//   }, 80);
+// };
+
+// window.addEventListener('load', typing);
+
+//
+// const typingTxt = document.querySelector('.typing');
+// const cursor = document.querySelector('.cursor');
+
+// const txt =
+//   '로보락 제품에 대한 고객들의 반응은 대체로 긍정적이지만, 물걸레 청소 시 발생하는 냄새 문제와 관련된 불만이 많으며, 가격 대비 성능에 대한 고민도 존재하는 것으로 요약할 수 있습니다. ';
+
+// // 전체 글자 수 기준으로 랜덤하게 1~2개의 멈춤 포인트 선택
+// const pauseCount = Math.floor(Math.random() * 2) + 1; // 1 또는 2
+// const pauseIndexes = [];
+// while (pauseIndexes.length < pauseCount) {
+//   const index = Math.floor(Math.random() * txt.length);
+//   if (!pauseIndexes.includes(index) && index > 5 && index < txt.length - 5) {
+//     pauseIndexes.push(index);
+//   }
+// }
+// // 정렬해줘야 멈추는 타이밍이 자연스러워져~
+// pauseIndexes.sort((a, b) => a - b);
+
+// function typeText(counter = 0) {
+//   if (counter >= txt.length) {
+//     cursor.classList.add('blink_animate');
+//     return;
+//   }
+
+//   typingTxt.textContent += txt[counter];
+//   counter++;
+
+//   const isPausePoint = pauseIndexes.includes(counter);
+//   const delay = isPausePoint ? 1000 : 80;
+
+//   setTimeout(() => typeText(counter), delay);
+// }
+
+// window.addEventListener('load', () => {
+//   typeText();
+// });
+
+//
+// const typingTxt = document.querySelector('.typing');
+// const cursor = document.querySelector('.cursor');
+
+// const txt =
+//   '로보락 제품에 대한 고객들의 반응은 대체로 긍정적이지만, 물걸레 청소 시 발생하는 냄새 문제와 관련된 불만이 많으며, 가격 대비 성능에 대한 고민도 존재하는 것으로 요약할 수 있습니다. ';
+
+// // 랜덤하게 1~2회 멈춤 위치 선정
+// const pauseCount = Math.floor(Math.random() * 2) + 1;
+// const pauseIndexes = [];
+// while (pauseIndexes.length < pauseCount) {
+//   const index = Math.floor(Math.random() * txt.length);
+//   if (!pauseIndexes.includes(index) && index > 5 && index < txt.length - 5) {
+//     pauseIndexes.push(index);
+//   }
+// }
+// pauseIndexes.sort((a, b) => a - b);
+
+// // 타이핑 함수
+// function typeText(counter = 0) {
+//   if (counter >= txt.length) {
+//     cursor.classList.add('blink_animate');
+//     return;
+//   }
+
+//   typingTxt.textContent += txt[counter];
+//   counter++;
+
+//   const isPausePoint = pauseIndexes.includes(counter);
+
+//   // 🎯 진짜 타자 느낌! 50~120ms 사이 랜덤 속도
+//   const baseSpeed = Math.floor(Math.random() * 70) + 50;
+
+//   // 🛑 멈추는 위치에서는 1초 쉬기
+//   const delay = isPausePoint ? 1000 : baseSpeed;
+
+//   setTimeout(() => typeText(counter), delay);
+// }
+
+// window.addEventListener('load', () => {
+//   typeText();
+// });
+
+//
 const typingTxt = document.querySelector('.typing');
 const cursor = document.querySelector('.cursor');
 
-const typing = function (_, counter = 0) {
-  const txt =
-    '로보락 제품에 대한 고객들의 반응은 대체로 긍정적이지만, 물걸레 청소 시 발생하는 냄새 문제와 관련된 불만이 많으며, 가격 대비 성능에 대한 고민도 존재하는 것으로 요약할 수 있습니다. ';
+const txt =
+  '로보락 제품에 대한 고객들의 반응은 대체로 긍정적이지만, 물걸레 청소 시 발생하는 냄새 문제와 관련된 불만이 많으며, 가격 대비 성능에 대한 고민도 존재하는 것으로 요약할 수 있습니다.';
 
-  setInterval(() => {
-    if (txt.length === counter) {
-      cursor.classList.add('blink_animate');
-      return;
-    }
-    typingTxt.textContent += txt[counter];
-    counter++;
-  }, 80);
-};
+function typeText(counter = 0) {
+  if (counter >= txt.length) {
+    cursor.classList.add('blink_animate');
+    return;
+  }
 
-window.addEventListener('load', typing);
+  const currentChar = txt[counter];
+  typingTxt.textContent += currentChar;
+  counter++;
+
+  // 타자 속도 기본값 (랜덤 50~120ms)
+  let delay = Math.floor(Math.random() * 70) + 50;
+
+  // 쉼표나 마침표는 살짝 멈춤
+  if (currentChar === ',') {
+    delay = 500;
+  } else if (currentChar === '.') {
+    delay = 800;
+  }
+
+  setTimeout(() => typeText(counter), delay);
+}
+
+window.addEventListener('load', () => {
+  typeText();
+});
 
 // 우측 > AI 감성 평가 > 자동 슬라이드 효과
 // function startEmotAutoSlide(container, delay) {
@@ -243,9 +358,10 @@ function startEmotAutoSlide(containers) {
 
   containers.forEach((container, index) => {
     const list = container.querySelector('.list__inner');
-    let items = Array.from(container.querySelectorAll('.emot__item'));
+    // const items = Array.from(container.querySelectorAll('.emot__item'));
 
     function updateClasses() {
+      const items = Array.from(container.querySelectorAll('.emot__item'));
       items.forEach((el) => el.classList.remove('first', 'second', 'third'));
       if (items.length > 0) items[0].classList.add('first');
       if (items.length > 1) items[1].classList.add('second');
@@ -253,6 +369,7 @@ function startEmotAutoSlide(containers) {
     }
 
     function slideUp() {
+      const items = Array.from(container.querySelectorAll('.emot__item'));
       if (items.length === 0 || list.scrollHeight <= container.clientHeight)
         return;
 
@@ -319,3 +436,53 @@ topicItems.forEach((tItem) => {
     selectedtItemName.innerText = tItemName.textContent;
   });
 });
+
+/*
+// 타이핑 타이머 추적용
+    let typingTimer = [];
+    const typing = function(text, counter = 0) {
+      // 이전 예약된 setTimeout 제거
+      typingTimer.forEach(id => clearTimeout(id));
+      typingTimer = [];
+
+      // if (typingInterval) clearInterval(typingInterval); // 기존 interval 정리
+      reactionToday.textContent = ""; // 기존 텍스트 초기화
+      reactionCursor.classList.remove('blink_animate'); // 커서 애니메이션 초기화
+*/
+/* 자연스러운 타이핑 효과를 위해 내용 수정 // 한희재 250410 // 기존 내용
+      typingInterval = setInterval(() => {
+        if (responseToday.length === counter) {
+          reactionCursor.classList.add('blink_animate');
+          return;
+        }
+        reactionToday.textContent += responseToday[counter];
+        counter++;
+      }, 80);
+      */
+/*
+      // 자연스러운 타이핑 효과를 위해 내용 수정 // 한희재 250410 // 수정된 내용
+      const typeChar = (i) => {
+        if (i >= responseToday.length) {
+          reactionCursor.classList.add('blink_animate');
+          return;
+        }
+        const currentChar = responseToday[i];
+        reactionToday.textContent += currentChar;
+
+        let delay = Math.floor(Math.random() * 50) + 50;
+        if (currentChar === ',') delay = 700;
+        else if (currentChar === '.') delay = 1000;
+
+        const timerId = setTimeout(() => typeChar(i + 1), delay);
+        typingTimer.push(timerId);
+      };
+      typeChar(counter);
+
+      document.querySelectorAll('.cont--reaction .tap__item').forEach(function(tap) {
+        tap.addEventListener('click', function() {
+          responseToday = '';
+        });
+      });
+    };
+    typing();
+*/
