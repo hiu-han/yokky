@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexbox 완전 학습장</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .panel {
+      margin-bottom: 30px;
+    }
+
+    .panel h2 {
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+    }
+
+    .control-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .control-group select,
+    .control-group input {
+      width: 100%;
+      padding: 4px;
+    }
+
+    .flex-container {
+      border: 2px dashed #aaa;
+      padding: 10px;
+      min-height: 200px;
+      display: flex;
+      background: white;
+      flex-wrap: wrap;
+    }
+
+    .flex-item {
+      background: #4e89ae;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+      white-space: pre-wrap;
+    }
+
+    .flex-item.selected {
+      outline: 3px solid #ff9800;
+    }
+
+    .info {
+      margin-top: 10px;
+      font-size: 14px;
+      background: #eee;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .actions input[type="text"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 4px;
+    }
+
+    .actions button {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+
+    .saved-list {
+      margin-top: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .saved-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .saved-item button {
+      margin-left: 5px;
+    }
+
+    .code-preview {
+      white-space: pre-wrap;
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: monospace;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Flexbox 완전 학습장</h1>
+
+  <div class="panel">
+    <h2>Flex Container 설정</h2>
+
+    <div class="actions">
+      <input type="text" id="saveName" placeholder="저장 이름 (자동 생성됨)" />
+      <button id="saveBtn">저장</button>
+      <button id="resetBtn">초기화</button>
+      <button id="previewBtn">코드 미리보기</button>
+    </div>
+
+    <div class="saved-list" id="savedList"></div>
+    <div class="code-preview" id="codePreview" style="display: none;"></div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="itemCount">아이템 개수</label>
+        <input type="number" id="itemCount" min="1" max="20" value="3" />
+      </div>
+      <div class="control-group">
+        <label for="flexDirection">flex-direction</label>
+        <select id="flexDirection">
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+          <option value="column">column</option>
+          <option value="column-reverse">column-reverse</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="flexWrap">flex-wrap</label>
+        <select id="flexWrap">
+          <option value="nowrap">nowrap</option>
+          <option value="wrap">wrap</option>
+          <option value="wrap-reverse">wrap-reverse</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="justifyContent">justify-content</label>
+        <select id="justifyContent">
+          <option value="flex-start">flex-start</option>
+          <option value="center">center</option>
+          <option value="flex-end">flex-end</option>
+          <option value="space-between">space-between</option>
+          <option value="space-around">space-around</option>
+          <option value="space-evenly">space-evenly</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="alignItems">align-items</label>
+        <select id="alignItems">
+          <option value="stretch">stretch</option>
+          <option value="flex-start">flex-start</option>
+          <option value="center">center</option>
+          <option value="flex-end">flex-end</option>
+          <option value="baseline">baseline</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="alignContent">align-content</label>
+        <select id="alignContent">
+          <option value="stretch">stretch</option>
+          <option value="flex-start">flex-start</option>
+          <option value="center">center</option>
+          <option value="flex-end">flex-end</option>
+          <option value="space-between">space-between</option>
+          <option value="space-around">space-around</option>
+        </select>
+      </div>
+    </div>
+    <div class="info" id="containerInfo"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Flex Items 설정</h2>
+    <div class="controls" id="itemControls">
+      <div class="control-group">
+        <label for="order">order</label>
+        <input type="number" id="order" value="0" />
+      </div>
+      <div class="control-group">
+        <label for="flexGrow">flex-grow</label>
+        <input type="number" id="flexGrow" value="0" />
+      </div>
+      <div class="control-group">
+        <label for="flexShrink">flex-shrink</label>
+        <input type="number" id="flexShrink" value="1" />
+      </div>
+      <div class="control-group">
+        <label for="flexBasis">flex-basis</label>
+        <input type="text" id="flexBasis" value="auto" />
+      </div>
+      <div class="control-group">
+        <label for="alignSelf">align-self</label>
+        <select id="alignSelf">
+          <option value="auto">auto</option>
+          <option value="flex-start">flex-start</option>
+          <option value="center">center</option>
+          <option value="flex-end">flex-end</option>
+          <option value="stretch">stretch</option>
+          <option value="baseline">baseline</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-container" id="flexContainer"></div>
+
+  <script>
+    const container = document.getElementById('flexContainer');
+    const containerInfo = document.getElementById('containerInfo');
+    const itemCountInput = document.getElementById('itemCount');
+
+    let selectedItem = null;
+
+    const updateContainerInfo = () => {
+      containerInfo.textContent = `display: flex; flex-direction: ${container.style.flexDirection || 'row'}; flex-wrap: ${container.style.flexWrap || 'nowrap'}; justify-content: ${container.style.justifyContent || 'flex-start'}; align-items: ${container.style.alignItems || 'stretch'}; align-content: ${container.style.alignContent || 'stretch'};`;
+    };
+
+    ['flexDirection', 'flexWrap', 'justifyContent', 'alignItems', 'alignContent'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('change', e => {
+        container.style[id.replace(/([A-Z])/g, '-$1').toLowerCase()] = e.target.value;
+        updateContainerInfo();
+      });
+    });
+
+    const createItems = (count) => {
+      container.innerHTML = '';
+      for (let i = 1; i <= count; i++) {
+        const item = document.createElement('div');
+        item.className = 'flex-item';
+        item.id = `item${i}`;
+        item.textContent = `${i}\norder: 0; flex-grow: 0; flex-shrink: 1; flex-basis: auto; align-self: auto;`;
+        item.addEventListener('click', () => selectItem(item));
+        container.appendChild(item);
+      }
+    };
+
+    const selectItem = (item) => {
+      if (selectedItem) selectedItem.classList.remove('selected');
+      selectedItem = item;
+      selectedItem.classList.add('selected');
+
+      document.getElementById('order').value = selectedItem.style.order || 0;
+      document.getElementById('flexGrow').value = selectedItem.style.flexGrow || 0;
+      document.getElementById('flexShrink').value = selectedItem.style.flexShrink || 1;
+      document.getElementById('flexBasis').value = selectedItem.style.flexBasis || 'auto';
+      document.getElementById('alignSelf').value = selectedItem.style.alignSelf || 'auto';
+    };
+
+    ['order', 'flexGrow', 'flexShrink', 'flexBasis', 'alignSelf'].forEach(prop => {
+      document.getElementById(prop).addEventListener('input', () => {
+        if (!selectedItem) return;
+        selectedItem.style[prop] = document.getElementById(prop).value;
+        updateItemText(selectedItem);
+      });
+      document.getElementById(prop).addEventListener('change', () => {
+        if (!selectedItem) return;
+        selectedItem.style[prop] = document.getElementById(prop).value;
+        updateItemText(selectedItem);
+      });
+    });
+
+    const updateItemText = (el) => {
+      el.textContent = `${el.id.replace('item', '')}\norder: ${el.style.order || 0}; flex-grow: ${el.style.flexGrow || 0}; flex-shrink: ${el.style.flexShrink || 1}; flex-basis: ${el.style.flexBasis || 'auto'}; align-self: ${el.style.alignSelf || 'auto'};`;
+    };
+
+    itemCountInput.addEventListener('change', () => {
+      const count = parseInt(itemCountInput.value, 10);
+      if (count >= 1 && count <= 20) {
+        createItems(count);
+        selectedItem = null;
+      }
+    });
+
+    updateContainerInfo();
+    createItems(parseInt(itemCountInput.value, 10));
+
+
+    //
+    //
+    const resetBtn = document.getElementById('resetBtn');
+    const saveBtn = document.getElementById('saveBtn');
+    const previewBtn = document.getElementById('previewBtn');
+    const codePreview = document.getElementById('codePreview');
+    const saveNameInput = document.getElementById('saveName');
+    const savedList = document.getElementById('savedList');
+
+    let savedSettings = JSON.parse(localStorage.getItem('flexSettingsList')) || [];
+
+    function getCurrentState() {
+      const items = Array.from(document.querySelectorAll('.flex-item')).map(item => ({
+        id: item.id,
+        style: {
+          order: item.style.order,
+          flexGrow: item.style.flexGrow,
+          flexShrink: item.style.flexShrink,
+          flexBasis: item.style.flexBasis,
+          alignSelf: item.style.alignSelf
+        }
+      }));
+      return {
+        name: saveNameInput.value || new Date().toLocaleString(),
+        itemCount: document.getElementById('itemCount').value,
+        flexDirection: document.getElementById('flexDirection').value,
+        flexWrap: document.getElementById('flexWrap').value,
+        justifyContent: document.getElementById('justifyContent').value,
+        alignItems: document.getElementById('alignItems').value,
+        alignContent: document.getElementById('alignContent').value,
+        items
+      };
+    }
+
+    function applyState(state) {
+      document.getElementById('itemCount').value = state.itemCount;
+      document.getElementById('flexDirection').value = state.flexDirection;
+      document.getElementById('flexWrap').value = state.flexWrap;
+      document.getElementById('justifyContent').value = state.justifyContent;
+      document.getElementById('alignItems').value = state.alignItems;
+      document.getElementById('alignContent').value = state.alignContent;
+      document.getElementById('itemCount').dispatchEvent(new Event('change'));
+      setTimeout(() => {
+        state.items.forEach(item => {
+          const el = document.getElementById(item.id);
+          if (el) {
+            Object.entries(item.style).forEach(([key, value]) => {
+              el.style[key] = value;
+            });
+            updateItemText(el);
+          }
+        });
+      }, 100);
+    }
+
+    function renderSavedList() {
+      savedList.innerHTML = '<h3>저장된 설정</h3>';
+      savedSettings.forEach((setting, i) => {
+        const div = document.createElement('div');
+        div.className = 'saved-item';
+        div.innerHTML = `
+        <span>${setting.name}</span>
+        <span>
+          <button onclick="loadSetting(${i})">불러오기</button>
+          <button onclick="deleteSetting(${i})">삭제</button>
+        </span>`;
+        savedList.appendChild(div);
+      });
+    }
+
+    function loadSetting(index) {
+      applyState(savedSettings[index]);
+    }
+
+    function deleteSetting(index) {
+      savedSettings.splice(index, 1);
+      localStorage.setItem('flexSettingsList', JSON.stringify(savedSettings));
+      renderSavedList();
+    }
+
+    saveBtn.addEventListener('click', () => {
+      const current = getCurrentState();
+      if (savedSettings.length >= 10) savedSettings.shift();
+      savedSettings.push(current);
+      localStorage.setItem('flexSettingsList', JSON.stringify(savedSettings));
+      renderSavedList();
+      saveNameInput.value = '';
+    });
+
+    resetBtn.addEventListener('click', () => {
+      location.reload();
+    });
+
+    let isPreviewVisible = false;
+
+    previewBtn.addEventListener('click', () => {
+      isPreviewVisible = !isPreviewVisible;
+      if (isPreviewVisible) {
+        const state = getCurrentState();
+        let code = `/* Flex Container */
+.container {
+  display: flex;
+  flex-direction: ${state.flexDirection};
+  flex-wrap: ${state.flexWrap};
+  justify-content: ${state.justifyContent};
+  align-items: ${state.alignItems};
+  align-content: ${state.alignContent};
+}
+
+`;
+        state.items.forEach(item => {
+          code += `#${item.id} {
+  order: ${item.style.order};
+  flex-grow: ${item.style.flexGrow};
+  flex-shrink: ${item.style.flexShrink};
+  flex-basis: ${item.style.flexBasis};
+  align-self: ${item.style.alignSelf};
+}
+
+`;
+        });
+        codePreview.textContent = code;
+        codePreview.style.display = 'block';
+        previewBtn.textContent = '코드 닫기';
+      } else {
+        codePreview.style.display = 'none';
+        previewBtn.textContent = '코드 미리보기';
+      }
+    });
+
+    renderSavedList();
+  </script>
+</body>
+
+</html>

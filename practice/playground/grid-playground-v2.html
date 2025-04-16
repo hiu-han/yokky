@@ -13,7 +13,6 @@
   <meta rel="shortcut icon" type="image/x-icon" href="../src/assets/img/icon/favicon.svg" size="16x16">
   <title>CSS Grid 놀이터</title>
 
-  <!-- <link rel="stylesheet" href="../../src/css/reset.css"> -->
   <link rel="stylesheet" href="../../src/css/grid-playground.css">
 </head>
 
@@ -107,6 +106,17 @@
           </div>
         </div>
 
+        <!-- 코드 프리뷰 -->
+        <div class="code-preview" style="margin-top: 30px;">
+          <button id="togglePreview">💻 코드 미리보기</button>
+          <div id="codeBox" style="display: none; margin-top: 10px;">
+            <pre style="background:#1e1e1e; color:#dcdcdc; padding: 15px; border-radius: 6px; overflow-x: auto;">
+        <code id="cssPreview">/* 코드가 여기에 표시됩니다 */</code>
+            </pre>
+            <button onclick="copyPreview()">📋 코드 복사</button>
+          </div>
+        </div>
+
         <!-- 속성 적용 상태 저장 -->
         <div class="save-box">
           <div class="save-controls">
@@ -125,6 +135,7 @@
   </div>
 </body>
 
-<script src="../../src/js/grid-playground.js"></script>
+<!-- <script src="../../src/js/grid-playground.js"></script> -->
+<script src="../../src/js/grid-playground-v2.js"></script>
 
 </html>
