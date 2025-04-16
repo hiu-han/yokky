@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <meta rel="shortcut icon" type="image/x-icon" href="../src/assets/img/icon/favicon.svg" size="16x16">
+  <title>gpt250416-1340</title>
+  <style>
+    .box {
+      border-radius: 8px;
+      border: 2px solid;
+      /* border-image: linear-gradient(45deg, #ff00cc, #3333ff) 1; */
+      border-image: linear-gradient(45deg, #1f78fd, #1d54ff, #1349c0) 1;
+    }
+
+    .gradient-border {
+      padding: 4px;
+      background: linear-gradient(135deg, #1f78fd, #1d54ff, #1349c0);
+      border-radius: 10px;
+      /* 필요시 */
+      display: inline-block;
+    }
+
+    .content {
+      background: white;
+      /* 내부 박스 배경 */
+      border-radius: 8px;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="test-sec">
+    <!-- code wrap -->
+    <div class="c__wrap">
+      <div class="wrapper">
+        <div class="gradient-border">
+          <div class="content">여기에 콘텐츠</div>
+        </div>
+        <div class="box">여기도 콘텐츠</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-sec">
+
+    <!-- question wrap -->
+    <div class="q__wrap">
+      <h3 class="q-title">세로 슬라이드 말풍선 2-a차</h3>
+      <div class="q-date">2503403_1036</div>
+      <div class="q-subs">
+        <p class="txt">
+          박스의 border를 gradient로 넣을 수 있어??
+        </p>
+        <!-- <p class="txt added last">
+        -
+      </p> -->
+      </div>
+    </div>
+
+    <!-- answer wrap -->
+    <div class="a__wrap">
+      <div class="a-subs">
+        <div class="a-txt">
+          응! border 자체에는 직접적으로 gradient를 바로 적용할 수는 없지만, 우회적인 방법으로 gradient 테두리 효과를 만들 수 있어. 대표적으로 많이 쓰는 2가지 방법 알려줄게:
+        </div>
+        <div class="a-txt__box">
+          <div class="a-txt-head">✅ 1. border-image를 이용하는 방법</div>
+          <div class="a-txt-code">
+            <pre>
+            <code>
+              .box {
+                border: 10px solid;
+                border-image: linear-gradient(45deg, #ff00cc, #3333ff) 1;
+              }
+            </code>
+          </pre>
+          </div>
+          <ul class="a-txt__list ul">
+            <li class="a-txt__item">- border-image는 border에 gradient 이미지를 덮어씌우는 방식이야.</li>
+            <li class="a-txt__item">- 숫자 1은 border-image-slice로, 전체 gradient를 border에 고르게 잘라서 쓴다는 의미야.</li>
+          </ul>
+        </div>
+        <div class="a-txt__box">
+          <div class="a-txt-head">✅ 2. background + padding + background-clip 조합 (더 자유로운 표현 가능)</div>
+          <div class="a-txt-code">
+            <pre>
+            <code>
+              .gradient-border {
+                padding: 4px;
+                background: linear-gradient(135deg, #ff00cc, #3333ff);
+                border-radius: 10px; /* 필요시 */
+                display: inline-block;
+              }
+              <br>
+              .content {
+                background: white; /* 내부 박스 배경 */
+                border-radius: 8px;
+                padding: 20px;
+              }
+            </code>
+          </pre>
+          </div>
+          <ul class="a-txt__list ul">
+            <li class="a-txt__item">- 겉에 div를 하나 더 감싸서 gradient를 배경으로 주고, 안쪽에 실제 콘텐츠 박스를 두는 방식이야.</li>
+            <li class="a-txt__item">- 이 방식은 더 정교한 컨트롤이 가능하고, 둥근 테두리나 애니메이션 효과도 쉽게 추가할 수 있어.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- result wrap -->
+    <div class="r__wrap">
+      <div class="r-subs">
+        <!-- <div class="r-txt__box">
+        <div class="r-txt-head">🔥 업데이트된 동작 방식</div>
+        <ul class="r-txt__ulist">
+          <li class="r-txt__item">✅ 두 개의 큰 박스가 각각 독립적으로 동작</li>
+          <li class="r-txt__item">✅ 두 번째 박스는 첫 번째보다 1초 뒤에 슬라이드 시작</li>
+          <li class="r-txt__item">✅ 각 박스 내부에서 'first', 'second', 'third' 클래스가 유지됨</li>
+          <li class="r-txt__item">✅ 부드러운 슬라이드 애니메이션 적용</li>
+          <li class="r-txt__item">✅ 아이템들의 높이가 다 달라도 문제없이 자연스럽게 작동</li>
+        </ul>
+      </div> -->
+        <div class="r-txt">
+          <p>원하는 연출이나 상황에 맞춰 어느 방법이 좋을지 추천도 해줄 수 있어! 혹시 지금 쓰려는 디자인이나 레이아웃이 있다면 보여줄래? 거기에 맞게 구체적으로 도와줄게 :)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

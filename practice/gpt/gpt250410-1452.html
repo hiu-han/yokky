@@ -50,26 +50,40 @@
 </head>
 
 <body>
-  <!-- question wrap -->
-  <div class="q-wrap">
-    <h3 class="q-title">로딩 애니메이션 2-a차</h3>
-    <div class="q-date">2503410_1452</div>
-    <div class="q-subs">
-      <p class="txt last">
-        아이디어가 하나 더 있어. 흰 박스 내부에 로고가 있는데, 그 로고가 천천히 사라졌다가 다시 서서히 나타나는 거야. 근데 opacity:0.8 정도 되었을 때 조금 빨리 opacity:1이 되면서
-        깜빡이는 효과를 넣는 거지.
-      </p>
-      <!-- <p class="txt added last">
+  <section class="test-sec">
+    <!-- code wrap -->
+    <div class="c__wrap">
+      <div class="wrapper">
+        <div class="loading-box">
+          <p class="logo">
+            <img src="logo.png" alt="Logo" />
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-sec">
+    <!-- question wrap -->
+    <div class="q-wrap">
+      <h3 class="q-title">로딩 애니메이션 2-a차</h3>
+      <div class="q-date">2503410_1452</div>
+      <div class="q-subs">
+        <p class="txt last">
+          아이디어가 하나 더 있어. 흰 박스 내부에 로고가 있는데, 그 로고가 천천히 사라졌다가 다시 서서히 나타나는 거야. 근데 opacity:0.8 정도 되었을 때 조금 빨리 opacity:1이 되면서
+          깜빡이는 효과를 넣는 거지.
+        </p>
+        <!-- <p class="txt added last">
         로고가 중심에 있고 그 로고 주변을 작은 막대들이 둥글게 둘러싸는 형태야. 수정해줄 수 있어??
       </p> -->
+      </div>
     </div>
-  </div>
 
-  <!-- answer wrap -->
-  <div class="a__wrap">
-    <div class="a-subs">
-      <div class="a-txt">
-        <pre>
+    <!-- answer wrap -->
+    <div class="a__wrap">
+      <div class="a-subs">
+        <div class="a-txt">
+          <pre>
           와 그 아이디어 너무 괜찮다!
 부드럽게 사라졌다가 다시 나타나는데, 중간쯤에서 살짝 반짝이는 듯한 깜빡임 — 시선도 잡고 포인트도 딱이야.
 
@@ -77,8 +91,8 @@
 0 → 0.8까지는 부드럽게,
 0.8 → 1은 빠르게 올라오게 만들면 돼!
         </pre>
-      </div>
-      <!-- <div class="a-txt__box">
+        </div>
+        <!-- <div class="a-txt__box">
         <div class="a-txt-head">✅ 설명해주신 로딩 이미지를 HTML/CSS로 구현해볼게요. 전체 구조는 이렇고:</div>
         <ol class="a-txt__olist">
           <li class="a-txt__item">하얀 배경 박스 (480x360)</li>
@@ -87,33 +101,22 @@
           <li class="a-txt__item">막대는 시계방향으로 하나씩 나타났다 사라지는 애니메이션</li>
         </ol>
       </div> -->
-    </div>
-  </div>
-
-  <!-- code wrap -->
-  <div class="c__wrap">
-    <div class="wrapper">
-      <div class="loading-box">
-        <p class="logo">
-          <img src="logo.png" alt="Logo" />
-        </p>
       </div>
     </div>
-  </div>
 
-  <!-- result wrap -->
-  <div class="r__wrap">
-    <div class="a-subs">
-      <div class="a-txt__box">
-        <div class="a-txt-head">✨ 어떻게 동작하냐면:</div>
-        <ul class="a-txt__ulist">
-          <li class="a-txt__item">✅ 0~40% 동안 부드럽게 사라짐</li>
-          <li class="a-txt__item">✅ 40~70% 천천히 다시 나타남</li>
-          <li class="a-txt__item">✅ 70~72% 사이에 빠르게 0.8 → 1 되면서 살짝 '반짝'</li>
-        </ul>
-      </div>
-      <div class="a-txt added">
-        <pre>
+    <!-- result wrap -->
+    <div class="r__wrap">
+      <div class="a-subs">
+        <div class="a-txt__box">
+          <div class="a-txt-head">✨ 어떻게 동작하냐면:</div>
+          <ul class="a-txt__ulist">
+            <li class="a-txt__item">✅ 0~40% 동안 부드럽게 사라짐</li>
+            <li class="a-txt__item">✅ 40~70% 천천히 다시 나타남</li>
+            <li class="a-txt__item">✅ 70~72% 사이에 빠르게 0.8 → 1 되면서 살짝 '반짝'</li>
+          </ul>
+        </div>
+        <div class="a-txt added">
+          <pre>
           이 효과랑 아까 만든 막대 애니메이션이 같이 돌아가면,
 로고는 잔잔하면서도 포인트 주고,
 주변 막대는 부드럽게 계속 돌아가니까 완성도 있는 로딩 연출이 될 거야.
@@ -121,13 +124,10 @@
 이 느낌도 직접 확인해보고,
 조금 더 자연스럽게 바꾸고 싶으면 타이밍이나 밝기 조정도 같이 도와줄게!
         </pre>
+        </div>
       </div>
     </div>
-  </div>
-
-  <script>
-
-  </script>
+  </section>
 </body>
 
 </html>
