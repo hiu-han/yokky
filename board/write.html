@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="포트폴리오">
+  <meta property="og:url" content="https://yokky.kr/">
+  <meta property="og:image" content="https://yokkyo.kr/src/assets/img/common/share.png">
+  <meta property="og:description" content="요끼의 포트폴리오">
+  <meta property="og:site_name" content="Yokky's portfolio">
+  <meta property="og:width" content="1200">
+  <meta property="og:height" content="630">
+
+  <title>Yokky's Write</title>
+
+  <script src="./src/js/include.js"></script>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <div id="wrap" class="pg--index w--full">
+    <div data-include-path="./include/header.html"></div>
+
+    <div id="main">
+      <div class="wrapper">
+
+      </div>
+    </div>
+
+    <div data-include-path="./include/asideFloatBtn.html"></div>
+    <div data-include-path="./include/footer.html"></div>
+  </div>
+
+  <script src="./src/js/jquery-3.5.1.js"></script>
+  <script src="./src/js/main.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAWxNFXwrX2a4y7eAIjo0t6U4TeglmJdr8",
+      authDomain: "ilwolyusi.firebaseapp.com",
+      projectId: "ilwolyusi",
+      storageBucket: "ilwolyusi.firebasestorage.app",
+      messagingSenderId: "310858055953",
+      appId: "1:310858055953:web:475f261ee345cded360cb0"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+</body>
+
+</html>

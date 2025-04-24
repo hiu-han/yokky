@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>요끼의 버블 UI</title>
+  <style>
+    #info-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      background: #f4f4f4;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-bubble {
+      position: absolute;
+      max-width: 200px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #ddd;
+      color: #333;
+      font-size: 14px;
+      box-sizing: border-box;
+      text-align: center;
+      white-space: normal;
+      word-break: keep-all;
+      line-height: 1.4;
+      /* opacity: 1; */
+      /* cursor: default; */
+      /* transition: opacity 0.5s ease, transform 0.2s ease; */
+      /* transform: translateY(0); */
+      cursor: default;
+      transition: opacity 0.5s ease, transform 0.5s ease, scale 0.3s ease;
+      opacity: 1;
+      transform: translateY(0);
+      /* 기본 위치 설정 */
+    }
+
+
+    .info-bubble.fade-in {
+      animation: bounceIn 0.6s ease forwards;
+    }
+
+    .info-bubble.fade-out {
+      opacity: 0;
+    }
+
+    .info-bubble:hover {
+      transform: scale(1.05);
+      /* 💡 이 부분 확실히 작동됨 */
+      z-index: 2;
+      background-color: #fff;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: translateY(10px);
+      }
+
+      40% {
+        transform: translateY(-8px);
+      }
+
+      70% {
+        transform: translateY(4px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .posit {
+      background: #d2f8ce;
+      color: #245c1d;
+    }
+
+    .negat {
+      background: #ffe0e0;
+      color: #7d1f1f;
+    }
+
+    .neut {
+      background: #fff6c5;
+      color: #5a4d00;
+    }
+
+    .info-bubble:hover {
+      transform: translateY(0) scale(1.05) !important;
+      transition: 0.3;
+      /* 둘 다 같이 써야 함 */
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="info-container"></div>
+
+  <script>
+    const container = document.getElementById('info-container');
+    const containerSize = 600;
+    let bubbles = [];
+    let index = 0;
+
+    const sentences = [
+      { text: "좋아요! 👍", type: "posit" },
+      { text: "문제가 생겼어요!", type: "negat" },
+      { text: "평범한 상태입니다.", type: "neut" }
+    ];
+
+    function checkOverlap(newBubble) {
+      const r1 = newBubble.getBoundingClientRect();
+      return bubbles.some(b => {
+        const r2 = b.getBoundingClientRect();
+        return !(
+          r1.right + 3 < r2.left ||
+          r1.left - 3 > r2.right ||
+          r1.bottom + 3 < r2.top ||
+          r1.top - 3 > r2.bottom
+        );
+      });
+    }
+
+    function removeOldestBubble(callback) {
+      const old = bubbles.shift();
+      if (!old) {
+        if (callback) callback();
+        return;
+      }
+      old.classList.remove('fade-in');
+      void old.offsetWidth; // reflow
+      old.classList.add('fade-out');
+      setTimeout(() => {
+        old.remove();
+        if (callback) callback();
+      }, 600);
+    }
+
+    function createBubble({ text, type }) {
+      const bubble = document.createElement('div');
+      bubble.className = `info-bubble ${type}`;
+      bubble.textContent = text;
+      container.appendChild(bubble);
+      bubble.style.maxWidth = '200px';
+
+      const rect = bubble.getBoundingClientRect();
+      const width = Math.min(rect.width, 200);
+      const height = rect.height;
+
+      let placed = false;
+      for (let i = 0; i < 100; i++) {
+        const x = Math.random() * (containerSize - width);
+        const y = Math.random() * (containerSize - height);
+        bubble.style.left = `${x}px`;
+        bubble.style.top = `${y}px`;
+        if (!checkOverlap(bubble)) {
+          placed = true;
+          break;
+        }
+      }
+
+      if (placed) {
+        bubble.classList.add('fade-in');
+        bubbles.push(bubble);
+      } else {
+        bubble.remove();
+        removeOldestBubble(() => createBubble({ text, type }));
+      }
+    }
+
+    setInterval(() => {
+      const sentence = sentences[index % sentences.length];
+      createBubble(sentence);
+      index++;
+    }, 1500);
+  </script>
+</body>
+
+</html>

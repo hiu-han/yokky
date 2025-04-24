@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <meta rel="shortcut icon" type="image/x-icon" href="../src/assets/img/icon/favicon.svg" size="16x16">
+  <title>gpt250422-1020</title>
+  <style>
+    #info-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      background: #f4f4f4;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-bubble {
+      position: absolute;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #d0eaff;
+      color: #333;
+      opacity: 0;
+      white-space: nowrap;
+      font-size: 14px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: opacity 0.5s ease, transform 0.6s ease;
+      transform: translateY(0);
+      z-index: 1;
+    }
+
+    .info-bubble.fade-in {
+      opacity: 1;
+      animation: bounceIn 0.6s ease forwards;
+    }
+
+    .info-bubble.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      40% {
+        opacity: 1;
+        transform: translateY(-8px);
+      }
+
+      70% {
+        transform: translateY(4px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="test-sec">
+    <!-- code wrap -->
+    <div class="c__wrap">
+      <div class="wrapper">
+        <div id="info-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-sec">
+
+    <!-- question wrap -->
+    <div class="q__wrap">
+      <h3 class="q-title">메세지 버블 1-b차</h3>
+      <div class="q-date">2503403_1036</div>
+      <div class="q-subs">
+        <p class="txt">
+        <pre>
+            페이지가 열리면 백에서 넘어 온 단순한 문장들을 받아서 800x800px의 컨테이너 내에 뿌려줄 거야.
+일단 각 문장은 원형의 박스 안에 있어.
+처음엔 빈 공간인데 1.5초마다 문장 박스가 페이드인할 거야.
+문장 박스의 공간은 랜덤인데, 문장 박스마다 간격은 최소 4px은 떨어져 있어야해.
+컨테이너 공간 내에서 4px 이상의 간격은 얼마든지 괜찮아.
+문장 박스가 더 들어갈 자리가 없으면 생겨난 순서대로 페이드아웃되면서 다음 문장박스 들이 페이드인하지.
+문장 박스의 갯수는 정해져있지 않아, 늘 달라질 수 있지.
+하지만 문장 박스 너비 내에 모두 들어갈 수 있는 양이라면 위의 동작 패턴은 멈추면 돼.
+          </pre>
+        </p>
+        <p class="txt added last">
+        <pre>
+            우와 깔끔하고 좋다!
+  그럼 좀 더 추가해보자.
+  - 문장 길이에따라 버블 크기가 유동적으로 달라져.
+  - 총 너비는 600x600px로 수정.
+  - 버블이 나타날땐 페이드인하면서 살짝 위로 튕겼다가 아래로 살짝 튕기고 정지, 사라질때는 페이드 아웃.
+  - 버블은 서로 겹치면 안돼. 최소 간격 3px 유지해줘.
+          </pre>
+        </p>
+      </div>
+    </div>
+
+    <!-- answer wrap -->
+    <div class="a__wrap">
+      <div class="a-subs">
+        <div class="a-txt">
+          좋아 요끼야! 추가 조건 완벽히 반영해서 ✨깔끔하고 부드러운 info UI 프로토타입 만들어줄게!<br>
+          전체 코드는 아래처럼 구성돼:
+        </div>
+        <!-- <div class="a-txt__box">
+          <div class="a-txt-head">🎯 목표</div>
+          <ul class="a-txt__list ul">
+            <li class="a-txt__item">- 800x800 컨테이너 내에</li>
+            <li class="a-txt__item">- 원형 문장 박스들을 랜덤 위치에 배치</li>
+            <li class="a-txt__item">- 1.5초 간격으로 페이드인</li>
+            <li class="a-txt__item">- 문장 박스끼리는 최소 4px 간격 유지</li>
+            <li class="a-txt__item">- 공간 부족 시, 먼저 생긴 박스부터 페이드아웃 → 새로운 박스 페이드인</li>
+            <li class="a-txt__item">- 문장 수는 유동적, 공간 내에 모두 들어가면 애니메이션 멈춤</li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- result wrap -->
+    <div class="r__wrap">
+      <div class="r-subs">
+        <div class="r-txt">
+          <pre>
+            📝 요약
+
+요소	설명
+600x600px	컨테이너 크기
+info-bubble	문장 길이 따라 유동 크기
+@keyframes bounceIn	위→아래로 튕기는 효과
+checkOverlap	겹침 및 간격 3px 이상 유지
+removeOldestBubble	공간 없을 시 가장 오래된 거 삭제 후 재도전
+          </pre>
+        </div>
+        <div class="r-txt__box">
+          <div class="r-txt-head">요끼야, 이대로도 데모 완성도 높고 부드러워.</div>
+          <ul class="r-txt__list u">
+            <li class="r-txt__item">- 더 감성적인 색이나 스타일 넣어볼까?</li>
+            <li class="r-txt__item">- 아니면 드래그 되게 만들거나, 자동 흐름도 구현할까?</li>
+            <!-- <li class="r-txt__item">✅ 각 박스 내부에서 'first', 'second', 'third' 클래스가 유지됨</li>
+            <li class="r-txt__item">✅ 부드러운 슬라이드 애니메이션 적용</li>
+            <li class="r-txt__item">✅ 아이템들의 높이가 다 달라도 문제없이 자연스럽게 작동</li> -->
+          </ul>
+          <div class="r-txt">필요하면 CodePen이나 HTML 완성본으로도 만들어줄게! 🌸</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const container = document.getElementById('info-container');
+    const containerSize = 600;
+    const margin = 3; // 최소 간격
+    let bubbles = [];
+    let index = 0;
+
+    // 예시 문장
+    const sentences = [
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동 페이드인 효과 적용 중 공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동 페이드인 효과 적용 중 공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+      "요끼찌가 등장했어요!", "이건 랜덤 버블 UI!", "문장 길이에 따라 크기 유동",
+      "페이드인 효과 적용 중", "공간이 부족하면 페이드아웃", "위 아래로 튕기는 애니메이션!",
+    ];
+
+    // 버블 생성
+    function createBubble(text) {
+      const bubble = document.createElement('div');
+      bubble.className = 'info-bubble';
+      bubble.textContent = text;
+      container.appendChild(bubble);
+
+      // DOM에 추가 후 실제 크기 측정
+      const rect = bubble.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
+
+      // 위치 찾기 (최대 100번 시도)
+      let placed = false;
+      for (let i = 0; i < 100; i++) {
+        const x = Math.random() * (containerSize - width);
+        const y = Math.random() * (containerSize - height);
+        bubble.style.left = `${x}px`;
+        bubble.style.top = `${y}px`;
+
+        if (!checkOverlap(bubble)) {
+          placed = true;
+          break;
+        }
+      }
+
+      if (placed) {
+        bubble.classList.add('fade-in');
+        bubbles.push(bubble);
+      } else {
+        // 자리 없으면 하나 제거 후 재도전
+        removeOldestBubble(() => createBubble(text));
+        bubble.remove(); // 임시 추가했던 것 삭제
+      }
+    }
+
+    // 겹침 검사
+    function checkOverlap(newBubble) {
+      const r1 = newBubble.getBoundingClientRect();
+      return bubbles.some(b => {
+        const r2 = b.getBoundingClientRect();
+        const isOverlap = !(
+          r1.right + margin < r2.left ||
+          r1.left - margin > r2.right ||
+          r1.bottom + margin < r2.top ||
+          r1.top - margin > r2.bottom
+        );
+        return isOverlap;
+      });
+    }
+
+    // 가장 오래된 버블 제거
+    function removeOldestBubble(callback) {
+      const old = bubbles.shift();
+      if (old) {
+        old.classList.remove('fade-in');
+        old.classList.add('fade-out');
+        setTimeout(() => {
+          old.remove();
+          if (callback) callback();
+        }, 500);
+      }
+    }
+
+    // 주기적 버블 추가
+    function start() {
+      const interval = setInterval(() => {
+        if (index >= sentences.length) {
+          clearInterval(interval);
+          return;
+        }
+        createBubble(sentences[index]);
+        index++;
+      }, 1500);
+    }
+
+    start();
+
+  </script>
+</body>
+
+</html>

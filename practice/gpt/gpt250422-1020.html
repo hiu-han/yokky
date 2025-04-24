@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="public/img/common/img-share.png">
+  <meta rel="shortcut icon" type="image/x-icon" href="../src/assets/img/icon/favicon.svg" size="16x16">
+  <title>gpt250422-1020</title>
+  <style>
+    #info-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      background: #f8f8f8;
+      overflow: hidden;
+    }
+
+    .info-bubble {
+      position: absolute;
+      min-width: 60px;
+      max-width: 200px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #dff0ff;
+      color: #333;
+      opacity: 0;
+      transition: opacity 0.5s;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="test-sec">
+    <!-- code wrap -->
+    <div class="c__wrap">
+      <div class="wrapper">
+        <div id="info-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-sec">
+
+    <!-- question wrap -->
+    <div class="q__wrap">
+      <h3 class="q-title">메세지 버블 1-a차</h3>
+      <div class="q-date">2503403_1036</div>
+      <div class="q-subs">
+        <p class="txt">
+        <pre>
+            페이지가 열리면 백에서 넘어 온 단순한 문장들을 받아서 800x800px의 컨테이너 내에 뿌려줄 거야.
+일단 각 문장은 원형의 박스 안에 있어.
+처음엔 빈 공간인데 1.5초마다 문장 박스가 페이드인할 거야.
+문장 박스의 공간은 랜덤인데, 문장 박스마다 간격은 최소 4px은 떨어져 있어야해.
+컨테이너 공간 내에서 4px 이상의 간격은 얼마든지 괜찮아.
+문장 박스가 더 들어갈 자리가 없으면 생겨난 순서대로 페이드아웃되면서 다음 문장박스 들이 페이드인하지.
+문장 박스의 갯수는 정해져있지 않아, 늘 달라질 수 있지.
+하지만 문장 박스 너비 내에 모두 들어갈 수 있는 양이라면 위의 동작 패턴은 멈추면 돼.
+          </pre>
+        </p>
+        <!-- <p class="txt added last">
+        -
+      </p> -->
+      </div>
+    </div>
+
+    <!-- answer wrap -->
+    <div class="a__wrap">
+      <div class="a-subs">
+        <div class="a-txt">
+          요끼야 이거 완전 재미있는 인터랙션이다 🤩<br>
+          정리해보면 이런 흐름이지:
+        </div>
+        <div class="a-txt__box">
+          <div class="a-txt-head">🎯 목표</div>
+          <ul class="a-txt__list ul">
+            <li class="a-txt__item">- 800x800 컨테이너 내에</li>
+            <li class="a-txt__item">- 원형 문장 박스들을 랜덤 위치에 배치</li>
+            <li class="a-txt__item">- 1.5초 간격으로 페이드인</li>
+            <li class="a-txt__item">- 문장 박스끼리는 최소 4px 간격 유지</li>
+            <li class="a-txt__item">- 공간 부족 시, 먼저 생긴 박스부터 페이드아웃 → 새로운 박스 페이드인</li>
+            <li class="a-txt__item">- 문장 수는 유동적, 공간 내에 모두 들어가면 애니메이션 멈춤</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- result wrap -->
+    <div class="r__wrap">
+      <div class="r-subs">
+        <!-- <div class="r-txt__box">
+        <div class="r-txt-head">🔥 업데이트된 동작 방식</div>
+        <ul class="r-txt__ulist">
+          <li class="r-txt__item">✅ 두 개의 큰 박스가 각각 독립적으로 동작</li>
+          <li class="r-txt__item">✅ 두 번째 박스는 첫 번째보다 1초 뒤에 슬라이드 시작</li>
+          <li class="r-txt__item">✅ 각 박스 내부에서 'first', 'second', 'third' 클래스가 유지됨</li>
+          <li class="r-txt__item">✅ 부드러운 슬라이드 애니메이션 적용</li>
+          <li class="r-txt__item">✅ 아이템들의 높이가 다 달라도 문제없이 자연스럽게 작동</li>
+        </ul>
+      </div> -->
+        <div class="r-txt">
+          <p>원하는 연출이나 상황에 맞춰 어느 방법이 좋을지 추천도 해줄 수 있어! 혹시 지금 쓰려는 디자인이나 레이아웃이 있다면 보여줄래? 거기에 맞게 구체적으로 도와줄게 :)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const container = document.getElementById('info-container');
+    const bubbles = []; // 현재 보여지는 버블 리스트
+    let incomingIndex = 0;
+
+    // 예시 문장들 (백에서 받아오는 데이터라 가정)
+    const sentences = [
+      "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!", "안녕하세요!", "오늘도 좋은 하루예요", "요끼는 귀여워요", "페이드인 효과~", "랜덤배치입니다", "공간이 꽉 찼다면 교체!"
+    ];
+
+    // 버블 생성 + 위치 배치
+    function createBubble(text) {
+      const bubble = document.createElement('div');
+      bubble.className = 'info-bubble';
+      bubble.textContent = text;
+      container.appendChild(bubble);
+
+      // 임의 위치 시도 최대 100번
+      for (let i = 0; i < 100; i++) {
+        const x = Math.random() * (600 - 100); // 최대 너비 보정
+        const y = Math.random() * (600 - 40);  // 최대 높이 보정
+
+        bubble.style.left = `${x}px`;
+        bubble.style.top = `${y}px`;
+
+        if (!hasOverlap(bubble)) {
+          break;
+        }
+      }
+
+      bubble.style.opacity = 1;
+      bubbles.push(bubble);
+    }
+
+    function hasOverlap(newBubble) {
+      const rect1 = newBubble.getBoundingClientRect();
+      return bubbles.some(b => {
+        const rect2 = b.getBoundingClientRect();
+        const dx = rect1.left - rect2.left;
+        const dy = rect1.top - rect2.top;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        return distance < 60 + 4; // 최소 4px 간격 유지
+      });
+    }
+
+    // 버블 제거
+    function removeOldestBubble() {
+      const old = bubbles.shift();
+      if (old) {
+        old.style.opacity = 0;
+        setTimeout(() => old.remove(), 500);
+      }
+    }
+
+    // 주기적 추가
+    function startBubbleAnimation() {
+      const interval = setInterval(() => {
+        if (incomingIndex >= sentences.length) {
+          clearInterval(interval);
+          return;
+        }
+
+        const bubble = document.createElement('div');
+        bubble.className = 'info-bubble';
+        bubble.textContent = sentences[incomingIndex];
+
+        container.appendChild(bubble);
+
+        let placed = false;
+        for (let i = 0; i < 100; i++) {
+          const x = Math.random() * (600 - 100);
+          const y = Math.random() * (600 - 40);
+          bubble.style.left = `${x}px`;
+          bubble.style.top = `${y}px`;
+          if (!hasOverlap(bubble)) {
+            placed = true;
+            break;
+          }
+        }
+
+        if (placed) {
+          bubble.style.opacity = 1;
+          bubbles.push(bubble);
+          incomingIndex++;
+        } else {
+          // 공간이 부족하면 가장 오래된 거 지움
+          removeOldestBubble();
+        }
+      }, 1500);
+    }
+
+    startBubbleAnimation();
+
+  </script>
+</body>
+
+</html>
