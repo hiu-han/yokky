@@ -1,0 +1,115 @@
+/*** HEADER ***/
+header {
+  position: fixed;
+  top: 8px;
+  /* top: 0px; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  padding: 6px 24px;
+  /* padding: 4px 24px; */
+  border-radius: 14px;
+  /* border-radius: 0 0 14px 14px; */
+  /* border-bottom: 1px solid var(--ln-layout); */
+  background-color: #fff;
+  box-shadow: var(--bxsd-l);
+  transition: 0.4s ease-in-out;
+  z-index: 200;
+}
+.hd__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--wd-center);
+  /* width: 110px; */
+  height: var(--ht-hd);
+  margin: 0 auto;
+  transition: 0.4s ease-in-out;
+}
+
+/* header:hover {
+  top: 8px;
+  padding: 6px 24px;
+  border-radius: 14px;
+}
+header:hover .hd__inner {
+  width: var(--wd-center);
+}
+header .hd-center,
+header .hd-right {
+  position: absolute;
+  top: -60px;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+header:hover .hd-center,
+header:hover .hd-right {
+  position: relative;
+  top: unset;
+  opacity: 1;
+} */
+
+.logo > a {
+  display: inline-block;
+  height: 26px;
+  width: 138px;
+  /* height: 22px;
+  width: 120px; */
+  background-image: url('../img/common/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-indent: -99999px;
+  transition: 0.4s ease-in-out;
+}
+/* header:hover .logo > a {
+  height: 26px;
+  width: 138px;
+} */
+
+.hd-center > .search__box {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 34px;
+}
+.srch-date__wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+}
+.srch-kword {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.srch-kword input[type='text'] {
+  border-radius: 6px 0 0 6px;
+}
+.srch-kword .btn.submit > button,
+.srch-kword .btn.submit > a {
+  margin-left: -1px;
+  border-radius: 0 6px 6px 0;
+}
+
+/*** FOOTER ***/
+footer {
+  border-top: 1px solid var(--ln-layout);
+  background-color: #fff;
+}
+.ft__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--wd-center);
+  height: var(--ht-ft);
+  margin: 0 auto;
+}
+.copyright {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+
+/*** ASIDE ***/

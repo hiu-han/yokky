@@ -1,0 +1,149 @@
+/*** COMMON ***/
+strong {
+  font-weight: 600;
+}
+.strong.color {
+  color: var(--cl-primary);
+}
+.screen-out {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-align: -99999px;
+  overflow: hidden;
+}
+
+/*** BTN ***/
+.btn {
+  display: inline-block;
+}
+.btn > a,
+.btn > button {
+  display: inline-block;
+  padding: 0 16px;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 34px;
+  transition: var(--trst-s);
+  cursor: pointer;
+}
+.btn > a:hover,
+.btn > button:hover {
+  box-shadow: var(--bxsd-s);
+}
+.btn.btn--ty01 > a,
+.btn.btn--ty01 > button {
+  border: 1px solid var(--cl-primary);
+  background-color: var(--cl-primary);
+  color: #fff;
+}
+.btn.btn--ty01 > a:hover,
+.btn.btn--ty01 > button:hover {
+  border: 1px solid var(--cl-primary-hover);
+  background-color: var(--cl-primary-hover);
+}
+.btn.btn--ty02 > a,
+.btn.btn--ty02 > button {
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
+}
+.btn.btn--ty02 > a:hover,
+.btn.btn--ty02 > button:hover {
+  border: 1px solid #3f3f3f;
+  background-color: #3f3f3f;
+}
+
+.btn.btn--icon > a,
+.btn.btn--icon > button {
+  width: 36px;
+  border: 1px solid var(--cl-primary);
+  background-color: #fff;
+  background-image: url('../img/icon/icon-down-color.svg');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+  text-indent: -99999px;
+}
+.btn.btn--icon > a:hover,
+.btn.btn--icon > button:hover {
+  background-color: var(--cl-primary);
+  background-image: url('../img/icon/icon-down-white.svg');
+}
+
+/*** INPUT ***/
+input[type='text'],
+input[type='password'],
+input[type='date'] {
+  border-radius: 10px;
+  border: 1px solid var(--ln-inpt-normal);
+  border: 1px solid #f4f5f7;
+  background-color: #f4f5f7;
+  height: 36px;
+  font-size: 15px;
+  transition: var(--trst-s);
+}
+input[type='text']:focus,
+input[type='text']:hover,
+input[type='password']:focus,
+input[type='password']:hover,
+input[type='date']:focus,
+input[type='date']:hover {
+  border: 1px solid var(--cl-primary);
+  border: 1px solid #eeeff2;
+  background-color: #fff;
+  background-color: #eeeff2;
+}
+/** INPUT > TXT **/
+input[type='text'],
+input[type='password'] {
+  padding: 0 14px;
+}
+
+.input-label {
+  display: block;
+}
+
+/** INPUT > DATE **/
+.srch-date .input-label {
+  display: inline-block;
+  position: relative;
+}
+.srch-date .date-name {
+  position: absolute;
+  left: 14px;
+  top: 0px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 34px;
+  color: #818181;
+}
+.srch-date input[type='date']:focus + .date-name,
+.srch-date input[type='date']:hover + .date-name {
+  color: #515151;
+}
+.srch-date input[type='date'] {
+  padding-left: 66px;
+  padding-right: 11px;
+  /* height: 36px; */
+  font-size: 15px;
+  text-align: right;
+}
+input[type='date'] {
+  color: #818181;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  padding: 3px;
+  margin-top: -1px;
+  margin-left: 6px;
+  background-image: url('../img/icon/icon-calendar.svg');
+  color: #666;
+  cursor: pointer;
+}
+input[type='date']:hover::-webkit-calendar-picker-indicator,
+input[type='date']:focus::-webkit-calendar-picker-indicator {
+  background-image: url('../img/icon/Icon-calendar-colored.svg');
+}

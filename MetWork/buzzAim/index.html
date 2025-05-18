@@ -10,7 +10,8 @@
   <meta property="og:url" content="">
   <meta property="og:description" content="Buzz Aim">
   <meta property="og:image" content="/MetWork/buzzAim/public/img/common/img-share.png">
-  <meta rel="shortcut icon" type="image/x-icon" href="/MetWork/buzzAim/favicon.ico">
+  <!-- <meta rel="shortcut icon" type="image/x-icon" href="/MetWork/buzzAimV2/favicon.ico"> -->
+  <meta rel="icon" type="image/x-icon" href="/MetWork/buzzAim/favicon.ico" size="16x16">
   <title>Buzz Aim</title>
 
   <link rel="stylesheet" href="/MetWork/buzzAim/public/css/style.css">
@@ -32,16 +33,18 @@
                   <div class="box__inner">
                     <div class="cont-hd__wrap">
                       <div class="tap__list in">
-                        <p class="tap__item b-01 on"><span>브랜드A</span></p>
-                        <p class="tap__item b-02"><span>브랜드B</span></p>
-                        <p class="tap__item b-03"><span>브랜드C</span></p>
-                        <p class="tap__item b-04"><span>브랜드D</span></p>
+                        <p class="tap__item b-01 on"><span>로보락</span></p>
+                        <p class="tap__item b-02"><span>드리미</span></p>
+                        <p class="tap__item b-03"><span>삼성 스팀</span></p>
+                        <p class="tap__item b-04"><span>에코백스</span></p>
+                        <p class="tap__item b-04"><span>브랜드E</span></p>
                       </div>
                     </div>
                     <div class="cont__wrap reaction">
                       <div class="wrap-hd">
                         <div class="wrap-title reaction">
-                          <span>😲 최근 고객 반응은 이렇게 변했습니다!</span>
+                          <span class="icon">🧐</span>
+                          <span>에임은 <strong id="brandName" class="color">로보락</strong>을(를) 이렇게 정리했어요!</span>
                         </div>
                       </div>
                       <div class="wrap-bd">
@@ -49,14 +52,22 @@
                           <div class="reaction__wrap">
                             <!-- 반응 - 오늘 -->
                             <div class="reaction__item now">
-                              <p class="date"><span>24.12.04</span></p>
-                              <p class="txt">
-                                <span>제품 성능, 서비스 경험, 충전 속도 등에서 불만이 제기되었으나, 사전 예약 혜택과 같은 긍정적인 요소도 일부 언급됨</span>
-                              </p>
+                              <p class="name"><em class="icon"></em>오늘의 한마디</p>
+                              <p class="date"><span>25.03.06</span></p>
+                              <div class="txt">
+                                <!-- <span>제품 성능, 서비스 경험, 충전 속도 등에서 불만이 제기되었으나, 사전 예약 혜택과 같은 긍정적인 요소도 일부 언급됨</span> -->
+                                <span class="typing">
+                                  <!-- 로보락 S8 MaxV Ultra에 대한 고객들의 반응은 대체로 긍정적이지만, 흡입력과 장애물 인식 기능에 대한 아쉬움이
+                                  존재하며, 가격 대비 성능에대한 고민도 나타나고 있습니다. 일부 사용자는 로봇청소기의 편리함과 청소 효율성에 만족하고 있지만, 다른 브랜드와의 비교를 통해
+                                  로보락의 가성비에 의문을 제기하기도 했습니다. -->
+                                </span>
+                                <p class="cursor">|</p>
+                              </div>
                             </div>
                             <!-- 반응 - 어제 -->
                             <div class="reaction__item prev">
-                              <p class="date"><span>24.12.03</span></p>
+                              <p class="name"><em class="icon"></em>어제의 한마디</p>
+                              <p class="date"><span>25.03.05</span></p>
                               <p class="txt">
                                 <span>고객에 대한 응대 태도가 친절하다는 후기와 제품에 대한 전문 지식에 대한 칭찬이 나타남</span>
                               </p>
@@ -75,7 +86,8 @@
                   <div class="box__inner">
                     <div class="cont-hd__wrap">
                       <div class="cont-title">
-                        <p>브랜드별 현황</p>
+                        <span class="icon">🤗</span>
+                        <span>브랜드별 현황을 알려드려요!</span>
                       </div>
                     </div>
                     <div class="cont__wrap">
@@ -98,29 +110,38 @@
                                     <!-- gauge--100 // 100% -->
                                     <div class="gauge--100">
                                       <!-- gauge--posts // 게시글 수 -->
-                                      <p class="gauge--posts"></p>
+                                      <p class="gauge--posts">
+                                        <span class="count">324</span>
+                                      </p>
                                     </div>
                                   </div>
                                   <div class="item-gauge emo">
                                     <!-- gauge--100 // 100% -->
                                     <div class="gauge--100">
                                       <!-- gauge--posit // 긍정 -->
-                                      <p class="gauge--posit"></p>
+                                      <p class="gauge--posit">
+                                        <span class="count">200</span>
+                                      </p>
                                       <!-- gauge--neut // 중립 -->
-                                      <p class="gauge--neut"></p>
+                                      <p class="gauge--neut">
+                                        <span class="count">24</span>
+                                      </p>
                                       <!-- gauge--negat // 부정 -->
-                                      <p class="gauge--negat"></p>
+                                      <p class="gauge--negat">
+                                        <span class="count">100</span>
+                                      </p>
                                     </div>
                                   </div>
                                 </div>
                                 <ul class="sub__list">
                                   <li class="sub__item" id="bAcA">
-                                    <div class="item-name">채널A</div>
+                                    <div class="item-name">네이버 지식인</div>
                                     <div class="item-gauge post">
                                       <!-- gauge--100 // 100% -->
                                       <div class="gauge--100">
                                         <!-- gauge--posts // 게시글 수 -->
                                         <p class="gauge--posts">
+                                          <span class="count">4</span>
                                           <!-- gauge--detail // 채널별 게시글 수 -->
                                           <!-- <span class="gauge--detail"></span> -->
                                         </p>
@@ -130,16 +151,22 @@
                                       <!-- gauge--100 // 100% -->
                                       <div class="gauge--100">
                                         <!-- gauge--posit // 긍정 -->
-                                        <p class="gauge--posit"></p>
+                                        <p class="gauge--posit">
+                                          <span class="count">100</span>
+                                        </p>
                                         <!-- gauge--neut // 중립 -->
-                                        <p class="gauge--neut"></p>
+                                        <p class="gauge--neut">
+                                          <span class="count">100</span>
+                                        </p>
                                         <!-- gauge--negat // 부정 -->
-                                        <p class="gauge--negat"></p>
+                                        <p class="gauge--negat">
+                                          <span class="count">100</span>
+                                        </p>
                                       </div>
                                     </div>
                                   </li>
                                   <li class="sub__item" id="bAcB">
-                                    <div class="item-name">채널B</div>
+                                    <div class="item-name">네이버 블로그</div>
                                     <div class="item-gauge post">
                                       <!-- gauge--100 // 100% -->
                                       <div class="gauge--100">
@@ -163,7 +190,7 @@
                                     </div>
                                   </li>
                                   <li class="sub__item" id="bAcC">
-                                    <div class="item-name">채널C</div>
+                                    <div class="item-name">디시인사이드</div>
                                     <div class="item-gauge post">
                                       <!-- gauge--100 // 100% -->
                                       <div class="gauge--100">
@@ -213,7 +240,7 @@
                                 </div>
                                 <ul class="sub__list">
                                   <li class="sub__item">
-                                    <div class="item-name">채널A</div>
+                                    <div class="item-name">뽐뿌</div>
                                     <div class="item-gauge post">
                                       <!-- gauge--100 // 100% -->
                                       <div class="gauge--100">
@@ -237,7 +264,7 @@
                                     </div>
                                   </li>
                                   <li class="sub__item">
-                                    <div class="item-name">채널B</div>
+                                    <div class="item-name">네이버 카페</div>
                                     <div class="item-gauge post">
                                       <!-- gauge--100 // 100% -->
                                       <div class="gauge--100">
@@ -261,7 +288,7 @@
                                     </div>
                                   </li>
                                   <li class="sub__item">
-                                    <div class="item-name">채널C</div>
+                                    <div class="item-name">소비자 상담센터</div>
                                     <div class="item-gauge post">
                                       <!-- gauge--100 // 100% -->
                                       <div class="gauge--100">
@@ -384,6 +411,26 @@
                                   </li>
                                 </ul>
                               </li>
+                              <li class="brand__item empty" id="brandD">
+                                <div class="item--total">
+                                  <div class="item-name">브랜드C</div>
+                                  <div class="item-gauge post">
+                                    <p class="note">
+                                      수집된 정보가 없습니다
+                                    </p>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="brand__item empty" id="brandE">
+                                <div class="item--total">
+                                  <div class="item-name">브랜드E</div>
+                                  <div class="item-gauge post">
+                                    <p class="note">
+                                      수집된 정보가 없습니다
+                                    </p>
+                                  </div>
+                                </div>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -406,10 +453,10 @@
                   <div class="cont-top__box">
                     <div class="top-left">
                       <div class="cont-tab__wrap">
-                        <p class="tab__item on"><span>감성 이유</span></p>
-                        <p class="tab__item"><span>주제 분석</span></p>
-                        <p class="tab__item"><span>상세 추이</span></p>
-                        <p class="tab__item disable"><span>AI 리포트</span></p>
+                        <p class="right-tab tab__item on" onclick="showTab(0)"><span>감성 이유</span></p>
+                        <p class="right-tab tab__item" onclick="showTab(1)"><span>주제 분석</span></p>
+                        <p class="right-tab tab__item" onclick="showTab(2)"><span>상세 추이</span></p>
+                        <p class="right-tab tab__item disable" onclick="showTab(3)"><span>AI 리포트</span></p>
                       </div>
                     </div>
                     <div class="top-right">
@@ -420,7 +467,7 @@
                   </div>
 
                   <!-- 컨텐츠 // AI 감성평가 -->
-                  <div class="cont__box cont--emot-eval">
+                  <div class="right-cont cont__box on cont--emot-eval">
                     <div class="box__inner">
                       <div class="cont-hd__wrap">
                         <div class="cont-title">
@@ -445,49 +492,49 @@
                                 <div class="emot__list">
                                   <div class="list__inner">
                                     <p class="emot__item">
-                                      <span>살어리 살어리랏다 청산에 살어리랏다.</span>
+                                      <span>스팀까지 가능하니 너무 편할 거 같아요!</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>머루랑 다래랑 먹고 청산에 살어리랏다 얄리얄리 얄랑셩 얄라리 얄라.</span>
+                                      <span>로청 만족도가 높던데</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>우러라 우러라 새여, 자고 니러 우러라 새여. 널라와 시름 한 나도 자고 니러 우니노라. 얄리얄리 얄랑셩 얄라리 얄라</span>
+                                      <span>로봇 청소기가 짱이네요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>스팀물걸레 청소로 걸레냄새 걱정도 없고, 혼자서 청소도 잘하고 반려동물 모니터링도 가능한 로봇청소기!!! 정말 최고입니다!!</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>기능적으로 부족한 부분이 없다보니 만족도가 확 올라가더라고요.</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>초정밀 센서가 탑재되어 있어가지구 앞에 장애물 있는 거 다 잘 피하더라고요~</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>직배수가 나아요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락이 로청 업계에서 인지도도 높고 워낙 알아주다보니까 믿고 로보락 s8 maxv ultra 산 것도 있단 말이죠.</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>친구네 놀러갔는데 로보락 로봇청소기 너무 좋더라구요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락 s8 maxv ultra 144만원이네유 이 정도면 가격이면 싸긴 싸네요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락 들이고 대만족 ^^</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락 사용중인데 정말 강추예요~!</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>S8 MaxV Ultra(기본형) : 정가 184만원 : 특가 144만원</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락으로 브랜드를 정하고 구매 기준에 부합한 제품으로 Q8 Max +로 선택하여 구매하였습니다.</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락 진짜 로봇팔 달았는데요.</span>
                                     </p>
                                   </div>
                                 </div>
@@ -500,49 +547,52 @@
                                 <div class="emot__list">
                                   <div class="list__inner">
                                     <p class="emot__item">
-                                      <span>살어리 살어리랏다 청산에 살어리랏다.</span>
+                                      <span>로보락 s8 maxv ultra는 중고로 팔고 다른걸로 교체하게 됐는데 와 진짜 넘 만족해요!!</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>머루랑 다래랑 먹고 청산에 살어리랏다 얄리얄리 얄랑셩 얄라리 얄라.</span>
+                                      <span>솔직히 한두푼 하는 것도 아니고 이렇게 홀랑 바꾸는게 맞나 싶었는데 진작 바꿀걸 그랬다 싶네요..</span>
                                     </p>
                                     <p class="emot__item">
                                       <span>우러라 우러라 새여, 자고 니러 우러라 새여. 널라와 시름 한 나도 자고 니러 우니노라. 얄리얄리 얄랑셩 얄라리 얄라</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락 s8 maxv ultra가 그냥 돌아다닐 때는 잘 빨아들이는데 문제는 모서리랑 벽면 구석에 있는 먼지까지 흡입을
+                                        못하는거에요.</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>돌아다니다가 앞에 장애물이 있으면 인식하고 피해서 돌아가야 하는데 그냥 휙 밀고 가버리는 바람에 피규어 같은거 망가진 적도 꽤
+                                        있었습니다.</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>한두번도 아니고 이런 불편함이 너무 여러번 반복되다 보니까 다른걸로 바꾸고 싶다는 마음이 점점 커지더라고요.</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>아무리 관리 잘해도 사용하다보면 쉰내 나는데.. 어떻게 얼마나 쓴건지도 모르는데 찝찝해서 말리고 싶네요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>모든 면에서 드리미x50이 압도적으로 s8보다 좋습니다</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>s8직배수 구입했는데 취소할려구요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>보급형 모델 큐레보를 150에 팔았으니 얼마나 호구같이 보일까요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>3월이내로 로보락도 신제품 출시할건데 지금 구매하는건 너무 아쉬운 선택입니다.</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락 구매해서 지난주 토요일에 설치기사분이 오셨는데 와이파이 설정이 안되더라구요</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>물체 인식 못하는거 진짜 속 뒤집어져요ㅠㅠ</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락꺼 첨 썼다가 아쉬운 부분이 꽤 있어서</span>
                                     </p>
                                     <p class="emot__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      <span>로보락 s8 maxv ultra가 그냥 돌아다닐 때는 잘 빨아들이는데 문제는 모서리랑 벽면 구석에 있는 먼지까지 흡입을
+                                        못하는거에요.</span>
                                     </p>
                                   </div>
                                 </div>
@@ -555,11 +605,11 @@
                   </div>
 
                   <!-- 컨텐츠 // 주제 분석 -->
-                  <div class="cont__box cont--topic-analysis">
+                  <div class="right-cont cont__box cont--topic-analysis">
                     <div class="box__inner">
                       <div class="cont-hd__wrap">
                         <div class="cont-title">
-                          <p>AI 주제 분석</p>
+                          <p>주제 분석</p>
                         </div>
                         <div class="cont-tag">
                           <ul class="tag__list">
@@ -582,50 +632,71 @@
                                 <div class="list__inner">
                                   <!-- 주제 A -->
                                   <div class="topic__group">
-                                    <div class="topic__item l-ctgry">
-                                      <p class="topic-element topic">주제 A</p>
-                                      <div class="topic-element amount">
-                                        <div class="guage--100">
-                                          <p class="gauge--amount"></p>
-                                        </div>
-                                      </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
-                                    </div>
-                                    <div class="topic__item s-ctgry">
-                                      <p class="topic-element topic">주제 A-1</p>
+                                    <div class="topic__item l-ctgry on">
+                                      <p class="topic-element topic">에코백스</p>
                                       <div class="topic-element amount">
                                         <div class="gauge--100">
-                                          <p class="gauge--amount"></p>
+                                          <p class="gauge--amount">
+                                            <span class="count">231</span>
+                                          </p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot posit"><span>13.7</span></p>
                                     </div>
                                     <div class="topic__item s-ctgry">
-                                      <p class="topic-element topic">주제 A-2</p>
+                                      <p class="topic-element topic">옴니</p>
                                       <div class="topic-element amount">
                                         <div class="gauge--100">
-                                          <p class="gauge--amount"></p>
+                                          <p class="gauge--amount">
+                                            <span class="count">26</span>
+                                          </p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot posit"><span>23.7</span></p>
                                     </div>
                                     <div class="topic__item s-ctgry">
-                                      <p class="topic-element topic">주제 A-3</p>
+                                      <p class="topic-element topic">n30</p>
                                       <div class="topic-element amount">
                                         <div class="gauge--100">
-                                          <p class="gauge--amount"></p>
+                                          <p class="gauge--amount">
+                                            <span class="count">40</span>
+                                          </p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot negat"><span>-9.7</span></p>
                                     </div>
                                     <div class="topic__item s-ctgry">
-                                      <p class="topic-element topic">주제 A-4</p>
+                                      <p class="topic-element topic">삼성 로봇청소기</p>
                                       <div class="topic-element amount">
                                         <div class="gauge--100">
-                                          <p class="gauge--amount"></p>
+                                          <p class="gauge--amount">
+                                            <span class="count">19</span>
+                                          </p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot posit"><span>7.7</span></p>
+                                    </div>
+                                    <div class="topic__item s-ctgry">
+                                      <p class="topic-element topic">t30</p>
+                                      <div class="topic-element amount">
+                                        <div class="gauge--100">
+                                          <p class="gauge--amount">
+                                            <span class="count">34</span>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <p class="topic-element emot negat"><span>-13.7</span></p>
+                                    </div>
+                                    <div class="topic__item s-ctgry">
+                                      <p class="topic-element topic">t509</p>
+                                      <div class="topic-element amount">
+                                        <div class="gauge--100">
+                                          <p class="gauge--amount">
+                                            <span class="count">51</span>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <p class="topic-element emot negat"><span>-13.7</span></p>
                                     </div>
                                   </div>
                                   <!-- 주제 B -->
@@ -633,20 +704,20 @@
                                     <div class="topic__item l-ctgry">
                                       <p class="topic-element topic">주제 B</p>
                                       <div class="topic-element amount">
-                                        <div class="guage--100">
+                                        <div class="gauge--100">
                                           <p class="gauge--amount"></p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot negat"><span>77.7%</span></p>
                                     </div>
-                                    <div class="topic__item s-ctgry">
+                                    <div class="topic__item s-ctgry on">
                                       <p class="topic-element topic">주제 B-1</p>
                                       <div class="topic-element amount">
                                         <div class="gauge--100">
                                           <p class="gauge--amount"></p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot negat"><span>77.7%</span></p>
                                     </div>
                                     <div class="topic__item s-ctgry">
                                       <p class="topic-element topic">주제 B-2</p>
@@ -655,7 +726,7 @@
                                           <p class="gauge--amount"></p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot posit"><span>77.7%</span></p>
                                     </div>
                                     <div class="topic__item s-ctgry">
                                       <p class="topic-element topic">주제 B-3</p>
@@ -664,7 +735,7 @@
                                           <p class="gauge--amount"></p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot negat"><span>77.7%</span></p>
                                     </div>
                                     <div class="topic__item s-ctgry">
                                       <p class="topic-element topic">주제 B-4</p>
@@ -673,7 +744,7 @@
                                           <p class="gauge--amount"></p>
                                         </div>
                                       </div>
-                                      <p class="topic-element emot"><span>77.7%</span></p>
+                                      <p class="topic-element emot posit"><span>77.7%</span></p>
                                     </div>
                                   </div>
                                   <!-- 주제 C -->
@@ -681,7 +752,7 @@
                                     <div class="topic__item l-ctgry">
                                       <p class="topic-element topic">주제 C</p>
                                       <div class="topic-element amount">
-                                        <div class="guage--100">
+                                        <div class="gauge--100">
                                           <p class="gauge--amount"></p>
                                         </div>
                                       </div>
@@ -729,76 +800,87 @@
                             </div>
                             <!-- 주제 분석 // 내용 -->
                             <div class="topic__wrap detail">
-                              <div class="wrap-name">내용</div>
+                              <!-- <div class="wrap-name"><span class="strong">에코벡스</span>에 대한 반응</div> -->
+                              <div class="wrap-name">
+                                <span class="icon">💬</span>
+                                <span>
+                                  <strong id="detailTopicName" class="color">에코백스</strong>
+                                  에 대한 반응
+                                </span>
+                              </div>
                               <!-- 주제 분석 // 내용 // 긍정 -->
                               <div class="topic-detail__box">
-                                <div class="topic-detail__list posit">
-                                  <div class="list__inner">
-                                    <p class="detail__item">
-                                      <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
+                                <div class="topic-detail posit">
+                                  <div class="topic-detail__list posit">
+                                    <div class="list__inner">
+                                      <p class="detail__item">
+                                        <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                    </div>
                                   </div>
                                 </div>
                                 <!-- 주제 분석 // 내용 // 부정 -->
-                                <div class="topic-detail__list negat">
-                                  <div class="list__inner">
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
-                                    <p class="detail__item">
-                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
-                                    </p>
+                                <div class="topic-detail negat">
+                                  <div class="topic-detail__list negat">
+                                    <div class="list__inner">
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                      <p class="detail__item">
+                                        <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                      </p>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -810,11 +892,11 @@
                   </div>
 
                   <!-- 컨텐츠 // 상세 추이 -->
-                  <div class="cont__box">
+                  <div class="right-cont cont__box">
                     <div class="box__inner">
                       <div class="cont-hd__wrap">
                         <div class="cont-title">
-                          <p>상세 추기</p>
+                          <p>상세 추이</p>
                         </div>
                         <div class="cont-tag">
                           <ul class="tag__list">
@@ -826,7 +908,110 @@
                       <div class="cont__wrap">
                         <div class="wrap-bd">
                           <div class="bd__inner">
+                            <div class="chart__list">
+                              <div class="list__inner">
+                                <!-- 상세 추이 차트 //  -->
+                                <div class="chart__wrap a-1">
+                                  <div class="chart-top">
+                                    <!-- 차트 이름 //  -->
+                                    <div class="chart-name">
+                                      <p class="name">버즈 발생 추이</p>
+                                    </div>
+                                    <!-- 차트 옵션 //  -->
+                                    <div class="chart-opt">
+                                      <div class="radio__wrap chart">
+                                        <label class="input-label">
+                                          <input id="chartA1daily" type="radio" value="" name="optChartA1" checked>
+                                          <span class="label-txt">일별</span>
+                                        </label>
+                                        <label class="input-label">
+                                          <input id="chartA1weekly" type="radio" value="" name="optChartA1">
+                                          <span class="label-txt">주별</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="chart__box">
+                                    <!-- 차트 //  -->
+                                    <div id="" class="chart">
+                                      <div class="chart__inner">
+                                        <canvas id="chartA1"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
 
+                                <!-- 상세 추이 차트 //  -->
+                                <div class="chart__wrap a-2">
+                                  <div class="chart-top">
+                                    <!-- 차트 이름 //  -->
+                                    <div class="chart-name">
+                                      <p class="name">긍/부정 추이</p>
+                                    </div>
+                                    <!-- 차트 옵션 //  -->
+                                    <div class="chart-opt">
+                                      <div class="radio__wrap chart">
+                                        <label class="input-label">
+                                          <input id="chartA2daily" type="radio" value="" name="optChartA2" checked>
+                                          <span class="label-txt">일별</span>
+                                        </label>
+                                        <label class="input-label">
+                                          <input id="chartA2weekly" type="radio" value="" name="optChartA2">
+                                          <span class="label-txt">주별</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="chart-slct">
+                                      <div class="select__wrap chart">
+                                        <select name="" id="chartEmot">
+                                          <option value="">긍정</option>
+                                          <option value="">부정</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="chart__box">
+                                    <!-- 차트 //  -->
+                                    <div id="" class="chart">
+                                      <div class="chart__inner">
+                                        <canvas id="chartA2"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- 상세 추이 차트 //  -->
+                                <div class="chart__wrap a-3">
+                                  <div class="chart-top">
+                                    <!-- 차트 이름 //  -->
+                                    <div class="chart-name">
+                                      <p class="name">버즈 발생 추이</p>
+                                    </div>
+                                    <!-- 차트 옵션 //  -->
+                                    <div class="chart-opt">
+                                      <div class="radio__wrap chart">
+                                        <label class="input-label">
+                                          <input id="chartA3daily" type="radio" value="" name="optChartA3" checked>
+                                          <span class="label-txt">일별</span>
+                                        </label>
+                                        <label class="input-label">
+                                          <input id="chartA3weekly" type="radio" value="" name="optChartA3">
+                                          <span class="label-txt">주별</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="chart__box">
+                                    <!-- 차트 //  -->
+                                    <div id="" class="chart">
+                                      <div class="chart__inner">
+                                        <canvas id="chartA3"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -834,20 +1019,34 @@
                   </div>
 
                   <!-- 컨텐츠 // AI 리포트 // disabled -->
-                  <div class="cont__box disabled">
+                  <div class="right-cont cont__box disable">
                     <div class="box__inner">
                       <div class="cont-hd__wrap">
                         <div class="cont-title">
-                          <p>주제 분석</p>
+                          <p>AI 리포트</p>
                         </div>
                         <div class="cont-tag">
                           <ul class="tag__list">
-                            <li class="tag__item"><span>#AI리포트</span></li>
+                            <li class="tag__item"><span>#로보락</span></li>
                           </ul>
                         </div>
                       </div>
                       <div class="cont__wrap">
-
+                        <div class="wrap-bd">
+                          <div class="bd__inner">
+                            <!-- AI 리포트 -->
+                            <div class="report__list">
+                              <div class="list__inner">
+                                <div class="report__wrap dummy">dummy</div>
+                                <div class="report__wrap dummy">dummy</div>
+                              </div>
+                            </div>
+                            <!-- 노트 // 준비 중 -->
+                            <div class="note yet">
+                              현재 준비 중입니다.
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -865,6 +1064,497 @@
   <!-- SCRIPT -->
   <script src="/MetWork/buzzAim/public/js/jquery-3.5.1.js"></script>
   <script src="/MetWork/buzzAim/public/js/include.js"></script>
+  <script src="/MetWork/buzzAim/public/js/lib/chart.umd.js"></script>
+  <script src="/MetWork/buzzAim/public/js/lib/chartjs-plugin-datalabels.min.js"></script>
+  <script src="/MetWork/buzzAim/public/js/main.js"></script>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.right-tab');
+      const contents = document.querySelectorAll('.right-cont');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('on', i === index);
+      });
+      contents.forEach((content, i) => {
+        content.classList.toggle('on', i === index);
+      });
+    };
+
+    /*
+        // 차트 (각 차트의 data)
+        const chartAData = [
+          {
+            data: [12, 19, 3, 5, 2, 3, 10]
+          },
+          {
+            data: [52, 190, 134, 156, 120, 39, 101]
+          },
+          {
+            data: [34, 56, 22, 97, 52, 73, 39]
+          }
+        ];
+    
+        // 차트를 그릴 컨텍스트 배열
+        const ctxA = Array.from({ length: chartAData.length }, (_, i) =>
+          document.getElementById(`chartA${i + 1}`)
+        );
+    
+        // a-1 차트 생성
+        ctxA.forEach((ctx, index) => {
+          new Chart(ctx, {
+            plugins: [ChartDataLabels],
+            type: 'line',
+            data: {
+              labels: ['2월 28일', '3월 1일', '3월 2일', '3월 3일', '3월 4일', '3월 5일', '3월 6일'],
+              datasets: [{
+                data: chartAData[index].data,
+                backgroundColor: [
+                  '#ff747333',
+                  '#ffc85233',
+                  '#47b8e033',
+                  '#6a60a933',
+                  '#f1d14b33',
+                  '#fc913a33',
+                  '#4556c733',
+                  '#8fa6bf33',
+                  'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                  '#ff7473',
+                  '#ffc852',
+                  '#47b8e0',
+                  '#6a60a9',
+                  '#f1d14b',
+                  '#fc913a',
+                  '#4556c7',
+                  '#8fa6bf',
+                  'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              plugins: {
+                legend: {
+                  display: false
+                },
+                tootip: {
+                  enabled: false
+                },
+                datalabels: {
+                  formatter: function (value, context) {
+                    var idx = context.dataIndex; // 각 데이터 인덱스
+                    // 출력 텍스트
+                    return context.chart.data.labels[idx] + '\n' + value;
+                  },
+                  font: {
+                    weight: '500',
+                    size: '14px',
+                    lineHeight: '1.2'
+                  },
+                  color: [
+                    '#ff7473',
+                    '#ffc852',
+                    '#47b8e0',
+                    '#6a60a9',
+                    '#f1d14b',
+                    '#fc913a',
+                    '#4556c7',
+                    '#8fa6bf',
+                    'rgba(255, 159, 64, 1)'
+                  ],
+                  font: {
+                    weight: '400',
+                    size: '12px'
+                  },
+                  textAlign: 'center',
+                  align: 'center',
+                }
+              },
+              maxBarThickness: 45
+            }
+          })
+        });
+        */
+  </script>
+
+  <!-- script>
+    const ctx = document.getElementById('chartA1').getContext('2d');
+
+    // 9가지 색상 팔레트 정의
+    const chartColors = [
+      { border: '#ff7473', background: '#ff747333' },
+      { border: '#ffc852', background: '#ffc85233' },
+      { border: '#47b8e0', background: '#47b8e033' },
+      { border: '#6a60a9', background: '#6a60a933' },
+      { border: '#f1d14b', background: '#f1d14b33' },
+      { border: '#fc913a', background: '#fc913a33' },
+      { border: '#4556c7', background: '#4556c733' },
+      { border: '#8fa6bf', background: '#8fa6bf33' },
+      { border: 'rgba(255, 159, 64, 1)', background: 'rgba(255, 159, 64, 0.2)' }
+    ];
+
+    // 일별 데이터셋
+    const dailyData = {
+      labels: ['2/28', '3/1', '3/2', '3/4', '3/4', '3/5', '3/6'],
+      datasets: chartColors.slice(0, 3).map((color, index) => ({
+        label: `항목 ${index + 1}`,
+        data: Array.from({ length: 7 }, () => Math.floor(Math.random() * 100)),
+        borderColor: color.border,
+        backgroundColor: color.background,
+        borderWidth: 2,
+        // tension: 0.3
+      }))
+    };
+
+    // 주별 데이터셋
+    const weeklyData = {
+      labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
+      datasets: chartColors.slice(0, 3).map((color, index) => ({
+        label: `항목 ${index + 1}`,
+        data: Array.from({ length: 7 }, () => Math.floor(Math.random() * 100)),
+        borderColor: color.border,
+        backgroundColor: color.background,
+        borderWidth: 2,
+        // tension: 0.3
+      }))
+    };
+
+    // 초기 차트 생성
+    let currentChart = new Chart(ctx, {
+      type: 'line',
+      data: dailyData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          tooltip: { mode: 'index', intersect: false }
+        },
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+
+    // 차트 업데이트 함수
+    function updateChart(dataType) {
+      currentChart.data = dataType === 'daily' ? dailyData : weeklyData;
+      // toggleActiveButton(dataType === 'daily' ? 'dailyBtn' : 'weeklyBtn');
+      currentChart.update();
+    }
+
+    // 버튼 활성화 상태 토글 함수
+    // function toggleActiveButton(activeId) {
+    //     document.getElementById('dailyBtn').classList.remove('active');
+    //     document.getElementById('weeklyBtn').classList.remove('active');
+    //     document.getElementById(activeId).classList.add('active');
+    // }
+
+    // 버튼 이벤트 리스너
+    document.getElementById('chartA1daily').addEventListener('click', () => updateChart('daily'));
+    document.getElementById('chartA1weekly').addEventListener('click', () => updateChart('weekly'));
+  </script -->
+
+  <!-- script>
+    // HTML 구조 (예시)
+    // <button onclick="updateChart('daily')">일별</button>
+    // <button onclick="updateChart('weekly')">주별</button>
+    // <canvas id="chart1"></canvas>
+    // <canvas id="chart2"></canvas>
+    // <canvas id="chart3"></canvas>
+
+    const ctx1 = document.getElementById('chartA1').getContext('2d');
+    const ctx2 = document.getElementById('chartA2').getContext('2d');
+    const ctx3 = document.getElementById('chartA3').getContext('2d');
+
+    const colors = [
+      { border: 'rgba(255, 99, 132, 1)', background: 'rgba(255, 99, 132, 0.2)' },
+      { border: 'rgba(54, 162, 235, 1)', background: 'rgba(54, 162, 235, 0.2)' },
+      { border: 'rgba(255, 206, 86, 1)', background: 'rgba(255, 206, 86, 0.2)' },
+      { border: 'rgba(75, 192, 192, 1)', background: 'rgba(75, 192, 192, 0.2)' },
+      { border: 'rgba(153, 102, 255, 1)', background: 'rgba(153, 102, 255, 0.2)' },
+      { border: 'rgba(255, 159, 64, 1)', background: 'rgba(255, 159, 64, 0.2)' },
+      { border: 'rgba(199, 199, 199, 1)', background: 'rgba(199, 199, 199, 0.2)' },
+      { border: 'rgba(83, 102, 255, 1)', background: 'rgba(83, 102, 255, 0.2)' },
+      { border: 'rgba(255, 102, 255, 1)', background: 'rgba(255, 102, 255, 0.2)' },
+    ];
+
+    const datasetsTemplate = (data, index) => ({
+      label: `Dataset ${index + 1}`,
+      data,
+      borderColor: colors[index].border,
+      backgroundColor: colors[index].background,
+      fill: false,
+    });
+
+    const createChart = (ctx, dataSets) => new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: Array.from({ length: 7 }, (_, i) => `Label ${i + 1}`),
+        datasets: dataSets,
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'top' } },
+      },
+    });
+
+    const dailyData = [
+      [10, 20, 30, 40, 50, 60, 70],
+      [15, 25, 35, 45, 55, 65, 75],
+      [12, 22, 32, 42, 52, 62, 72],
+    ];
+
+    const weeklyData = [
+      [100, 200, 300, 400, 500, 600, 700],
+      [150, 250, 350, 450, 550, 650, 750],
+      [120, 220, 320, 420, 520, 620, 720],
+    ];
+
+    let charts = [];
+
+    const initCharts = (data) => {
+      charts = [ctx1, ctx2, ctx3].map((ctx, idx) =>
+        createChart(ctx, data.map((d, i) => datasetsTemplate(d, i)))
+      );
+    };
+
+    const updateChart = (type) => {
+      const data = type === 'daily' ? dailyData : weeklyData;
+      charts.forEach((chart, idx) => {
+        chart.data.datasets.forEach((dataset, i) => {
+          dataset.data = data[i];
+        });
+        chart.update();
+      });
+    };
+
+    initCharts(dailyData);
+
+  </script -->
+
+  <!-- script>
+    // 색상 배열 정의
+    const colors = [
+      'rgba(255, 99, 132, 0.5)',
+      'rgba(54, 162, 235, 0.5)',
+      'rgba(255, 206, 86, 0.5)',
+      'rgba(75, 192, 192, 0.5)',
+      'rgba(153, 102, 255, 0.5)',
+      'rgba(255, 159, 64, 0.5)',
+      'rgba(199, 199, 199, 0.5)',
+      'rgba(83, 102, 255, 0.5)',
+      'rgba(201, 203, 207, 0.5)'
+    ];
+
+    const borderColors = colors.map(color => color.replace('0.5', '1'));
+
+    const chartConfigs = [
+      {
+        id: 'chartA1',
+        daily: [[12, 19, 3, 5, 2, 3, 7], [8, 6, 7, 9, 5, 3, 2], [5, 4, 3, 2, 1, 0, 6]],
+        weekly: [[70, 60, 75, 80, 90, 85, 95], [50, 40, 55, 60, 65, 70, 75], [30, 25, 35, 40, 45, 50, 55]]
+      },
+      {
+        id: 'chartA2',
+        daily: [[10, 15, 13, 12, 16, 18, 19], [5, 9, 8, 7, 6, 5, 4], [15, 14, 13, 12, 11, 10, 9]],
+        weekly: [[60, 65, 70, 75, 80, 85, 90], [20, 25, 30, 35, 40, 45, 50], [10, 15, 20, 25, 30, 35, 40]]
+      },
+      {
+        id: 'chartA3',
+        daily: [[3, 7, 4, 8, 6, 9, 5], [2, 6, 5, 9, 7, 4, 8], [1, 5, 2, 6, 3, 7, 4]],
+        weekly: [[20, 30, 40, 50, 60, 70, 80], [15, 25, 35, 45, 55, 65, 75], [10, 20, 30, 40, 50, 60, 70]]
+      }
+    ];
+
+    const charts = {};
+
+    function createChart(id, data, labels) {
+      const ctx = document.getElementById(id).getContext('2d');
+      return new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: data.map((dataset, index) => ({
+            label: `Data ${index + 1}`,
+            data: dataset,
+            borderColor: borderColors[index % borderColors.length],
+            backgroundColor: colors[index % colors.length],
+            fill: false
+          }))
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' }
+          }
+        }
+      });
+    }
+
+    function updateCharts(type) {
+      const labels = type === 'daily' ? ['2/28', '3/1', '3/2', '3/3', '3/4', '3/5', '3/6'] : ['1월 5주차', '2월 1주차', '2월 2주차', '2월 3주차', '2월 5주차', '3월 1주차', '3월 2주차'];
+
+      chartConfigs.forEach(config => {
+        if (charts[config.id]) {
+          charts[config.id].destroy();
+        }
+        charts[config.id] = createChart(config.id, config[type], labels);
+      });
+    }
+
+    document.getElementById('chartA1daily').addEventListener('click', () => updateCharts('daily'));
+    document.getElementById('chartA1weekly').addEventListener('click', () => updateCharts('weekly'));
+
+    // 초기 차트 렌더링
+    updateCharts('daily');
+
+  </script -->
+
+  <!-- script>
+    const chartConfigs = [
+      { id: 'chartA1', dailyData: [[10, 20, 30, 40, 50, 60, 70], [15, 25, 35, 45, 55, 65, 75], [20, 30, 40, 50, 60, 70, 80]], weeklyData: [[70, 60, 50, 40, 30, 20, 10], [75, 65, 55, 45, 35, 25, 15], [80, 70, 60, 50, 40, 30, 20]] },
+      { id: 'chartA2', dailyData: [[12, 22, 32, 42, 52, 62, 72], [17, 27, 37, 47, 57, 67, 77], [22, 32, 42, 52, 62, 72, 82]], weeklyData: [[72, 62, 52, 42, 32, 22, 12], [77, 67, 57, 47, 37, 27, 17], [82, 72, 62, 52, 42, 32, 22]] },
+      { id: 'chartA3', dailyData: [[14, 24, 34, 44, 54, 64, 74], [19, 29, 39, 49, 59, 69, 79], [24, 34, 44, 54, 64, 74, 84]], weeklyData: [[74, 64, 54, 44, 34, 24, 14], [79, 69, 59, 49, 39, 29, 19], [84, 74, 64, 54, 44, 34, 24]] },
+    ];
+
+    const colors = [
+      'rgba(255, 99, 132, 1)',
+      'rgba(54, 162, 235, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(75, 192, 192, 1)',
+      'rgba(153, 102, 255, 1)',
+      'rgba(255, 159, 64, 1)',
+      'rgba(199, 199, 199, 1)',
+      'rgba(83, 102, 255, 1)',
+      'rgba(255, 102, 255, 1)',
+    ];
+
+    const backgroundColors = colors.map(color => color.replace('1)', '0.2)'));
+
+    const charts = {};
+
+    chartConfigs.forEach((config, index) => {
+      const ctx = document.getElementById(config.id).getContext('2d');
+      charts[config.id] = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['1', '2', '3', '4', '5', '6', '7'],
+          datasets: [
+            {
+              label: 'Dataset 1',
+              data: config.dailyData[0],
+              borderColor: colors[index],
+              backgroundColor: backgroundColors[index],
+              borderWidth: 2,
+            },
+            {
+              label: 'Dataset 2',
+              data: config.dailyData[1],
+              borderColor: colors[(index + 1) % colors.length],
+              backgroundColor: backgroundColors[(index + 1) % colors.length],
+              borderWidth: 2,
+            },
+            {
+              label: 'Dataset 3',
+              data: config.dailyData[2],
+              borderColor: colors[(index + 2) % colors.length],
+              backgroundColor: backgroundColors[(index + 2) % colors.length],
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      });
+
+      document.getElementById(`${config.id}daily`).addEventListener('click', () => {
+        updateChart(config.id, config.dailyData);
+      });
+
+      document.getElementById(`${config.id}weekly`).addEventListener('click', () => {
+        updateChart(config.id, config.weeklyData);
+      });
+    });
+
+    function updateChart(chartId, dataSets) {
+      const chart = charts[chartId];
+      chart.data.datasets.forEach((dataset, idx) => {
+        dataset.data = dataSets[idx];
+      });
+      chart.update();
+    }
+  </script -->
+
+  <!-- script>
+    const chartConfigs = [
+      { id: 'chartA1', dailyData: [[10, 20, 30, 40, 50, 60, 70], [15, 25, 35, 45, 55, 65, 75], [20, 30, 40, 50, 60, 70, 80]], weeklyData: [[70, 60, 50, 40, 30, 20, 10], [75, 65, 55, 45, 35, 25, 15], [80, 70, 60, 50, 40, 30, 20]] },
+      { id: 'chartA2', dailyData: [[12, 22, 32, 42, 52, 62, 72], [17, 27, 37, 47, 57, 67, 77], [22, 32, 42, 52, 62, 72, 82]], weeklyData: [[72, 62, 52, 42, 32, 22, 12], [77, 67, 57, 47, 37, 27, 17], [82, 72, 62, 52, 42, 32, 22]] },
+      { id: 'chartA3', dailyData: [[14, 24, 34, 44, 2, 64, 74], [19, 29, 39, 49, 59, 69, 79], [24, 34, 44, 54, 64, 74, 84]], weeklyData: [[74, 64, 54, 44, 34, 24, 14], [79, 69, 59, 49, 39, 29, 19], [84, 74, 64, 54, 44, 34, 24]] },
+    ];
+
+    const colors = [
+      'rgba(255, 99, 132, 1)',
+      'rgba(54, 162, 235, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(75, 192, 192, 1)',
+      'rgba(153, 102, 255, 1)',
+      'rgba(255, 159, 64, 1)',
+      'rgba(199, 199, 199, 1)',
+      'rgba(83, 102, 255, 1)',
+      'rgba(255, 102, 255, 1)',
+    ];
+
+    const backgroundColors = colors.map(color => color.replace('1)', '0.2)'));
+
+    const charts = {};
+
+    chartConfigs.forEach((config, index) => {
+      const ctx = document.getElementById(config.id).getContext('2d');
+      charts[config.id] = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: Array.from({ length: 7 }, (_, i) => `Day ${i + 1}`),
+          datasets: config.dailyData.map((data, dataIndex) => ({
+            label: `Dataset ${dataIndex + 1}`,
+            data,
+            borderColor: colors[(index * 0 + dataIndex) % colors.length],
+            backgroundColor: backgroundColors[(index * 0 + dataIndex) % backgroundColors.length],
+            borderWidth: 2,
+          })),
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 0
+          },
+          plugins: {
+            legend: {
+              position: 'top',
+            }
+          }
+        }
+      });
+
+      document.getElementById(`${config.id}daily`).addEventListener('click', () => {
+        updateChart(config.id, config.dailyData, 'Day');
+      });
+
+      document.getElementById(`${config.id}weekly`).addEventListener('click', () => {
+        updateChart(config.id, config.weeklyData, 'Week');
+      });
+    });
+
+    function updateChart(chartId, dataSets, labelType) {
+      const chart = charts[chartId];
+      chart.data.labels = Array.from({ length: 7 }, (_, i) => `${labelType} ${i + 1}`);
+      chart.data.datasets.forEach((dataset, idx) => {
+        dataset.data = dataSets[idx];
+      });
+      chart.update();
+    }
+  </script -->
 </body>
 
 </html>
