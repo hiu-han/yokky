@@ -1,0 +1,3337 @@
+.search {
+  display: none;
+}
+
+/*  공통  */
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?75882288');
+  src: url('../font/fontello.eot?75882288#iefix') format('embedded-opentype'),
+    url('../font/fontello.woff2?75882288') format('woff2'),
+    url('../font/fontello.woff?75882288') format('woff'),
+    url('../font/fontello.ttf?75882288') format('truetype'),
+    url('../font/fontello.svg?75882288#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'NEXON Lv2 Gothic', 'NEXON Lv2 Gothic Bold',
+    'NEXON Lv2 Gothic Light', 'Noto Sans KR', sans-serif;
+}
+
+button {
+  font-family: 'NEXON Lv2 Gothic', 'NEXON Lv2 Gothic Bold',
+    'NEXON Lv2 Gothic Light', 'Noto Sans KR', sans-serif;
+}
+
+.contents section {
+  padding: 90px 0;
+}
+
+.center {
+  position: relative;
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.subTitle {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 10px 0 40px;
+}
+
+.more {
+  position: absolute;
+  top: 170px;
+  right: 0;
+}
+
+.more a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #005690;
+}
+
+.btn {
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  text-indent: -99999px;
+  background-position: center center;
+}
+
+.res,
+#userBtn,
+.navClose,
+.res_nav,
+.res_button,
+.radioBtn {
+  display: none;
+}
+
+/*  HEADER  */
+
+.mainBanner_res {
+  display: none;
+}
+
+header {
+  width: 100%;
+  min-width: 1200px;
+  position: absolute;
+  z-index: 100;
+}
+
+header::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: rgb(255, 255, 255, 0.3);
+  display: block;
+  position: absolute;
+  top: 36px;
+  left: 0;
+}
+
+.headTop {
+  width: 1200px;
+  height: 36px;
+  font-size: 11px;
+  line-height: 36px;
+}
+
+.headTop * {
+  color: white;
+}
+
+.headTop > .hTopLeft {
+  float: left;
+}
+
+.headTop > .hTopLeft > li {
+  float: left;
+  padding-right: 10px;
+  position: relative;
+}
+
+.headTop > .hTopLeft > li:first-child {
+  padding-right: 20px;
+}
+
+.hTopLeft > li > a {
+  display: block;
+}
+
+.headTop > div > ul > li > a {
+  position: relative;
+  display: block;
+}
+
+.headTop > div > ul > li > a:hover,
+.hTopLeft > li > a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.countLangWrap {
+  position: relative;
+}
+
+.countLangWrap > a {
+  position: relative;
+}
+
+.countLangWrap > a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 7px;
+  background: url(../images/btn-regionSelect.png);
+}
+
+.countLangWrap .countLangSelect {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 300px;
+  padding: 0px 10px 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  display: none;
+}
+
+.countLangWrap:hover .countLangSelect {
+  display: block;
+}
+
+.countLangSelect > div {
+  float: left;
+  padding: 10px;
+}
+
+.countLangSelect > div > p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2.5;
+}
+
+.countLangSelect * {
+  color: #222;
+}
+
+.countryWrap .cWrap,
+.langWrap .lWrap {
+  position: relative;
+}
+
+.cWrap > button,
+.lWrap > button {
+  display: relative;
+  width: 100px;
+  padding-left: 10px;
+  background: none;
+  border: 1px solid #222;
+  border-radius: 3px;
+  line-height: 2;
+  text-align: left;
+}
+
+.cWrap > button::after,
+.lWrap > button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 7px;
+  background: url('../assets/img/icon/btn-regionSelectwBB.png') center center;
+  background-size: contain;
+}
+
+.cWrap .country,
+.lWrap .language {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  background: white;
+  text-align: left;
+  border: 1px solid #444;
+  border-radius: 3px;
+  box-sizing: border-box;
+  opacity: 0;
+  height: 0;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.cWrap:hover .country,
+.lWrap:hover .language {
+  opacity: 1;
+  height: auto;
+}
+
+.cWrap .country > li,
+.lWrap .language > li {
+  padding-left: 10px;
+  line-height: 2.4;
+  border-bottom: 1px solid #eee;
+}
+
+.cWrap .country > li:hover,
+.lWrap .language > li:hover {
+  background: #efefef;
+}
+
+.countLangSelect > button {
+  background: none;
+  border: none;
+}
+
+#changeLocal {
+  position: absolute;
+  bottom: 18px;
+  right: 15px;
+  padding: 0 10px;
+  border: 1px solid #222;
+  border-radius: 3px;
+  line-height: 2;
+  transition: 0.3s;
+}
+
+#changeLocal:hover {
+  background: #17254d;
+  color: white;
+}
+
+.cSelect-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  text-indent: -99999px;
+}
+
+.cSelect-close::before,
+.cSelect-close::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 14px;
+  position: absolute;
+  top: 0;
+  background: #222;
+  transform: translateY(-50%);
+}
+
+.cSelect-close::before {
+  left: -2px;
+  transform: rotate(-45deg);
+}
+
+.cSelect-close::after {
+  right: 0px;
+  transform: rotate(45deg);
+}
+
+.hTopLeft > .countResult > span {
+  position: relative;
+  padding-right: 10px;
+}
+
+.hTopLeft > .countResult > span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  background: white;
+}
+
+/*  hTopRight  */
+
+.headTop > .hTopRight {
+  float: right;
+}
+
+.hTopRight li {
+  float: left;
+  margin-left: 20px;
+  position: relative;
+}
+
+.hTopRight li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  background: white;
+}
+
+.hTopRight li:first-child::before {
+  display: none;
+}
+
+.hTopRight .searchWrap > a > img {
+  width: 11px;
+  margin: 12px 0px 12px 6px;
+}
+
+.headBottom {
+  position: relative;
+  width: 1200px;
+  height: 50px;
+}
+
+.logo {
+  float: left;
+  margin: 10px 0;
+}
+
+.logo img {
+  width: 232px;
+}
+
+/*  NAV  */
+
+#nav {
+  float: right;
+  z-index: 1000;
+}
+
+#nav > li {
+  float: left;
+  margin-left: 70px;
+}
+
+#nav > li > a {
+  position: relative;
+  font-size: 16px;
+  color: white;
+  height: 100%;
+  line-height: 50px;
+  display: block;
+}
+
+#nav > li > a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#nav > li > a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: white;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  transition: 0.5s;
+}
+
+#nav > li > a:hover::after {
+  width: 100%;
+}
+
+#nav .sub {
+  position: absolute;
+  background: white;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  height: 420px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: 0.5s;
+}
+
+.subWrap {
+  float: right;
+  padding-right: 20px;
+  transition: 0.5s;
+
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: 0.5s;
+}
+
+#nav > li:hover .sub {
+  display: block;
+
+  opacity: 1;
+  height: auto;
+}
+
+#nav > li:hover .subWrap {
+  opacity: 1;
+  height: auto;
+}
+
+.subWrap > li {
+  float: left;
+  padding: 30px 35px;
+  line-height: 2.5;
+}
+
+.subWrap > li > a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #005690;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+.subWrap .subList > li > a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.subWrap .subList > li > a:hover {
+  text-decoration: none;
+  color: #005690;
+}
+
+/*  #CONTAINER  */
+
+#container {
+  width: 100%;
+}
+
+#container > .mainBanner {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+.mainBanner .mBannerWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.mainBanner .mBanner {
+  width: 100%;
+  height: 100%;
+}
+
+.mBanner li {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.mBanner > li img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.mBanner > li > .bg > div {
+  height: 800px;
+}
+
+.mBanner > li .bannerText {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 00px;
+  text-align: center;
+}
+
+.bannerText > strong {
+  display: block;
+  font-size: 45px;
+}
+
+.bannerText > p {
+  font-size: 25px;
+  padding: 25px 0;
+}
+
+.bannerText > button {
+  font-size: 20px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  width: 150px;
+  height: 50px;
+  transition: 0.3s;
+}
+
+.bannerText > button:hover {
+  background: white;
+  color: rgb(23, 37, 77);
+  font-weight: 500;
+}
+
+.mainBanner {
+  min-width: 1200px;
+}
+
+.mainBanner > .searchWrap {
+  width: 1092px;
+  height: 120px;
+  background: white;
+  position: absolute;
+  top: 158px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.searchWrap .searchList {
+  height: 50px;
+  line-height: 55px;
+  padding-left: 30px;
+  border-bottom: 1px solid #888;
+}
+
+.searchWrap .searchList > li {
+  float: left;
+  padding: 0 25px;
+}
+
+.searchWrap .searchList > li > a {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(23, 37, 77, 0.5);
+}
+
+.searchWrap .searchList > li:hover > a {
+  color: #17254d;
+  text-decoration: none;
+}
+
+.searchWrap .searchList > .airlineT > a {
+  color: #17254d;
+}
+
+.searchWrap .searchList > .airlineT > a:after {
+  content: '';
+  display: block;
+  width: 120%;
+  height: 4px;
+  background: #17254d;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.airlineWrap {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 70px;
+  font-weight: bold;
+}
+
+.airlineWrap > div {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+}
+
+.airlineWrap .selectWrap {
+  position: relative;
+  width: 15%;
+}
+
+.selectWrap > div:hover {
+  background: rgb(238, 238, 238, 0.3);
+}
+
+.selectWrap > div:hover > a {
+  text-decoration: none;
+  color: #17254d;
+  background: rgb(238, 238, 238, 0.3);
+}
+
+.airlineWrap .selectWrap > .select-present > a {
+  position: relative;
+}
+
+.airlineWrap .selectWrap > .select-present > a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid #222;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid transparent;
+  position: absolute;
+  top: 5px;
+  right: -25px;
+}
+
+.airlineWrap .selectWrap > .tabWrap {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: 0.5s;
+}
+
+.airlineWrap .selectWrap:hover > .tabWrap {
+  opacity: 1;
+  height: auto;
+}
+
+.airlineWrap .selectWrap > .tabWrap > li {
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.airlineWrap .selectWrap > .tabWrap > li:hover {
+  background: #efefef;
+}
+
+.airlineWrap .bookingWrap {
+  width: 70%;
+}
+
+.airlineWrap .booking > li {
+  position: relative;
+  float: left;
+  font-size: 16px;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.airlineWrap li > div {
+  transition: 0.3s;
+}
+
+.selectWrap > div > a {
+  transition: 0.3s;
+}
+
+.booking > li:hover > div > a {
+  text-decoration: none;
+  color: #17254d;
+}
+
+.booking > li {
+  transition: 0.4s;
+}
+
+.booking > li:hover {
+  background: rgba(238, 238, 238, 0.5);
+}
+
+.booking > li > div > a {
+  font-weight: bold;
+  color: rgba(23, 37, 77, 0.5);
+}
+
+.booking > li::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 35px;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.booking > li:last-child::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 35px;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* 인원 수 입력창 */
+
+.guestWrap > .guWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* 날짜 선택 입력창 */
+
+.booking .sCalendarWrap {
+  position: relative;
+}
+
+.booking .sCalendarWrap > .sCWrap {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 780px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.booking .sCalendarWrap:hover > .sCWrap {
+  opacity: 1;
+  height: auto;
+}
+
+.sCWrap .infoWrap {
+  position: relative;
+  margin: 35px 70px 20px;
+  padding: 0px 20px;
+  line-height: 1;
+}
+
+.infoWrap > .arrTextBox {
+  margin-left: 180px;
+}
+
+.infoWrap > div {
+  float: left;
+  padding-right: 100px;
+}
+
+.infoWrap > div > strong,
+.infoWrap > div > span,
+.infoWrap > div > p {
+  display: block;
+  color: #17254d;
+}
+
+.infoWrap strong,
+.infoWrap span {
+  font-size: 16px;
+}
+
+.infoWrap > div > strong {
+  padding-bottom: 8px;
+}
+
+.infoWrap span {
+  font-weight: normal;
+}
+
+.infoWrap p {
+  font-size: 26px;
+  padding-bottom: 5px;
+}
+
+.infoWrap > p {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.infoWrap > p > img {
+  width: 95%;
+}
+
+.sCalendar {
+  position: relative;
+  margin: 0px 75px 30px;
+  padding: 10px 0;
+}
+
+.sCalendar::before {
+  content: '';
+  display: block;
+  width: 95%;
+  height: 1px;
+  background: #444;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#calendar_1 {
+  float: left;
+}
+
+#calendar_2 {
+  float: right;
+}
+
+.calendar {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.calendar:hover {
+  background: none;
+}
+
+.calendar > table th,
+.calendar > table td {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 2;
+}
+
+.calendar > table td:hover {
+  background: rgba(238, 238, 238, 0.5);
+}
+
+.calendar > table .empty:hover {
+  background: none;
+}
+
+.calendar .red,
+.calendar .red a {
+  color: tomato;
+}
+
+.calendar .blue,
+.calendar .blue a {
+  color: royalblue;
+}
+
+.calendar .past {
+  opacity: 0.3;
+}
+
+.sCalendarWrap > div > button {
+  background: none;
+  border: none;
+}
+
+.calendarBtn > .btn {
+  top: 155px;
+  width: 40px;
+  height: 40px;
+  background-size: 50%;
+  border-radius: 50%;
+}
+
+.calendarBtn > .btn:hover {
+  background-color: rgba(238, 238, 238, 0.5);
+}
+
+.calendarBtn > .leftBtn {
+  left: 76px;
+  background-image: url('../assets/img/icon/iconmonstr-angel-left-thin-32.png');
+}
+
+.calendarBtn > .rightBtn {
+  right: 76px;
+  background-image: url('../assets/img/icon/iconmonstr-angel-right-thin-32.png');
+}
+
+.sCWrap > .closeBtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.booking .guestWrap .guest {
+  display: none;
+}
+
+.booking .seatWrap .seat {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: 0.5s;
+}
+
+.booking .seatWrap:hover .seat {
+  opacity: 1;
+  height: auto;
+}
+
+.booking .seatWrap .seat li {
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.booking .seatWrap .seat li:hover {
+  background: rgba(238, 238, 238, 0.7);
+}
+
+.airlineWrap .search-button {
+  width: 15%;
+}
+
+.airlineWrap .search-button button {
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #17254d;
+  border: none;
+  color: white;
+  font-weight: 700;
+  margin: 10px;
+  transition: 0.4s;
+}
+
+.search-button img {
+  width: 22px;
+  margin-top: 1px;
+}
+
+.airlineWrap > .search-button button:hover {
+  background-color: #005690;
+}
+
+/*  .contents  */
+
+.contents {
+}
+
+.newsWrap {
+}
+
+.newsWrap > ul {
+  height: 273px;
+}
+
+.newsWrap > ul > li {
+  position: absolute;
+  top: 0;
+  margin-top: 100px;
+  width: 582px;
+  height: 273px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.newsWrap > ul > .news_1 {
+  left: 0;
+}
+
+.newsWrap > ul > .news_2 {
+  right: 0;
+}
+
+.newsWrap > ul > li > a > img {
+  transition: 0.5s;
+  width: 592px;
+}
+
+.newsWrap > ul > li > a:hover > img {
+  transform: scale(1.04);
+}
+
+.newsWrap > ul > li .textBox {
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  font-size: 20px;
+}
+
+.newsWrap > ul > li .textBox > * {
+  display: block;
+}
+
+.newsWrap > ul > li .textBox > strong {
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.newsWrap > ul > li:hover .textBox > * {
+  color: #17254d;
+}
+
+/* .specOfferWrap */
+
+.specOffersWrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1200px;
+}
+
+.sOffersWrap {
+  margin: 0 -44px;
+  position: relative;
+}
+
+.sOffersWrap > .sOffersList {
+  width: 100%;
+}
+
+.sOffersList > li {
+  float: left;
+  width: 20%;
+  height: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.sOffersList > li > a,
+.sOffersList > li .sOfferMore {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.sOffersList > li > a > img {
+  width: 100%;
+}
+
+.sOffersList > li:first-child,
+.sOffersList > li:last-child {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.sOffersList > li:first-child:hover,
+.sOffersList > li:last-child:hover {
+  opacity: 0.9;
+}
+
+.sOffersList > li .textBox {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: white;
+  display: block;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 28, 39, 0) 0,
+    rgba(9, 14, 19, 0.5) 39.32%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  width: 100%;
+  padding: 30px 25px 23px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.sOffersList > li:hover .textBox {
+  opacity: 0;
+}
+
+.sOffersList > li .textBox > span,
+.sOffersList > li .textBox > strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sOffersList > li .textBox > i {
+  display: block;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.sOffersList > li .sOfferMore {
+  display: block;
+  position: absolute;
+  bottom: -225px;
+  left: 0;
+  background: rgb(255, 255, 255, 0.9);
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  padding: 30px 45px 23px;
+  box-sizing: border-box;
+  transition: 0.7s;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sOffersList > li:hover .sOfferMore {
+  bottom: 0;
+}
+
+.sOffersList > li:first-child:hover .sOfferMore,
+.sOffersList > li:last-child:hover .sOfferMore {
+  display: none;
+}
+
+.sOffersList > li .sOfferMore > span,
+.sOffersList > li .sOfferMore > strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sOffersList > li .sOfferMore > strong {
+  display: block;
+}
+
+.sOffersList > li .sOfferMore > i {
+  display: block;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.sOffersList > li .sOfferMore > button {
+  background: none;
+  padding: 12px 25px;
+  border: 1px solid #222;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  color: #222;
+  transition: 0.5s;
+}
+
+.sOffersWrap > .sOffersList > li .sOfferMore > button:hover {
+  background: #222;
+  border: 1px solid #222;
+  color: white;
+}
+
+.sOffersList > li:first-child .textBox,
+.sOffersList > li:last-child .textBox {
+  display: none;
+}
+
+.sOffersBtn > .btn {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 45px;
+  background-size: 90%;
+}
+
+.sOffersBtn > .leftBtn {
+  left: 10%;
+  background-image: url('../assets/img/icon/left_arrow.png');
+}
+
+.sOffersBtn > .rightBtn {
+  right: 10%;
+  background-image: url('../assets/img/icon/right_arrow.png');
+}
+
+.specOffersWrap .more {
+  left: 50%;
+  padding-left: 530px;
+}
+
+/* .promotionWrap */
+
+.promotionWrap {
+}
+
+.promotion {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.promotion li .img_box {
+  position: relative;
+}
+
+.promotion li .img_box a {
+  display: block;
+  position: relative;
+}
+
+.promotion li img {
+  border-radius: 8px;
+  width: 276px;
+  height: 276px;
+}
+
+.promotion .img_box > a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  border-radius: 8px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.promotion .img_box > button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  font-size: 16px;
+  color: #222;
+  border: 1px solid #222;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.promotion .img_box > a::after,
+.promotion .img_box > button {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.promotion li:hover .img_box > a::after,
+.promotion li:hover .img_box > button {
+  opacity: 1;
+}
+
+.promotion li .img_box > button:hover {
+  background: #222;
+  color: #fff;
+}
+
+.promotion .textBox {
+  padding: 12px 0 30px;
+}
+
+.promotion .textBox:hover a {
+  text-decoration: none;
+}
+
+.promotion .textBox a strong,
+.promotion .textBox a span {
+  display: block;
+  width: 276px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.promotion .textBox a > * {
+  padding-bottom: 10px;
+}
+
+.promotion .textBox a strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.promotion .textBox a span {
+  font-size: 15px;
+}
+
+.promotion .textBox a .text_date {
+  font-size: 13px;
+  color: #005690;
+}
+
+/*  .storyWrap  */
+
+.storyWrap {
+  width: 100%;
+  min-width: 1200px;
+  height: 545px;
+  overflow: hidden;
+}
+
+.storyBox {
+  width: 1400px;
+  height: 405px;
+  margin: 35px auto;
+  padding: 50px 0;
+  background: rgb(239, 239, 239, 0.4);
+  position: relative;
+  transition: 0.6s;
+}
+
+.storyBox:hover {
+  background: none;
+}
+
+.storyLine {
+  width: 100%;
+  height: 100%;
+}
+
+.storyBox::before,
+.storyBox::after,
+.storyBox > .storyLine::before,
+.storyBox > .storyLine::after {
+  content: '';
+  display: block;
+  background: #222;
+  position: absolute;
+  transition: 0.6s;
+}
+
+.storyBox::before,
+.storyBox::after {
+  width: 1px;
+  height: 30%;
+}
+
+.storyBox::before {
+  top: 0;
+  left: 0;
+}
+
+.storyBox::after {
+  bottom: 0;
+  right: 0;
+}
+
+.storyBox:hover::before,
+.storyBox:hover::after {
+  height: 100%;
+}
+
+.storyBox > .storyLine::before,
+.storyBox > .storyLine::after {
+  width: 15%;
+  height: 1px;
+}
+
+.storyBox > .storyLine::before {
+  top: 0;
+  left: 0;
+}
+
+.storyBox > .storyLine::after {
+  bottom: 0;
+  right: 0;
+}
+
+.storyBox:hover > .storyLine::before,
+.storyBox:hover > .storyLine::after {
+  width: 100%;
+}
+
+.storyBox .sBox {
+  float: left;
+  text-align: center;
+  vertical-align: center;
+  line-height: 1.4;
+  margin: 85px 200px;
+}
+
+.storyBox .sBox .sTitle {
+  margin-bottom: 15px;
+  color: #17254d;
+}
+
+.storyBox .sBox .sTitle > p {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.storyBox .sBox .sTitle > strong {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.storyBox .sBox .sText {
+  font-size: 16px;
+}
+
+.storyBox .sBox button {
+  background: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  color: #17254d;
+  border: 1px solid #17254d;
+  border-radius: 3px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.storyBox .sBox button:hover {
+  background: #17254d;
+  color: white;
+}
+
+.storyBox .mBox {
+  float: right;
+  position: relative;
+  margin-right: 50px;
+}
+
+.storyBox .mBox > iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* .serviceWrap*/
+
+.serviceWrap {
+}
+
+.serviceList {
+  margin: 0 -15px;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.serviceList > li {
+  float: left;
+  width: 25%;
+  height: 250px;
+  padding: 0 15px;
+  margin: 40px 0;
+  box-sizing: border-box;
+}
+
+.service {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.service .serviceImg {
+  position: relative;
+  display: block;
+  width: 276px;
+  height: 250px;
+  /* background: tan; */
+  /* border-radius: 8px; */
+}
+
+.service .serviceImg img {
+  width: 105%;
+}
+
+.service .textBox {
+  width: 242px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  /*    bottom: -48px;*/
+  bottom: -50px;
+  left: 0;
+  padding: 12px 18px;
+  line-height: 1.8;
+  transition: 0.4s;
+}
+
+.service:hover .textBox {
+  bottom: 0;
+}
+
+.service .textBox > * {
+  display: block;
+  padding: 2px 0;
+}
+
+.service .textBox > strong {
+  font-size: 18px;
+}
+
+.service .textBox > span {
+  font-size: 14px;
+  padding-bottom: 12px;
+}
+
+.service .textBox button {
+  display: block;
+  background: none;
+  border-radius: 3px;
+  padding: 8px 15px;
+  border: 1px solid #222;
+  font-size: 14px;
+}
+
+.service .textBox button:hover {
+  background: #222;
+  color: white;
+}
+
+/*  FOOTER  */
+
+footer .footContents {
+  width: 100%;
+  background: #07274a;
+  min-width: 1200px;
+}
+
+.footTop {
+  width: 100%;
+}
+
+.footTop > .fMenuWrap {
+  padding: 30px 0 20px;
+}
+
+.footTop > .fMenuWrap > .fMenu {
+  float: left;
+  width: 25%;
+  line-height: 3;
+}
+
+.footTop > .fMenuWrap > .fMenu > p {
+  font-size: 14px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.fMenuWrap > .fMenu > .fSub > li > a {
+  color: white;
+  font-size: 12px;
+}
+
+.fMenuWrap > .fMenu > .fSub > li > a:hover {
+  text-decoration: none;
+}
+
+.foot_sns {
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* background: tomato; */
+}
+
+.foot_sns a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 10px 0px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all ease 0.3s;
+}
+
+.sns_instagram a {
+  background-image: url('../assets/img/icon/icon-instagram-fff.png');
+}
+
+.sns_facebook a {
+  background-image: url('../assets/img/icon/icon-facebook-fff.png');
+}
+
+.sns_twitter a {
+  background-image: url('../assets/img/icon/icon-twitter-fff.png');
+}
+
+.sns_youtube a {
+  background-image: url('../assets/img/icon/icon-youtube-fff.png');
+}
+
+.sns_instagram:hover a {
+  background-image: url('../assets/img/icon/icon-instagram-005389.png');
+}
+
+.sns_facebook:hover a {
+  background-image: url('../assets/img/icon/icon-facebook-005389.png');
+}
+
+.sns_twitter:hover a {
+  background-image: url('../assets/img/icon/icon-twitter-005389.png');
+}
+
+.sns_youtube:hover a {
+  background-image: url('../assets/img/icon/icon-youtube-005389.png');
+}
+
+.footBottom {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+.footBottom > div {
+  float: left;
+}
+
+.footBottom address {
+  font-size: 11px;
+  color: white;
+  line-height: 1.8;
+  padding-right: 60px;
+}
+
+.footBottom .visitKorea > div {
+  float: left;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.visitKorea > div > * {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.8;
+  font-size: 11px;
+  color: white;
+  padding-left: 5px;
+}
+
+footer h2 {
+  position: absolute;
+  bottom: -36px;
+  left: 0;
+}
+footer h2 img {
+  width: 40%;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 767px) {
+  body,
+  button,
+  * {
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.04em;
+  }
+
+  /*  1. 제거하기  */
+  .verPc,
+  header::before,
+  .headTop,
+  .searchWrap,
+  footer h2,
+  .more,
+  .foot_sns,
+  address {
+    display: none;
+  }
+
+  /*  2. 100%  */
+  header,
+  .headBottom,
+  .center,
+  #container,
+  .mainBanner,
+  .mainBanner > .searchWrap,
+  .storyBox,
+  .specOffersWrap,
+  .storyWrap,
+  footer .footContents {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /*  3. 보이기  */
+  body,
+  button,
+  * {
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.04em;
+  }
+
+  .res,
+  .res_nav,
+  .radioBtn {
+    display: block;
+  }
+
+  /*---  HEADER  ---*/
+
+  header {
+    position: relative;
+    /*        position: fixed;*/
+  }
+
+  .headBottom {
+    /*        height: 50px;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0e2750;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .logo {
+    float: none;
+    text-align: center;
+    margin: 11px 0px;
+  }
+
+  .logo img {
+    text-align: center;
+    width: 180px;
+  }
+
+  .logo_res {
+    text-align: center;
+    padding: 11px;
+  }
+
+  .logo_res img {
+    width: 180px;
+  }
+
+  .hamBtn,
+  .globBtn,
+  #userBtn,
+  .navClose {
+    display: block;
+    position: absolute;
+  }
+
+  .hamBtn,
+  .globBtn,
+  #userBtn {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamBtn {
+    left: 20px;
+  }
+
+  .globBtn {
+    right: 7px;
+  }
+
+  #userBtn {
+    right: 44px;
+  }
+
+  .hamBtn img,
+  .globBtn img,
+  #userBtn img {
+    width: 65%;
+  }
+
+  #navWrapWrap {
+    /* #navWrap 아래에 블러 배경을 깔아주기 위해 임시로 추가해 준 부모 */
+    height: 100vh;
+    position: fixed;
+    top: 1px;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  #navWrapWrap:target {
+    opacity: 1;
+    width: 100%;
+  }
+
+  #navWrapWrap:target > .nav_bg {
+    display: block;
+    position: fixed;
+    opacity: 1;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .nav_bg {
+    display: none;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    /* background: rgba(0, 0, 0, 5); */
+  }
+
+  nav {
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background: white;
+    box-sizing: border-box;
+  }
+
+  .navClose {
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+  }
+
+  .navClose a {
+    display: block;
+  }
+
+  #nav {
+    /* width: 110%; */
+    width: 100%;
+    height: 100vh;
+    float: none;
+    display: block;
+    margin-top: 35px;
+    padding: 10px 0 0 0px;
+    overflow-y: scroll;
+    background: none;
+  }
+
+  #nav > li {
+    position: relative;
+    float: none;
+    margin-left: 14%;
+    margin-right: 14%;
+    padding-top: 10px;
+    overflow: hidden;
+  }
+
+  #nav > li:last-child {
+    margin-bottom: 100px;
+  }
+
+  #nav > li > a {
+    display: inline-block;
+    width: 90%;
+    color: #222;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2.5;
+    /* color: #000;
+    overflow: hidden;
+    background: linear-gradient(to right, #005690, #005690 50%, #000 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 875ms ease; */
+  }
+
+  #nav > li:hover > a {
+    /* background-position: 0 100%; */
+    color: #005690;
+  }
+
+  #nav > li > a::after {
+    /* display: none; */
+    background: #222;
+    bottom: 8px;
+    height: 1px;
+    transition: all ease 0.8s;
+  }
+
+  #nav > .nav_faq > a::after,
+  #nav > .nav_notice > a::after {
+    display: none;
+  }
+
+  #nav > li:hover a::after {
+    width: 350px;
+  }
+
+  #nav > li .upDownArrow {
+    display: inline-block;
+    float: right;
+    transition: all ease 0.5s;
+  }
+
+  #nav > li:hover > .upDownArrow {
+    transform: rotate(180deg);
+  }
+
+  #nav > li > .upDownArrow > img {
+    width: 14px;
+    margin: 15px 0;
+  }
+
+  #nav .sub {
+    opacity: 1;
+    height: auto;
+    padding: 0 0px;
+    position: relative;
+    top: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .subWrap {
+    float: none;
+    /* height: auto; */
+    /* padding-bottom: 5px; */
+    padding-right: 0;
+    margin-left: 10px;
+    background: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+  }
+
+  #nav > li:hover .subWrap {
+    opacity: 1;
+    height: auto;
+  }
+
+  .subWrap > li {
+    float: none;
+    padding: 5px 0;
+    line-height: 2;
+  }
+
+  .subWrap > li > a {
+    font-size: 16px;
+    color: #222;
+    font-weight: 400;
+  }
+  .subWrap > li > a:hover {
+    color: #005690;
+  }
+
+  .nav_service .subWrap > li:last-of-type > a:first-of-type {
+    padding-bottom: 14px;
+  }
+
+  .nav_promotion .subWrap > li:nth-of-type(1) > a:first-of-type,
+  .nav_promotion .subWrap > li:nth-of-type(2) > a:first-of-type {
+    padding-bottom: 18px;
+  }
+
+  .subWrap .subList {
+    display: none;
+    line-height: 2.5;
+    padding: 0 20px;
+  }
+
+  .nav_sns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav_sns a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all ease 0.3s;
+  }
+
+  .sns_instagram a {
+    background-image: url('../assets/img/icon/icon-instagram.png');
+  }
+
+  .sns_facebook a {
+    background-image: url('../assets/img/icon/icon-facebook.png');
+  }
+
+  .sns_twitter a {
+    background-image: url('../assets/img/icon/icon-twitter.png');
+  }
+
+  .sns_youtube a {
+    background-image: url('../assets/img/icon/icon-youtube.png');
+  }
+
+  .sns_instagram:hover a {
+    background-image: url('../assets/img/icon/icon-instagram-005389.png');
+  }
+
+  .sns_facebook:hover a {
+    background-image: url('../assets/img/icon/icon-facebook-005389.png');
+  }
+
+  .sns_twitter:hover a {
+    background-image: url('../assets/img/icon/icon-twitter-005389.png');
+  }
+
+  .sns_youtube:hover a {
+    background-image: url('../assets/img/icon/icon-youtube-005389.png');
+  }
+
+  .nav_footer {
+    width: 72%;
+    margin: 15px 0 50px;
+    border-top: 1px solid #222;
+  }
+
+  .navAddress {
+    margin-top: 10px !important;
+    padding-bottom: 20px !important;
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /*---  #CONTAINER  ---*/
+
+  #container {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  #container > .mainBanner {
+    height: 155vw;
+  }
+
+  .mainBanner .mBanner {
+    position: relative;
+  }
+
+  .mBanner > li .bannerText {
+    top: 53%;
+    padding-left: 5vw;
+    text-align: left;
+  }
+
+  .mBanner > li > .bg > div {
+    height: 155vw;
+  }
+
+  .bannerText > strong {
+    font-size: 26px;
+  }
+
+  .bannerText > p {
+    width: 50%;
+    font-size: 18px;
+    padding: 15px 0;
+    line-height: 1.5;
+  }
+
+  .bannerText > button {
+    font-size: 18px;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  /*---  반응형 전용 요소  ---*/
+
+  .mainBanner_res {
+    display: block;
+  }
+
+  .searchWrap_res {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .selectWrap_res {
+    width: 90%;
+    margin: 5%;
+    height: auto;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .tapWrap_res {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .tapWrap_res > li {
+    position: relative;
+    display: inline-block;
+    width: 32%;
+    height: auto;
+    padding: 10px 0;
+    margin: 20px 0 0px;
+    overflow: hidden;
+  }
+
+  .tapWrap_res > li::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    bottom: 13px;
+    right: 0;
+    background: #ddd;
+  }
+
+  .tapWrap_res > li:last-child::after {
+    display: none;
+  }
+
+  .tapWrap_res > li > a {
+    position: relative;
+    display: block;
+    margin: 0 10px;
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .tapWrap_res > .bookingTap_res > a {
+    color: #222;
+  }
+
+  .tapWrap_res > .bookingTap_res > a:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #17254d;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+
+  .bookInfo_res {
+    position: relative;
+    width: 80%;
+    margin: 0 10% 10px;
+    padding: 15px 0;
+  }
+
+  .bookInfo_res .textBox {
+    line-height: 1.3;
+  }
+
+  .bookInfo_res .depBox {
+    float: left;
+    width: 40%;
+  }
+
+  .bookInfo_res .arrBox {
+    float: right;
+    width: 40%;
+  }
+
+  .bookInfo_res .textBox > div > h4 {
+    font-size: 34px;
+    padding-bottom: 5px;
+    font-weight: 700;
+  }
+
+  .bookInfo_res .textBox > div > p {
+    font-size: 14px;
+  }
+
+  .bookInfo_res .airIcon {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .selectWrap_res > .rentHotelWrap_res {
+    width: 80%;
+    margin: 0 10%;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .rentHotelWrap_res > div {
+    display: inline-block;
+    width: 40%;
+    margin: 0 12px;
+  }
+
+  .rentHotelWrap_res span {
+    display: block;
+    font-weight: bold;
+  }
+
+  .rentWrap img,
+  .hotelWrap img {
+    width: 24%;
+    padding: 5px;
+  }
+
+  /*  반응형 reserv_search 창  */
+
+  #reserv_search {
+  }
+
+  #reserv_search_in {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: rgb(23, 37, 77);
+    z-index: 100;
+    opacity: 0;
+    overflow: hidden;
+    transition: all ease 0.4s;
+  }
+
+  #reserv_search_in:target {
+    opacity: 1;
+    height: 100vh;
+  }
+
+  .reserv_search_wrap {
+    width: 90%;
+    margin: 15% 5% 0;
+    height: auto;
+  }
+
+  .reserv_style_wrap {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .reserv_style_wrap > li {
+    position: relative;
+    display: inline-block;
+    width: 49%;
+    height: auto;
+    /* padding: ; */
+    margin: 0%;
+    text-align: center;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+  }
+
+  .reserv_style_wrap > li > a {
+    position: relative;
+    display: block;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    /* background: lightgrey; */
+    color: white;
+  }
+
+  .normal_tap > a::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .reserv_style_wrap > li.bonus_tap > a {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .bonus_tap::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: rgba(221, 221, 221, 0.699);
+    transform: translateY(-50%);
+  }
+
+  #reserv_search_in .close_btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #reserv_search_in .close_btn img {
+    width: 28px;
+  }
+
+  .reserv_goto_wrap {
+    position: relative;
+    width: 90%;
+    margin: 0 5%;
+    padding: 4% 0;
+  }
+
+  .goto_text_box {
+    padding: 0 5%;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .goto_text_box .go_box {
+    float: left;
+    width: 40%;
+  }
+
+  .goto_text_box > div > h4 {
+    padding-bottom: 5px;
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .goto_text_box > div > h4 > a {
+    color: white;
+  }
+
+  .goto_text_box > div > p {
+    font-size: 14px;
+    color: white;
+  }
+
+  .go_box .go_point {
+  }
+
+  .goto_text_box .to_box {
+    float: right;
+    width: 40%;
+  }
+
+  .goto_text_box > .airIcon {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .reserv_date_wrap {
+    width: 90%;
+    margin: 0 5%;
+    padding: 2% 0;
+  }
+
+  .reserv_date_wrap .date_box {
+    width: 43%;
+    padding: 2% 3%;
+    border-radius: 4px;
+    background: white;
+    transition: all ease 0.4s;
+  }
+
+  .reserv_date_wrap .date_box:hover {
+    background: #ddd;
+  }
+
+  .date_box > a {
+    display: block;
+  }
+
+  .reserv_date_wrap .dep_date_box {
+    float: left;
+  }
+
+  .reserv_date_wrap .arr_date_box {
+    float: right;
+  }
+
+  .d_title {
+    float: left;
+    display: block;
+    margin: 13px 0;
+    color: #888;
+  }
+
+  .d_box {
+    display: block;
+    float: right;
+    text-align: right;
+  }
+
+  .d_box .year_month {
+    display: block;
+  }
+
+  .d_box > strong {
+    display: inline-block;
+    font-size: 22px;
+  }
+
+  .d_box > .day {
+    float: left;
+    margin: 8px 10% 0 0;
+  }
+
+  .flight_class_wrap {
+    width: 90%;
+    margin: 0 5%;
+    padding: 3% 0;
+  }
+
+  .flight_class_in {
+    position: relative;
+    border-radius: 4px;
+    background: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 3.5;
+  }
+
+  .class_select > a {
+    display: block;
+  }
+
+  .class_select .arrow_down {
+    display: inline-block;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    transition: all ease 0.4s;
+    line-height: 0;
+  }
+
+  .flight_class_in:hover .arrow_down {
+    transform: rotate(180deg);
+  }
+
+  .class_select img {
+    width: 14px;
+  }
+
+  .class_list {
+    /* display: none; */
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    background: white;
+    overflow: hidden;
+    z-index: 100;
+    opacity: 0;
+    height: 0;
+    transition: all ease 0.4s;
+  }
+
+  .flight_class_in:hover .class_list {
+    /* display: block; */
+    opacity: 1;
+    height: auto;
+  }
+
+  .class_list > li {
+    transition: all ease 0.4s;
+  }
+
+  .class_list > li:hover {
+    background: #eee;
+  }
+
+  .class_list > li > a {
+    display: block;
+  }
+
+  .passenger_num_wrap {
+    width: 90%;
+    margin: 0 5%;
+    padding: 3% 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .passenger_num_wrap .age_wrap {
+    width: 32%;
+  }
+
+  .age_wrap .text_box {
+    padding: 0 0 10px 0;
+  }
+
+  .age_wrap .text_box * {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+  }
+
+  .age_wrap .num_select {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    /* background: rgba(128, 128, 0, 0.438); */
+  }
+
+  .num_select input {
+    width: 100%;
+    height: 60px;
+    padding: 0 40%;
+    border-radius: 0;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  .num_select input::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .num_select input::-moz-input-placeholder {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .num_select input::-ms-input-placeholder {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .num_select > button {
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 60px;
+    border: none;
+    background: #eee;
+    font-size: 18px;
+    transition: all ease 0.4s;
+  }
+
+  .num_select > button:hover {
+    background: #ddd;
+  }
+
+  .num_select .minus_btn {
+    left: 0;
+    /* float: left; */
+  }
+
+  .num_select .plus_btn {
+    right: 0;
+    /* float: right; */
+  }
+
+  .reserv_search_btn {
+    width: 40%;
+    height: 13vw;
+    margin: 30px 30%;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: rgb(23, 37, 77);
+    transition: all ease 0.4s;
+  }
+
+  .reserv_search_btn:hover {
+    background: #ddd;
+  }
+
+  /*---  CONTENTS  ---*/
+
+  .contents section {
+    padding: 45px 0;
+  }
+
+  .title {
+    font-size: 22px;
+    padding: 0px 0 30px;
+    font-weight: 700;
+  }
+
+  .subTitle {
+    display: none;
+  }
+
+  .newsWrap {
+    width: 100%;
+    padding: 10px 0 15px !important;
+    margin-bottom: 35px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .newsWrap > ul {
+    width: 96%;
+    height: auto;
+    padding: 0 2%;
+  }
+
+  .newsWrap > ul > li {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+
+  .newsWrap > ul > li:first-child {
+    margin-bottom: 10px;
+  }
+
+  .newsWrap > ul > li > a > img {
+    width: 100%;
+  }
+
+  .newsWrap > ul > li .textBox {
+    top: 18px;
+    left: 18px;
+    font-size: 16px;
+  }
+
+  .newsWrap > ul > li .textBox > strong {
+    padding: 0;
+  }
+
+  .sOffersWrap {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    overflow-x: auto;
+    padding-bottom: 15px;
+  }
+
+  .sOffersWrap > .sOffersList {
+    display: flex;
+    justify-content: space-around;
+    width: 240%;
+    margin: 0 1%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .sOffersList > li {
+    width: 100%;
+    margin: 0 0.5%;
+    padding: 0;
+    border-radius: 8px;
+  }
+
+  .sOffersList > li:first-child,
+  .sOffersList > li:last-child {
+    opacity: 1;
+  }
+
+  .sOffersList > li .textBox {
+    display: none;
+  }
+
+  .sOffersList > li:first-child:hover .sOfferMore,
+  .sOffersList > li:last-child:hover .sOfferMore {
+    display: block;
+  }
+
+  .sOffersList > li .sOfferMore {
+    bottom: 0;
+    padding: 10px 15px;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.7);
+    line-height: 1.3;
+  }
+
+  .sOffersList > li .sOfferMore > span,
+  .sOffersList > li .sOfferMore > strong {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .sOffersList > li .sOfferMore > i {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .sOffersList > li .sOfferMore > button {
+    display: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .sOffersBtn > .btn {
+    display: none;
+  }
+
+  .res_button {
+    width: 30%;
+    margin: 10px 35% 0;
+    display: block;
+    background: #222;
+    border: 1px solid #222;
+    border-radius: 3px;
+    padding: 12px 10px;
+    color: white;
+    transition: 0.4s;
+  }
+
+  .res_button:hover {
+    background: #ddd;
+    border: 1px solid #ddd;
+    color: #222;
+  }
+
+  .promoWrap {
+    overflow: hidden;
+    overflow-x: auto;
+  }
+
+  .promotion {
+    width: 384%;
+    padding: 0 2%;
+    overflow: hidden;
+  }
+
+  .promotion > li {
+    position: relative;
+    width: 12%;
+  }
+
+  .promotion li img {
+    width: 100%;
+    height: auto;
+  }
+
+  .promotion .img_box > button {
+    display: none;
+  }
+
+  .promotion .textBox {
+    padding: 15px 0 15px;
+    line-height: 1.5;
+  }
+
+  .promotion .textBox a strong {
+    font-size: 16px;
+  }
+
+  .promotion .textBox a span {
+    font-size: 15px;
+  }
+
+  .promotion .textBox a .text_date {
+  }
+
+  .promotion .textBox a strong,
+  .promotion .textBox a span {
+    width: 100%;
+    padding: 2px 5px;
+  }
+
+  .storyWrap {
+    height: auto;
+    margin: 20px 0;
+    background: rgb(239, 239, 239, 0.5);
+  }
+
+  .storyBox {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    background: none;
+  }
+
+  .storyLine {
+    position: relative;
+  }
+
+  .storyBox::before,
+  .storyBox::after,
+  .storyBox > .storyLine::before,
+  .storyBox > .storyLine::after {
+    display: none;
+  }
+
+  .storyBox .sBox {
+    float: none;
+    margin: 0;
+  }
+
+  .storyBox .sBox .sTitle {
+    display: none;
+  }
+
+  .storyBox .sBox .sText {
+    margin-bottom: 300px;
+  }
+
+  .storyBox .sBox .sTitle > p {
+    font-size: 18px;
+  }
+
+  .storyBox .sBox .sTitle > strong {
+    display: block;
+    font-size: 30px;
+  }
+
+  .storyBox .sBox button {
+    /* display: none; */
+    width: 40%;
+    margin: 0 30%;
+    font-size: 14px;
+    background: #17254d;
+    color: white;
+    border: none;
+  }
+
+  .storyBox .sBox button:hover {
+    background: rgba(23, 37, 77, 0.4);
+  }
+
+  .storyBox .mBox {
+    width: 100%;
+    position: absolute;
+    top: 95px;
+    float: none;
+    margin: 0;
+  }
+
+  .storyBox .mBox > iframe {
+    position: static;
+    width: 100%;
+    height: 240px;
+    z-index: 10;
+  }
+
+  .serviceWrap {
+    overflow: visible;
+  }
+
+  .serviceList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 96%;
+    padding-top: 0;
+    margin: 0 2%;
+    overflow: visible;
+  }
+
+  .serviceList.clearFix:after {
+    display: none;
+    /* 기존 하위에 float이 적용되어 사용한 clearFix의 content:"";가 display:flex를 만나면서 문제가 되어 마지막 li가 제대로 정렬되지 않고 들여 정렬(?)되었기에 이를 없애주었다. */
+  }
+
+  .serviceList > li {
+    float: none;
+    width: 49%;
+    height: auto;
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .service {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .service .serviceImg {
+    width: 100%;
+    height: 230px;
+  }
+
+  .service .serviceImg img {
+    width: 100%;
+  }
+
+  .service .textBox {
+    width: 100%;
+    padding: 8px 8px;
+    bottom: 0;
+    line-height: 1.8;
+    background: white;
+    box-sizing: border-box;
+  }
+
+  .service .textBox > * {
+    padding: 0;
+    width: 100%;
+  }
+
+  .service .textBox > strong {
+    font-size: 16px;
+  }
+
+  .service .textBox > span {
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+
+  .service .textBox button {
+    display: none;
+  }
+
+  /*---  FOOTER  ---*/
+
+  footer .footContents {
+    padding-bottom: 80px;
+  }
+
+  .footTop > .fMenuWrap {
+    position: relative;
+    /* padding: 10px 0 5px; */
+    padding: 5px 0 0px;
+    width: 96%;
+    margin: 0 2%;
+  }
+
+  .footTop > .fMenuWrap::before {
+    content: '';
+    /* display: block; */
+    display: none;
+    height: 1px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 67px;
+    left: 0;
+  }
+
+  .footTop > .fMenuWrap > .fMenu {
+    text-align: center;
+  }
+
+  .footTop > .fMenuWrap > .fMenu > p {
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .fSub {
+    display: none;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .fMenu:hover .fSub {
+    opacity: 1;
+    /* height: auto; */
+    height: 230px;
+
+    /* overflow: visible; */
+  }
+
+  .fSub > li {
+    top: 50%;
+    left: 0;
+    margin: 0 -30px;
+  }
+  .fMenuWrap > .fMenu > .fSub > li > a {
+    letter-spacing: -0.13rem;
+  }
+
+  .fSub > li:first-child {
+    /* margin-top: 10px; */
+  }
+
+  .fSub > li:last-child {
+    margin-bottom: 10px;
+  }
+
+  .footBottom > div {
+    float: none;
+    text-align: center;
+  }
+  .footBottom > .visitKorea {
+    /* display: none; */
+    width: 96%;
+    margin: 0 2%;
+  }
+
+  .footBottom .visitKorea > div {
+    float: none;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .footBottom .visitKorea > .type1 {
+    width: 55%;
+    /* float: left; */
+    /* padding-left: 2%; */
+  }
+
+  .footBottom .visitKorea > .type2 {
+    width: 44%;
+    /* float: right; */
+    /* padding-right: 2%; */
+  }
+
+  .footBottom .visitKorea > .type1 img {
+    height: 33px;
+  }
+
+  .footBottom .visitKorea > .type2 img {
+    height: 43px;
+  }
+
+  .visitKorea > div > * {
+    font-size: 10px;
+  }
+  .visitKorea > div > a {
+    padding: 0;
+  }
+
+  .floating_widget {
+    position: fixed;
+    width: 130px;
+    z-index: 10;
+    right: -80px;
+    bottom: 125px;
+    transition: all ease 0.3s;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .floating_widget:hover {
+    right: 0;
+  }
+
+  .floating_widget:target {
+    /* right: -66px; */
+  }
+
+  .floating_widget .floatingList {
+    vertical-align: middle;
+  }
+
+  .floatingList > li {
+    padding: 0 14px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-top: 0;
+  }
+  .floatingList > li:first-child {
+    border-top: 1px solid #eee;
+    border-radius: 4px 0 0 0;
+  }
+  .floatingList > li:last-child {
+    border-radius: 0 0 0 4px;
+  }
+
+  .floatingList > li > * {
+    display: inline-block;
+  }
+
+  .floatingList > li > a {
+    padding: 13px 0 10px 10px;
+  }
+
+  .floatingList > li > a > span {
+    height: 100%;
+    font-size: 14px;
+  }
+
+  .floatingList > li img {
+    display: inline-block;
+    padding-bottom: 10px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .fixed_menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background: white;
+    border-top: 1px solid #eee;
+  }
+
+  .fixedList {
+    width: 98%;
+    padding: 0 1%;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  .fixedList > li {
+    display: inline-block;
+    width: 24%;
+  }
+
+  .fixedList > li > a {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 5%;
+  }
+
+  .fixedList > li > a > img {
+    display: block;
+    width: 40px;
+    margin: 0 auto;
+  }
+
+  .fixedList > li > a > span {
+    display: block;
+    width: 45px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .logo {
+    margin: 12px 0;
+  }
+
+  .logo img {
+    width: 48%;
+  }
+
+  .globBtn img,
+  #userBtn img {
+    width: 60%;
+  }
+
+  #userBtn {
+    right: 35px;
+  }
+
+  #nav > li > a {
+    font-size: 16px;
+  }
+
+  .subWrap > li > a {
+    font-size: 14px;
+  }
+
+  .navAddress {
+    font-size: 10px;
+  }
+
+  .tapWrap_res > li {
+    margin: 10px 0 0;
+  }
+
+  .tapWrap_res > li > a {
+    font-size: 15px;
+  }
+
+  .bookInfo_res {
+    padding: 0;
+  }
+
+  .selectWrap_res > .rentHotelWrap_res {
+    padding: 8px 0;
+  }
+
+  .rentHotelWrap_res > div {
+    width: 35%;
+    margin: 0;
+  }
+
+  .rentHotelWrap_res > .rentWrap {
+    margin-right: 40px;
+  }
+
+  .mBanner > li .bannerText {
+    top: 52%;
+  }
+
+  .bannerText > strong {
+    font-size: 22px;
+  }
+
+  .bannerText > p {
+    font-size: 16px;
+    padding: 10px 0 15px;
+  }
+
+  .bannerText > button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .d_title {
+    font-size: 12px;
+  }
+
+  .d_box {
+    font-size: 13px;
+  }
+
+  .d_box > strong {
+    font-size: 20px;
+  }
+
+  .flight_class_in {
+    font-size: 16px;
+  }
+
+  .num_select input {
+    height: 50px;
+  }
+
+  .num_select > button {
+    height: 50px;
+  }
+
+  .reserv_search_btn {
+    margin: 35px 22%;
+    width: 56%;
+    height: 16vw;
+  }
+
+  .newsWrap > ul > li .textBox {
+    top: 12px;
+    line-height: 1.4;
+  }
+
+  .sOffersList > li .sOfferMore {
+    padding: 8px;
+    line-height: 1.2;
+  }
+
+  .sOffersList > li .sOfferMore > span,
+  .sOffersList > li .sOfferMore > strong {
+    font-size: 20px;
+  }
+
+  .sOffersList > li .sOfferMore > strong {
+    letter-spacing: -0.08rem;
+  }
+
+  .promotion .textBox {
+    padding: 10px 0 15px;
+  }
+
+  .promotion .textBox a strong {
+    font-size: 13px;
+  }
+
+  .promotion .textBox a span {
+    font-size: 12px;
+  }
+
+  .storyBox .sBox button {
+    width: 46%;
+    margin: 0 27%;
+  }
+
+  .fMenuWrap > .fMenu > .fSub > li > a {
+    font-size: 10px;
+  }
+
+  .footBottom .visitKorea > .type1 img {
+    height: 30px;
+  }
+
+  .footBottom .visitKorea > .type2 img {
+    height: 40px;
+  }
+
+  .visitKorea > div > * {
+    padding-left: 2px;
+    letter-spacing: -0.08rem;
+  }
+}

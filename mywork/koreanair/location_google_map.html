@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="포트폴리오">
+  <meta property="og:url" content="https://yokky.kr/mywork/koreanair.html">
+  <meta property="og:image" content="./src/assets/img/common/share.png">
+  <meta property="og:description" content="대한항공">
+  <meta property="og:site_name" content="Yokky's portfolio">
+  <meta property="og:width" content="1200">
+  <meta property="og:height" content="630">
+  <link rel="short cut icon" type="image/x-icon" href="./src/assets/img/icon/favicon.ico">
+
+  <title>대한항공</title>
+
+  <!-- <script src="./src/js/include.js"></script> -->
+
+  <link rel="stylesheet" href="./src/css/common.css">
+  <link rel="stylesheet" href="./src/css/fontello.css">
+  <link rel="stylesheet" href="./src/css/sub.css">
+
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyC_457BczNnu8lKlAyUrQkPU4SkbtI5qv0&callback=initMap"
+    type="text/javascript" async defer></script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="center">
+      <div class="headTop clearFix">
+        <ul class="hTopLeft">
+          <li class="countLangWrap">
+            <a href="#">지역/언어</a>
+            <div class="countLangSelect clearFix">
+              <div class="countryWrap">
+                <p>국가/지역 선택</p>
+                <div class="cWrap">
+                  <button>대한민국</button>
+                  <ul class="country">
+                    <li><a href="#void">대한민국</a></li>
+                    <li><a href="#void">그리스</a></li>
+                    <li><a href="#void">네덜란드</a></li>
+                    <li><a href="#void">네팔</a></li>
+                    <li><a href="#void">노르웨이</a></li>
+                    <li><a href="#void">뉴질랜드</a></li>
+                    <li><a href="#void">독일</a></li>
+                    <li><a href="#void">러시아</a></li>
+                    <li><a href="#void">말레이시아</a></li>
+                    <li><a href="#void">멕시코</a></li>
+                    <!--                                        <li><a href="#void">몰디브</a></li>-->
+                    <li><a href="#void">몽골</a></li>
+                    <li><a href="#void">미국</a></li>
+                    <li><a href="#void">미얀마</a></li>
+                    <!--                                        <li><a href="#void">방글라데시</a></li>-->
+                    <li><a href="#void">베트남</a></li>
+                    <li><a href="#void">브라질</a></li>
+                    <!--                                        <li><a href="#void">브루네이</a></li>-->
+                    <li><a href="#void">사우디 아라비아</a></li>
+                    <!--                                        <li><a href="#void">스리랑카</a></li>-->
+                    <li><a href="#void">스위스</a></li>
+                    <li><a href="#void">스페인</a></li>
+                    <!--                                        <li><a href="#void">시리아</a></li>-->
+                    <li><a href="#void">싱가포르</a></li>
+                    <!--                                        <li><a href="#void">아랍 에미리트</a></li>-->
+                    <li><a href="#void">영국</a></li>
+                    <!--                                        <li><a href="#void">오만</a></li>-->
+                    <li><a href="#void">오스트리아</a></li>
+                    <!--                                        <li><a href="#void">요르단</a></li>-->
+                    <li><a href="#void">우즈베키스탄</a></li>
+                    <!--                                        <li><a href="#void">이스라엘</a></li>-->
+                    <li><a href="#void">이탈리아</a></li>
+                    <li><a href="#void">인도</a></li>
+                    <!--                                        <li><a href="#void">인도네시아</a></li>-->
+                    <li><a href="#void">일본</a></li>
+                    <li><a href="#void">중국</a></li>
+                    <li><a href="#void">중국 홍콩</a></li>
+                    <li><a href="#void">체코</a></li>
+                    <li><a href="#void">카타르</a></li>
+                    <!--                                        <li><a href="#void">캄보디아</a></li>-->
+                    <li><a href="#void">캐나다</a></li>
+                    <!--                                        <li><a href="#void">쿠웨이트</a></li>-->
+                    <li><a href="#void">크로아티아</a></li>
+                    <li><a href="#void">태국</a></li>
+                    <li><a href="#void">터키</a></li>
+                    <!--                                        <li><a href="#void">파키스탄</a></li>-->
+                    <li><a href="#void">프랑스</a></li>
+                    <li><a href="#void">필리핀</a></li>
+                    <li><a href="#void">헝가리</a></li>
+                    <li><a href="#void">호주</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="langWrap">
+                <p>언어 선택</p>
+                <div class="lWrap">
+                  <button>한국어</button>
+                  <ul class="language">
+                    <li><a href="#void">한국어</a></li>
+                    <li><a href="#void#">English</a></li>
+                  </ul>
+                </div>
+              </div>
+              <button id="changeLocal">선택</button>
+              <button class="cSelect-close close">+</button>
+            </div>
+          </li>
+          <li class="countResult"><span>대한민국</span></li>
+          <li class="langResult"><span>한국어</span></li>
+          <li><a href="#void">English</a></li>
+        </ul>
+
+        <div class="hTopRight">
+          <ul class="memberWrap">
+            <li><a href="#void">로그인</a></li>
+            <li><a href="#void">회원가입</a></li>
+            <li><a href="#void">나의 예약</a></li>
+            <li><a href="#void">챗봇 바로가기</a></li>
+            <li><a href="./location_google_map.html">MAP</a></li>
+            <li class="searchWrap">
+              <a href="#void">검색<i class="icon-search"></i></a>
+              <div class="search">
+                <input type="search" id="search" name="search">
+                <input type="submit" value="검색">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="headBottom clearFix">
+        <h1 class="logo"><a href="./index.html"><img src="./images/logo_Wb.png" alt="korean air logo"></a></h1>
+        <nav>
+          <ul id="nav">
+            <!--                        li*4>a[href="#void"]+ul.subWrap>li*7>a[href="#void"]+ul.subList>li*7>a[href="#void"]-->
+            <li class="nav_ticket">
+              <a href="#void">항공권 예매</a>
+              <div class="sub">
+                <ul class="subWrap">
+                  <li>
+                    <a href="#void">항공권 예매</a>
+                    <ul class="subList">
+                      <li><a href="#void">일반 / 보너스 예매</a></li>
+                      <li><a href="#void">조회/변경/환불</a></li>
+                      <li><a href="#void">보너스 좌석 상황 보기</a></li>
+                      <li><a href="#void">보너스 알리미</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">항공권 선물하기</a>
+                    <ul class="subList">
+                      <li><a href="#void">국내선 선물하기</a></li>
+                      <li><a href="#void">국제선 선물하기</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">항공편 조회</a>
+                    <ul class="subList">
+                      <li><a href="#void">출도착 조회</a></li>
+                      <li><a href="#void">스케줄 조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">운항 노선도</a>
+                  </li>
+                  <li>
+                    <a href="#void">이용 안내</a>
+                    <ul class="subList">
+                      <li><a href="#void">항공권 변경 및 환불 안내</a></li>
+                      <li><a href="#void">국내선 운임 안내</a></li>
+                      <li><a href="#void">환승전용내항기 예매</a></li>
+                      <li><a href="#void">스카이팀 세계일주 운임</a></li>
+                      <li><a href="#void">공동운항 항공사</a></li>
+                      <li><a href="#void">구매 가이드</a></li>
+                    </ul>
+                  </li>
+                  <!--                                    <button class="subWarp-close close">닫기</button>-->
+                </ul>
+              </div>
+            </li>
+            <li class="nav_skypass">
+              <a href="#void">스카이패스</a>
+              <div class="sub">
+                <ul class="subWrap">
+                  <li>
+                    <a href="#void">회원 혜택</a>
+                    <ul class="subList">
+                      <li><a href="#void">스카이패스 회원 혜택</a></li>
+                      <li><a href="#void">스카이팀 공동 혜택</a></li>
+                      <li><a href="#void">가족 마일리지 제도</a></li>
+                      <li><a href="#void">제휴사 할인 혜택</a></li>
+                      <li><a href="#void">상용기업우대제도</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">마일리지 적립</a>
+                    <ul class="subList">
+                      <li><a href="#void">대한항공</a></li>
+                      <li><a href="#void">신용카드</a></li>
+                      <li><a href="#void">제휴 항공사</a></li>
+                      <li><a href="#void">호텔</a></li>
+                      <li><a href="#void">렌터카</a></li>
+                      <li><a href="#void">기타 제휴사</a></li>
+                      <li><a href="#void">탑승 후 마일리지 적립</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">항공 보너스 사용</a>
+                    <ul class="subList">
+                      <li><a href="#void">보너스 항공권</a></li>
+                      <li><a href="#void">좌석승급 보너스</a></li>
+                      <li><a href="#void">세계일주 보너스</a></li>
+                      <li><a href="#void">KAL 라운지 보너스</a></li>
+                      <li><a href="#void">초과 수하물 보너스</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">비항공 보너스 사용</a>
+                    <ul class="subList">
+                      <li><a href="#void">로고 상품</a></li>
+                      <li><a href="#void">코트룸 보너스</a></li>
+                      <li><a href="#void">마일로 호텔로</a></li>
+                      <li><a href="#void">마일로 리무진</a></li>
+                      <li><a href="#void">마일리지 투어</a></li>
+                      <li><a href="#void">문화 체험 상품</a></li>
+                    </ul>
+                  </li>
+                  <!--                                    <button class="subWarp-close close">닫기</button>-->
+                </ul>
+              </div>
+            </li>
+            <li class="nav_service">
+              <a href="#void">서비스 안내</a>
+              <div class="sub">
+                <ul class="subWrap">
+                  <li>
+                    <a href="#void">탑승수속</a>
+                    <ul class="subList">
+                      <li><a href="#void">탑승수속</a></li>
+                      <li><a href="#void">연결 탑승수속</a></li>
+                      <li><a href="#void">사전 좌석배정</a></li>
+                      <li><a href="#void">키오스크</a></li>
+                      <li><a href="#void">모바일/웹 체크인</a></li>
+                      <li><a href="#void">출입국 규정 조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">수하물</a>
+                    <ul class="subList">
+                      <li><a href="#void">운송 가능 수하물</a></li>
+                      <li><a href="#void">운송 제한 품목</a></li>
+                      <li><a href="#void">수하물 연결 수속</a></li>
+                      <li><a href="#void">분실/지연/파손</a></li>
+                      <li><a href="#void">기내 유실물 찾기</a></li>
+                      <li><a href="#void">수하물 준비방법</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">도움이 필요한 고객</a>
+                    <ul class="subList">
+                      <li><a href="#void">한가족 서비스</a></li>
+                      <li><a href="#void">비동반 소아 서비스</a></li>
+                      <li><a href="#void">몸이 불편하신 고객</a></li>
+                      <li><a href="#void">임신부 고객</a></li>
+                      <li><a href="#void">유아동반 고객</a></li>
+                      <li><a href="#void">반려동물과 여행하기</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">공항 및 환승 정보</a>
+                    <ul class="subList">
+                      <li><a href="#void">인천공항</a></li>
+                      <li><a href="#void">도심공항</a></li>
+                      <li><a href="#void">취항지 공항정보</a></li>
+                      <li><a href="#void">KAL 라운지</a></li>
+                      <li><a href="#void">KAL 리무진</a></li>
+                      <li><a href="#void">Rail &amp; Fly</a></li>
+                      <li><a href="#void">SkyPriority</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">기내 및 클래스별 서비스</a>
+                    <ul class="subList">
+                      <li><a href="#void">일등석</a></li>
+                      <li><a href="#void">프레스티지석</a></li>
+                      <li><a href="#void">일반석</a></li>
+                      <li><a href="#void">기내 서비스 순서</a></li>
+                      <li><a href="#void">기내 오락</a></li>
+                      <li><a href="#void">기내식 및 특별기내식</a></li>
+                      <li><a href="#void">기내 여행 가이드</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">항공기 안내</a>
+                    <a href="#void">기내면세품</a>
+                  </li>
+                  <!--
+                                    <li>
+                                        <a href="#void">기내면세품</a>
+                                    </li>
+-->
+                  <!--                                    <button class="subWarp-close close">닫기</button>-->
+                </ul>
+              </div>
+            </li>
+            <li class="nav_promotion">
+              <a href="#void">프로모션 / 여행상품</a>
+              <div class="sub">
+                <ul class="subWrap">
+                  <li>
+                    <a href="#void">이벤트</a>
+                    <a href="#void">특가 항공권</a>
+                  </li>
+                  <li>
+                    <a href="#void">엑설런트 보딩패스</a>
+                    <a href="#void">엑설런트 트랜짓 프로그램</a>
+                  </li>
+                  <li>
+                    <a href="#void">전용기 서비스</a>
+                    <ul class="subList">
+                      <li><a href="#void">서비스 개요</a></li>
+                      <li><a href="#void">상품 안내</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#void">여행상품</a>
+                    <ul class="subList">
+                      <li><a href="#void">해외여행상품</a></li>
+                      <li><a href="#void">호텔</a></li>
+                      <li><a href="#void">렌터카</a></li>
+                      <li><a href="#void">해외여행자 보험</a></li>
+                    </ul>
+                  </li>
+                  <!--
+                                    <li>
+                                        <a href="#void">특가 항공권</a>
+                                    </li>
+                                    <li>
+                                        <a href="#void">엑설런트 트랜짓 프로그램</a>
+                                    </li>
+-->
+                  <!--                                    <button class="subWarp-close close">닫기</button>-->
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- #container -->
+  <section id="container">
+    <h2 class="blind">오시는 길</h2>
+    <div class="googleMap" id="map_api">
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          const KoreanAir = {
+            lat: 37.5496144,
+            lng: 126.8123165
+          };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: KoreanAir,
+          });
+          const contentString =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Korean Air</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>대한항공.</b><br>서울특별시 강서구 발산1동 하늘길 260<br>항공업계를 선도하는 글로벌 항공사로서, 대한항공은 신규 노선 개척 및 해외영업 강화를 바탕으로<br>글로벌 네트워크를 지속적으로 확대하고 있으며, 이를 통해 전세계에 대한민국의 위상을 높이는데<br>핵심적인 역할을 수행해 왔습니다.</p>" +
+            '<a href="https://www.koreanair.com">' +
+            "https://www.koreanair.com/korea/ko.html</a> " +
+            "<br>+8215882001</p>" +
+            "</div>" +
+            "</div>";
+          const infowindow = new google.maps.InfoWindow({
+            content: contentString,
+          });
+          const marker = new google.maps.Marker({
+            position: KoreanAir,
+            map,
+            title: "Korean Air (대한항공)",
+          });
+          marker.addListener("click", () => {
+            infowindow.open(map, marker);
+          });
+        }
+      </script>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footContents">
+      <div class="center">
+        <div class="footTop">
+          <ul class="fMenuWrap clearFix">
+            <li class="fMenu">
+              <p>회사소개</p>
+              <ul class="fSub">
+                <li><a href="#void">대한항공에 대하여</a></li>
+                <li><a href="#void">기업지배구조</a></li>
+                <li><a href="#void">투자정보</a></li>
+                <li><a href="#void">지속가능경영</a></li>
+                <li><a href="#void">뉴스룸 새 창 열기</a></li>
+                <li><a href="#void">공지사항</a></li>
+              </ul>
+            </li>
+            <li class="fMenu">
+              <p>약관 및 규정</p>
+              <ul class="fSub">
+                <li><a href="#void">개인정보 처리방침 새 창 열기</a></li>
+                <li><a href="#void">이용약관</a></li>
+                <li><a href="#void">운송약관</a></li>
+                <li><a href="#void">소비자 안전 관련 정보 공개</a></li>
+                <li><a href="#void">운임 및 서비스 요금표</a></li>
+              </ul>
+            </li>
+            <li class="fMenu">
+              <p>기타 안내</p>
+              <ul class="fSub">
+                <li><a href="#void">고객 안내 서비스</a></li>
+                <li><a href="#void">항공교통이용자 서비스 계획</a></li>
+                <li><a href="#void">항공교통이용자 피해구제 새 창 열기</a></li>
+                <li><a href="#void">관련 사이트</a></li>
+                <li><a href="#void">사이트맵</a></li>
+              </ul>
+            </li>
+            <li class="fMenu">
+              <p>고객지원</p>
+              <ul class="fSub">
+                <li><a href="#void">지점 연락처</a></li>
+                <li><a href="#void">고객의 말씀</a></li>
+                <li><a href="#void">FAQ</a></li>
+                <li><a href="#void">e 서식함</a></li>
+                <li><a href="#void">챗봇 상담 서비스 새 창 열기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footBottom clearFix">
+          <div class="addressWrap">
+            <address>
+              <p>(주) 대한항공 | 대표이사 : 우기홍 외 1명 | 주소 : 서울특별시 강서구 하늘길 260 | 대표전화 : 1588-2001 / 02-2656-2001</p>
+              <p>사업자 등록번호 : 110-81-14794 | 통신판매업신고 : 강서 제 16-3010 | 개인정보보호책임자 : 여객사업본부장 이진호 전무</p>
+              <strong>© 1997-2020 KOREAN AIR</strong>
+            </address>
+          </div>
+
+          <div class="visitKorea">
+            <div class="type1">
+              <a href="#void"><img src="images/isms-icon.png" alt="isms icon"></a>
+              <span>
+                [인증범위] : 인터넷 예약, 발권 시스템
+                <br>
+                [유효기간] : 2019.12.26 ~ 2022.12.25
+              </span>
+            </div>
+            <div class="type2">
+              <a href="#void"><img src="images/tripadvisor-icon.png" alt="tripadvisor icon"></a>
+              <span>
+                Top3 World's Best Airlines
+                <br>
+                Best Airline in Korea
+              </span>
+            </div>
+          </div>
+        </div>
+        <h2 class="foootLogo">
+          <img src="./images/top-nav-koreanair.png" alt="koran air foot logo">
+        </h2>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!--  JS  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap"
+    async defer></script>
+
+</body>
+
+</html>
