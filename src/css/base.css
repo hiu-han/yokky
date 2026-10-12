@@ -1,10 +1,5 @@
 :root {
   /* COLOR */
-  /* --cl-primary: #fff100; */
-  /* --cl-primary: #efd234; */
-  /* --cl-primary: #fda228; */
-  /* --cl-primary: #fff854; */
-  /* --cl-primary: #ffdb58; */
   --cl-primary: #ffd700;
   --cl-ft-primary: #2a1f0e;
   --cl-ft-light: #c0c0c0;
@@ -13,7 +8,7 @@
   --ft-fs-r: 'FlightSans-Regular';
   --ft-fs-b: 'FlightSans-Bold';
   --ft-agr-b: 'SBAggroB';
-  --ft-agr-M: 'SBAggroM';
+  --ft-agr-m: 'SBAggroM';
   --ft-agr-l: 'SBAggroL';
   --ft-rb: 'RIDIBatang';
 
@@ -49,7 +44,8 @@
   vertical-align: middle;
 }
 .slogan__wrap .typing {
-  font-family: var(--ft-agr-b);
+  /* font-family: var(--ft-agr-b); */
+  font-family: var(--ft-agr-m);
   font-size: 74px;
   color: var(--cl-ft-primary);
   line-height: 1.2;

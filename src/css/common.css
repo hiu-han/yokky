@@ -25,3 +25,4 @@
   animation: blink-effect 1200ms step-end infinite;
   /* step-end 또는 step(1)을 넣지 않으면 transition이 일어난다*/
 }
+
