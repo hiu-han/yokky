@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="buzz Toktok">
+  <meta property="og:url" content="http://www.buzztoktok.co.kr">
+  <meta property="og:description" content="Buzz Toktok">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./src/img/icon/favicon.png">
+  <title>buzz TOKTOK</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/css/style.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header" class="intro-page" style="display:none;">
+
+    </div>
+
+    <div id="main" class="intro-page">
+      <section class="intro-section">
+        <div class="section-inner">
+          <div class="section-content">
+            <h1 class="logo"><a href="./status.html"><img src="./src/img/common/logo.png" alt="buzzON logo"></a></h1>
+            <div class="intro-search">
+              <input type="text" id="introSearch" placeholder="검색어를 입력하세요">
+              <!-- <label for="introSearch">검색어를 입력하세요</label> -->
+              <p class="search-btn"><a href="./status.html"></a></p>
+            </div>
+
+            <!-- 로그인 후 addClass .now-on으로 활성화 -->
+            <div class="intro-login">
+              <button id="introLogin" class="login-btn">로그인</button>
+              <button id="introLogout" class="logout-btn now-on"><a href="./index.html">로그아웃</a></button>
+            </div>
+
+            <div class="user-area now-on">
+              <a href="./userPreset.html" class="link-area">
+                <p class="user-profile"></p>
+                <span class="user-name">야무진진눈깨비</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-inner">
+          <article class="content-article article-keyword-news">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3>뜨고 있는 뉴스 키워드</h3>
+                <span class="title-date">2022.04.25 08:00 기준</span>
+              </div>
+              <div class="article-content">
+                <div id="idxTrdSwpContainer" class="article-rank-wrap index-trend-rank swiper-container">
+                  <div id="idxTrdSwpPagination" class="swiper-pagination"></div>
+                  <ul class="trend-rank-wrap swiper-wrapper">
+                    <li class="trend-rank-list politics-list swiper-slide">
+                      <h4>정치</h4>
+                      <ul class="rank-list">
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1위</p>
+                          <span class="item-keyword">소득세</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2위</p>
+                          <span class="item-keyword">갈등</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3위</p>
+                          <span class="item-keyword">기본소득</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4위</p>
+                          <span class="item-keyword">대선</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5위</p>
+                          <span class="item-keyword">공천</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6위</p>
+                          <span class="item-keyword">카카오</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7위</p>
+                          <span class="item-keyword">SKT</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8위</p>
+                          <span class="item-keyword">메타버스</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9위</p>
+                          <span class="item-keyword">디지털자산</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10위</p>
+                          <span class="item-keyword">NFT</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="trend-rank-list economy-list swiper-slide">
+                      <h4>경제</h4>
+                      <ul class="rank-list">
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1위</p>
+                          <span class="item-keyword">소득세</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2위</p>
+                          <span class="item-keyword">갈등</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3위</p>
+                          <span class="item-keyword">기본소득</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4위</p>
+                          <span class="item-keyword">대선</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5위</p>
+                          <span class="item-keyword">공천</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6위</p>
+                          <span class="item-keyword">카카오</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7위</p>
+                          <span class="item-keyword">SKT</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8위</p>
+                          <span class="item-keyword">메타버스</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9위</p>
+                          <span class="item-keyword">디지털자산</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10위</p>
+                          <span class="item-keyword">NFT</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="trend-rank-list society-list swiper-slide">
+                      <h4>사회</h4>
+                      <ul class="rank-list">
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1위</p>
+                          <span class="item-keyword">소득세</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2위</p>
+                          <span class="item-keyword">갈등</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3위</p>
+                          <span class="item-keyword">기본소득</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4위</p>
+                          <span class="item-keyword">대선</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5위</p>
+                          <span class="item-keyword">공천</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6위</p>
+                          <span class="item-keyword">카카오</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7위</p>
+                          <span class="item-keyword">SKT</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8위</p>
+                          <span class="item-keyword">메타버스</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9위</p>
+                          <span class="item-keyword">디지털자산</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10위</p>
+                          <span class="item-keyword">NFT</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="trend-rank-list science-list swiper-slide">
+                      <h4>IT·과학</h4>
+                      <ul class="rank-list">
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1위</p>
+                          <span class="item-keyword">소득세</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2위</p>
+                          <span class="item-keyword">갈등</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3위</p>
+                          <span class="item-keyword">기본소득</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4위</p>
+                          <span class="item-keyword">대선</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5위</p>
+                          <span class="item-keyword">공천</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6위</p>
+                          <span class="item-keyword">카카오</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7위</p>
+                          <span class="item-keyword">SKT</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8위</p>
+                          <span class="item-keyword">메타버스</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9위</p>
+                          <span class="item-keyword">디지털자산</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10위</p>
+                          <span class="item-keyword">NFT</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="trend-rank-list entertainment-list swiper-slide">
+                      <h4>연예</h4>
+                      <ul class="rank-list">
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1위</p>
+                          <span class="item-keyword">소득세</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2위</p>
+                          <span class="item-keyword">갈등</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3위</p>
+                          <span class="item-keyword">기본소득</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4위</p>
+                          <span class="item-keyword">대선</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5위</p>
+                          <span class="item-keyword">공천</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6위</p>
+                          <span class="item-keyword">카카오</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7위</p>
+                          <span class="item-keyword">SKT</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8위</p>
+                          <span class="item-keyword">메타버스</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9위</p>
+                          <span class="item-keyword">디지털자산</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10위</p>
+                          <span class="item-keyword">NFT</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="slide-btn-wrap">
+                    <p id="idxtrdPrev" class="slide-btn slide-left swiper-button-prev"></p>
+                    <p id="idxtrdNext" class="slide-btn slide-right swiper-button-next"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-inner">
+          <article class="content-article article-youtube-hot width-3-2">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3>유튜브 인기 동영상</h3>
+                <span class="title-more"><a href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl"
+                    target="_blank">더 보기</a></span>
+              </div>
+              <div class="article-content">
+                <div id="youtHotSwpContainer" class="article-list-wrap swiper-container">
+                  <div class="thumb-list swiper-wrapper">
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_001.jpg" alt="버즈메트릭스 22년 02월 뉴스"></div>
+                        <p class="thumb-title">[애쉬스 게임 리뷰] 짱구는 못말려! 나와 박사님의 여름방학 ~끝나지 않는 7일간의 여행~ 전격 리뷰!!!</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_002.jpg" alt="버즈메트릭스 21년 12월 뉴스"></div>
+                        <p class="thumb-title">내가 더이상 통신사에서 폰을 안사는 이유. 훨씬 저렴한 자급제+알뜰폰 조합 장단점?</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_003.jpg" alt="버즈메트릭스 21년 11월 뉴스"></div>
+                        <p class="thumb-title">『별의 커비 디스커버리』 소개 영상</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_001.jpg" alt="버즈메트릭스 22년 02월 뉴스"></div>
+                        <p class="thumb-title">[애쉬스 게임 리뷰] 짱구는 못말려! 나와 박사님의 여름방학 ~끝나지 않는 7일간의 여행~ 전격 리뷰!!!</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_002.jpg" alt="버즈메트릭스 21년 12월 뉴스"></div>
+                        <p class="thumb-title">내가 더이상 통신사에서 폰을 안사는 이유. 훨씬 저렴한 자급제+알뜰폰 조합 장단점?</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_003.jpg" alt="버즈메트릭스 21년 11월 뉴스"></div>
+                        <p class="thumb-title">『별의 커비 디스커버리』 소개 영상</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_001.jpg" alt="버즈메트릭스 22년 02월 뉴스"></div>
+                        <p class="thumb-title">[애쉬스 게임 리뷰] 짱구는 못말려! 나와 박사님의 여름방학 ~끝나지 않는 7일간의 여행~ 전격 리뷰!!!</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_002.jpg" alt="버즈메트릭스 21년 12월 뉴스"></div>
+                        <p class="thumb-title">내가 더이상 통신사에서 폰을 안사는 이유. 훨씬 저렴한 자급제+알뜰폰 조합 장단점?</p>
+                      </a>
+                    </div>
+                    <div class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/youtube_003.jpg" alt="버즈메트릭스 21년 11월 뉴스"></div>
+                        <p class="thumb-title">『별의 커비 디스커버리』 소개 영상</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-article article-buzz-news width-3-1">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3>버즈메트릭스 뉴스레터</h3>
+                <span class="title-more"><a href="http://www.buzzmetrix.co.kr/wp/?page_id=73" target="_blank">더
+                    보기</a></span>
+              </div>
+              <div class="article-content">
+                <div id="buzzNewsSwpContainer" class="article-list-wrap swiper-container">
+                  <ul class="thumb-list swiper-wrapper">
+                    <li class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/buzz_2202.png" alt="버즈메트릭스 22년 02월 뉴스"></div>
+                        <p class="thumb-title">2022년 2월호 가상인간</p>
+                      </a>
+                    </li>
+                    <li class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/buzz_2112.png" alt="버즈메트릭스 21년 12월 뉴스"></div>
+                        <p class="thumb-title">2021년 12월호 밀키트</p>
+                      </a>
+                    </li>
+                    <li class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/buzz_2111.png" alt="버즈메트릭스 21년 11월 뉴스"></div>
+                        <p class="thumb-title">2022년 11월호 숏폼</p>
+                      </a>
+                    </li>
+                    <li class="thumb-item swiper-slide">
+                      <a href="#" class="link-area" target="_blank">
+                        <div class="thumb-img"><img src="./src/img/main/buzz_2111.png" alt="버즈메트릭스 21년 11월 뉴스"></div>
+                        <p class="thumb-title">2022년 10월호 숏폼</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- <div class="slide-btn-wrap">
+                    <p id="buzzNewsPrev" class="slide-btn slide-left swiper-button-prev"></p>
+                    <p id="buzzNewsNext" class="slide-btn slide-right swiper-button-next"></p>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div id="footer" class="intro-page">
+
+    </div>
+  </div>
+
+  <script src='./src/js/jquery-3.5.1.js'></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/lib.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+<script>
+
+  /* 메트릭스코퍼레이션에서 콘텐츠 수집하면서 생성된 style 지우기 테스트용 */
+
+  const p = 'p',
+    span = 'span',
+    b = 'b',
+    blockquote = 'blockquote',
+    div = 'div',
+    a = 'a';
+
+  function removeStyle(...args) {
+    for (let i = 0; i < args.length; i++) {
+      $(`.news_cell_contents ${args[i]}`).removeAttr('style lang');
+    };
+  };
+
+  //removeStyle(p, span, b, blockquote, div, a);
+
+
+</script>
+
+</html>

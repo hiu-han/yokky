@@ -1,0 +1,214 @@
+@charset "utf-8";
+@import url('./reset.css');
+@import url('./font.css');
+@import url('./common.css');
+@import url('./layout.css');
+@import url('./modal.css');
+@import url('./lib.css');
+@import url('./chart.css');
+@import url('./main.css');
+
+/** className 표기
+.mentioned-keyword {
+  .mentioned-keyword__wrap {
+    .mentioned-keyword__list {
+      .mentioned-keyword__item {
+        .mentioned-keyword__num {}
+        .mentioned-keyword__text {
+          .mentioned-keyword__date.date--start {}
+          .mentioned-keyword__date.date--end {}
+        }
+        .mentioned-keyword__icon.icon--cat {}
+        .mentioned-keyword__icon.icon--dog {}
+        .mentioned-keyword__icon.icon--lion {}
+      }
+    }
+  }
+}
+**/
+
+/** ID 표기
+#mentKwrdDate
+#mentKwrdText
+**/
+
+/***------------------ common.css  START ------------------***/
+/*** SAMPLE ***/
+/*** COLOR TEST ***/
+/*** COMMON ***/
+/** TEXT STYLE **/
+/** CHART COLOR **/
+/** BTN **/
+/** BTN -> icon-btn **/
+/** INPUT **/
+/* INPUT -> BTN & INPUT 박스 */
+/* INPUT -> 검색어 박스 */
+/* 위에 정리한 'BTN & INPUT 박스'와 하나로 통일해야할지 선택 필요함! */
+/* INPUT -> CHECKBOX 옵션 on off 버튼 랩 */
+/* INPUT -> SELECT */
+/* INPUT -> SELECT (CUSTOM) */
+/* INPUT -> RADIO 옵션 on off 버튼 랩 */
+/* SCROLL BOX */
+/* TABLE WRAP */
+/***------------------ common.css  END ------------------***/
+
+/***------------------ layout.css  START ------------------***/
+/*** HAEDER ***/
+/** HEADER -> SEARCH AREA **/
+/** HEADER -> DETAIL SLIDER **/
+/* HEADER -> DETAIL SLIDER -> detailChannelArea */
+/* HEADER -> DETAIL SLIDER -> searchArea (기간설정) */
+/* HEADER -> DETAIL SLIDER -> detailKeywordArea */
+/* HEADER -> DETAIL SLIDER -> detailBtnArea */
+
+/*** FOOTER ***/
+
+/*** ASIDE ***/
+/** ASIDE -> GO TOP **/
+/** ASIDE -> SWITCHING ACOUNT **/
+/** ASIDE -> LOADING ANIMATION **/
+/** ASIDE -> MODAL **/
+/* ASIDE -> MODAL -> 콘텐츠 원문 리스트 모달 */
+/* ASIDE -> MODAL -> 콘텐츠 원문 내용 모달 */
+/* ASIDE -> MODAL -> 로그인 모달 */
+/* ASIDE -> MODAL -> 검색 설정 모달 */
+
+/*** HEADER - 1400px ***/
+/** HEADER -> SEARCH AREA - 1400px **/
+
+/*** HEADER - 1024px ***/
+/** HEADER -> DETAIL SLIDER - 1024px **/
+/* HEADER -> DETAIL SLIDER -> detailChannelArea - 1024px */
+/* HEADER -> DETAIL SLIDER -> searchArea (기간설정) - 1024px */
+/* HEADER -> DETAIL SLIDER -> detailKeywordArea - 1024px */
+/* HEADER -> DETAIL SLIDER -> detailBtnArea - 1024px */
+
+/*** FOOTER - 1024px ***/
+
+/*** ASIDE - 1024px ***/
+/** ASIDE -> MODAL - 1024px **/
+/* ASIDE -> MODAL -> 콘텐츠 원문 리스트 모달 - 1024px */
+/* ASIDE -> MODAL -> 콘텐츠 원문 내용 모달 - 1024px */
+
+/*** HEADER - 768px ***/
+
+/*** FOOTER - 768px ***/
+/*** ASIDE - 768px ***/
+/** ASIDE -> MODAL - 768px **/
+/* ASIDE -> MODAL -> 콘텐츠 원문 내용 모달 - 768px */
+
+/*** HEADER - 480px ***/
+
+/*** ASIDE - 480px ***/
+/** ASIDE -> MODAL - 480px **/
+/* ASIDE -> MODAL -> 콘텐츠 원문 리스트 모달 - 480px */
+/* ASIDE -> MODAL -> 콘텐츠 원문 내용 모달 - 480px */
+
+/*** FOOTER - 480px ***/
+
+/*** ASIDE - 480px ***/
+/** ASIDE -> GO TOP - 480px **/
+/***------------------ layout.css  END ------------------***/
+
+/***------------------ main.css  START ------------------***/
+/*** COMMON ***/
+/** COMMON -> BODY **/
+/** COMMON -> SECTION ARTICLE **/
+/** COMMON -> PAGE TAP **/
+/** COMMON -> TABLE **/
+/* COMMON -> SECTION ARTICLE -> article-content-top */
+/* COMMON -> SECTION ARTICLE -> TREND page 내 차트 아이템 구분 색상 */
+/* COMMON -> SECTION ARTICLE -> 차트 기간 선택 버튼 & 차트 형식 선택 버튼 */
+/* COMMON -> SECTION ARTICLE -> 키워드 랭크 랩 (단일 랭크) */
+/* COMMON -> SECTION ARTICLE -> 키워드 랭크 트랜드 랩 (트랜드 랭크) */
+/* COMMON -> SECTION ARTICLE -> 좌우 슬라이드 버튼 */
+
+/*** MAIN ***/
+/** MAIN -> INTRO PAGE **/
+/* MAIN -> INTRO PAGE -> Login section */
+/* MAIN -> INTRO PAGE > Contents section */
+
+/*** CONTENT ***/
+/** CONTENT -> STATUS PAGE **/
+/* CONTENT -> STATUS PAGE -> Engagement article */
+/* CONTENT -> STATUS PAGE -> ChannelDetails article */
+
+/** CONTENT -> TREND-PAGE **/
+/* CONTENT -> TREND-PAGE -> Association article */
+
+/** CONTENT -> CONTENTS-PAGE **/
+/* CONTENT -> CONTENTS-PAGE -> 언급량 article */
+/* CONTENT -> CONTENTS-PAGE -> Hottest articles (simple) */
+/* CONTENT -> CONTENTS-PAGE -> Hottest articles (wide) */
+
+/*** USER PRESET ***/
+
+/*** COMMON - 1200px ***/
+/** COMMON -> TABLE - 1200px **/
+
+/*** COMMON - 768px ***/
+/** COMMON -> BODY - 768px **/
+/** COMMON -> PAGE TAP - 768px **/
+/** COMMON -> TABLE - 768px **/
+/* COMMON -> SECTION ARTICLE -> article-content-top - 768px */
+
+/*** MAIN - 768px ***/
+/** MAIN -> INTRO PAGE - 768px **/
+
+/*** CONTENT - 768px ***/
+/** CONTENT -> STATUS PAGE - 768px **/
+/* CONTENT -> STATUS PAGE -> ChannelDetails article - 768px */
+/* CONTENT -> STATUS PAGE -> Sentiment article - 768px */
+/* CONTENT -> STATUS PAGE -> SentimentByChannel article - 768px */
+/* CONTENT -> STATUS PAGE -> KeywordAssociation & Ranking articles - 768px */
+
+/* CONTENT -> TREND PAGE - 768px */
+
+/** CONTENT -> CONTENTS-PAGE -768px **/
+/* CONTENT -> CONTENTS-PAGE -> Hottest articles (simple) -768px */
+
+/*** MAIN - 680px ***/
+/** MAIN -> INTRO PAGE - 680px **/
+/* MAIN -> INTRO PAGE > Contents section - 680px */
+
+/*** CONTENT - 680px ***/
+/** CONTENT -> STATUS PAGE - 680px **/
+/* CONTENT -> STATUS PAGE -> Engagement article - 680px */
+
+/*** COMMON - 480px ***/
+/** COMMON -> BODY - 480px **/
+/** COMMON -> SECTION ARTICLE - 480px **/
+/** COMMON -> PAGE TAP - 480px **/
+/** COMMON -> TABLE - 480px **/
+
+/*** MAIN - 480px ***/
+/** MAIN -> INTRO PAGE - 480px **/
+/* MAIN -> INTRO PAGE -> Login section - 480px */
+/* MAIN -> INTRO PAGE > Contents section - 480px */
+
+/*** CONTENT - 480px ***/
+/** CONTENT -> STATUS PAGE - 480px **/
+/* CONTENT -> STATUS PAGE -> Engagement article - 480px */
+/* CONTENT -> STATUS PAGE -> ChannelDetails article */
+/* CONTENT -> STATUS PAGE -> Sentiment article - 480px */
+/* CONTENT -> STATUS PAGE -> SentimentByChannel article - 480px */
+/* CONTENT -> STATUS PAGE -> Keyword articles - 480px */
+
+/** CONTENT -> TREND PAGE - 480px **/
+/* CONTENT -> TREND-PAGE -> Association article - 480px */
+/* CONTENT -> TREND-PAGE -> KeywordTrend article - 480px */
+
+/** CONTENT -> CONTENTS PAGE - 480px **/
+/* CONTENT -> CONTENTS-PAGE -> Hottest articles (simple) - 480px */
+/* CONTENT -> CONTENTS-PAGE -> HottestS articles (wide) - 480px */
+
+/*** USER PRESET - 480px ***/
+/***------------------ main.css  END ------------------***/
+
+/***------------------ modal.css  START ------------------***/
+/*** COMMON ***/
+
+/*** MODAL ***/
+/** MODAL -> CONTENT TABLE **/
+/** MODAL -> RESULT DATA **/
+/***------------------ modal.css  END ------------------***/

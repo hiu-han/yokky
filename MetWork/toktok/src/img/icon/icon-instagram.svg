@@ -1,0 +1,32 @@
+<svg id="그룹_654" data-name="그룹 654" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.587" height="38.588" viewBox="0 0 38.587 38.588">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="패스_499" data-name="패스 499" d="M7.926,0A7.927,7.927,0,0,0,0,7.928V30.662a7.926,7.926,0,0,0,7.926,7.926H30.661a7.927,7.927,0,0,0,7.926-7.926V7.928A7.928,7.928,0,0,0,30.661,0Z" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.293" cy="1.077" r="1.325" gradientTransform="matrix(1, 0, 0, -1, 0, 2)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffd87a"/>
+      <stop offset="0.097" stop-color="#ffd87a"/>
+      <stop offset="0.154" stop-color="#fccb76"/>
+      <stop offset="0.26" stop-color="#f4aa6d"/>
+      <stop offset="0.4" stop-color="#e7755e"/>
+      <stop offset="0.449" stop-color="#e36159"/>
+      <stop offset="0.679" stop-color="#cb3593"/>
+      <stop offset="1" stop-color="#6568ae"/>
+    </radialGradient>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_496" data-name="사각형 496" width="38.587" height="38.588" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_651" data-name="그룹 651">
+    <g id="그룹_650" data-name="그룹 650" clip-path="url(#clip-path)">
+      <rect id="사각형_495" data-name="사각형 495" width="38.587" height="38.588" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+    </g>
+  </g>
+  <g id="그룹_653" data-name="그룹 653">
+    <g id="그룹_652" data-name="그룹 652" clip-path="url(#clip-path-2)">
+      <path id="패스_500" data-name="패스 500" d="M34.226,14.092H23.056a8.967,8.967,0,0,0-8.966,8.967V34.228a8.966,8.966,0,0,0,8.966,8.965H34.226a8.965,8.965,0,0,0,8.966-8.965V23.059a8.966,8.966,0,0,0-8.966-8.967M40.4,33.156A7.245,7.245,0,0,1,33.154,40.4H24.128a7.244,7.244,0,0,1-7.246-7.245V24.13a7.246,7.246,0,0,1,7.246-7.245h9.026A7.247,7.247,0,0,1,40.4,24.13Z" transform="translate(-9.347 -9.349)" fill="#fff"/>
+      <path id="패스_501" data-name="패스 501" d="M43.368,34.7a7.665,7.665,0,1,0,7.665,7.665A7.665,7.665,0,0,0,43.368,34.7m0,12.277a4.612,4.612,0,1,1,4.611-4.612,4.612,4.612,0,0,1-4.611,4.612" transform="translate(-23.685 -23.019)" fill="#fff"/>
+      <path id="패스_502" data-name="패스 502" d="M77.782,30.5a1.949,1.949,0,1,1-1.95-1.95,1.95,1.95,0,0,1,1.95,1.95" transform="translate(-49.014 -18.94)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

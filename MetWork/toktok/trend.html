@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="buzz Toktok">
+  <meta property="og:url" content="http://www.buzztoktok.co.kr">
+  <meta property="og:description" content="Buzz Toktok">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./src/img/icon/favicon.png">
+  <title>buzz TOKTOK</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/css/style.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header" class="contents-page trend-page">
+
+    </div>
+
+    <div id="main" class="contents-page trend-page">
+      <section class="tab-section">
+        <div class="section-inner">
+          <article class="tab-article ">
+            <div class="article-inner">
+              <div class="tab-wrap">
+                <ul class="tab-list">
+                  <li class="tab-item tab-status"><a href="./status.html">STATUS</a></li>
+                  <li class="tab-item tab-trend now-on"><a href="./trend.html">TREND</a></li>
+                  <li class="tab-item tab-contents"><a href="./contents.html">CONTENTS</a></li>
+                </ul>
+                <ul class="tab-info-list">
+                  <li class="tab-info-item tab-now">
+                    검색하신 키워드의 <em class="txt-highlight">관심도와 평판, 연관 단어</em>를 <br> 한눈에 알아볼 수 있습니다.
+                  </li>
+                  <li class="tab-info-item tab-trend now-on">
+                    검색하신 키워드의 <em class="txt-highlight">관심도와 평판</em>이 시간의 흐름에 따라 <em class="txt-highlight">변화되는
+                      과정</em>을 확인할 수 있습니다.
+                  </li>
+                  <li class="tab-info-item tab-hottest">
+                    검색하신 키워트에 큰 영향을 미치는 <em class="txt-highlight">카페와 인플루언서, </em><br><em class="txt-highlight">화제가 된
+                      게시글</em>을 확인할 수 있습니다.
+                  </li>
+                  <li class="tab-info-item tab-preset">
+                    검색 설정을 통해 <em class="txt-highlight">빠르고 편리한 분석</em>을 간략하게 소개하는 문구가 삽입됩니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-article tab-title-article width-2-1 fl-r">
+            <div class="article-inner">
+              <div class="article-content">
+                <p class="tab-title">
+                  키워드 <strong class="txt-highlight">"베개"</strong>와 관련된 포스트가 가장 많은 날은 <strong
+                    class="txt-num txt-highlight">4월 1일</strong> 입니다.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-inner">
+          <article class="content-article article-post-trend">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3 class="add-icon icon--chart-bubble">Association</h3>
+              </div>
+              <div class="article-content">
+                <div class="graph-box">
+                  <div id="buttonBar" class="control-btn__box">
+                    <div class="btn__wrap btn--reset__wrap">
+                      <p class="icon-btn btn--reset-zoom">
+                        <button id="resetZooomBtn" title="스크롤/확대 재설정"></button>
+                      </p>
+                      <p class="icon-btn btn--reset-pos">
+                        <button id="resetPosBtn" title="위치/크기 재설정"></button>
+                      </p>
+                    </div>
+                    <div class="btn__wrap btn--size__wrap">
+                      <p class="btn btn-2 btn--size-plus">
+                        <button id="nodePlus" title="노드 확대">+ 확대</button>
+                      </p>
+                      <p class="btn btn-2 btn--size-minus">
+                        <button id="nodeMinus" title="노드 축소">- 축소</button>
+                      </p>
+                    </div>
+                    <div class="input-btn__wrap input-number__wrap">
+                      <label class="btn input-btn input-btn--number">
+                        <input type="number" id="setValue" class="input-btn__input" value="30">
+                        <button id="setBtn" class="input-btn__btn">Set</button>
+                      </label>
+                    </div>
+                    <div class="select__wrap">
+                      <select name="chartType" id="chartType">
+                        <option value="network">Network</option>
+                        <option value="cloud">Cloud</option>
+                        <option value="drilldown">Drilldown</option>
+                      </select>
+                    </div>
+                    <div class="btn__wrap btn--down__wrap">
+                      <p class="btn btn-1">
+                        <button class="button-1" onClick="excelKeyowrd(); return false;">키워드 다운로드</button>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="optionChkBar" class="option-chk__box">
+                    <div class="btn__wrap chk-btn__wrap btn-option__wrap">
+                      <label class="chk-btn chk-btn--all">
+                        <input type="checkbox" id="" class="chk-btn__input" checked>
+                        <span class="chk-btn__txt">전체</span>
+                      </label>
+                      <label class="chk-btn chk-btn--attribute chk-btn--yellow">
+                        <input type="checkbox" id="" class="chk-btn__input">
+                        <span class="chk-btn__txt">Attribute</span>
+                      </label>
+                      <label class="chk-btn chk-btn--brand chk-btn--green">
+                        <input type="checkbox" id="" class="chk-btn__input">
+                        <span class="chk-btn__txt">Brand</span>
+                      </label>
+                      <label class="chk-btn chk-btn--positive chk-btn--blue">
+                        <input type="checkbox" id="" class="chk-btn__input">
+                        <span class="chk-btn__txt">Positive</span>
+                      </label>
+                      <label class="chk-btn chk-btn--negative chk-btn--red">
+                        <input type="checkbox" id="" class="chk-btn__input">
+                        <span class="chk-btn__txt">Negative</span>
+                      </label>
+                      <label class="chk-btn chk-btn--neutral chk-btn--purple">
+                        <input type="checkbox" id="" class="chk-btn__input">
+                        <span class="chk-btn__txt">Neutral</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div id="typeDiv">
+
+                    <ul class="colorTest">
+                      <li class="color color-1">#699ff1</li>
+                      <li class="color color-2">#fb6761</li>
+                      <li class="color color-3">#f0f040</li>
+                      <li class="color color-4">#FFCB51</li>
+                      <li class="color color-5">#81e778</li>
+                      <li class="color color-6">#a384eb</li>
+                      <li class="color color-7">#69ecec</li>
+                      <li class="color color-8">#ffaab8</li>
+                      <li class="color color-9">#83af5a</li>
+                      <li class="color color-10">#586bd1</li>
+                      <li class="color color-11">#4dc457</li>
+                      <li class="color color-12">#9e5050</li>
+                      <li class="color color-13">#c559bc</li>
+                      <li class="color color-14">#ffa238</li>
+                      <li class="color color-15">#dadada</li>
+                    </ul>
+
+                  </div>
+
+                  <!-- <svg width="900" height="600"></svg> -->
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-inner">
+          <article class="content-article article-engagement-trend">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3 class="add-icon icon--chart-line">ENGAGEMENT TREND</h3>
+                <div class="title-btn-wrap">
+                  <p class="btn btn-icon btn-line btn-down">
+                    <button>다운로드</button>
+                    <span class="btn-name">다운로드</span>
+                  </p>
+                </div>
+              </div>
+              <div class="article-content">
+                <div class="article-content-top">
+                  <div class="period-select">
+                    <ul class="period-list">
+                      <li class="period-item">DAILY</li>
+                      <li class="period-item">WEEKLY</li>
+                      <li class="period-item now-on">MONTHLY</li>
+                    </ul>
+                  </div>
+                  <div class="color-info">
+                    <ul class="color-list">
+                      <li class="color-item color-item-views">
+                        <p class="item-color"></p>
+                        <span class="item-name">Views</span>
+                      </li>
+                      <li class="color-item color-item-comments">
+                        <p class="item-color"></p>
+                        <span class="item-name">Comments</span>
+                      </li>
+                      <li class="color-item color-item-likes">
+                        <p class="item-color"></p>
+                        <span class="item-name">Likes</span>
+                      </li>
+                      <li class="color-item color-item-shares">
+                        <p class="item-color"></p>
+                        <span class="item-name">Shares</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="enggTrdSwpContainer" class="article-chart-wrap swiper-container" dir="rtl">
+                  <div class="trend-chart-wrap swiper-wrapper">
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                  </div>
+                  <div class="slide-btn-wrap">
+                    <p class="slide-btn slide-left swiper-button-next"></p>
+                    <p class="slide-btn slide-right swiper-button-prev"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-inner">
+          <article class="content-article article-sentiment-trend">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3 class="add-icon icon--chart-bar01">SENTIMENT TREND</h3>
+              </div>
+              <div class="article-content">
+                <div class="article-content-top">
+                  <div class="period-select">
+                    <ul class="period-list">
+                      <li class="period-item">DAILY</li>
+                      <li class="period-item">WEEKLY</li>
+                      <li class="period-item now-on">MONTHLY</li>
+                    </ul>
+                  </div>
+                  <div class="color-info">
+                    <ul class="color-list">
+                      <li class="color-item color-item-posit">
+                        <p class="item-color"></p>
+                        <span class="item-name">긍정</span>
+                      </li>
+                      <li class="color-item color-item-neutral">
+                        <p class="item-color"></p>
+                        <span class="item-name">중립</span>
+                      </li>
+                      <li class="color-item color-item-negat">
+                        <p class="item-color"></p>
+                        <span class="item-name">부정</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="stmtTrdSwpContainer" class="article-chart-wrap swiper-container" dir="rtl">
+                  <div class="trend-chart-wrap swiper-wrapper">
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                    <div class="trend-chart-list swiper-slide" dir="ltr"></div>
+                  </div>
+                  <div class="slide-btn-wrap">
+                    <p class="slide-btn slide-left swiper-button-next"></p>
+                    <p class="slide-btn slide-right swiper-button-prev"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-inner">
+          <article class="content-article article-keyword-trend">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3 class="add-icon icon--chart-rank">KEYWORD TREND</h3>
+              </div>
+              <div class="article-content">
+                <div id="kwdTrdSwpContainer" class="article-rank-wrap swiper-container" dir="rtl">
+                  <div class="trend-rank-wrap swiper-wrapper">
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 4월 1주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 3월 5주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 3월 4주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 3월 3주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 3월 2주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 3월 1주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 2월 4주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="trend-rank-list swiper-slide">
+                      <div class="trend-rank-title clearFix" dir="ltr">
+                        <h4 dir="ltr">22년 2월 3주차</h4>
+                        <span class="trend-term">2022.04.04~04.10</span>
+                      </div>
+                      <ul class="rank-list" dir="ltr">
+                        <li class="rank-item item-title">
+                          <p class="item-standing">순위</p>
+                          <span class="item-keyword">단어</span>
+                          <span class="item-num">건수</span>
+                          <span class="item-move">변동</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">1</p>
+                          <span class="item-keyword">소득</span>
+                          <span class="item-num">15,471</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">2</p>
+                          <span class="item-keyword">갈등</span>
+                          <span class="item-num">15,221</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">3</p>
+                          <span class="item-keyword">기본소득</span>
+                          <span class="item-num">12,117</span>
+                          <span class="item-move up"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">4</p>
+                          <span class="item-keyword">대선</span>
+                          <span class="item-num">10,227</span>
+                          <span class="item-move down"><em></em>1</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">5</p>
+                          <span class="item-keyword">공천</span>
+                          <span class="item-num">9,471</span>
+                          <span class="item-move down"><em></em>2</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">6</p>
+                          <span class="item-keyword">카카오</span>
+                          <span class="item-num">8,626</span>
+                          <span class="item-move new"><em></em>NEW</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">7</p>
+                          <span class="item-keyword">SKT</span>
+                          <span class="item-num">7,684</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">8</p>
+                          <span class="item-keyword">메타버스</span>
+                          <span class="item-num">6,228</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">9</p>
+                          <span class="item-keyword">디지털자산</span>
+                          <span class="item-num">5,983</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                        <li class="rank-item item-subs">
+                          <p class="item-standing">10</p>
+                          <span class="item-keyword">NFT</span>
+                          <span class="item-num">4,115</span>
+                          <span class="item-move none"><em></em>-</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="slide-btn-wrap">
+                    <p class="slide-btn slide-left swiper-button-next"></p>
+                    <p class="slide-btn slide-right swiper-button-prev"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div id="footer" class="contents-page trend-page">
+
+    </div>
+  </div>
+
+  <script src='./src/js/jquery-3.5.1.js'></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/lib.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>

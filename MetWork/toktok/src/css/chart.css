@@ -1,0 +1,10 @@
+.chart__wrap {
+  position: relative;
+}
+
+.chart-sentiment__wrap {
+  width: 75%;
+  padding: 2px 14px 4px;
+  /* padding-top: 4px; */
+  margin: 0 auto;
+}

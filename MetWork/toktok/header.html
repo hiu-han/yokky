@@ -1,0 +1,379 @@
+<header>
+  <div class="header-inner">
+    <h1 class="logo"><a href="index.html"><img src="./src/img/common/logo_gra.svg" alt="buzzOn logo"></a></h1>
+    <!-- div class="mobile-menu-btn">
+      <a href="./userPreset.html" class="link-area">
+        <p class="menu-line line-1"></p>
+        <p class="menu-line line-2"></p>
+        <p class="menu-line line-3"></p>
+      </a>
+    </div -->
+    <p class="go-preset-btn"><a href="./userPreset_sub.html" target="_blank"></a></p>
+    <p id="moDetailOpen" class="search-slide-btn"></p>
+
+    <div class="search-area">
+      <div class="search-keyword-wrap">
+        <div class="search-input">
+          <input type="text" id="searchWord" placeholder="검색어를 입력하세요">
+          <label for="searchWord" class="blind">검색어를 입력하세요</label>
+          <p class="search-btn"></p>
+        </div>
+        <div class="search-detail-btn">
+          <p id="detailOpen" class="">상세검색</p>
+        </div>
+      </div>
+
+      <div class="search-date-wrap">
+        <div class="search-date date-start">
+          <span class="date-title">시작일</span>
+          <!-- value, min >> 기획에 따라 초기 값 설정 -->
+          <div class="date-input">
+            <input type="date" id="startDate" value="2022-02-15" min="2021-05-13" pattern="\d{4}-\d{2}-\d{2}">
+          </div>
+        </div>
+        <div class="search-date date-end">
+          <span class="date-title">종료일</span>
+          <!-- value, max >> 오늘 날짜로 설정
+              min >> 시작일의 초기값 혹은 시작일 선택 시 시작일로 설정 -->
+          <div class="date-input">
+            <input type="date" id="endDate" value="2022-03-15" max="2022-03-15" min="2022-02-15"
+              pattern="\d{4}-\d{2}-\d{2}">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-area">
+      <!-- <a href="./userPreset_sub.html" class="link-area"> -->
+      <div class="user-wrap">
+        <p class="user-profile"></p>
+        <span class="user-name">스피커</span>
+      </div>
+      <!-- </a> -->
+      <ul class="user-menu__list now-on">
+        <li class="menu__item item--preset">
+          <a href="./userPreset_sub.html">검색설정 관리</a>
+        </li>
+        <li class="menu__item item--acount">
+          <a href="#">사운드바 입장</a>
+        </li>
+        <li class="menu__item item--logout">
+          <a href="#">로그아웃</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 상세검색 슬라이더 start -->
+  <div class="slider-bg"></div>
+  <div class="detail-slider">
+    <div class="slider-inner">
+      <p class="cls-btn">X</p>
+      <form action="">
+        <div class="detail-area-wrap">
+          <div class="detail-area detail-channel-area">
+            <h3 id="moChannelOpen" class="blind">검색 대상 채널 설정</h3>
+            <fieldset>
+              <legend class="blind">검색 대상 채널 설정</legend>
+              <div class="search-group search-group-sns">
+                <h3 class="group-title">브랜드</h3>
+                <p class="all-btn">
+                  <input type="checkbox" id="allChecksns" class="all-check-btn" onclick="toggleChk(this,'sns');">
+                  <label for="allChecksns">All</label>
+                </p>
+                <div class="search-group-box">
+                  <div class="input-group sns-group sns-twitter">
+                    <input type="checkbox" id="chkSnsTwitter" onclick="channelChk(this,'sns');">
+                    <label for="chkSnsTwitter">LG</label>
+                  </div>
+                  <div class="input-group sns-group sns-insta">
+                    <input type="checkbox" id="chkSnsInstagram" onclick="channelChk(this,'sns');">
+                    <label for="chkSnsInstagram">Samsung</label>
+                  </div>
+                  <div class="input-group sns-group sns-youtube">
+                    <input type="checkbox" id="chkSnsYoutube" onclick="channelChk(this,'sns');">
+                    <label for="chkSnsYoutube">Sony</label>
+                  </div>
+                  <div class="input-group sns-group sns-facebook">
+                    <input type="checkbox" id="chkSnsFacebook" onclick="channelChk(this,'sns');">
+                    <label for="chkSnsFacebook">Panasonic</label>
+                  </div>
+                  <div class="input-group sns-group sns-facebook">
+                    <input type="checkbox" id="chkSnsFacebook" onclick="channelChk(this,'sns');">
+                    <label for="chkSnsFacebook">VIZIO</label>
+                  </div>
+                  <div class="input-group sns-group sns-facebook">
+                    <input type="checkbox" id="chkSnsFacebook" onclick="channelChk(this,'sns');">
+                    <label for="chkSnsFacebook">Amazon</label>
+                  </div>
+                </div>
+              </div>
+              <div class="search-group search-group-cafe">
+                <h3 class="group-title">국가</h3>
+                <p class="all-btn">
+                  <input type="checkbox" id="allCheckcafe" class="all-check-btn" onclick="toggleChk(this,'cafe');">
+                  <label for="allCheckcafe">All</label>
+                </p>
+                <div class="search-group-box">
+                  <div class="input-group cafe-group cafe-naver">
+                    <input type="checkbox" id="chkCafeNaver" class="helo" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeNaver">미국</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">영국</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">독일</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">프랑스</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">브라질</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">터키</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">베트남</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">인도</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">일본</label>
+                  </div>
+                  <div class="input-group cafe-group cafe-daum">
+                    <input type="checkbox" id="chkCafeDaum" onclick="channelChk(this,'cafe');">
+                    <label for="chkCafeDaum">한국</label>
+                  </div>
+                </div>
+              </div>
+              <div class="search-group search-group-blog">
+                <h3 class="group-title">블로그</h3>
+                <p class="all-btn">
+                  <input type="checkbox" id="allCheckblog" class="all-check-btn" onclick="toggleChk(this,'blog');">
+                  <label for="allCheckblog">All</label>
+                </p>
+                <div class="search-group-box">
+                  <div class="input-group blog-group blog-naver">
+                    <input type="checkbox" id="chkBlogNaver" onclick="channelChk(this,'blog');">
+                    <label for="chkBlogNaver">네이버 블로그</label>
+                  </div>
+                  <div class="input-group blog-group blog-tstory">
+                    <input type="checkbox" id="chkBlogTstory" onclick="channelChk(this,'blog');">
+                    <label for="chkBlogTstory">티스토리</label>
+                  </div>
+                  <div class="input-group blog-group blog-daum" onclick="channelChk(this,'blog');">
+                    <input type="checkbox" id="chkBlogDaum">
+                    <label for="chkBlogDaum">다음 블로그</label>
+                  </div>
+                </div>
+              </div>
+              <div class="search-group search-group-community">
+                <h3 class="group-title">커뮤니티</h3>
+                <p class="all-btn">
+                  <input type="checkbox" id="allCheckcommu" class="all-check-btn" onclick="toggleChk(this,'commu');">
+                  <label for="allCheckcommu">All</label>
+                </p>
+                <div class="search-group-box">
+                  <div class="input-group commu-group commu-ppom">
+                    <input type="checkbox" id="chkCommuPpomppu" onclick="channelChk(this,'commu');">
+                    <label for="chkCommuPpomppu">뽐뿌</label>
+                  </div>
+                  <div class="input-group commu-group commu-mlb">
+                    <input type="checkbox" id="chkCommuMlbpark" onclick="channelChk(this,'commu');">
+                    <label for="chkCommuMlbpark">MLB파크</label>
+                  </div>
+                  <div class="input-group commu-group commu-clien">
+                    <input type="checkbox" id="chkCommuClien" onclick="channelChk(this,'commu');">
+                    <label for="chkCommuClien">클리앙</label>
+                  </div>
+                  <div class="input-group commu-group commu-fm">
+                    <input type="checkbox" id="chkCommuFm" onclick="channelChk(this,'commu');">
+                    <label for="chkCommuFm">FM코리아</label>
+                  </div>
+                  <div class="input-group commu-group commu-dc">
+                    <input type="checkbox" id="chkCommuDc" onclick="channelChk(this,'commu');">
+                    <label for="chkCommuDc">DC</label>
+                  </div>
+                  <div class="input-group commu-group commu-ruli">
+                    <input type="checkbox" id="chkCommuRuliweb" onclick="channelChk(this,'commu');">
+                    <label for="chkCommuRuliweb">루리웹</label>
+                  </div>
+                  <div class="input-group commu-group commu-inven">
+                    <input type="checkbox" id="chkCommuInven" onclick="channelChk(this,'commu');">
+                    <label for="chkCommuInven">인벤</label>
+                  </div>
+                </div>
+              </div>
+              <!-- div class="search-group search-group-news">
+                <h3 class="group-title">속성기준</h3>
+                <p class="all-btn">
+                  <input type="checkbox" id="allChecknews" class="all-check-btn" onclick="toggleChk(this,'news');">
+                  <label for="allChecknews">All</label>
+                </p>
+                <div class="search-group-box">
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">사이즈</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">화질</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">음질</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">디자인</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">설치</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">스마트/AI</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">연결성</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이버_장문테스트용이니까 길어도 괜찮아</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이버</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이dfdfdfdfd버</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이버</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이버</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이버</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이버</label>
+                  </div>
+                  <div class="input-group news-group news-naver">
+                    <input type="checkbox" id="chkNewsNaver" class="helo" onclick="channelChk(this,'news');">
+                    <label for="chkNewsNaver">네이dfdfdfdffd버장문테스트용</label>
+                  </div>
+                </div>
+              </div -->
+            </fieldset>
+          </div>
+
+          <!-- "detail-slider .search-area" 기간 설정 -> pc에서 display:none; / mobile에서 display:block; -->
+          <div class="detail-area search-area clearFix">
+            <div class="search-date-wrap">
+              <div class="search-date date-start">
+                <span class="date-title">시작일</span>
+                <!-- value, min >> 기획에 따라 초기 값 설정 -->
+                <div class="date-input">
+                  <input type="date" id="startDate" value="2022-02-15" min="2021-05-13" pattern="\d{4}-\d{2}-\d{2}">
+                </div>
+              </div>
+              <div class="search-date date-end">
+                <span class="date-title">종료일</span>
+                <!-- value, max >> 오늘 날짜로 설정
+                    min >> 시작일의 초기값 혹은 시작일 선택 시 시작일로 설정 -->
+                <div class="date-input">
+                  <input type="date" id="endDate" value="2022-03-15" max="2022-03-15" min="2022-02-15"
+                    pattern="\d{4}-\d{2}-\d{2}">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="detail-area detail-keyword-area clearFix">
+            <fieldset>
+              <legend class="blind">검색어 상세 설정</legend>
+              <div class="detail-search detail-keyword">
+                <h4 class="detail-title">검색어</h4>
+                <div class="detail-input">
+                  <input type="text" placeholder="검색어를 입력하세요">
+                </div>
+              </div>
+
+              <div class="detail-search detail-include clearFix">
+                <h4 class="detail-title">포함어</h4>
+                <div class="detail-option">
+                  <input type="radio" name="includeOption" class="include-option" id="includeOr" value="include-or"
+                    checked="checked">
+                  <label for="includeOr">또는</label>
+                  <input type="radio" name="includeOption" class="include-option" id="includeAnd" value="include-and">
+                  <label for="includeAnd">그리고</label>
+                </div>
+                <div class="detail-input">
+                  <input type="text" placeholder="포함어를 입력하세요 (최대3개)">
+                  <p class="add-btn">+</p>
+                </div>
+              </div>
+
+              <div class="detail-search detail-except clearFix">
+                <h4 class="detail-title">제외어</h4>
+                <div class="detail-option">
+                  <input type="radio" name="exceptOption" class="except-option" id="exceptOr" value="except-or"
+                    checked="checked">
+                  <label for="exceptOr">또는</label>
+                  <input type="radio" name="exceptOption" class="except-option" id="exceptAnd" value="except-and">
+                  <label for="exceptAnd">그리고</label>
+                </div>
+                <div class="detail-input">
+                  <input type="text" placeholder="포함어를 입력하세요 (최대3개)">
+                  <p class="add-btn">+</p>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="detail-btn-area clearFix">
+          <div class="detail-preset-wrap">
+            <p class="text-btn preset-btn">
+              <a href="#" class="add-icon">검색설정 가져오기</a>
+            </p>
+            <p class="text-btn preset-save-btn">
+              <input type="checkbox" id="presetSave">
+              <label for="presetSave">검색설정 저장하기</label>
+            </p>
+          </div>
+          <div class="detail-btn-wrap">
+            <p id="detailCncl" class="cancel-btn">취소</p>
+            <p type="submit" id="detailSubmit" class="btn btn-1 submit-btn">
+              <button>검색 결과 보기</button>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- 상세검색 슬라이더 end -->
+
+</header>
+<script src="./src/js/header.js"></script>

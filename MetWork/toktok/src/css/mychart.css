@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import url('./font.css');
+
+#main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.chart-box-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 24px 54px;
+}
+
+.chart-box {
+  width: 400px;
+  height: 300px;
+}
+.chart-box#chartBox04,
+.chart-box#chartBox05,
+.chart-box#chartBox08,
+.chart-box#chartBox09 {
+  height: 480px;
+}
+.chart-box canvas {
+  width: 400px;
+  height: 300px;
+}

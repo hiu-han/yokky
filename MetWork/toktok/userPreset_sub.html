@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="buzz Toktok">
+  <meta property="og:url" content="http://www.buzztoktok.co.kr">
+  <meta property="og:description" content="Buzz Toktok">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <link rel="short cut icon" type="image/x-icon" href="./src/img/icon/favicon.png">
+  <title>buzz TOKTOK</title>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/style_sub.css">
+  <!-- <link rel="stylesheet" href="./src/css/layout_sub.css"> -->
+</head>
+
+<body>
+  <div id="wrap" class="user-page usePreset-page">
+    <!-- div id="dummy-btn-userpreset_sub" style="position:absolute;top:100px;left:20px;font-size:18px;font-weight:700;"><a
+        href="./userPreset.html">돌아가기</a></div -->
+    <div id="header" class="contents-page">
+
+    </div>
+
+    <div id="main" class="contents-page">
+
+      <section class="tab-section">
+        <div class="section-inner">
+          <article class="tab-article ">
+            <div class="article-inner">
+              <div class="tab-wrap">
+                <ul class="tab-list">
+                  <li class="tab-item tab-now"><a href="./status.html">STATUS</a></li>
+                  <li class="tab-item tab-trend"><a href="./trend.html">TREND</a></li>
+                  <li class="tab-item tab-hottest"><a href="./contents.html">CONTENTS</a></li>
+                  <!-- <li class="tab-item tab-preset now-on"><a href="./userPreset.html">PRESET</a></li> -->
+                </ul>
+                <ul class="tab-info-list">
+                  <li class="tab-info-item tab-now">
+                    검색하신 키워드의 <em class="txt-highlight">관심도와 평판,</em> <em class="txt-highlight">연관 단어</em>를
+                    한눈에 알아볼 수 있습니다.
+                  </li>
+                  <li class="tab-info-item tab-trend">
+                    검색하신 키워드의 <em class="txt-highlight">관심도와 평판</em>이 시간의 흐름에 따라 <br><em class="txt-highlight">변화되는
+                      과정</em>을 확인할 수 있습니다.
+                  </li>
+                  <li class="tab-info-item tab-hottest">
+                    검색하신 키워트에 큰 영향을 미치는 <em class="txt-highlight">카페와 인플루언서, </em><br><em class="txt-highlight">화제가 된
+                      게시글</em>을 확인할 수 있습니다.
+                  </li>
+                  <li class="tab-info-item tab-preset now-on">
+                    검색 설정을 통해 <em class="txt-highlight">빠르고 편리한 분석</em>을 간략하게 소개하는 문구가 삽입됩니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-article tab-title-article width-2-1 fl-r">
+            <div class="article-inner">
+              <div class="article-content">
+                <p class="tab-title">
+                  총 <strong class="txt-highlight">5가지 키워드</strong>에 대한 검색 설정이 등록되었습니다.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-inner">
+          <article class="content-article article-user-setting">
+            <div class="article-inner">
+              <div class="article-title">
+                <h3 class="">검색 설정 관리</h3>
+              </div>
+              <div class="article-content">
+                <div class="usr-set-container">
+                  <div class="usr-kywrd-wrap">
+                    <ul class="usr-kywrd-list">
+                      <li class="usr-kywrd-item">
+                        <span class="item-kywrd">베개</span>
+                        <span class="item-date"><em>2022.05.10 09:28</em> 저장됨</span>
+                      </li>
+                      <li class="usr-kywrd-item">
+                        <span class="item-kywrd">아이폰</span>
+                        <span class="item-date"><em>2022.05.03 15:03</em> 저장됨</span>
+                      </li>
+                      <li class="usr-kywrd-item">
+                        <span class="item-kywrd">신한은행</span>
+                        <span class="item-date"><em>2022.05.03 17:41</em> 저장됨</span>
+                      </li>
+                      <li class="usr-kywrd-item now-on">
+                        <span class="item-kywrd">잇섭</span>
+                        <span class="item-date"><em>2022.05.01 09:57</em> 저장됨</span>
+                      </li>
+                      <li class="usr-kywrd-item add-item">
+                        <span class="item-kywrd">+ 추가하기</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="usr-set-wrap">
+                    <ul class="usr-set-list">
+
+                      <li class="usr-set-item">
+                        <!-- 수정 btn으로 .usr-set-item에 .now-on 토글 >> 내용 수정 모드 -->
+                        <!-- 이하 input들 수정모드 >> readnoly = false; -->
+                        <!-- but! input checkbox는 onclick="return false"로 대체 -->
+                        <div class="usr-set-item-cls"></div>
+                        <div class="set-btn-wrap">
+                          <p class="set-btn modify-btn">
+                            <span>수정</span>
+                            <em>수정하기</em>
+                          </p>
+                          <p class="set-btn search-btn">
+                            <span>검색</span>
+                            <em>검색하기</em>
+                          </p>
+                          <p class="set-btn save-btn">
+                            <span>저장</span>
+                            <em>저장하기</em>
+                          </p>
+                          <p class="set-btn del-btn">
+                            <span>삭제</span>
+                            <em>삭제하기</em>
+                          </p>
+                          <p class="set-btn cls-btn">
+                            <span>취소</span>
+                            <em>취소하기</em>
+                          </p>
+                        </div>
+                        <ul class="set-info-wrap">
+                          <li class="set-info-item info-search-word">
+                            <div class="info-item-title">검색어</div>
+                            <div class="info-item-input">
+                              <div class="info-label-wrap">
+                                <label class="info-label label-search-word">
+                                  <input type="text" class="info-input input-search-word" placeholder="잇섭" readonly>
+                                  <!-- <span class="search-word-value">베개</span> -->
+                                  <span class="saved-date"><em>2022-05-10</em> <em>13:05</em> 저장됨</span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="set-info-item info-optional-word info-include-word added">
+                            <!-- .info-optional-word > 저장된 포함어가 있으면 addClass '.added' -->
+                            <div class="info-item-title">포함어</div>
+                            <div class="info-item-input">
+                              <div class="include-not-yet word-not-yet">
+                                <p>지정된 포함어가 없습니다.</p>
+                              </div>
+                              <div class="include-word-wrap added-word-wrap">
+                                <!-- .added-word-wrap >> 저장된 포함어가 없으면 기본인 display: none; -->
+                                <!-- .added-word-wrap >> 저장된 포함어가 있으면 .info-optional-word에 addClass '.added' >> display: block; -->
+                                <div class="include-word add-word added">
+                                  <!-- 저장된 단어의 .include-word에 .added 추가  -->
+                                  <div class="add-option">
+                                    <label class="add-option-label add-or-label">
+                                      <input type="radio" name="addOption501" value="include-or" checked>
+                                      <span class="label-txt">또는</span>
+                                    </label>
+                                    <label class="add-option-label add-and-label">
+                                      <input type="radio" name="addOption501" value="include-and">
+                                      <span class="label-txt">그리고</span>
+                                    </label>
+                                  </div>
+                                  <div class="add-input">
+                                    <input type="text" placeholder="스위치" readonly>
+                                    <p class="add-btn">+</p>
+                                  </div>
+                                </div>
+                                <div class="include-word add-word added">
+                                  <div class="add-option">
+                                    <label class="add-option-label add-or-label">
+                                      <input type="radio" name="addOption502" value="include-or">
+                                      <span class="label-txt">또는</span>
+                                    </label>
+                                    <label class="add-option-label add-and-label">
+                                      <input type="radio" name="addOption502" value="include-and" checked>
+                                      <span class="label-txt">그리고</span>
+                                    </label>
+                                  </div>
+                                  <div class="add-input">
+                                    <input type="text" placeholder="스팀덱" readonly>
+                                    <p class="add-btn">+</p>
+                                  </div>
+                                </div>
+                                <div class="include-word add-word added">
+                                  <!-- 추가할 수 있는 입력창은 .include-word에 .added 없음. -->
+                                  <!-- 저장된 단어가 3개일 경우 노출되지 않음 -->
+                                  <div class="add-option">
+                                    <label class="add-option-label add-or-label">
+                                      <input type="radio" name="addOption503" value="include-or" checked>
+                                      <span class="label-txt">또는</span>
+                                    </label>
+                                    <label class="add-option-label add-and-label">
+                                      <input type="radio" name="addOption503" value="include-and">
+                                      <span class="label-txt">그리고</span>
+                                    </label>
+                                  </div>
+                                  <div class="add-input">
+                                    <input type="text" placeholder="황용섭" readonly>
+                                    <p class="add-btn">+</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </li>
+                          <li class="set-info-item info-optional-word info-exclude-word">
+                            <!-- .info-optional-word > 저장된 제외어가 있으면 addClass '.added' -->
+                            <div class="info-item-title">제외어</div>
+                            <div class="info-item-input">
+                              <div class="exclude-not-yet word-not-yet">
+                                <p>지정된 제외어가 없습니다.</p>
+                              </div>
+                              <div class="exclude-word-wrap added-word-wrap">
+                                <!-- .added-word-wrap >> 저장된 제외어가 없으면 기본인 display: none; -->
+                                <!-- .added-word-wrap >> 저장된 제외어가 있으면 .info-optional-word에 addClass '.added' >> display: block; -->
+                                <!-- div class="exclude-word add-word added">
+                                  <div class="add-option">
+                                    <label class="add-option-label add-or-label">
+                                      <input type="radio" name="addOption504" value="include-or">
+                                      <span class="label-txt">또는</span>
+                                    </label>
+                                    <label class="add-option-label add-and-label">
+                                      <input type="radio" name="addOption504" value="include-and" checked>
+                                      <span class="label-txt">그리고</span>
+                                    </label>
+                                  </div>
+                                  <div class="add-input">
+                                    <input type="text" placeholder="컬러스케일" readonly>
+                                    <p class="add-btn">+</p>
+                                  </div>
+                                </div>
+                                <div class="exclude-word add-word added">
+                                  <div class="add-option">
+                                    <label class="add-option-label add-or-label">
+                                      <input type="radio" name="addOption505" value="include-or" checked>
+                                      <span class="label-txt">또는</span>
+                                    </label>
+                                    <label class="add-option-label add-and-label">
+                                      <input type="radio" name="addOption505" value="include-and">
+                                      <span class="label-txt">그리고</span>
+                                    </label>
+                                  </div>
+                                  <div class="add-input">
+                                    <input type="text" placeholder="언더케이지" readonly>
+                                    <p class="add-btn">+</p>
+                                  </div>
+                                </div -->
+                                <div class="exclude-word add-word">
+                                  <div class="add-option">
+                                    <label class="add-option-label add-or-label">
+                                      <input type="radio" name="addOption506" value="include-or">
+                                      <span class="label-txt">또는</span>
+                                    </label>
+                                    <label class="add-option-label add-and-label">
+                                      <input type="radio" name="addOption506" value="include-and">
+                                      <span class="label-txt">그리고</span>
+                                    </label>
+                                  </div>
+                                  <div class="add-input">
+                                    <input type="text" placeholder="제외어를 입력하세요.">
+                                    <p class="add-btn">+</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="set-info-item info-period">
+                            <div class="info-item-title">검색기간</div>
+                            <div class="info-item-input">
+                              <div class="searched-date-wrap">
+                                <div class="search-date date-start">
+                                  <span class="date-title">시작일</span>
+                                  <div class="date-input">
+                                    <input type="date" class="selected-start-date" value="2022-04-10"
+                                      pattern="\d{4}-\d{2}-\d{2}" readonly>
+                                  </div>
+                                </div>
+                                <div class="search-date date-end">
+                                  <div class="date-title">종료일</div>
+                                  <div class="date-input">
+                                    <input type="date" class="selected-end-date" value="2022-05-10"
+                                      pattern="\d{4}-\d{2}-\{2}" readonly>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="set-info-item info-channel">
+                            <div class="info-item-title">대상 채널</div>
+                            <div class="info-item-input">
+                              <div class="search-group-wrap">
+                                <div class="search-group search-group-sns">
+                                  <h3 class="group-title">SNS</h3>
+                                  <p class="all-btn">
+                                    <label>
+                                      <input type="checkbox" class="all-check-btn" onclick="">
+                                      <span class="label-txt">All</span>
+                                    </label>
+                                  </p>
+                                  <div class="search-group-box">
+                                    <div class="input-group sns-group sns-twitter">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">트위터</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group sns-group sns-insta">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">인스타그램</span>
+                                        </span>
+                                    </div>
+                                    <div class="input-group sns-group sns-youtube">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">유튜브</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group sns-group sns-facebook">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">페이스북</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-group search-group-cafe">
+                                  <h3 class="group-title">CAFE</h3>
+                                  <p class="all-btn">
+                                    <label>
+                                      <input type="checkbox" class="all-check-btn" onclick="">
+                                      <span class="label-txt">All</span>
+                                    </label>
+                                  </p>
+                                  <div class="search-group-box">
+                                    <div class="input-group cafe-group cafe-naver">
+                                      <label>
+                                        <input type="checkbox" class="helo" onclick="">
+                                        <span class="label-txt">네이버</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group cafe-group cafe-daum">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">다음</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-group search-group-blog">
+                                  <h3 class="group-title">BLOG</h3>
+                                  <p class="all-btn">
+                                    <label>
+                                      <input type="checkbox" class="all-check-btn" onclick="">
+                                      <span class="label-txt">All</span>
+                                    </label>
+                                  </p>
+                                  <div class="search-group-box">
+                                    <div class="input-group blog-group blog-naver">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">네이버</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group blog-group blog-tstory">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">티스토리</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group blog-group blog-daum">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">다음</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-group search-group-community">
+                                  <h3 class="group-title">COMMUNITY</h3>
+                                  <p class="all-btn">
+                                    <label>
+                                      <input type="checkbox" class="all-check-btn" onclick="">
+                                      <span class="label-txt">All</span>
+                                    </label>
+                                  </p>
+                                  <div class="search-group-box">
+                                    <div class="input-group commu-group commu-ppom">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">뽐뿌</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group commu-group commu-mlb">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">MLB파크</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group commu-group commu-clien">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label=txxt">클리앙</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group commu-group commu-fm">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">FM코리아</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group commu-group commu-dc">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">DC</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group commu-group commu-ruli">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">루리웹</span>
+                                      </label>
+                                    </div>
+                                    <div class="input-group commu-group commu-inven">
+                                      <label>
+                                        <input type="checkbox" onclick="">
+                                        <span class="label-txt">인벤</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-group search-group-news">
+                                  <h3 class="group-title">NEWS</h3>
+                                  <p class="all-btn">
+                                    <label>
+                                      <input type="checkbox" class="all-check-btn" onclick="">
+                                      <span class="label-txt">All</span>
+                                    </label>
+                                  </p>
+                                  <div class="search-group-box">
+                                    <div class="input-group news-group news-naver">
+                                      <label>
+                                        <input type="checkbox" class="helo" onclick="">
+                                        <span class="label-txt">네이버</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <div id="footer" class="contents-page">
+
+    </div>
+  </div>
+
+  <script src='./src/js/jquery-3.5.1.js'></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/lib.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
