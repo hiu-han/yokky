@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 27 29.8">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #6270f4;
+        stroke-miterlimit: 10;
+        stroke-width: 2.6px;
+      }
+
+      .st1 {
+        fill: #6270f4;
+      }
+    </style>
+  </defs>
+  <path id="Icon_material-person-pin" class="st0" d="M22.7,1.6H4.3c-1.4,0-2.6,1.2-2.6,2.6v17.2c0,1.4,1.2,2.6,2.6,2.6h5.2l3.9,3.9,3.9-3.9h5.2c1.4,0,2.6-1.2,2.6-2.6V4.3c0-1.4-1.2-2.6-2.6-2.6Z"/>
+  <g>
+    <path class="st1" d="M5.1,18.7v1.3h16.8v-1.3c0-2.8-5.6-4.3-8.4-4.3s-8.4,1.5-8.4,4.3Z"/>
+    <path class="st1" d="M17.3,8.8c0-2.1-1.7-3.8-3.8-3.8-2.1,0-3.8,1.7-3.8,3.8,0,2.1,1.7,3.8,3.8,3.8s3.8-1.7,3.8-3.8Z"/>
+  </g>
+</svg>

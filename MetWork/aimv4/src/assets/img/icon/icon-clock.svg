@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 33 33">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #313235;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.8px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-clock">
+    <path id="_패스_578" class="st0" d="M30.9,18.3c-.9,7.1-7,12.7-14.4,12.7S2,24.5,2,16.5,8.5,2,16.5,2s2.4.2,3.5.4.8.2,1.2.3"/>
+    <path id="_패스_579" class="st0" d="M16.6,9.1v8.3l5.5,2.8"/>
+  </g>
+</svg>

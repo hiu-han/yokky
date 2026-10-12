@@ -1,0 +1,136 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css');
+@import url('https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css');
+/* @import url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Bold.woff2'); */
+/* @import url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Title.woff2'); */
+/* Monserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playball&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* FlightSans */
+@font-face {
+  font-family: 'FlightSans-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Regular.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FlightSans-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Bold.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FlightSans-Title';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Title.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Interop */
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Thin.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-ExtraLight.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Light.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Medium.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-SemiBold.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Bold.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Bold.woff') format('woff');
+    font-weight: bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Interop';
+    src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-ExtraBold.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+
+* {
+  /* font-family: 'Pretendard', 'Noto Sans KR', Apple Gothic, 'sans-serif'; */
+  font-family: 'Pretendard GOV', 'Noto Sans KR', Apple Gothic, 'sans-serif';
+  /* font-family: 'Interop', 'Pretendard GOV', 'sans-serif'; */
+}
+body,
+h1,
+h2,
+h3,
+h4,
+input,
+textarea,
+select,
+button {
+  /* font-family: 'Pretendard', 'Noto Sans KR', Apple Gothic, 'sans-serif'; */
+  font-family: 'Pretendard GOV', 'Noto Sans KR', Apple Gothic, 'sans-serif';
+  /* font-family: 'Interop', 'Pretendard GOV', 'sans-serif'; */
+  font-size: 16px;
+  font-weight: 400;
+  font-display: swap;
+  color: #212121;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+@font-face {
+  font-family: 'FlightSans-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Regular.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FlightSans-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Bold.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FlightSans-Title';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Title.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
